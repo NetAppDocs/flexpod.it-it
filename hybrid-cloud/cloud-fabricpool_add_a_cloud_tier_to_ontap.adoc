@@ -1,0 +1,67 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html 
+keywords: add, cloud, tier, ontap, aggregate, storage, fabricpool, flexpod, ontap, cli, oncommand, manager 
+summary: 'Prima di poter collegare un archivio di oggetti a un aggregato, è necessario aggiungerlo e identificarlo da ONTAP. Questa attività può essere completata con Gestore di sistema di OnCommand o l"interfaccia utente di ONTAP.' 
+---
+= Aggiungi un Tier cloud a ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Prima di poter collegare un archivio di oggetti a un aggregato, è necessario aggiungerlo e identificarlo da ONTAP. Questa attività può essere completata con Gestore di sistema di OnCommand o l'interfaccia utente di ONTAP.
+
+FabricPool supporta Amazon S3, storage cloud a oggetti IBM e archivi di oggetti storage blob Microsoft Azure come Tier cloud.
+
+Sono necessarie le seguenti informazioni:
+
+* Nome del server (FQDN); ad esempio, `s3.amazonaws.com`
+* ID chiave di accesso
+* Chiave segreta
+* Nome del container (nome del bucket)
+
+
+
+
+== Gestore di sistema di OnCommand
+
+Per aggiungere un livello cloud con Gestione di sistema OnCommand, attenersi alla seguente procedura:
+
+. Avviare Gestore di sistema di OnCommand.
+. Fare clic su Storage (archiviazione)
+. Fare clic su aggregati e dischi.
+. Fare clic su livelli cloud.
+. Selezionare un provider di archivi di oggetti.
+. Completare i campi di testo richiesti per il provider dell'archivio di oggetti.
++
+Nel campo Container Name (Nome contenitore), immettere il nome del bucket o del container dell'archivio di oggetti.
+
+. Fare clic su Save and Allega aggregati.
+
+
+image:cloud-fabricpool_image13.png["Errore: Immagine grafica mancante"]
+
+
+
+== CLI ONTAP
+
+Per aggiungere un livello cloud con l'interfaccia utente di ONTAP, immettere i seguenti comandi:
+
+....
+object-store config create
+-object-store-name <name>
+-provider-type <AWS>
+-port <443/8082> (AWS)
+-server <name>
+-container-name <bucket-name>
+-access-key <string>
+-secret-password <string>
+-ssl-enabled true
+-ipspace default
+....
+link:cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html["Successivo: Collega un Tier cloud a un aggregato ONTAP."]

@@ -1,0 +1,332 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_introduction.html 
+keywords: medical, imaging, flexpod, healthcare, productivity, solution, benefits, scope, audience, host, vmware, software 
+summary: Con FlexPod, otterrai una singola piattaforma che supporta FC, FCoE, iSCSI, NFS/pNFS, SMB/CIFS e così via da una singola piattaforma. Persone, processi e tecnologia fanno parte del DNA su cui FlexPod è progettato e costruito. La QoS adattiva di FlexPod aiuta a abbattere i silos di reparto supportando più sistemi clinici mission-critical sulla stessa piattaforma FlexPod sottostante. 
+---
+= TR-4865: FlexPod per l'imaging medicale
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Jaya Kishore Esanakula e Atul Balodia, NetApp
+
+[role="lead"]
+L'imaging medicale rappresenta il 70% di tutti i dati generati dalle organizzazioni del settore sanitario. Man mano che le modalità digitali continuano a progredire e emergono nuove modalità, la quantità di dati continuerà ad aumentare. Ad esempio, la transizione dalla patologia analogica a quella digitale aumenterà drasticamente le dimensioni delle immagini a un ritmo che metterà a confronto qualsiasi strategia di gestione dei dati attualmente in atto.
+
+Secondo un recente, COVID-19 ha chiaramente ridefinito la trasformazione digitale https://www.cfo.com/the-cloud/2020/06/three-ways-covid-19-is-accelerating-digital-transformation-in-professional-services/["report"^], COVID-19 ha accelerato il commercio digitale di 5 anni. L'innovazione tecnologica guidata dai risolutori dei problemi sta cambiando radicalmente il nostro modo di procedere nella vita quotidiana. Questo cambiamento basato sulla tecnologia rivoluzionerà molti aspetti critici della nostra vita, tra cui l'assistenza sanitaria.
+
+L'assistenza sanitaria è destinata a subire un cambiamento importante nei prossimi anni. COVID sta accelerando l'innovazione nel settore sanitario che spingerà il settore di almeno diversi anni. Il fulcro di questo cambiamento è la necessità di rendere l'assistenza sanitaria più flessibile nella gestione delle pandemie, essendo più accessibile, disponibile e accessibile, senza compromettere l'affidabilità.
+
+Alla base di questo cambiamento nel settore sanitario c'è una piattaforma ben progettata. Una delle metriche chiave per misurare la piattaforma è la facilità con cui è possibile implementare le modifiche alla piattaforma. La velocità è la nuova scala e la protezione dei dati non può essere compromessa. Alcuni dei dati più critici al mondo vengono creati e utilizzati dai sistemi clinici che supportano i medici. NetApp ha reso disponibili i dati critici per l'assistenza ai pazienti dove i medici ne hanno bisogno, on-premise, nel cloud o in un ambiente ibrido. Gli ambienti multi-cloud ibridi sono l'attuale stato dell'arte per l'architettura IT.
+
+Il settore sanitario, come sappiamo, si concentra su fornitori (medici, infermieri, radiologi, tecnici dei dispositivi medici e così via) e pazienti. Avvicinando pazienti e fornitori, rendendo la posizione geografica un semplice punto dati, diventa ancora più importante che la piattaforma sottostante sia disponibile quando i fornitori e i pazienti ne hanno bisogno. La piattaforma deve essere efficiente e conveniente nel lungo termine. Nel loro impegno per ridurre ulteriormente i costi di assistenza ai pazienti, https://innovation.cms.gov/initiatives/aco/["Organizzazioni responsabili dell'assistenza"^] (Acos) sarebbe potenziata da una piattaforma efficiente.
+
+Quando si tratta di sistemi di informazione sanitaria utilizzati dalle organizzazioni sanitarie, la questione della costruzione rispetto all'acquisto tende ad avere una sola risposta: L'acquisto. Questo potrebbe essere per molti motivi soggettivi. Le decisioni di acquisto prese nel corso di molti anni possono creare sistemi informativi eterogenei. Ciascun sistema dispone di un insieme specifico di requisiti per la piattaforma su cui viene implementato. Il problema più significativo è l'ampio e diversificato insieme di protocolli di storage e livelli di performance richiesti dai sistemi informativi, che rendono la standardizzazione della piattaforma e l'efficienza operativa ottimale una sfida significativa. Le organizzazioni del settore sanitario non possono concentrarsi su problemi mission-critical perché la loro attenzione è concentrata su esigenze operative banali come l'ampio set di piattaforme che richiedono un insieme diversificato di competenze e quindi la conservazione delle PMI.
+
+Le sfide possono essere classificate nelle seguenti categorie:
+
+* Esigenze di storage eterogenee
+* Silos di reparto
+* Complessità operativa DELL'IT
+* Connettività cloud
+* Sicurezza informatica
+* Intelligenza artificiale e deep learning
+
+
+Con FlexPod, otterrai una singola piattaforma che supporta FC, FCoE, iSCSI, NFS/pNFS, SMB/CIFS e così via da una singola piattaforma. Persone, processi e tecnologia fanno parte del DNA su cui FlexPod è progettato e costruito. La QoS adattiva di FlexPod aiuta a abbattere i silos di reparto supportando più sistemi clinici mission-critical sulla stessa piattaforma FlexPod sottostante. FlexPod è certificata FedRAMP e FIPS 140-2. Inoltre, le organizzazioni sanitarie devono affrontare opportunità come l'intelligenza artificiale e il deep learning. FlexPod e NetApp risolvono queste sfide e rendono i dati disponibili dove sono necessari on-premise o in un ambiente multi-cloud ibrido in una piattaforma standardizzata. Per ulteriori informazioni e per una serie di storie di successo dei clienti, vedere https://flexpod.com/solutions/verticals/healthcare/["FlexPod settore sanitario"^].
+
+I sistemi PACS e di informazione medica tipici dispongono del seguente set di funzionalità:
+
+* Ricezione e registrazione
+* Pianificazione
+* Imaging
+* Trascrizione
+* Gestione
+* Scambio di dati
+* Archivio di immagini
+* Visualizzazione delle immagini per l'acquisizione e la lettura delle immagini per i tecnici e visualizzazione delle immagini per i medici
+
+
+Per quanto riguarda l'imaging, il settore sanitario sta cercando di risolvere le seguenti sfide cliniche:
+
+* Adozione più ampia di https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3168328/["elaborazione del linguaggio naturale"^] Assistenti (NLP) di tecnici e medici per la lettura delle immagini. Il reparto di radiologia può beneficiare del riconoscimento vocale per la trascrizione dei referti. NLP può essere utilizzato per identificare e rendere anonimi i record di un paziente, in particolare i tag DICOM integrati nell'immagine DICOM. Le funzionalità NLP richiedono piattaforme dalle performance elevate con tempi di risposta a bassa latenza per l'elaborazione delle immagini. La qualità del servizio FlexPod non solo offre performance e offre anche proiezioni di capacità mature per la crescita futura.
+* Adozione più ampia di percorsi clinici e protocolli standardizzati da parte di Acos e delle organizzazioni sanitarie della comunità. Storicamente, i percorsi clinici sono stati utilizzati come set statico di linee guida piuttosto che come workflow integrato che guida le decisioni cliniche. Con i miglioramenti nell'elaborazione di immagini e NLP, i tag DICOM nelle immagini possono essere integrati nei percorsi clinici come fatti per guidare le decisioni cliniche. Pertanto, questi processi richiedono performance elevate, bassa latenza e throughput elevato dalla piattaforma dell'infrastruttura sottostante e dai sistemi storage.
+* I modelli ML che sfruttano le reti neurali convoluzionali consentono l'automazione delle funzionalità di elaborazione delle immagini in tempo reale e richiedono pertanto un'infrastruttura che sia compatibile con GPU. FlexPod offre componenti di calcolo CPU e GPU integrati nello stesso sistema e CPU e GPU possono essere scalate indipendentemente l'una dall'altra.
+* Se i tag DICOM vengono utilizzati come fatti negli avvisi delle Best practice cliniche, il sistema deve eseguire più letture di artefatti DICOM con bassa latenza e throughput elevato.
+* Quando si valutano le immagini, la collaborazione in tempo reale tra radiologi di diverse organizzazioni richiede un'elaborazione grafica dalle performance elevate nei dispositivi di calcolo dell'utente finale. NetApp offre soluzioni VDI leader del settore progettate e collaudate appositamente per i casi di utilizzo della grafica high-end. Ulteriori informazioni sono disponibili https://flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/["qui"^].
+* La gestione di immagini e supporti nelle organizzazioni sanitarie ACO può utilizzare una singola piattaforma, indipendentemente dal sistema di registrazione dell'immagine, utilizzando protocolli come Digital Imaging and Communications in Medicine ( https://www.dicomstandard.org/about/["DICOM"^]) E accesso web agli oggetti persistenti DICOM ( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3447090/["WADO"^])
+* Scambio di informazioni sanitarie ( https://www.healthit.gov/topic/health-it-and-health-information-exchange-basics/what-hie["HIE"^]) include immagini incorporate nei messaggi.
+* Le modalità mobili, ad esempio dispositivi portatili e wireless di scansione (ad esempio, scanner a ultrasuoni tascabili collegati a un telefono), richiedono una solida infrastruttura di rete con sicurezza, affidabilità e latenza a livello DoD all'edge, al core e nel cloud. https://www.netapp.com/us/data-fabric.aspx["Un data fabric abilitato da NetApp"^] fornire alle organizzazioni questa funzionalità su larga scala.
+* Le modalità più recenti hanno esigenze di storage esponenziali; ad esempio, CT e MRI richiedono alcune centinaia di MB per ciascuna modalità, ma le immagini di patologia digitale (inclusa l'imaging a vetrino intero) possono avere dimensioni di pochi GB. FlexPod è progettato con https://www.netapp.com/us/media/sb-flexpod-advantage-performance-agility-economics.pdf["performance, affidabilità e scalabilità come caratteristiche fondamentali"^].
+
+
+Una piattaforma di sistemi di imaging medicale ben architettata è al centro dell'innovazione. L'architettura FlexPod offre funzionalità di calcolo e storage flessibili con efficienza dello storage leader del settore.
+
+
+
+== Vantaggi generali della soluzione
+
+Eseguendo un ambiente applicativo di imaging su una base architetturale FlexPod, la tua organizzazione sanitaria può aspettarsi un miglioramento della produttività del personale e una riduzione delle spese di capitale e operative. FlexPod offre un prodotto rigorosamente testato, prevalidato e convergente, progettato e progettato per offrire performance di sistema prevedibili a bassa latenza e alta disponibilità. Questo approccio offre elevati livelli di comfort e, in ultima analisi, tempi di risposta ottimali per gli utenti del sistema di imaging medicale.
+
+Diversi componenti del sistema di imaging potrebbero richiedere lo storage dei dati nei file system SMB/CIFS, NFS, Ext4 o NTFS. Questo requisito significa che l'infrastruttura deve fornire l'accesso ai dati sui protocolli NFS, SMB/CIFS e SAN. Un singolo sistema storage NetApp può supportare i protocolli NFS, SMB/CIFS e SAN, eliminando così la necessità di una pratica legacy di sistemi storage specifici del protocollo.
+
+L'infrastruttura FlexPod è una piattaforma modulare, convergente, virtualizzata, scalabile (scale-out e scale-up) e conveniente. Con la piattaforma FlexPod, puoi scalare in modo indipendente calcolo, rete e storage per accelerare l'implementazione delle applicazioni. Inoltre, l'architettura modulare consente operazioni senza interruzioni anche durante le attività di scale-out e upgrade del sistema.
+
+FlexPod offre diversi vantaggi specifici per il settore dell'imaging medicale:
+
+* *Prestazioni del sistema a bassa latenza.* il tempo dei radiologi è una risorsa di alto valore e l'utilizzo efficiente del tempo di un radiologo è fondamentale. L'attesa del caricamento di immagini o video può contribuire al burnout del medico e compromettere l'efficienza e la sicurezza del paziente.
+* *Architettura modulare.* i componenti FlexPod sono collegati tramite un server in cluster, un fabric di gestione dello storage e un set di strumenti di gestione coesivi. Man mano che le strutture di imaging crescono anno dopo anno e il numero di studi aumenta, sarà necessario che l'infrastruttura sottostante sia scalabile di conseguenza. FlexPod è in grado di scalare calcolo, storage e rete in modo indipendente.
+* *Implementazione più rapida dell'infrastruttura.* sia che si trovi in un data center esistente o in una postazione remota, il design integrato e testato di FlexPod Datacenter con imaging medicale ti consente di attivare e utilizzare la nuova infrastruttura in meno tempo, con meno sforzo.
+* *Implementazione accelerata delle applicazioni.* Un'architettura prevalidata riduce i tempi di integrazione dell'implementazione e i rischi per qualsiasi carico di lavoro, mentre la tecnologia NetApp automatizza l'implementazione dell'infrastruttura. Sia che si utilizzi la soluzione per un'implementazione iniziale dell'imaging medicale, un aggiornamento dell'hardware o un'espansione, è possibile trasferire più risorse al valore di business del progetto.
+* *Operazioni semplificate e costi inferiori.* è possibile eliminare i costi e la complessità delle piattaforme proprietarie legacy sostituendole con una risorsa condivisa più efficiente e scalabile in grado di soddisfare le esigenze dinamiche del carico di lavoro. Questa soluzione offre un maggiore utilizzo delle risorse dell'infrastruttura per un maggiore ritorno sull'investimento (ROI).
+* *Architettura scale-out.* è possibile scalare SAN e NAS da terabyte a decine di petabyte senza riconfigurare le applicazioni in esecuzione.
+* *Operazioni senza interruzioni.* è possibile eseguire manutenzione dello storage, operazioni del ciclo di vita dell'hardware e aggiornamenti software senza interrompere il business.
+* *Multitenancy sicura.* questo vantaggio supporta le maggiori esigenze di infrastruttura condivisa storage e server virtualizzati, consentendo la multi-tenancy sicura di informazioni specifiche della struttura, in particolare se si ospitano più istanze di database e software.
+* *Ottimizzazione delle risorse in pool.* questo vantaggio consente di ridurre il numero di server fisici e controller di storage, bilanciare il carico di lavoro e aumentare l'utilizzo migliorando le performance.
+* *Qualità del servizio (QoS).* FlexPod offre QoS sull'intero stack. Queste policy di storage QoS leader del settore consentono livelli di servizio differenziati in un ambiente condiviso. Queste policy aiutano a ottimizzare le performance per i carichi di lavoro e aiutano a isolare e controllare le applicazioni senza controllo.
+* *Supporto per SLA di livello storage mediante QoS.* non è necessario implementare sistemi storage diversi per i diversi livelli di storage richiesti generalmente da un ambiente di imaging medicale. Un singolo cluster di storage con più volumi NetApp FlexVol con policy QoS specifiche per diversi livelli può servire a tale scopo. Con questo approccio, l'infrastruttura storage può essere condivisa adattando dinamicamente le mutevoli esigenze di un particolare Tier di storage. NetApp AFF può supportare diversi SLA per i Tier di storage consentendo la QoS a livello del volume FlexVol, eliminando così la necessità di sistemi storage diversi per diversi Tier di storage per l'applicazione.
+* *Efficienza dello storage.* le immagini mediche sono in genere pre-compresse dall'applicazione di imaging per una compressione senza perdita di dati jpeg2k che è di circa 2.5:1. Tuttavia, si tratta di un'applicazione di imaging e specifica del vendor. In ambienti applicativi di imaging più grandi (oltre 1 PB), sono possibili risparmi del 5-10% sullo storage e puoi ridurre i costi dello storage con le funzionalità di efficienza dello storage NetApp. Collaborate con i vostri fornitori di applicazioni di imaging e con il vostro esperto NetApp per sbloccare potenziali efficienze dello storage per il vostro sistema di imaging medicale.
+* *Agilità.* grazie ai tool di automazione, orchestrazione e gestione del workflow leader del settore offerti dai sistemi FlexPod, il tuo team IT può essere molto più reattivo alle richieste di business. Queste richieste di business possono spaziare dal backup dell'imaging medico al provisioning di ambienti di test e formazione aggiuntivi alle repliche dei database di analisi per iniziative di gestione dello stato di salute della popolazione.
+* *Maggiore produttività.* è possibile implementare e scalare rapidamente questa soluzione per un'esperienza ottimale dell'utente finale del medico.
+* *Data Fabric.* il data fabric basato su NetApp consente di unire i dati tra siti, oltre i confini fisici e tra applicazioni diverse. Il tuo data fabric basato su NetApp è costruito per le aziende basate sui dati in un mondo incentrato sui dati. I dati vengono creati e utilizzati in più sedi e spesso devono essere sfruttati e condivisi con altre sedi, applicazioni e infrastrutture. Quindi, ti serve un modo coerente e integrato per gestirlo. Questa soluzione consente di gestire i dati in modo da tenere sotto controllo il team IT e semplificare l'aumento della complessità DELL'IT.
+* *FabricPool.* NetApp ONTAP FabricPool aiuta a ridurre i costi dello storage senza compromettere performance, efficienza, sicurezza o protezione. FabricPool è trasparente per le applicazioni aziendali e sfrutta l'efficienza del cloud riducendo il TCO dello storage senza la necessità di riprogettare l'infrastruttura applicativa. FlexPod può trarre vantaggio dalle funzionalità di tiering dello storage di FabricPool per un utilizzo più efficiente dello storage flash ONTAP. Per informazioni complete, vedere https://www.netapp.com/us/media/tr-4801.pdf["FlexPod con FabricPool"^].
+* *Sicurezza FlexPod.* la sicurezza è alla base di FlexPod. Negli ultimi anni, il ransomware è diventato una minaccia significativa e crescente. Ransomware è un malware basato sulla virologia crittografica, l'utilizzo della crittografia per la creazione di software dannoso. Questo malware può utilizzare la crittografia a chiave simmetrica e asimmetrica per bloccare i dati della vittima e richiedere un riscatto per fornire la chiave per decrittare i dati. Per scoprire come FlexPod aiuta a mitigare minacce come ransomware, consulta https://www.netapp.com/us/media/tr-4802.pdf["La soluzione per il ransomware"^]. I componenti dell'infrastruttura FlexPod sono anche standard federali per l'elaborazione delle informazioni https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["(FIPS) 140-2"^] conforme.
+* *Supporto congiunto di FlexPod.* NetApp e Cisco hanno definito il supporto congiunto di FlexPod, un modello di supporto forte, scalabile e flessibile per soddisfare i requisiti di supporto esclusivi dell'infrastruttura convergente di FlexPod. Questo modello utilizza l'esperienza, le risorse e l'esperienza di supporto tecnico di NetApp e Cisco per fornire un processo semplificato per identificare e risolvere il problema di supporto FlexPod, indipendentemente dalla posizione del problema. Il modello di supporto cooperativo FlexPod ti aiuta a confermare che il tuo sistema FlexPod funziona in modo efficiente e sfrutta la tecnologia più aggiornata, fornendo al contempo un team esperto per risolvere i problemi di integrazione.
++
+Il supporto congiunto di FlexPod è particolarmente utile se la tua organizzazione sanitaria esegue applicazioni business-critical. L'illustrazione riportata di seguito mostra una panoramica del modello di supporto cooperativo FlexPod.
+
+
+
+image:medical-imaging_image2.png["Errore: Immagine grafica mancante"]
+
+
+
+== Scopo
+
+Questo documento fornisce una panoramica tecnica di un'infrastruttura FlexPod basata su Cisco UCS e NetApp ONTAP per l'hosting di questa soluzione di imaging medicale.
+
+
+
+== Pubblico
+
+Il presente documento è destinato ai responsabili tecnici del settore sanitario, ai tecnici delle soluzioni partner Cisco e NetApp e al personale dei servizi professionali. NetApp presuppone che il lettore abbia una buona comprensione dei concetti di dimensionamento di calcolo e storage, nonché una buona familiarità tecnica con il sistema di imaging medicale, Cisco UCS e i sistemi storage NetApp.
+
+
+
+== Applicazione di imaging medicale
+
+Una tipica applicazione di imaging medicale offre una suite di applicazioni che insieme costituiscono una soluzione di imaging di livello Enterprise per le piccole, medie e grandi organizzazioni sanitarie.
+
+Il cuore della suite di prodotti è costituito dalle seguenti funzionalità cliniche:
+
+* Repository di imaging aziendale
+* Supporta le sorgenti di immagini tradizionali, ad esempio radiologia e cardiologia. Supporta anche altre aree di cura come oftalmologia, dermatologia, colonscopia e altri oggetti di imaging medico come foto e video.
+* https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1718393/["Sistema di archiviazione e comunicazione delle immagini"^] (PACS), che è un mezzo computerizzato per sostituire i ruoli delle pellicole radiologiche convenzionali
+* Enterprise Imaging Vendor Neutral Archive (VNA):
++
+** Consolidamento scalabile di documenti DICOM e non DICOM
+** Sistema di imaging medicale centralizzato
+** Supporto per la sincronizzazione dei documenti e l'integrità dei dati tra più (PACS) nell'azienda
+** Gestione del ciclo di vita dei documenti mediante un sistema esperto basato su regole che sfrutta i metadati dei documenti, come:
+** Tipo di modalità
+** Età dello studio
+** Età del paziente (corrente e al momento dell'acquisizione dell'immagine)
+** Singolo punto di integrazione all'interno e all'esterno dell'azienda (HIE):
+** Collegamento di documenti consapevole del contesto
+** Health Level Seven International (HL7), DICOM e WADO
+** Funzionalità di archiviazione indipendente dallo storage
+
+
+* Integrazione con altri sistemi di informazione sanitaria che utilizzano HL7 e il collegamento contestuale:
++
+** Consente agli EHR di implementare collegamenti diretti alle immagini dei pazienti da cartelle dei pazienti, flussi di lavoro di imaging e così via.
+** Consente di incorporare la cronologia delle immagini di cura longitudinale di un paziente negli EHR.
+
+
+* Flussi di lavoro dei tecnici di radiologia
+* Visualizzatori Enterprise a impatto zero per la visualizzazione delle immagini da qualsiasi luogo su qualsiasi dispositivo compatibile
+* Strumenti analitici che sfruttano i dati retrospettivi e in tempo reale:
++
+** Reporting sulla conformità
+** Report operativi
+** Rapporti sul controllo di qualità e sul controllo di qualità
+
+
+
+
+
+
+== Dimensioni dell'organizzazione sanitaria e dimensionamento della piattaforma
+
+Le organizzazioni del settore sanitario possono essere classificate in maniera ampia utilizzando metodi basati su standard che aiutano programmi come ACO. Una di queste classificazioni utilizza il concetto di una rete integrata clinica (CIN). Un gruppo di ospedali può essere chiamato CIN se collaborano e rispettano protocolli clinici standard e percorsi comprovati per migliorare il valore dell'assistenza e ridurre i costi dei pazienti. Gli ospedali all'interno di una rete CIN dispongono di controlli e pratiche per i medici di bordo che seguono i valori fondamentali della rete CIN. Tradizionalmente, una rete di erogazione integrata (IDN) è stata limitata a ospedali e gruppi di medici. Un CIN attraversa i tradizionali confini dell'IDN e un CIN può ancora far parte di un ACO. Seguendo i principi di una CIN, le organizzazioni sanitarie possono essere classificate in piccole, medie e grandi.
+
+
+
+=== Piccole organizzazioni sanitarie
+
+Un'organizzazione sanitaria è di piccole dimensioni se include un solo ospedale con ambulatori e un reparto degente, ma non fa parte di un CIN. I medici lavorano come operatori sanitari e coordinano l'assistenza ai pazienti durante un percorso di cura. Queste piccole organizzazioni includono generalmente strutture gestite da medici. Potrebbero offrire o meno cure di emergenza e traumi come assistenza integrata per il paziente. In genere, un'organizzazione sanitaria di piccole dimensioni esegue circa 250,000 studi di imaging clinico all'anno. I centri di imaging sono considerati piccole organizzazioni sanitarie e offrono servizi di imaging. Alcuni forniscono anche servizi di dettatura radiologica ad altre organizzazioni.
+
+
+
+=== Organizzazioni sanitarie di medie dimensioni
+
+Un'organizzazione sanitaria considerata di medie dimensioni se include più sistemi ospedalieri con organizzazioni mirate, come ad esempio:
+
+* Cliniche di cura per adulti e ospedali ricoverati per adulti
+* Reparti di manodopera e consegna
+* Cliniche di puericultura e ospedali ricoverati
+* Un centro di trattamento del cancro
+* Reparti di emergenza per adulti
+* Reparti di emergenza minorenni
+* Un ufficio di medicina di famiglia e di assistenza primaria
+* Un centro per la cura dei traumi per adulti
+* Un centro per la cura dei traumi per bambini
+
+
+In un'organizzazione sanitaria di medie dimensioni, i medici seguono i principi di una CIN e operano come una singola unità. Gli ospedali dispongono di funzioni distinte di fatturazione per ospedali, medici e farmacie. Gli ospedali potrebbero essere associati a istituti di ricerca accademici ed eseguire ricerche cliniche e sperimentazioni interventistiche. Un'organizzazione sanitaria di medie dimensioni esegue fino a 500,000 studi di imaging clinico all'anno.
+
+
+
+=== Grandi organizzazioni sanitarie
+
+Un'organizzazione sanitaria è considerata di grandi dimensioni se include le caratteristiche di un'organizzazione sanitaria di medie dimensioni e offre le capacità cliniche di medie dimensioni alla comunità in diverse aree geografiche.
+
+Un'organizzazione sanitaria di grandi dimensioni svolge in genere le seguenti funzioni:
+
+* Dispone di una sede centrale per gestire le funzioni generali
+* Partecipa a joint venture con altri ospedali
+* Negozia i tassi con le organizzazioni paganti ogni anno
+* Negozia le tariffe dei paganti per stato e regione
+* Partecipa a programmi di utilizzo significativo (MU)
+* Esegue ricerche cliniche avanzate in tutte le coorti di salute della popolazione utilizzando strumenti di gestione dello stato di salute della popolazione (PHM) basati su standard
+* Esegue fino a un milione di studi di imaging clinico all'anno
+
+
+Alcune grandi organizzazioni sanitarie che partecipano a una CIN dispongono anche di funzionalità di lettura dell'imaging basate sull'ai. In genere, queste organizzazioni eseguono da uno a due milioni di studi di imaging clinico all'anno.
+
+Prima di esaminare il modo in cui queste organizzazioni di dimensioni diverse si traducono in un sistema FlexPod di dimensioni ottimali, è necessario comprendere i vari componenti FlexPod e le diverse funzionalità di un sistema FlexPod.
+
+
+
+== FlexPod
+
+
+
+=== Cisco Unified Computing System
+
+Cisco UCS è costituito da un singolo dominio di gestione che è interconnesso con un'infrastruttura i/o unificata. Cisco UCS per ambienti di imaging medico è stato allineato con le raccomandazioni e le Best practice dell'infrastruttura del sistema di imaging medico NetApp, in modo che l'infrastruttura possa fornire informazioni critiche sui pazienti con la massima disponibilità.
+
+La base di calcolo dell'imaging medicale aziendale è la tecnologia Cisco UCS, con la sua gestione integrata dei sistemi, i processori Intel Xeon e la virtualizzazione dei server. Queste tecnologie integrate risolvono le sfide del data center e ti consentono di raggiungere i tuoi obiettivi per la progettazione del data center con un tipico sistema di imaging medicale. Cisco UCS unifica la gestione di LAN, SAN e sistemi in un unico collegamento semplificato per server rack, blade server e macchine virtuali (VM). Cisco UCS è costituito da una coppia ridondante di interconnessioni fabric Cisco UCS che forniscono un singolo punto di gestione e un singolo punto di controllo per tutto il traffico i/O.
+
+Cisco UCS utilizza profili di servizio in modo che i server virtuali nell'infrastruttura Cisco UCS siano configurati correttamente e in modo coerente. I profili di servizio includono informazioni critiche sull'identità del server, come indirizzi LAN e SAN, configurazioni i/o, versioni del firmware, ordine di avvio, LAN virtuale di rete (VLAN), porta fisica e policy QoS. I profili di servizio possono essere creati in modo dinamico e associati a qualsiasi server fisico nel sistema in pochi minuti anziché in ore o giorni. L'associazione dei profili di servizio con i server fisici viene eseguita come un'unica e semplice operazione che consente la migrazione delle identità tra i server dell'ambiente senza richiedere alcuna modifica della configurazione fisica. Inoltre, facilita il provisioning bare-metal rapido delle sostituzioni per i server guasti.
+
+L'utilizzo dei profili di servizio aiuta a confermare che i server sono configurati in modo coerente in tutta l'azienda. Quando si utilizzano più domini di gestione Cisco UCS, Cisco UCS Central può utilizzare profili di servizio globali per sincronizzare le informazioni di configurazione e policy tra i domini. Se la manutenzione deve essere eseguita in un dominio, l'infrastruttura virtuale può essere migrata in un altro dominio. Con questo approccio, anche quando un singolo dominio è offline, le applicazioni continuano a funzionare con alta disponibilità.
+
+Cisco UCS è una soluzione di prossima generazione per l'elaborazione di server blade e rack. Il sistema integra un fabric di rete unificato 40 GbE a bassa latenza, senza perdita di dati con server di classe Enterprise con architettura x86. Il sistema è una piattaforma multi-chassis integrata, scalabile, in cui tutte le risorse partecipano a un dominio di gestione unificato. Cisco UCS accelera l'erogazione di nuovi servizi in modo semplice, affidabile e sicuro attraverso il provisioning end-to-end e il supporto della migrazione per sistemi virtualizzati e non virtualizzati. Cisco UCS offre le seguenti funzionalità:
+
+* Gestione completa
+* Semplificazione radicale
+* Performance elevate
+
+
+Cisco UCS è costituito dai seguenti componenti:
+
+* *Compute.* il sistema si basa su una nuova classe di sistemi di calcolo che incorpora server blade e montati su rack basati sulla famiglia di processori scalabili Intel Xeon.
+* *Network.* il sistema è integrato in un fabric di rete unificato a bassa latenza, senza perdite e 40 Gbps. Questa base di rete consolida LAN, SAN e reti di calcolo ad alte performance, che oggi sono reti separate. Il fabric unificato riduce i costi riducendo il numero di schede di rete, switch e cavi e anche diminuendo i requisiti di alimentazione e raffreddamento.
+* *Virtualizzazione.* il sistema libera il pieno potenziale della virtualizzazione migliorando la scalabilità, le performance e il controllo operativo degli ambienti virtuali. Le funzionalità di sicurezza, applicazione delle policy e diagnostica di Cisco sono ora estese agli ambienti virtualizzati per supportare meglio i requisiti IT e di business in continua evoluzione.
+* *Accesso allo storage.* il sistema fornisce un accesso consolidato allo storage SAN e NAS tramite il fabric unificato. È anche un sistema ideale per lo storage software-defined. Combinando i vantaggi di un singolo framework per gestire i server di calcolo e storage in un singolo pannello, è possibile implementare QoS se necessario per introdurre la limitazione di i/o nel sistema. Inoltre, gli amministratori dei server possono preassegnare le policy di accesso allo storage alle risorse di storage, semplificando la connettività e la gestione dello storage e aumentando la produttività. Oltre allo storage esterno, sia i server rack che i server blade dispongono di uno storage interno a cui è possibile accedere tramite controller RAID hardware integrati. Impostando il profilo di storage e la policy di configurazione del disco in Cisco UCS Manager, le esigenze di storage del sistema operativo host e dei dati delle applicazioni vengono soddisfatte dai gruppi RAID definiti dall'utente. Il risultato è un'elevata disponibilità e migliori performance.
+* *Gestione.* il sistema integra in modo univoco tutti i componenti del sistema in modo che l'intera soluzione possa essere gestita come singola entità da Cisco UCS Manager. Per gestire tutte le operazioni e la configurazione del sistema, Cisco UCS Manager dispone di una GUI intuitiva, di una CLI e di un potente modulo di libreria di scripting per Microsoft Windows PowerShell, costruito su una solida API.
+
+
+Cisco Unified Computing System unisce server e reti di livello di accesso. Questo sistema server di nuova generazione dalle performance elevate offre al tuo data center un elevato grado di agilità e scalabilità dei carichi di lavoro.
+
+
+
+=== Cisco UCS Manager
+
+Cisco UCS Manager offre una gestione integrata e unificata per tutti i componenti software e hardware di Cisco UCS. Utilizzando la tecnologia a connessione singola, UCS Manager gestisce, controlla e amministra più chassis per migliaia di macchine virtuali. Attraverso una GUI intuitiva, una CLI o un'API XML, gli amministratori utilizzano il software per gestire l'intero Cisco UCS come singola entità logica. Cisco UCS Manager risiede su una coppia di fabric Interconnect Cisco UCS 6300 Series che utilizzano una configurazione di Active-standby in cluster per una disponibilità elevata.
+
+Cisco UCS Manager offre un'interfaccia di gestione integrata unificata che integra server, rete e storage. Cisco UCS Manager esegue il rilevamento automatico per rilevare l'inventario, gestire ed eseguire il provisioning dei componenti di sistema aggiunti o modificati. Offre un set completo di API XML per l'integrazione di terze parti ed espone 9,000 punti di integrazione. Inoltre, facilita lo sviluppo personalizzato per l'automazione, l'orchestrazione e il raggiungimento di nuovi livelli di visibilità e controllo del sistema.
+
+I profili di servizio beneficiano sia degli ambienti virtualizzati che di quelli non virtualizzati. Aumentano la mobilità dei server non virtualizzati, ad esempio quando si spostano i carichi di lavoro da un server all'altro o quando si porta un server offline per l'assistenza o l'upgrade. È inoltre possibile utilizzare i profili insieme ai cluster di virtualizzazione per portare nuove risorse online in modo semplice, integrando la mobilità delle macchine virtuali esistenti.
+
+Per ulteriori informazioni su Cisco UCS Manager, consultare https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-manager/index.html["Pagina del prodotto Cisco UCS Manager"^].
+
+
+
+=== Elementi di differenziazione di Cisco UCS
+
+Cisco Unified Computing System sta rivoluzionando il modo in cui i server vengono gestiti nel data center. Scopri i seguenti elementi distintivi di Cisco UCS e Cisco UCS Manager:
+
+* *Gestione integrata.* in Cisco UCS, i server sono gestiti dal firmware incorporato nelle interconnessioni fabric, eliminando la necessità di dispositivi fisici o virtuali esterni per gestirli.
+* *Unified Fabric.* in Cisco UCS, dallo chassis per server blade o server rack alle interconnessioni fabric, viene utilizzato un singolo cavo Ethernet per LAN, SAN e traffico di gestione. Questo i/o convergente riduce il numero di cavi, SFP e adattatori necessari, riducendo le spese di capitale e operative per la soluzione complessiva.
+* *AutoDiscovery.* semplicemente inserendo il server blade nello chassis o collegando i server rack alle interconnessioni fabric, il rilevamento e l'inventario delle risorse di calcolo avviene automaticamente senza alcun intervento di gestione. La combinazione di Unified Fabric e rilevamento automatico consente l'architettura wire-once di Cisco UCS, in cui è possibile estendere facilmente le funzionalità di calcolo mantenendo la connettività esterna esistente a LAN, SAN e reti di gestione.
+* *Classificazione delle risorse basata su policy.* quando Cisco UCS Manager rileva una risorsa di calcolo, può essere automaticamente classificata in un determinato pool di risorse in base alle policy definite dall'utente. Questa funzionalità è utile nel cloud computing multi-tenant.
+* *Gestione combinata di server blade e rack.* Cisco UCS Manager può gestire server blade B-Series e server rack C-Series nello stesso dominio Cisco UCS. Questa funzionalità, insieme al computing stateless, rende le risorse di calcolo realmente indipendenti dall'hardware.
+* *Architettura di gestione basata su modelli.* l'architettura e il database di gestione di Cisco UCS Manager sono basati su modelli e basati sui dati. L'API XML aperta fornita per operare sul modello di gestione consente un'integrazione semplice e scalabile di Cisco UCS Manager con altri sistemi di gestione.
+* *Criteri, pool e modelli.* l'approccio di gestione di Cisco UCS Manager si basa sulla definizione di policy, pool e modelli invece di una configurazione ordinata. Consente un approccio semplice, basato sui dati e liberamente accoppiato nella gestione delle risorse di calcolo, rete e storage.
+* *Integrità referenziale allentata.* in Cisco UCS Manager, un profilo di servizio, un profilo di porta o policy possono fare riferimento ad altre policy o ad altre risorse logiche con integrità referenziale allentata. Una policy di riferimento non può esistere al momento della creazione della policy di riferimento, ma una policy di riferimento può essere eliminata anche se ad essa fanno riferimento altri criteri. Questa funzione consente a diversi esperti in materia di lavorare in modo indipendente l'uno dall'altro. Ottieni una grande flessibilità consentendo a diversi esperti di diversi domini, come rete, storage, sicurezza, server e virtualizzazione, di lavorare insieme per eseguire un'attività complessa.
+* *Policy resolution.* in Cisco UCS Manager, è possibile creare una struttura ad albero di gerarchia di unità organizzative che imiti i tenant reali e le relazioni organizzative. È possibile definire diversi criteri, pool e modelli a diversi livelli della gerarchia organizzativa. Una policy che fa riferimento a un'altra policy per nome viene risolta nella gerarchia organizzativa con la corrispondenza di policy più vicina. Se nella gerarchia dell'organizzazione root non viene trovato alcun criterio con un nome specifico, viene eseguita la ricerca di un criterio speciale denominato "default". Questa procedura di risoluzione dei criteri consente di utilizzare API di gestione intuitive per l'automazione e offre una grande flessibilità ai proprietari delle diverse organizzazioni.
+* *Profili di servizio e stateless computing.* Un profilo di servizio è una rappresentazione logica di un server che supporta le sue varie identità e policy. È possibile assegnare questo server logico a qualsiasi risorsa di calcolo fisica, purché soddisfi i requisiti delle risorse. Il computing stateless consente di procurarsi un server in pochi minuti, che in passato richiedevano giorni nei sistemi di gestione dei server legacy.
+* *Supporto multi-tenancy integrato.* la combinazione di policy, pool, modelli, integrità referenziale allentata, risoluzione delle policy nella gerarchia organizzativa e un approccio basato sui profili di servizio alle risorse di calcolo rende Cisco UCS Manager intrinsecamente amichevole per gli ambienti multi-tenant che vengono generalmente osservati nei cloud pubblici e privati.
+* *Memoria estesa.* il server blade Cisco UCS B200 M5 di livello Enterprise estende le funzionalità del portfolio Cisco Unified Computing System in un fattore di forma blade half-width. Cisco UCS B200 M5 sfrutta la potenza delle più recenti CPU con processori scalabili Intel Xeon con un massimo di 3 TB di RAM. Questa funzionalità consente l'enorme rapporto macchina virtuale-server fisico che molte implementazioni richiedono o consentono a determinate architetture di supportare grandi operazioni di memoria, come i big data.
+* *Virtualization-aware network.* la tecnologia Cisco Virtual Machine Fabric Extender (VM-FEX) rende il layer di rete di accesso consapevole della virtualizzazione host. Questa consapevolezza impedisce l'inquinamento dei domini di calcolo e di rete con la virtualizzazione quando una rete virtuale viene gestita da profili di porta definiti dal team di amministratori di rete. Inoltre, VM-FEX scarica la CPU dell'hypervisor eseguendo la commutazione nell'hardware, consentendo alla CPU dell'hypervisor di eseguire più attività correlate alla virtualizzazione. Per semplificare la gestione del cloud, la tecnologia VM-FEX è perfettamente integrata con VMware vCenter, Linux kernel-based Virtual Machine (KVM) e Microsoft Hyper-V SR-IOV.
+* *QoS semplificato.* anche se FC ed Ethernet sono convergenti in Cisco UCS, il supporto integrato per QoS e Ethernet senza perdita di dati lo rende perfetto. Rappresentando tutte le classi di sistema in un unico pannello GUI, la QoS di rete è semplificata in Cisco UCS Manager.
+
+
+
+
+=== Switch Cisco Nexus IP e MDS
+
+Gli switch Cisco Nexus e Cisco MDS Multilayer director offrono connettività di livello Enterprise e consolidamento SAN. Le reti di storage multiprotocollo Cisco aiutano a ridurre i rischi aziendali fornendo flessibilità e opzioni: FC, Fibre Connection (FICON), FC over Ethernet (FCoE), iSCSI e FC over IP (FCIP).
+
+Gli switch Cisco Nexus offrono una delle funzionalità di rete del data center più complete in un'unica piattaforma. Offrono performance e densità elevate sia per il data center che per il core del campus. Offrono inoltre un set completo di funzionalità per l'aggregazione del data center, l'end-of-row e le implementazioni di interconnessione del data center in una piattaforma modulare altamente resiliente.
+
+Cisco UCS integra le risorse di calcolo con gli switch Cisco Nexus e un fabric unificato che identifica e gestisce diversi tipi di traffico di rete. Questo traffico include l'i/o dello storage, il traffico desktop in streaming, la gestione e l'accesso alle applicazioni cliniche e aziendali. Sono disponibili le seguenti funzionalità:
+
+* *Scalabilità dell'infrastruttura.* virtualizzazione, alimentazione e raffreddamento efficienti, scalabilità cloud con automazione, alta densità e performance supportano una crescita efficiente del data center.
+* *Continuità operativa.* il design integra hardware, funzionalità software Cisco NX-OS e gestione per supportare ambienti senza downtime.
+* *Flessibilità di trasporto.* con questa soluzione conveniente è possibile adottare in modo incrementale nuove tecnologie di rete.
+
+
+Insieme, Cisco UCS con switch Cisco Nexus e MDS Multilayer director offrono una soluzione di calcolo, networking e connettività SAN per un sistema di imaging medicale aziendale.
+
+
+
+=== Storage all-flash NetApp
+
+Lo storage NetApp che esegue il software ONTAP riduce i costi di storage complessivi offrendo al contempo tempi di risposta in lettura e scrittura a bassa latenza e IOPS elevati richiesti dai carichi di lavoro del sistema di imaging medicale. Per creare un sistema di storage ottimale che soddisfi i requisiti tipici dei sistemi di imaging medicale, ONTAP supporta configurazioni di storage all-flash e ibride. Lo storage flash NetApp offre ai clienti del sistema di imaging medicale come te i componenti chiave delle performance elevate e della reattività per supportare le operazioni del sistema di imaging medicale sensibili alla latenza. Creando più domini di errore in un singolo cluster, la tecnologia NetApp può anche isolare gli ambienti di produzione dagli ambienti non di produzione. Inoltre, garantendo che le performance del sistema non scenda al di sotto di un determinato livello per i carichi di lavoro con QoS minimo ONTAP, NetApp riduce i problemi di performance del sistema.
+
+L'architettura scale-out del software ONTAP può adattarsi in modo flessibile ai vari carichi di lavoro i/O. Per offrire il throughput necessario e la bassa latenza di cui le applicazioni cliniche hanno bisogno e per fornire un'architettura scalabile modulare, le configurazioni all-flash sono generalmente utilizzate nelle architetture ONTAP. I nodi AFF di NetApp possono essere combinati nello stesso cluster scale-out con nodi di storage ibridi (HDD e flash), adatti per l'archiviazione di set di dati di grandi dimensioni con throughput elevato. È possibile clonare, replicare ed eseguire il backup dell'ambiente del sistema di imaging medicale, dal costoso storage SSD allo storage HDD più economico su altri nodi. Con lo storage NetApp abilitato al cloud e un data fabric fornito da NetApp, puoi eseguire il backup su storage a oggetti on-premise o nel cloud.
+
+Per l'imaging medicale, ONTAP è stato validato dalla maggior parte dei sistemi di imaging medicale leader del settore. Ciò significa che è stato testato per offrire performance veloci e affidabili per l'imaging medicale. Inoltre, le seguenti funzionalità semplificano la gestione, aumentano la disponibilità e l'automazione e riducono la quantità totale di storage necessaria.
+
+* *Performance eccezionali.* la soluzione NetApp AFF condivide la stessa architettura di storage unificata, il software ONTAP, l'interfaccia di gestione, i servizi dati avanzati e il set di funzionalità avanzate delle altre famiglie di prodotti NetApp FAS. Questa innovativa combinazione di supporti all-flash e ONTAP offre una latenza costantemente bassa e IOPS elevati dello storage all-flash con il software ONTAP leader del settore.
+* *Efficienza dello storage.* è possibile ridurre i requisiti di capacità totale lavorare con il proprio SME NetApp per comprendere come questo ha applicato il proprio sistema di imaging medicale specifico.
+* *Cloning efficiente in termini di spazio.* con la funzionalità FlexClone, il sistema può creare cloni quasi istantaneamente per supportare il refresh dell'ambiente di backup e test. Questi cloni consumano storage aggiuntivo solo quando vengono apportate modifiche.
+* *Protezione integrata dei dati.* le funzionalità complete di protezione dei dati e disaster recovery ti aiutano a proteggere le tue risorse di dati critici e a fornire il disaster recovery.
+* *Operazioni senza interruzioni.* è possibile eseguire aggiornamenti e manutenzione senza interrompere la trasmissione dei dati.
+* *QoS.* la QoS dello storage ti aiuta a limitare i potenziali carichi di lavoro ingombrante. Cosa ancora più importante, la qualità del servizio crea una garanzia di performance minime che garantisce che le performance del sistema non scenderanno al di sotto di un determinato livello per i carichi di lavoro critici, come ad esempio l'ambiente di produzione di un sistema di imaging medicale. Inoltre, limitando i conflitti, NetApp QoS può anche ridurre i problemi legati alle performance.
+* *Data Fabric.* per accelerare la trasformazione digitale, il data fabric fornito da NetApp semplifica e integra la gestione dei dati in ambienti cloud e on-premise. Offre applicazioni e servizi di gestione dei dati coerenti e integrati per una visibilità e informazioni dei dati superiori, accesso e controllo dei dati, protezione e sicurezza dei dati. NetApp è integrato con grandi cloud pubblici, come AWS, Azure, Google Cloud e IBM Cloud, un'ampia scelta.
+
+
+
+
+=== Virtualizzazione host: VMware vSphere
+
+Le architetture FlexPod sono validate con VMware vSphere 6.x, la piattaforma di virtualizzazione leader del settore. VMware ESXi 6.x viene utilizzato per implementare ed eseguire le macchine virtuali. VCenter Server Appliance 6.x viene utilizzato per gestire host e macchine virtuali ESXi. Per formare un cluster VMware ESXi vengono utilizzati più host ESXi eseguiti su blade Cisco UCS B200 M5. Il cluster VMware ESXi raggruppa le risorse di calcolo, memoria e rete di tutti i nodi del cluster e fornisce una piattaforma resiliente per le macchine virtuali in esecuzione sul cluster. Le funzionalità del cluster VMware ESXi, l'alta disponibilità di vSphere e il DRS (Distributed Resource Scheduler) contribuiscono alla tolleranza del cluster vSphere per resistere agli errori e aiutano a distribuire le risorse tra gli host VMware ESXi.
+
+Il plug-in per lo storage NetApp e il plug-in Cisco UCS si integrano con VMware vCenter per consentire flussi di lavoro operativi per le risorse di calcolo e storage richieste.
+
+Il cluster VMware ESXi e vCenter Server offrono una piattaforma centralizzata per l'implementazione di ambienti di imaging medicale nelle macchine virtuali. La tua organizzazione sanitaria può realizzare con sicurezza tutti i vantaggi di un'infrastruttura virtuale leader del settore, come ad esempio:
+
+* *Implementazione semplice.* implementazione rapida e semplice di vCenter Server mediante un'appliance virtuale.
+* *Controllo e visibilità centralizzati.* amministrare l'intera infrastruttura vSphere da un'unica posizione.
+* *Ottimizzazione proattiva.* allocare, ottimizzare e migrare le risorse per la massima efficienza.
+* *Management.* utilizza potenti plug-in e tool per semplificare la gestione ed estendere il controllo.
+

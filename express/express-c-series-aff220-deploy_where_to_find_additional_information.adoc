@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_where_to_find_additional_information.html 
+keywords:  
+summary: Per ulteriori informazioni su questo documento, consultare il sito Web di NetApp e la guida alla progettazione di FlexPod con VMware vSphere 6.7 e NetApp AFF A220. 
+---
+= Dove trovare ulteriori informazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e/o siti Web:
+
+* Documentazione sui prodotti NetApp
++
+http://docs.netapp.com["http://docs.netapp.com"^]
+
+* Guida alla progettazione di FlexPod Express con VMware vSphere 6.7 e NetApp AFF A220
++
+https://www.netapp.com/us/media/nva-1125-design.pdf["https://www.netapp.com/us/media/nva-1125-design.pdf"^]
+
+

@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html 
+keywords: netapp, storage, cisco intersight, monitor, orchestrate, orchestration, storage inventory, storage widgets 
+summary: 'Una volta rivendicati i target, i widget di storage NetApp, l"inventario dello storage e le schede di virtualizzazione diventano disponibili se si dispone di una licenza Advantage Tier. Le schede di orchestrazione sono disponibili se si dispone di una licenza Tier Premier.' 
+---
+= Monitorare lo storage NetApp da Cisco Intersight
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Una volta rivendicati i target, i widget di storage NetApp, l'inventario dello storage e le schede di virtualizzazione diventano disponibili se si dispone di una licenza Advantage Tier. Le schede di orchestrazione sono disponibili se si dispone di una licenza Tier Premier.
+
+
+
+== Panoramica dell'inventario dello storage
+
+La seguente schermata visualizza la schermata *Operate > Storage* (funzionamento > archiviazione).
+
+image:ci-qsg_image9.png["Viene visualizzata la schermata Operate > Storage (funzionamento > archiviazione)"]
+
+La seguente schermata mostra la panoramica del cluster di storage.
+
+
+NOTE: Le seguenti informazioni di riepilogo delle metriche di performance verranno visualizzate solo se lo storage array viene monitorato tramite NetApp Active IQ Unified Manager 9.9 o versione successiva.
+
+image:ci-qsg_image10.png["la schermata mostra la panoramica del cluster di storage"]
+
+
+
+== Widget per lo storage
+
+Per visualizzare i widget di storage, selezionare *Monitoring > Dashboards > View NetApp storage widgets* (monitoraggio > Dashboard > Visualizza widget di storage NetApp).
+
+* La seguente schermata mostra il widget Storage Version Summary (Riepilogo versione storage).
+
+
+image:ci-qsg_image11.jpg["La schermata mostra il widget Storage Version Summary (Riepilogo versione storage)"]
+
+* Questa schermata mostra il widget Top 5 Storage Array by Capacity Utilization.
+
+
+image:ci-qsg_image12.png["La schermata mostra il widget Top 5 Storage Array by Capacity Utilization (primi 5 array di storage per utilizzo della capacità)"]
+
+* Questa schermata mostra il widget Top 5 Storage Volumes by Capacity Utilization.
+
+
+image:ci-qsg_image13.png["La schermata mostra il widget Top 5 Storage Volumes by Capacity Utilization"]

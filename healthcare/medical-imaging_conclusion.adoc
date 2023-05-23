@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_conclusion.html 
+keywords: medical, imaging, flexpod, healthcare, organization, productivity, conclusion 
+summary: Eseguendo un ambiente di imaging medico su FlexPod, la tua organizzazione sanitaria può aspettarsi un miglioramento della produttività del personale e una riduzione delle spese di capitale e operative. 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Eseguendo un ambiente di imaging medico su FlexPod, la tua organizzazione sanitaria può aspettarsi un miglioramento della produttività del personale e una riduzione delle spese di capitale e operative. FlexPod offre un'infrastruttura convergente pre-validata e rigorosamente testata grazie alla partnership strategica di Cisco e NetApp. È progettato e progettato specificamente per offrire performance di sistema prevedibili a bassa latenza e alta disponibilità. Questo approccio offre un'esperienza utente superiore e tempi di risposta ottimali per gli utenti del sistema di imaging medicale.
+
+Diversi componenti di un sistema di imaging medicale richiedono lo storage dei dati nei file system SMB/CIFS, NFS, Ext4 e NTFS. Pertanto, l'infrastruttura deve fornire l'accesso ai dati tramite protocolli NFS, SMB/CIFS e SAN. I sistemi di storage NetApp supportano questi protocolli da un singolo array di storage.
+
+Disponibilità elevata, efficienza dello storage, backup rapidi pianificati basati su copie Snapshot, operazioni di ripristino rapido, replica dei dati per il disaster recovery e funzionalità dell'infrastruttura di storage FlexPod offrono un sistema di storage e gestione dei dati leader del settore.

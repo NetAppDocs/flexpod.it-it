@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_program_summary.html 
+keywords:  
+summary:  
+---
+= Riepilogo del programma
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+

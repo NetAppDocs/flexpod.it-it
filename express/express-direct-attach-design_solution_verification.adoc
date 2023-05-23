@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_solution_verification.html 
+keywords: verification, redundancy, availability 
+summary: 'In linea con i principi fondamentali del programma FlexPod, l"architettura FlexPod Express è stata testata a fondo dagli architetti e dagli ingegneri dei data center Cisco e NetApp. Dalla ridondanza e disponibilità a ogni singola funzionalità, l"intera architettura FlexPod Express viene validata per infondere fiducia nei nostri clienti e per creare fiducia nel processo di progettazione.' 
+---
+= Verifica della soluzione
+:allow-uri-read: 
+
+
+[role="lead"]
+Cisco e NetApp hanno progettato e costruito FlexPod Express per fungere da piattaforma infrastrutturale di prim'ordine per i propri clienti. Poiché è stato progettato utilizzando componenti leader del settore, i clienti possono affidarsi a FlexPod Express come base dell'infrastruttura. In linea con i principi fondamentali del programma FlexPod, l'architettura FlexPod Express è stata testata a fondo dagli architetti e dagli ingegneri dei data center Cisco e NetApp. Dalla ridondanza e disponibilità a ogni singola funzionalità, l'intera architettura FlexPod Express viene validata per infondere fiducia nei nostri clienti e per creare fiducia nel processo di progettazione.
+
+L'hypervisor VMware vSphere 6.7U1 è stato verificato sui componenti dell'infrastruttura FlexPod Express. Questa convalida includeva la connessione ISCSI Direct Connect SAN Boot e gli archivi dati NFS Direct Connect che utilizzavano l'opzione di connettività 10GbE.
+
+link:express-direct-attach-design_conclusion.html["Prossimo: Conclusione."]

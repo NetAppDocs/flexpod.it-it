@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-conclusion.html 
+keywords: conclusion 
+summary: La creazione di un cloud ibrido è un obiettivo per la maggior parte delle organizzazioni sanitarie di fornire la disponibilità dei dati in qualsiasi momento. In questa soluzione, abbiamo implementato una soluzione di cloud ibrido FlexPod con Cloud Volumes ONTAP, utilizzando la tecnologia di replica SnapMirror di NetApp per convalidare alcuni casi di utilizzo per il backup e il ripristino di applicazioni e carichi di lavoro nel settore sanitario. 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-solution-validation.html["Precedente: Convalida della soluzione."]
+
+[role="lead"]
+La creazione di un cloud ibrido è un obiettivo per la maggior parte delle organizzazioni sanitarie di fornire la disponibilità dei dati in qualsiasi momento. In questa soluzione, abbiamo implementato una soluzione di cloud ibrido FlexPod con Cloud Volumes ONTAP, utilizzando la tecnologia di replica SnapMirror di NetApp per convalidare alcuni casi di utilizzo per il backup e il ripristino di applicazioni e carichi di lavoro nel settore sanitario.
+
+FlexPod, un'infrastruttura convergente rigorosamente testata e prevalidata dalla partnership strategica di Cisco e NetApp, è progettata per offrire performance di sistema prevedibili a bassa latenza e alta disponibilità. Questo approccio offre elevati livelli di comfort EHR e, in ultima analisi, il miglior tempo di risposta per gli utenti del sistema EHR.
+
+Con NetApp, puoi eseguire la produzione EHR, il disaster recovery, il backup o il tiering nel cloud proprio come faresti con le funzionalità di storage NetApp in un data center on-premise. Con NetApp Cloud Volumes ONTAP, NetApp offre le funzionalità di livello Enterprise e le performance necessarie per eseguire in modo efficace i servizi EHR nel cloud. Le opzioni cloud di NetApp offrono Block-over-iSCSI e file-over-NFS o SMB.
+
+Questa soluzione soddisfa le esigenze delle organizzazioni sanitarie e consente loro di fare un passo verso la loro trasformazione digitale. Può anche aiutarli a gestire le applicazioni e i carichi di lavoro in modo efficiente.
+
+link:fhc-cvoe-where-to-find-additional-information.html["Avanti: Dove trovare ulteriori informazioni."]

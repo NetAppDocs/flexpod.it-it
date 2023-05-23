@@ -1,0 +1,203 @@
+---
+sidebar: sidebar 
+permalink: healthcare/flexpod-genomics-appendix-d-gpu-setup.html 
+keywords: gpu, setup, cvd, nvidia, tesla 
+summary: 'Al momento della pubblicazione, il tool GATK non supporta in modo nativo l"esecuzione on-premise basata su GPU. La seguente configurazione e guida consentono ai lettori di comprendere quanto sia semplice utilizzare FlexPod con una GPU NVIDIA Tesla P6 montata sul retro utilizzando una scheda mezzanine PCIe per GATK.' 
+---
+= Configurazione della GPU
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-genomics-appendix-c.html["Precedente: Output per l'esecuzione di GATK utilizzando il motore Cromwell."]
+
+[role="lead"]
+Al momento della pubblicazione, il tool GATK non supporta in modo nativo l'esecuzione on-premise basata su GPU. La seguente configurazione e guida consentono ai lettori di comprendere quanto sia semplice utilizzare FlexPod con una GPU NVIDIA Tesla P6 montata sul retro utilizzando una scheda mezzanine PCIe per GATK.
+
+Abbiamo utilizzato il seguente progetto validato da Cisco (CVD) come architettura di riferimento e guida alle Best practice per configurare l'ambiente FlexPod in modo da poter eseguire applicazioni che utilizzano GPU.
+
+* https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.pdf["Data center FlexPod per ai/ML con Cisco UCS 480 ML per l'apprendimento approfondito"^]
+
+
+Ecco una serie di punti chiave durante questa configurazione:
+
+. Abbiamo utilizzato una GPU NVIDIA Tesla P6 PCIe in uno slot mezzanino nei server UCS B200 M5.
++
+image:flexpod-genomics-image18.png["Errore: Immagine grafica mancante"]
+
++
+image:flexpod-genomics-image19.png["Errore: Immagine grafica mancante"]
+
+. Per questa configurazione, ci siamo registrati sul portale partner NVIDIA e abbiamo ottenuto una licenza di valutazione (nota anche come diritto) per poter utilizzare le GPU in modalità di calcolo.
+. Il software NVIDIA vGPU richiesto è stato scaricato dal sito Web del partner NVIDIA.
+. Abbiamo scaricato i diritti `*.bin` Dal sito web del partner NVIDIA.
+. Abbiamo installato un server di licenza NVIDIA vGPU e aggiunto le autorizzazioni al server di licenza utilizzando `*.bin` File scaricato dal sito del partner NVIDIA.
+. Assicurarsi di scegliere la versione software NVIDIA vGPU corretta per l'implementazione sul portale dei partner NVIDIA. Per questa configurazione è stata utilizzata la versione del driver 460.73.02.
+. Questo comando installa https://docs.omniverse.nvidia.com/prod_deployment/prod_deployment/installing-vgpu-manager.html["NVIDIA vGPU Manager"^] In ESXi.
++
+....
+[root@localhost:~] esxcli software vib install -v /vmfs/volumes/infra_datastore_nfs/nvidia/vib/NVIDIA_bootbank_NVIDIA-VMware_ESXi_7.0_Host_Driver_460.73.02-1OEM.700.0.0.15525992.vib
+Installation Result
+Message: Operation finished successfully.
+Reboot Required: false
+VIBs Installed: NVIDIA_bootbank_NVIDIA-VMware_ESXi_7.0_Host_Driver_460.73.02-1OEM.700.0.0.15525992
+VIBs Removed:
+VIBs Skipped:
+....
+. Dopo aver riavviato il server ESXi, eseguire il seguente comando per convalidare l'installazione e controllare lo stato delle GPU.
++
+....
+[root@localhost:~] nvidia-smi
+Wed Aug 18 21:37:19 2021
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.73.02    Driver Version: 460.73.02    CUDA Version: N/A      |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  Tesla P6            On   | 00000000:D8:00.0 Off |                    0 |
+| N/A   35C    P8     9W /  90W |  15208MiB / 15359MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A   2812553    C+G   RHEL01                          15168MiB |
++-----------------------------------------------------------------------------+
+[root@localhost:~]
+....
+. Utilizzando vCenter, https://blogs.vmware.com/apps/2018/09/using-gpus-with-virtual-machines-on-vsphere-part-2-vmdirectpath-i-o.html["configurare"^] L'impostazione del dispositivo grafico è "Shared Direct".
++
+image:flexpod-genomics-image20.png["Errore: Immagine grafica mancante"]
+
++
+image:flexpod-genomics-image21.png["Errore: Immagine grafica mancante"]
+
+. Assicurarsi che l'avvio sicuro sia disattivato per la macchina virtuale RedHat.
+. Assicurarsi che il firmware VM Boot Options sia impostato su EFI ( https://docs.vmware.com/en/VMware-vSphere-Bitfusion/3.0/Install-Guide/GUID-2005A8C6-4FDC-46DF-BB6B-989F6E91F3E2.html["rif"^]).
++
+image:flexpod-genomics-image22.png["Errore: Immagine grafica mancante"]
+
+. Assicurarsi che i SEGUENTI PARAMETRI siano aggiunti alla configurazione avanzata di modifica delle opzioni della macchina virtuale. Il valore di `pciPassthru.64bitMMIOSizeGB` Il parametro dipende dalla memoria della GPU e dal numero di GPU assegnate alla VM. Ad esempio:
++
+.. Se a una macchina virtuale sono assegnate 4 GPU V100 da 32 GB, questo valore deve essere 128.
+.. Se a una macchina virtuale sono assegnate 4 GPU P6 da 16 GB, questo valore deve essere 64.
++
+image:flexpod-genomics-image23.png["Errore: Immagine grafica mancante"]
+
++
+image:flexpod-genomics-image24.png["Errore: Immagine grafica mancante"]
+
+
+
+. Quando si aggiungono vGPU come nuovo dispositivo PCI alla macchina virtuale in vCenter, assicurarsi di selezionare NVIDIA GRID vGPU come tipo di dispositivo PCI.
+. Scegliere il profilo GPU corretto che si adatta alla GPU utilizzata, alla memoria GPU e allo scopo di utilizzo: Ad esempio, grafica o calcolo.
++
+image:flexpod-genomics-image25.png["Errore: Immagine grafica mancante"]
+
+. Su RedHat Linux VM, i driver NVIDIA possono essere installati eseguendo il seguente comando:
++
+....
+[root@genomics1 genomics]#sh NVIDIA-Linux-x86_64-460.73.01-grid.run
+....
+. Verificare che venga segnalato il profilo vGPU corretto eseguendo il seguente comando:
++
+....
+[root@genomics1 genomics]# nvidia-smi –query-gpu=gpu_name –format=csv,noheader –id=0 | sed -e ‘s/ /-/g’
+GRID-P6-16C
+[root@genomics1 genomics]#
+....
+. Dopo il riavvio, verificare che la scheda NVIDIA vGPU corretta sia riportata insieme alle versioni dei driver.
++
+....
+[root@genomics1 genomics]# nvidia-smi
+Wed Aug 18 20:30:56 2021
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.73.01    Driver Version: 460.73.01    CUDA Version: 11.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GRID P6-16C         On   | 00000000:02:02.0 Off |                  N/A |
+| N/A   N/A    P8    N/A /  N/A |   2205MiB / 16384MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------+----------------------+----------------------+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      8604      G   /usr/libexec/Xorg                  13MiB |
++-----------------------------------------------------------------------------+
+[root@genomics1 genomics]#
+....
+. Assicurarsi che l'IP del server di licenza sia configurato sulla macchina virtuale nel file di configurazione della griglia vGPU.
++
+.. Copiare il modello.
++
+....
+[root@genomics1 genomics]# cp /etc/nvidia/gridd.conf.template /etc/nvidia/gridd.conf
+....
+.. Modificare il file `/etc/nvidia/rid.conf`, Aggiungere l'indirizzo IP del server di licenza e impostare il tipo di funzione su 1.
++
+....
+ ServerAddress=192.168.169.10
+....
++
+....
+ FeatureType=1
+....
+
+
+. Dopo aver riavviato la macchina virtuale, nel server di licenza viene visualizzata una voce sotto Licensed Clients (Client concessi in licenza), come mostrato di seguito.
++
+image:flexpod-genomics-image26.png["Errore: Immagine grafica mancante"]
+
+. Per ulteriori informazioni sul download del software GATK e Cromwell, consultare la sezione Solutions Setup.
+. Dopo che GATK può utilizzare le GPU on-premise, il linguaggio di descrizione del workflow `*. wdl` ha gli attributi di runtime come mostrato di seguito.
++
+....
+task ValidateBAM {
+  input {
+    # Command parameters
+    File input_bam
+    String output_basename
+    String? validation_mode
+    String gatk_path
+    # Runtime parameters
+    String docker
+    Int machine_mem_gb = 4
+    Int addtional_disk_space_gb = 50
+  }
+  Int disk_size = ceil(size(input_bam, "GB")) + addtional_disk_space_gb
+  String output_name = "${output_basename}_${validation_mode}.txt"
+  command {
+    ${gatk_path} \
+      ValidateSamFile \
+      --INPUT ${input_bam} \
+      --OUTPUT ${output_name} \
+      --MODE ${default="SUMMARY" validation_mode}
+  }
+  runtime {
+    gpuCount: 1
+    gpuType: "nvidia-tesla-p6"
+    docker: docker
+    memory: machine_mem_gb + " GB"
+    disks: "local-disk " + disk_size + " HDD"
+  }
+  output {
+    File validation_report = "${output_name}"
+  }
+}
+....
+
+
+link:flexpod-genomics-conclusion.html["Prossimo: Conclusione."]

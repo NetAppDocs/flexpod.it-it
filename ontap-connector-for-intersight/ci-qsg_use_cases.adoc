@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_use_cases.html 
+keywords: netapp, ontap, cisco, intersight, storage, use cases, monitor, monitoring, orchestration, reference workflows, custom workflows, storage inventory, widgets 
+summary: 'Questi sono alcuni esempi di casi di utilizzo per il monitoraggio e l"orchestrazione dello storage NetApp da Cisco Intersight.' 
+---
+= Casi di utilizzo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Questi sono alcuni esempi di casi di utilizzo per il monitoraggio e l'orchestrazione dello storage NetApp da Cisco Intersight.
+
+
+
+== Caso d'utilizzo 1: Monitoraggio dell'inventario e dei widget dello storage NetApp
+
+Quando l'ambiente di storage NetApp è disponibile in Cisco Intersight, è possibile monitorare in dettaglio gli oggetti di storage NetApp dall'inventario dello storage e ottenere una panoramica dai widget di storage.
+
+. Implementazione di Intersight Assist OVA (task OnPrem in vCenter Environment).
+. Aggiungere i dispositivi NetApp AIQ UM in Intersight Assist.
+. Vai a *Storage* e naviga attraverso l'inventario dello storage NetApp.
+. Aggiungi *Widgets* per lo storage NetApp al tuo *Monitor Dashboard*.
++
+Ecco un https://tv.netapp.com/detail/video/6228096841001["collegamento"^] Al video che mostra le funzionalità di monitoraggio dello storage NetApp ONTAP di Cisco Intersight.
+
+
+
+
+
+== Caso d'utilizzo 2: Orchestrazione dello storage NetApp con flussi di lavoro di riferimento
+
+Quando gli ambienti di storage e vCenter NetApp sono disponibili in Cisco Intersight, è possibile eseguire workflow di riferimento end-to-end, già pronti all'uso, che includono attività di storage e virtualizzazione.
+
+. Implementazione di Intersight Assist OVA (task OnPrem in vCenter Environment).
+. Aggiungere i dispositivi NetApp AIQ UM in Intersight Assist.
+. Aggiungere il target vCenter a Intersight tramite Intersight Assist.
+. Esegui flussi di lavoro di riferimento già pronti all'uso.
++
+Ecco un elenco dei flussi di lavoro di riferimento:
+
++
+** Nuovo datastore NAS
+** Nuova policy di esportazione dello storage
+** Nuovo host storage
+** Nuova interfaccia storage
+** Nuova macchina virtuale per lo storage
+** Nuova macchina virtuale
+** Nuovo datastore VMFS
+** Rimuovere NAS Datastore
+** Rimuovi policy di esportazione dello storage
+** Rimuovere l'host di storage
+** Rimuovere l'archivio dati VMFS
+** Aggiornare il datastore NAS
+** Aggiornare l'host di storage
+** Aggiorna datastore VMFS
+
+
+
+
+
+
+== Caso d'utilizzo 3: Flussi di lavoro personalizzati utilizzando un modulo senza designer
+
+Quando gli ambienti NetApp Storage e vCenter sono disponibili in Cisco Intersight, è possibile creare flussi di lavoro personalizzati utilizzando le attività di storage e virtualizzazione di NetApp.
+
+. Implementazione di Intersight Assist OVA (task OnPrem in ambiente vCenter)
+. Aggiungere i dispositivi NetApp AIQ UM in Intersight Assist.
+. Aggiungere il target vCenter a Intersight tramite Intersight Assist.
+. Accedere alla scheda *orchestrazione* in Intersight.
+. Selezionare *Crea flusso di lavoro*.
+. Aggiungi attività di storage e virtualizzazione ai tuoi flussi di lavoro.
++
+Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:
+
++
+** Aggiungi policy di esportazione dello storage al volume
+** Collegare gli iniziatori a Storage host
+** Disconnettere Storage Export Policy dal volume
+** Modifica aggregati per Storage Virtual Machine
+** Modifica la regola dei criteri di esportazione dello storage
+** Modifica policy Snapshot storage
+** Modifica la pianificazione della policy Snapshot dello storage
+** Espandere il LUN dello storage
+** Espandere Storage Volume (Volume di storage)
+** Trova NetApp igroup LUN Map
+** Trova LUN storage per ID
+** Trova volume di storage per ID
+** Nuova policy di esportazione dello storage
+** Nuova regola dei criteri di esportazione dello storage
+** Nuova interfaccia Fibre Channel per lo storage NetApp
+** Nuovo host storage
+** Nuova interfaccia IP dello storage
+** Nuovo LUN dello storage
+** Nuovo ID LUN storage
+** Nuovo NetApp Storage NAS Smart Volume
+** Nuovo NetApp Storage Smart LUN
+** Nuova policy Snapshot dello storage
+** Nuova pianificazione della policy Snapshot dello storage
+** Nuova macchina virtuale per lo storage
+** Nuovo volume di storage
+** Nuova snapshot del volume di storage
+** Rimuovere la policy di esportazione dello storage
+** Rimuovere la regola dei criteri di esportazione dello storage
+** Rimuovere l'interfaccia FC dello storage
+** Rimuovere l'host di storage
+** Rimuovere l'interfaccia IP dello storage
+** Rimuovere il LUN dello storage
+** Rimuovere l'ID LUN dello storage
+** Rimuovere NetApp Storage Smart LUN
+** Rimuovere Storage Snapshot Policy
+** Rimuovere la pianificazione della policy Snapshot dello storage
+** Rimuovere Storage Virtual Machine
+** Rimuovere il volume di storage
+** Rimuovere Storage Volume Snapshot
+** Rinominare Storage Volume Snapshot
++
+
+NOTE: Le attività del nuovo volume smart NAS e del nuovo LUN smart storage funzionano solo con ONTAP 9.8 e versioni successive. ONTAP 9.7P1 è attualmente la versione minima supportata.
+
+
+
+
+
+Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video https://tv.netapp.com/detail/video/6228095945001["Orchestrazione dello storage NetApp ONTAP in Cisco Intersight"^].

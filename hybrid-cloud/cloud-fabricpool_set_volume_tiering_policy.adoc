@@ -1,0 +1,69 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html 
+keywords: volume, tiering, policy, ontap, cli, oncommand, system, manager, cloud, fabricpool 
+summary:  
+---
+= Impostare la policy di tiering dei volumi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Per impostazione predefinita, i volumi utilizzano il criterio None volume Tiering. Dopo la creazione del volume, è possibile modificare il criterio di tiering del volume utilizzando Gestione di sistema di OnCommand o l'interfaccia utente di ONTAP.
+
+Se utilizzato con FlexPod, FabricPool offre tre criteri di tiering dei volumi, automatico, solo snapshot e Nessuno.
+
+* *Auto*
++
+** Tutti i cold block nel volume vengono spostati nel Tier cloud. Supponendo che l'aggregato sia utilizzato oltre il 50%, occorrono circa 31 giorni affinché i blocchi inattivi diventino freddi. Il periodo di raffreddamento automatico può essere regolato tra 2 giorni e 63 giorni utilizzando `tiering-minimum-cooling-days` impostazione.
+** Quando i cold block in un volume con una policy di tiering impostata su Auto vengono letti in modo casuale, vengono resi hot e scritti nel Tier di performance.
+** Quando i blocchi freddi in un volume con una policy di tiering impostata su Auto vengono letti in sequenza, rimangono freddi e rimangono sul livello cloud. Non sono scritti nel Tier di performance.
+
+
+* *Solo Snapshot*
++
+** I blocchi Cold Snapshot nel volume non condivisi con il file system attivo vengono spostati nel Tier cloud. Supponendo che l'aggregato sia utilizzato oltre il 50%, sono necessari circa 2 giorni affinché i blocchi snapshot inattivi diventino freddi. Il periodo di raffreddamento solo Snapshot può essere regolato da 2 a 63 giorni utilizzando `tiering-minimum-cooling-days` impostazione.
+** Quando i blocchi a freddo in un volume con una policy di tiering impostata su Snapshot-only vengono letti, vengono resi a caldo e scritti nel Tier di performance.
+
+
+* *Nessuno (impostazione predefinita)*
++
+** I volumi impostati per l'utilizzo di None come policy di tiering non suddividono i dati cold nel Tier cloud.
+** L'impostazione del criterio di tiering su None impedisce il nuovo tiering.
+** I dati del volume precedentemente spostati nel Tier cloud rimangono nel Tier cloud fino a quando non diventano caldi e vengono automaticamente spostati di nuovo nel Tier di performance.
+
+
+
+
+
+
+== Gestore di sistema di OnCommand
+
+Per modificare la policy di tiering di un volume utilizzando Gestione di sistema di OnCommand, attenersi alla seguente procedura:
+
+. Avviare Gestore di sistema di OnCommand.
+. Selezionare un volume.
+. Fare clic su altre azioni e selezionare Cambia policy di tiering.
+. Selezionare il criterio di tiering da applicare al volume.
+. Fare clic su Salva.
++
+image:cloud-fabricpool_image16.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== CLI ONTAP
+
+Per modificare il criterio di tiering di un volume utilizzando l'interfaccia utente di ONTAP, eseguire il seguente comando:
+
+....
+volume modify -vserver <svm_name> -volume <volume_name>
+-tiering-policy <auto|snapshot-only|all|none>
+....
+link:cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html["Successivo: Impostare i giorni minimi di raffreddamento per il tiering del volume."]

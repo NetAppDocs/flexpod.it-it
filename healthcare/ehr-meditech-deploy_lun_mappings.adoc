@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_mappings.html 
+keywords: lun, mappings, meditech, host 
+summary: Le mappature LUN per gli host MEDITECH vengono stabilite al momento della creazione dei LUN. 
+---
+= Mappature LUN
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Le mappature LUN per gli host MEDITECH vengono stabilite al momento della creazione dei LUN.

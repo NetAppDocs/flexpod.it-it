@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_technology_requirements.html 
+keywords: technology, requirements, flexpod, express, hardware, software, hypervisor, nodes 
+summary: Un sistema FlexPod richiede una combinazione di componenti hardware e software. FlexPod Express descrive inoltre i componenti hardware necessari per aggiungere nodi hypervisor al sistema in unità di due. 
+---
+= Requisiti tecnologici
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Un sistema FlexPod richiede una combinazione di componenti hardware e software. FlexPod Express descrive inoltre i componenti hardware necessari per aggiungere nodi hypervisor al sistema in unità di due.
+
+
+
+== Requisiti hardware
+
+Indipendentemente dall'hypervisor scelto, tutte le configurazioni FlexPod utilizzano lo stesso hardware. Pertanto, anche se i requisiti di business cambiano, entrambi gli hypervisor possono essere eseguiti sullo stesso hardware FlexPod Express.
+
+La seguente tabella elenca i componenti hardware necessari per tutte le configurazioni FlexPod Express.
+
+|===
+| Hardware | Quantità 
+
+
+| Coppia AFF A220 ha | 1 
+
+
+| Server Cisco UCS B200 M5 | 2 
+
+
+| Switch Cisco Nexus 31108PCV | 2 
+
+
+| Cisco UCS Virtual Interface Card (VIC) 1440 per il server Cisco UCS B200 M5 | 2 
+
+
+| Cisco UCS Mini con due interconnessioni fabric UCS-Fi-M-6324 integrate | 1 
+|===
+
+
+== Requisiti software
+
+La seguente tabella elenca i componenti software necessari per implementare le architetture delle soluzioni FlexPod Express.
+
+|===
+| Software | Versione | Dettagli 
+
+
+| Cisco UCS Manager | 4.0(1b) | Per Cisco UCS Fabric Interconnect Fi-6324UP 
+
+
+| Software Cisco Blade | 4.0(1b) | Per server Cisco UCS B200 M5 
+
+
+| Driver Cisco Nenic | 1.0.25.0 | Per schede di interfaccia Cisco VIC 1440 
+
+
+| Sistema operativo Cisco NX | 7.0(3)I6(1) | Per switch Cisco Nexus 31108PCV 
+
+
+| NetApp ONTAP | 9.5 | Per controller AFF A220 
+|===
+La seguente tabella elenca il software necessario per tutte le implementazioni di VMware vSphere su FlexPod Express.
+
+|===
+| Software | Versione 
+
+
+| Appliance server VMware vCenter | 6.7U1 
+
+
+| Hypervisor VMware vSphere ESXi | 6.7U1 
+|===

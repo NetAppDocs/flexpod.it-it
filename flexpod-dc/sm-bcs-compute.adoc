@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-compute.html 
+keywords: compute, connectivity, service profiles, san boot 
+summary: 'La configurazione di calcolo per la soluzione FlexPod SM-BC segue le Best practice tipiche delle soluzioni FlexPod. Nelle sezioni seguenti vengono illustrate alcune delle configurazioni e della connettività utilizzate per la convalida. Vengono inoltre evidenziate alcune considerazioni relative a SM-BC per fornire riferimenti e indicazioni per l"implementazione.' 
+---
+= Convalida della soluzione - calcolo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-solution-validation_overview.html["Preivous: Convalida della soluzione - Panoramica."]
+
+[role="lead"]
+La configurazione di calcolo per la soluzione FlexPod SM-BC segue le Best practice tipiche delle soluzioni FlexPod. Nelle sezioni seguenti vengono illustrate alcune delle configurazioni e della connettività utilizzate per la convalida. Vengono inoltre evidenziate alcune considerazioni relative a SM-BC per fornire riferimenti e indicazioni per l'implementazione.
+
+
+
+== Connettività
+
+La connettività tra i server blade UCS B200 e gli IOM viene fornita dalla scheda VIC UCS attraverso le connessioni del backplane dello chassis UCS 5108. Gli UCS 2204XP Fabric Extender utilizzati per la convalida dispongono di sedici porte 10G ciascuna per connettersi agli otto server blade half-width, ad esempio due per ciascun server. Per aumentare la larghezza di banda della connettività del server, è possibile aggiungere un VIC aggiuntivo basato su mezzanino per collegare il server all'IOM UCS 2408 alternativo, che fornisce quattro connessioni 10G a ciascun server.
+
+image:sm-bcs-image17.png["Errore: Immagine grafica mancante"]
+
+La connettività tra lo chassis UCS 5108 e gli UCS 6454 IF utilizzati per la convalida è fornita da IOM 2204XP che utilizza quattro connessioni 10G. Le porte Fi da 1 a 4 sono configurate come porte server per queste connessioni. Le porte Fi da 25 a 28 sono configurate come porte di uplink di rete verso lo switch Nexus A e B nel sito locale. La figura e la tabella riportate di seguito forniscono lo schema di connettività e i dettagli di connessione delle porte per i Fi UCS 6454 da collegare allo chassis UCS 5108 e agli switch Nexus.
+
+image:sm-bcs-image18.png["Errore: Immagine grafica mancante"]
+
+|===
+| Dispositivo locale | Porta locale | Dispositivo remoto | Porta remota 
+
+
+| UCS 6454 FI A | 1 | IOM A. | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus A. | 1/13/1 
+
+
+|  | 26 |  | 1/13/2 
+
+
+|  | 27 | Nexus B | 1/13/3 
+
+
+|  | 28 |  | 1/13/4 
+
+
+|  | L1 | UCS 6454 FI B | L1 
+
+
+|  | L2 |  | L2 
+
+
+| UCS 6454 FI B | 1 | IOM B | 1 
+
+
+|  | 2 |  | 2 
+
+
+|  | 3 |  | 3 
+
+
+|  | 4 |  | 4 
+
+
+|  | 25 | Nexus A. | 1/13/3 
+
+
+|  | 26 |  | 1/13/4 
+
+
+|  | 27 | Nexus B | 1/13/1 
+
+
+|  | 28 |  | 1/13/2 
+
+
+|  | L1 | UCS 6454 FI A | L1 
+
+
+|  | L2 |  | L2 
+|===
+
+NOTE: Le connessioni descritte in precedenza sono simili per entrambi i siti A e B, nonostante il sito A utilizzi switch Nexus 9336C-FX2e il sito B con switch Nexus 3232C. I cavi breakout DA 40 G a 4 x 10 G sono utilizzati per le connessioni Nexus-Fi. Le connessioni Fi a Nexus utilizzano il canale di porta e i canali di porta virtuale sono configurati sugli switch Nexus per aggregare le connessioni a ciascun Fi.
+
+
+NOTE: Quando si utilizza una diversa combinazione di componenti IOM, Fi e switch Nexus, assicurarsi di utilizzare i cavi e la velocità della porta appropriati per la combinazione di ambienti.
+
+
+NOTE: È possibile ottenere un'ulteriore larghezza di banda utilizzando componenti che supportano connessioni a velocità superiore o più connessioni. È possibile ottenere una ridondanza aggiuntiva aggiungendo connessioni aggiuntive con componenti che li supportano.
+
+
+
+== Profili di servizio
+
+Uno chassis per server blade con interconnessioni fabric gestite da UCS Manager (UCSM) o Cisco Intersight può astrarre i server utilizzando i profili di servizio disponibili in UCSM e i profili server in Intersight. Questa convalida utilizza UCSM e profili di servizio per semplificare la gestione del server. Con i profili di servizio, è possibile sostituire o aggiornare un server semplicemente associando il profilo di servizio originale al nuovo hardware.
+
+I profili di servizio creati supportano i seguenti elementi per gli host VMware ESXi:
+
+* Eseguire l'avvio SAN dallo storage AFF A250 in entrambi i siti utilizzando il protocollo iSCSI.
+* Vengono create sei vNIC per i server in cui:
++
+** Due vNIC ridondanti (vSwitch0-A e vSwitch0-B) trasportano traffico di gestione in banda. Facoltativamente, questi vNIC possono essere utilizzati anche dai dati del protocollo NFS non protetti da SM-BC.
+** Lo switch distribuito vSphere utilizza due vNIC ridondanti (VDS-A e VDS-B) per trasportare il traffico VMware vMotion e altre applicazioni.
+** ISCSI-A vNIC utilizzato da iSCSI-A vSwitch per fornire l'accesso al percorso iSCSI-A.
+** VNIC iSCSI-B utilizzata da iSCSI-B vSwitch per fornire l'accesso al percorso iSCSI-B.
+
+
+
+
+
+
+== Boot SAN
+
+Per la configurazione di boot SAN iSCSI, i parametri di boot iSCSI sono impostati in modo da consentire l'avvio iSCSI da entrambi i fabric iSCSI. Per adattarsi allo scenario di failover SM-BC in cui un LUN di avvio SAN iSCSI viene servito dal cluster secondario quando il cluster primario non è disponibile, la configurazione di destinazione statica iSCSI deve includere destinazioni sia dal sito A che dal sito B. Inoltre, per massimizzare la disponibilità del LUN di avvio, configurare le impostazioni dei parametri di avvio iSCSI per l'avvio da tutti i controller di storage.
+
+La destinazione statica iSCSI può essere configurata nella policy di avvio dei modelli di profilo del servizio nella finestra di dialogo Set iSCSI Boot Parameter (Imposta parametro di avvio iSCSI), come mostrato nella figura seguente. La configurazione consigliata per l'impostazione dei parametri di avvio iSCSI è illustrata nella tabella seguente, che implementa la strategia di avvio descritta in precedenza per ottenere una disponibilità elevata.
+
+image:sm-bcs-image19.png["Errore: Immagine grafica mancante"]
+
+|===
+| Fabric iSCSI | Priorità | Destinazione iSCSI | LIF iSCSI 
+
+
+| ISCSI A. | 1 | Sito Di destinazione iSCSI | Site A Controller 1 iSCSI A LIF 
+
+
+|  | 2 | Destinazione iSCSI del sito B. | Site B Controller 2 iSCSI A LIF 
+
+
+| ISCSI B | 1 | Destinazione iSCSI del sito B. | LIF iSCSI B controller 1 sito B 
+
+
+|  | 2 | Sito Di destinazione iSCSI | LIF B iSCSI controller 2 sito A 
+|===
+link:sm-bcs-network.html["Pagina successiva: Convalida della soluzione - rete."]

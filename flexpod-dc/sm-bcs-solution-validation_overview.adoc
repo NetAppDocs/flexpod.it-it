@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-solution-validation_overview.html 
+keywords: validation topology, hardware, software, compute, connectivity, service, profiles, san boot, Port channel, virtual port channel 
+summary: 'I dettagli di progettazione e implementazione della soluzione FlexPod SM-BC dipendono dalla configurazione specifica della situazione FlexPod e dagli obiettivi della soluzione. Una volta definiti i requisiti generali di business continuity, è possibile creare la soluzione FlexPod SM-BC implementando una soluzione completamente nuova con due nuovi sistemi FlexPod, aggiungendo un nuovo FlexPod in un altro sito per l"associazione con un FlexPod esistente o associando due sistemi FlexPod esistenti.' 
+---
+= Convalida della soluzione - Panoramica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-flexpod-sm-bc-solution.html["Precedente: Soluzione FlexPod SM-BC."]
+
+[role="lead"]
+I dettagli di progettazione e implementazione della soluzione FlexPod SM-BC dipendono dalla configurazione specifica della situazione FlexPod e dagli obiettivi della soluzione. Una volta definiti i requisiti generali di business continuity, è possibile creare la soluzione FlexPod SM-BC implementando una soluzione completamente nuova con due nuovi sistemi FlexPod, aggiungendo un nuovo FlexPod in un altro sito per l'associazione con un FlexPod esistente o associando due sistemi FlexPod esistenti.
+
+Poiché le soluzioni FlexPod sono di natura flessibile nelle relative configurazioni, è possibile utilizzare potenzialmente tutte le configurazioni e i componenti FlexPod supportati. Il resto di questa sezione fornisce informazioni sulle validazioni di implementazione eseguite per una soluzione di infrastruttura virtuale basata su VMware. Ad eccezione degli aspetti correlati a SM-BC, l'implementazione segue i processi di implementazione standard di FlexPod. Per informazioni generali sull'implementazione di FlexPod, consultare i CVD e gli NVA FlexPod disponibili per le configurazioni specifiche.
+
+
+
+== Topologia di convalida
+
+Per la convalida della soluzione FlexPod SM-BC, vengono utilizzati i componenti tecnologici supportati da NetApp, Cisco e VMware. La soluzione include coppie ha NetApp AFF A250 con ONTAP 9.10.1, due switch Cisco Nexus 9336C-FX2 nel sito A e due switch Cisco Nexus 3232C nel sito B, Cisco UCS 6454 Fi in entrambi i siti, E tre server Cisco UCS B200 M5 in ogni sito che esegue VMware vSphere 7.0u2 e gestiti da UCS Manager e dal server VMware vCenter. La figura seguente mostra la topologia di convalida della soluzione a livello di componente con due sistemi FlexPod in esecuzione nel sito A e nel sito B collegati tramite collegamenti intersito Layer-2 estesi e mediatore ONTAP in esecuzione nel sito C.
+
+image:sm-bcs-image16.png["Errore: Immagine grafica mancante"]
+
+
+
+== Hardware e software
+
+La seguente tabella elenca l'hardware e il software utilizzati per la convalida della soluzione. È importante notare che Cisco, NetApp e VMware dispongono di matrici di interoperabilità utilizzate per determinare il supporto per qualsiasi implementazione specifica di FlexPod:
+
+* http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+* http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCS hardware and Software Interoperability Tool"^]
+* http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+|===
+| Categoria | Componente | Versione del software | Quantità 
+
+
+| Calcolo | Cisco UCS Fabric Interconnect 6454 | 4.2(1f) | 4 (2 per sito) 
+
+
+|  | Server Cisco UCS B200 M5 | 4.2(1f) | 6 (3 per sito) 
+
+
+|  | CISCO UCS IOM 2204XP | 4.2(1f) | 4 (2 per sito) 
+
+
+|  | CISCO VIC 1440 (PID: UCSB-MLOM-40G-04) | 5.2 (1a) | 2 (1 per sito) 
+
+
+|  | CISCO VIC 1340 (PID: UCSB-MLOM-40G-03) | 4.5 (1a) | 4 (2 per sito) 
+
+
+| Rete | Cisco Nexus 9336C-FX2 | 9.3(6) | 2 (sito A) 
+
+
+|  | Cisco Nexus 3232C | 9.3(6) | 2 (sito B) 
+
+
+| Storage | NetApp AFF A250 | 9.10.1 | 4 (2 per sito) 
+
+
+|  | System Manager di NetApp | 9.10.1 | 2 (1 per sito) 
+
+
+|  | NetApp Active IQ Unified Manager | 9.10 | 1 
+
+
+|  | Strumenti NetApp ONTAP per VMware vSphere | 9.10 | 1 
+
+
+|  | Plug-in NetApp SnapCenter per VMware vSphere | 4.6 | 1 
+
+
+|  | Mediatore NetApp ONTAP | 1.3 | 1 
+
+
+|  | NAbox | 3.0.2 | 1 
+
+
+|  | NetApp Harvest | 21.11.1-1 | 1 
+
+
+| Virtualizzazione | VMware ESXi | 7.0U2 | 6 (3 per sito) 
+
+
+|  | Driver Ethernet Nenico VMware ESXi | 1.0.35.0 | 6 (3 per sito) 
+
+
+|  | VMware vCenter | 7.0U2 | 1 
+
+
+|  | Plug-in NetApp NFS per VMware VAAI | 2.0 | 6 (3 per sito) 
+
+
+| Test | Microsoft Windows | 2022 | 1 
+
+
+|  | Microsoft SQL Server | 2019 | 1 
+
+
+|  | Microsoft SQL Server Management Studio | 18.10 | 1 
+
+
+|  | HammerDB | 4.3 | 1 
+
+
+|  | Microsoft Windows | 10 | 6 (3 per sito) 
+
+
+|  | Iometro | 1.1.0 | 6 (3 per sito) 
+|===
+link:sm-bcs-compute.html["Successivo: Convalida della soluzione - calcolo."]

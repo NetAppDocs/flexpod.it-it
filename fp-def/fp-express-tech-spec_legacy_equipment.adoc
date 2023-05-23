@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, legacy, storage, controller, fas, disk, shelf 
+summary: Questa sezione elenca le opzioni di shelf di dischi legacy, controller FAS e controller storage NetApp. 
+---
+= Apparecchiature legacy
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+La seguente tabella elenca le opzioni del controller di storage legacy di NetApp.
+
+|===
+| Controller dello storage | Codice ricambio FAS | Specifiche tecniche 
+
+
+| FAS2520 | In base alle singole opzioni scelte | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2552 | In base alle singole opzioni scelte | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2554 | In base alle singole opzioni scelte | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8020 | In base alle singole opzioni scelte | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+La seguente tabella elenca le opzioni di shelf di dischi legacy NetApp per NetApp FAS.
+
+|===
+| Shelf di dischi | Codice del ricambio | Specifiche tecniche 
+
+
+| DE1600 | E-X5682A-DM-0E-R6-C. | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Shelf di dischi specifiche tecniche unità supportate su NetApp Hardware Universe"] 
+
+
+| DE5600 | E-X4041A-12-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Shelf di dischi specifiche tecniche unità supportate su NetApp Hardware Universe"] 
+
+
+| DE6600 | X-48564-00-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["Shelf di dischi specifiche tecniche unità supportate su NetApp Hardware Universe"] 
+|===
+
+
+== Controller FAS legacy di NetApp
+
+La seguente tabella elenca le opzioni del controller FAS di NetApp legacy.
+
+|===
+| Componente corrente | FAS2554 | FAS2552 | FAS2520 
+
+
+| Configurazione | 2 controller in uno chassis 4U | 2 controller in uno chassis 2U | 2 controller in uno chassis 2U 
+
+
+| Capacità massima raw | 576 TB | 509 TB | 336 TB 
+
+
+| Dischi interni | 24 | 24 | 12 
+
+
+| Numero massimo di dischi (interni ed esterni) | 144 | 144 | 84 
+
+
+| Dimensione massima del volume 3+| 60 TB 
+
+
+| Dimensione massima dell'aggregato 3+| 120 TB 
+
+
+| Numero massimo di LUN 3+| 2,048 per controller 
+
+
+| Supporto dello storage di rete 2+| ISCSI, FC, FCoE, NFS e CIFS | ISCSI, NFS e CIFS 
+
+
+| Numero massimo di volumi NetApp FlexVol 3+| 1,000 per controller 
+
+
+| Numero massimo di copie Snapshot di NetApp 3+| 255,000 per controller 
+|===
+
+NOTE: Per ulteriori modelli NetApp FAS, vedere https://hwu.netapp.com/Controller/Index?platformTypeId=2032["Sezione modelli FAS"^] Nel Hardware Universe.

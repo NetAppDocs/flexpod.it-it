@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_other_requirements.html 
+keywords: flexpod, datacenter, technical, specifications, requirements, interoperability 
+summary: 'Un"architettura FlexPod presenta i seguenti requisiti aggiuntivi di interoperabilità e di supporto' 
+---
+= Altri requisiti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Un'architettura FlexPod presenta i seguenti requisiti aggiuntivi di interoperabilità e di supporto:
+
+* Tutti i componenti hardware e software devono essere elencati e supportati su NetApp http://mysupport.netapp.com/matrix["IMT"^], il https://ucshcltool.cloudapps.cisco.com/public/["Elenco di compatibilità hardware e software Cisco UCS"^]E Cisco UCS hardware and Software Interoperability Matrix Tool.
+* Sono richiesti contratti di supporto validi per tutte le apparecchiature, tra cui:
++
+** Supporto Smart Net Total Care (SmartNet) per apparecchiature Cisco
+** Supporto SupportEdge Advisor o SupportEdge Premium per le apparecchiature NetApp
+
+
+
+
+Per ulteriori informazioni, consulta NetApp http://mysupport.netapp.com/matrix["IMT"^].

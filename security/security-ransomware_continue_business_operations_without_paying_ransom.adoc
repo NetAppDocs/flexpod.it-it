@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_continue_business_operations_without_paying_ransom.html 
+keywords: ransom, pay, business, operations, restore, data, attack, prevent, recover 
+summary: Le funzionalità di NetApp descritte in questo documento consentono di ripristinare i dati entro pochi minuti dopo un attacco e prevenire gli attacchi, in modo da poter continuare le operazioni di business senza ostacoli. 
+---
+= Continua le operazioni di business senza pagare il riscatto
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Le funzionalità di NetApp descritte in questo documento consentono di ripristinare i dati entro pochi minuti dopo un attacco e prevenire gli attacchi, in modo da poter continuare le operazioni di business senza ostacoli.
+
+È possibile impostare un programma di copia Snapshot per soddisfare l'obiettivo RPO (Recovery Point Objective) desiderato. Le operazioni di ripristino basate su copia Snapshot sono molto rapide, pertanto è possibile raggiungere un obiettivo RTO (Recovery Time Objective) molto basso.
+
+Soprattutto, non è necessario pagare alcun riscatto a seguito di un attacco e si può tornare rapidamente alle operazioni regolari.

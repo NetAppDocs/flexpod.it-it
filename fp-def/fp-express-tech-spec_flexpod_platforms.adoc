@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_flexpod_platforms.html 
+keywords: flexpod, platforms, datacenter, express, select, technical, specifications 
+summary: Questo documento fornisce le specifiche tecniche della piattaforma FlexPod Express. 
+---
+= Piattaforme FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Esistono tre piattaforme FlexPod:
+
+* *FlexPod Datacenter.* questa piattaforma è un'infrastruttura di data center virtuale estremamente scalabile, ideale per applicazioni aziendali con carichi di lavoro, virtualizzazione, VDI e cloud pubblico e privato. FlexPod Datacenter dispone di specifiche specifiche proprie, documentate in https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_solution_overview.html["TR-4036: Specifiche tecniche del data center FlexPod"^].
+* *FlexPod Express.* questa piattaforma è un'infrastruttura convergente compatta, destinata a uffici remoti e casi di utilizzo edge.
+
+
+Questo documento fornisce le specifiche tecniche della piattaforma FlexPod Express.

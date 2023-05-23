@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html 
+keywords: flexpod, architecture, supported, validated, configurations, hardware, software 
+summary: 'L"architettura di FlexPod è definita dall"insieme di regole descritte in questo documento.' 
+---
+= Configurazioni FlexPod supportate e validate
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+L'architettura di FlexPod è definita dall'insieme di regole descritte in questo documento. I componenti hardware e le configurazioni software devono essere supportati da https://ucshcltool.cloudapps.cisco.com/public/["Elenco di compatibilità hardware e software Cisco UCS"^] e a. http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp (IMT)"^].
+
+Ogni Cisco Validated Design (CVD) o NetApp Verified Architecture (NVA) è una possibile configurazione FlexPod. Cisco e NetApp documentano queste combinazioni di configurazione e le convalidano con test completi end-to-end. Le implementazioni FlexPod che si discostano da queste configurazioni sono pienamente supportate se seguono le linee guida contenute in questo documento e se tutti i componenti sono elencati come compatibili nell'elenco di compatibilità hardware e software di Cisco UCS e in NetApp http://mysupport.netapp.com/matrix["IMT"^].
+
+Ad esempio, l'aggiunta di più controller di storage o Cisco UCS Server e l'aggiornamento del software alle versioni più recenti sono completamente supportati se il software, l'hardware e le configurazioni soddisfano le linee guida definite in questo documento.

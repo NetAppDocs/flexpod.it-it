@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_volume_configuration.html 
+keywords: volume, provisioning, snapshot, copy, volume, default, aggregate, reallocate, schedule 
+summary: 'I volumi MEDITECH dedicati agli host MEDITECH possono essere con thin provisioning o thick e possono essere utilizzati con le copie Snapshot. È inoltre possibile utilizzare la riallocazione a livello di volume per ottimizzare il layout dei dati su disco per migliorare le latenze di scrittura e l"accesso in lettura sequenziale.' 
+---
+= Configurazione del volume
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Provisioning di volumi
+
+I volumi MEDITECH dedicati agli host MEDITECH possono essere thick o thin provisioning.
+
+
+
+== Copie Snapshot predefinite a livello di volume
+
+Le copie Snapshot vengono create come parte del flusso di lavoro di backup. Ogni copia Snapshot può essere utilizzata per accedere ai dati memorizzati nelle LUN MEDITECH in momenti diversi. La soluzione di backup approvata da MEDITECH crea volumi FlexClone con thin provisioning basati su queste copie Snapshot per fornire copie point-in-time delle LUN MEDITECH. L'ambiente MEDITECH è integrato con una soluzione software di backup approvata. Pertanto, NetApp consiglia di disattivare la pianificazione predefinita delle copie Snapshot su ciascuno dei volumi NetApp FlexVol che costituiscono le LUN del database di produzione MEDITECH.
+
+*Importante:* i volumi FlexClone condividono lo spazio del volume dei dati padre, pertanto è fondamentale che il volume disponga di spazio sufficiente per le LUN dei dati MEDITECH e per i volumi FlexClone creati dai server di backup. I volumi FlexClone non occupano più spazio come i volumi di dati. Tuttavia, se le LUN MEDITECH vengono eliminate in tempi brevi, i volumi dei cloni potrebbero crescere.
+
+
+
+== Numero di volumi per aggregato
+
+Per un sistema NetApp FAS che utilizza il caching con Flash Pool o Flash cache, NetApp consiglia di fornire tre o più volumi per aggregato dedicati alla memorizzazione del programma, del dizionario e dei file di dati MEDITECH.
+
+Per i sistemi AFF, NetApp consiglia di dedicare quattro o più volumi per aggregato per memorizzare il programma MEDITECH, il dizionario e i file di dati.
+
+
+
+== Pianificazione di riallocazione a livello di volume
+
+Il layout dei dati dello storage diventa meno ottimale nel tempo, soprattutto quando viene utilizzato da carichi di lavoro con un elevato utilizzo di scrittura, come le piattaforme MEDITECH expse, 6.x e C/S 5.x. Con il passare del tempo, questa situazione potrebbe aumentare la latenza di lettura sequenziale, con conseguente maggiore tempo per completare il backup. Anche un layout o una frammentazione dei dati errati possono influire sulla latenza di scrittura. È possibile utilizzare la riallocazione a livello di volume per ottimizzare il layout dei dati su disco per migliorare le latenze di scrittura e l'accesso in lettura sequenziale. Il layout dello storage migliorato consente di completare il backup entro un intervallo di tempo di 8 ore.
+
+|===
+| Best practice 
+
+
+ a| 
+Come minimo, NetApp consiglia di implementare una pianificazione settimanale di riallocazione dei volumi per eseguire operazioni di riallocazione durante il downtime di manutenzione allocato o durante le ore fuori orario di punta in un sito di produzione.
+
+
+NOTE: NetApp consiglia vivamente di eseguire l'attività di riallocazione su un volume alla volta per controller.
+
+|===
+Per ulteriori informazioni sulla determinazione di una pianificazione di riallocazione dei volumi appropriata per lo storage del database di produzione, vedere la sezione 3.12 in https://fieldportal.netapp.com/content/192896["NetApp TR-3929: Guida alla riallocazione delle Best practice"^]. Questa sezione illustra inoltre come creare una pianificazione settimanale di riallocazione per un sito occupato.
+
+link:ehr-meditech-deploy_lun_configuration.html["Pagina successiva: Configurazione del LUN."]

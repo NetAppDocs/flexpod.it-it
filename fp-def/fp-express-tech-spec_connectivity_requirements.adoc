@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, flexpod, express, aff, fas, e, series 
+summary: In questa sezione vengono descritti i requisiti di connettività per le diverse versioni di FlexPod Express. 
+---
+= Requisiti di connettività
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+In questa sezione vengono descritti i requisiti di connettività per le diverse versioni di FlexPod Express.
+
+
+
+== Requisiti di connettività per FlexPod Express con NetApp FAS
+
+I requisiti di connettività per FlexPod Express con NetApp FAS includono:
+
+* I controller di storage NetApp FAS devono essere collegati direttamente agli switch Cisco Nexus, ad eccezione della configurazione gestita da Cisco UCS, in cui i controller di storage sono collegati alle interconnessioni fabric.
+* Non è possibile posizionare in linea apparecchiature aggiuntive tra i componenti principali di FlexPod.
+* I Virtual Port channel (VPC) sono necessari per collegare gli switch Cisco Nexus serie 3000/9000 ai controller di storage NetApp.
+* Sebbene non sia necessario, si consiglia di abilitare il supporto dei frame jumbo in tutto l'ambiente.
+
+
+
+
+== Requisiti di connettività per FlexPod Express con NetApp e-Series
+
+I requisiti di connettività per FlexPod Express con e-Series includono:
+
+* I controller di storage e-Series devono essere collegati direttamente alle interconnessioni fabric.
+* Non è necessario posizionare apparecchiature aggiuntive inline tra i componenti principali di FlexPod.
+* Tra le interconnessioni fabric e gli switch Ethernet sono richiesti VPC.
+
+
+
+
+== Requisiti di connettività per FlexPod Express con NetApp AFF
+
+I requisiti di connettività per FlexPod Express con NetApp AFF includono:
+
+* I controller di storage NetApp AFF devono essere collegati direttamente agli switch Cisco Nexus, ad eccezione della configurazione gestita da Cisco UCS, in cui i controller di storage sono collegati al fabric. interconnessioni.
+* Non è possibile posizionare in linea apparecchiature aggiuntive tra i componenti principali di FlexPod.
+* I Virtual Port channel (VPC) sono necessari per collegare gli switch Cisco Nexus serie 3000/9000 ai controller di storage NetApp.
+* Sebbene non sia necessario, si consiglia di abilitare il supporto dei frame jumbo in tutto l'ambiente.
+

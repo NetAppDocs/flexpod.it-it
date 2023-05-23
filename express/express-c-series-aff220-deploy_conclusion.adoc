@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_conclusion.html 
+keywords: validated, design, solution, industry, components, flexpod, express 
+summary: FlexPod offre una soluzione semplice ed efficace grazie a un design validato che utilizza componenti leader del settore. 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod offre una soluzione semplice ed efficace grazie a un design validato che utilizza componenti leader del settore. Grazie alla scalabilità attraverso l'aggiunta di componenti aggiuntivi, FlexPod può essere personalizzato in base alle specifiche esigenze aziendali. FlexPod Express è stato progettato tenendo conto delle piccole e medie imprese, delle ROBOs e di altre aziende che richiedono soluzioni dedicate.

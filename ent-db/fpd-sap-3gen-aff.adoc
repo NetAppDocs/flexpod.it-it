@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-3gen-aff.html 
+keywords: flexpod, cisco, sap, ucs, third generation, fabric, aff, a-series 
+summary: 'Questo documento descrive la metodologia di implementazione di Cisco e NetApp FlexPod Datacenter per SAP HANA basata sul sistema di calcolo Cisco UCS (Cisco UCS) supportato dai processori scalabili Intel Xeon di seconda generazione.' 
+---
+= Soluzione FlexPod per data center per SAP con fabric di terza generazione Cisco UCS e NetApp AFF Serie A.
+:allow-uri-read: 
+
+
+Shailendra Mruthunjaya, Cisco Ralf Klahr, Cisco Marco Schoen, NetApp
+
+[role="lead"]
+Questo documento descrive la metodologia di implementazione di Cisco e NetApp FlexPod Datacenter per SAP HANA basata sul sistema di calcolo Cisco UCS (Cisco UCS) supportato dai processori scalabili Intel Xeon di seconda generazione.
+
+Cisco UCS Manager (UCSM) 4.0(4) fornisce il supporto consolidato di tutti gli attuali modelli di Cisco UCS Fabric Interconnect (6200, 6300, 6324 e 6454), IOM serie 2200/2300, blade Cisco UCS B-Series e server Cisco UCS C-Series rack formFactor. FlexPod Datacenter con Cisco UCS Unified Software release 4.0(4d) e NetApp ONTAP 9.6 è un'architettura di data center pre-progettata e basata su Best practice, basata su Cisco UCS, sulla famiglia di switch Cisco Nexus 9000 e sugli storage array NetApp AFF serie A.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html["Soluzione FlexPod per data center per SAP con fabric di terza generazione Cisco UCS e NetApp AFF Serie A."^]

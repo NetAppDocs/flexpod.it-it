@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-wp-741586.html 
+keywords: flexpod, cisco, graphics, citrix, nvidia, white, paper 
+summary: Scopri le performance di Citrix XenDesktop su Citrix XenServer con schede NVIDIA Tesla P4, P6 e P40 su server Cisco UCS C240 M5 e B200 M5 con SPECviewperf 13. 
+---
+= Visualizzazione grafica 3D con Citrix e NVIDIA - White paper
+:allow-uri-read: 
+
+
+[role="lead"]
+Questo documento descrive le prestazioni di Citrix XenDesktop su Citrix XenServer con schede NVIDIA Tesla P4, P6 e P40 su server Cisco UCS C240 M5 e B200 M5 con SPECviewperf 13.
+
+link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf["Visualizzazione grafica 3D con Citrix e NVIDIA - White paper"^]

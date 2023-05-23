@@ -1,0 +1,196 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_meditech_workload_overview.html 
+keywords: meditech, workload, backup, cisco, ucs, reference, architecture, platforms 
+summary: In questa sezione vengono descritti i tipi di workload di calcolo e storage che si possono trovare negli ambienti MEDITECH. 
+---
+= Panoramica SUL CARICO di lavoro DI MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+In questa sezione vengono descritti i tipi di workload di calcolo e storage che si possono trovare negli ambienti MEDITECH.
+
+
+
+== CARICHI DI lavoro DI BACKUP E MEDITECH
+
+Quando si dimensionano i sistemi storage NetApp per ambienti MEDITECH, è necessario prendere in considerazione sia il carico di lavoro di produzione MEDITECH che il carico di lavoro di backup.
+
+|===
+| Host MEDITECH 
+
+
+| Un host MEDITECH è un server di database. Questo host è anche chiamato file server MEDITECH (per LA piattaforma EXPSE, 6.x o C/S 5.x) o UNA MACCHINA MAGICA (per la piattaforma MAGICA). Questo documento utilizza il termine host MEDITECH per fare riferimento a un file server MEDITECH e a una MACCHINA MAGICA. 
+|===
+Le sezioni seguenti descrivono le caratteristiche di i/o e i requisiti di performance di questi due carichi di lavoro.
+
+
+
+== Carico DI lavoro DI MEDITECH
+
+In un ambiente MEDITECH, più server che eseguono il software MEDITECH eseguono diverse attività come un sistema integrato noto come sistema MEDITECH. Per ulteriori informazioni sul sistema MEDITECH, consultare la documentazione MEDITECH:
+
+* Per gli ambienti MEDITECH in produzione, consultare la documentazione MEDITECH appropriata per determinare il numero di host MEDITECH e la capacità di storage da includere nel dimensionamento del sistema storage NetApp.
+* Per i nuovi ambienti MEDITECH, consultare il documento relativo alla proposta di configurazione dell'hardware. Per gli ambienti MEDITECH esistenti, consultare il documento delle attività di valutazione dell'hardware. L'attività di valutazione dell'hardware è associata a un ticket MEDITECH. I clienti possono richiedere questi documenti a MEDITECH.
+
+
+È possibile scalare il sistema MEDITECH per aumentare capacità e performance aggiungendo host. Ogni host richiede capacità di storage per i file di database e applicazioni. Lo storage disponibile per ciascun host MEDITECH deve supportare anche l'i/o generato dall'host. In un ambiente MEDITECH, è disponibile un LUN per ciascun host per supportare i requisiti di storage di database e applicazioni di quell'host. Il tipo di categoria MEDITECH e il tipo di piattaforma da implementare determinano le caratteristiche del carico di lavoro di ciascun host MEDITECH e, di conseguenza, dell'intero sistema.
+
+
+
+=== Categorie MEDITECH
+
+MEDITECH associa le dimensioni dell'implementazione a un numero di categoria compreso tra 1 e 6. La categoria 1 rappresenta le implementazioni MEDITECH più piccole; la categoria 6 rappresenta le più grandi. Esempi di specifiche applicative MEDITECH associate a ciascuna categoria includono metriche come:
+
+* Numero di letti ospedalieri
+* Pazienti inpazienti all'anno
+* Pazienti esterni all'anno
+* Visite di pronto soccorso all'anno
+* Esami all'anno
+* Prescrizioni al giorno in caso di degenza
+* Prescrizioni ambulatoriali al giorno
+
+
+Per ulteriori informazioni sulle categorie MEDITECH, consulta la scheda di riferimento della categoria MEDITECH. È possibile ottenere questa scheda da MEDITECH attraverso il cliente o attraverso il programma di installazione del sistema MEDITECH.
+
+
+
+=== Piattaforme MEDITECH
+
+MEDITECH dispone di quattro piattaforme:
+
+* ESPANDI
+* MEDITECH 6.x
+* Client/Server 5.x (C/S 5.x)
+* MAGIA
+
+
+Per le piattaforme ESPANSE MEDITECH, 6.x e C/S 5.x, le caratteristiche di i/o di ciascun host sono definite come casuali al 100% con una dimensione della richiesta di 4,000. Per la piattaforma MAGICA MEDITECH, le caratteristiche i/o di ciascun host sono definite come casuali al 100% con una dimensione della richiesta di 8,000 o 16,000. Secondo MEDITECH, la dimensione della richiesta per una tipica implementazione DI PRODUZIONE MAGICA è 8,000 o 16,000.
+
+Il rapporto di lettura e scrittura varia in base alla piattaforma implementata. MEDITECH stima il mix medio di lettura e scrittura e quindi li esprime come percentuali. MEDITECH stima anche il valore medio sostenuto di IOPS richiesto per ciascun host MEDITECH su una specifica piattaforma MEDITECH. La tabella seguente riassume le caratteristiche di i/o specifiche della piattaforma fornite da MEDITECH.
+
+|===
+| CATEGORIA MEDITECH | Piattaforma MEDITECH | Percentuale media di lettura casuale | Percentuale media di scrittura casuale | IOPS medi sostenuti per host MEDITECH 
+
+
+| 1 | ESPANSIONI, 6.x | 20 | 80 | 750 
+
+
+.4+| 2-6 | ESPANDI | 20 | 80 | 750 
+
+
+| 6.x | 20 | 80 | 750 
+
+
+| C/S 5.x | 40 | 60 | 600 
+
+
+| MAGIA | 90 | 10 | 400 
+|===
+In un sistema MEDITECH, il livello IOPS medio di ciascun host deve essere uguale ai valori IOPS definiti nella tabella precedente. Per determinare il corretto dimensionamento dello storage in base a ciascuna piattaforma, i valori IOPS specificati nella tabella precedente vengono utilizzati come parte della metodologia di dimensionamento descritta nella link:ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html["Specifiche tecniche per architetture piccole, medie e grandi"] sezione.
+
+MEDITECH richiede che la latenza media di scrittura casuale rimanga al di sotto di 1 ms per ciascun host. Tuttavia, gli aumenti temporanei della latenza di scrittura fino a 2 ms durante i processi di backup e riallocazione sono considerati accettabili. MEDITECH richiede inoltre che la latenza media di lettura casuale rimanga inferiore a 7 ms per gli host di categoria 1 e inferiore a 5 ms per gli host di categoria 2. Questi requisiti di latenza si applicano a tutti gli host, indipendentemente dalla piattaforma MEDITECH utilizzata.
+
+La tabella seguente riassume le caratteristiche di i/o da prendere in considerazione quando si dimensiona lo storage NetApp per i carichi di lavoro MEDITECH.
+
+|===
+| Parametro | CATEGORIA MEDITECH | ESPANDI | MEDITECH 6.x | C/S 5.x | MAGIA 
+
+
+| Dimensione richiesta .2+| 1-6 | 4K | 4K | 4K | 8K o 16K 
+
+
+| Casuale/sequenziale | 100% casuale | 100% casuale | 100% casuale | 100% casuale 
+
+
+.2+| IOPS medi sostenuti | 1 | 750 | 750 | N/A. | N/A. 
+
+
+| 2-6 | 750 | 750 | 600 | 400 
+
+
+| Rapporto di lettura/scrittura .2+| 1-6 | 20% lettura, 80% scrittura | 20% lettura, 80% scrittura | 40% lettura, 60% scrittura | 90% lettura, 10% scrittura 
+
+
+| Latenza di scrittura | <1 ms. | <1 ms. | <1 ms. | <1 ms. 
+
+
+| Latenza temporanea di picco in scrittura | 1-6 | <2 ms. | <2 ms. | <2 ms. | <2 ms. 
+
+
+.2+| Latenza di lettura | 1 | <7 ms. | <7 ms. | N/A. | N/A. 
+
+
+| 2-6 | <5 ms. | <5 ms. | <5 ms. | <5 ms. 
+|===
+
+NOTE: Gli host MEDITECH delle categorie da 3 a 6 hanno le stesse caratteristiche di i/o della categoria 2. Per le categorie MEDITECH da 2 a 6, il numero di host implementati in ciascuna categoria è diverso.
+
+Il sistema storage NetApp deve essere dimensionato per soddisfare i requisiti di performance descritti nelle sezioni precedenti. Oltre al carico di lavoro di produzione MEDITECH, il sistema storage NetApp deve essere in grado di mantenere questi obiettivi di performance MEDITECH durante le operazioni di backup, come descritto nella sezione seguente.
+
+
+
+== Descrizione del carico di lavoro di backup
+
+Il software di backup certificato MEDITECH esegue il backup del LUN utilizzato da ciascun host MEDITECH in un sistema MEDITECH. Affinché i backup siano in uno stato coerente con l'applicazione, il software di backup interrompe il sistema MEDITECH e sospende le richieste di i/o su disco. Mentre il sistema è in stato di quiescenza, il software di backup invia un comando al sistema di storage NetApp per creare una copia Snapshot di NetApp dei volumi che contengono le LUN. Il software di backup in seguito rende più completo il sistema MEDITECH, che consente alle richieste di i/o di produzione di continuare con il database. Il software crea un volume NetApp FlexClone in base alla copia Snapshot. Questo volume viene utilizzato dall'origine del backup mentre le richieste di i/o di produzione continuano sui volumi principali che ospitano le LUN.
+
+Il carico di lavoro generato dal software di backup deriva dalla lettura sequenziale delle LUN che risiedono nei volumi FlexClone. Il carico di lavoro è definito come un carico di lavoro di lettura sequenziale al 100% con una dimensione della richiesta di 64,000. Per il carico di lavoro di produzione MEDITECH, il criterio delle performance è quello di mantenere gli IOPS richiesti e i livelli di latenza di lettura/scrittura associati. Per il carico di lavoro di backup, tuttavia, l'attenzione viene spostata sul throughput dei dati complessivo (Mbps) generato durante l'operazione di backup. I backup DEL LUN DI MEDITECH devono essere completati in una finestra di backup di otto ore, ma NetApp consiglia di completare il backup di tutti i LUN MEDITECH in sei ore o meno. L'obiettivo di completare il backup in meno di sei ore riduce gli eventi, come un aumento non pianificato del carico di lavoro MEDITECH, le operazioni in background di NetApp ONTAP o la crescita dei dati nel tempo. Uno di questi eventi potrebbe richiedere tempi di backup aggiuntivi. Indipendentemente dalla quantità di dati applicativi memorizzati, il software di backup esegue un backup completo a livello di blocco dell'intero LUN per ogni host MEDITECH.
+
+Calcolare il throughput di lettura sequenziale necessario per completare il backup all'interno di questa finestra in funzione degli altri fattori coinvolti:
+
+* La durata del backup desiderata
+* Il numero di LUN
+* Le dimensioni di ciascun LUN di cui eseguire il backup
+
+
+Ad esempio, in un ambiente MEDITECH con 50 host in cui le dimensioni del LUN di ciascun host sono pari a 200 GB, la capacità totale del LUN per il backup è pari a 10 TB.
+
+Per eseguire il backup di 10 TB di dati in otto ore, è necessario il seguente throughput:
+
+* = (10 x 10^6)MB (8 x 3,600) s.
+* = 347,2 MBps
+
+
+Tuttavia, per tenere conto degli eventi non pianificati, viene selezionata una finestra di backup conservativa di 5.5 ore per fornire spazio oltre le sei ore consigliate.
+
+Per eseguire il backup di 10 TB di dati in otto ore, è necessario il seguente throughput:
+
+* = (10 x 10^6)MB (5.5 x 3,600)s
+* = 500 Mbps
+
+
+Con una velocità di throughput di 500 Mbps, il backup può essere completato in un intervallo di tempo di 5.5 ore, comodamente entro le 8 ore di backup richieste.
+
+La tabella seguente riassume le caratteristiche i/o del carico di lavoro di backup da utilizzare quando si dimensiona il sistema storage.
+
+|===
+| Parametro | Tutte le piattaforme 
+
+
+| Dimensione richiesta | 64.000 
+
+
+| Casuale/sequenziale | 100% sequenziale 
+
+
+| Rapporto di lettura/scrittura | 100% di lettura 
+
+
+| Throughput medio | Dipende dal numero di host MEDITECH e dalle dimensioni di ogni LUN: Il backup deve essere completato entro 8 ore. 
+
+
+| Durata del backup richiesta | 8 ore 
+|===
+
+
+== Cisco UCS Reference Architecture per MEDITECH
+
+L'architettura di MEDITECH su FlexPod si basa sulla guida di MEDITECH, Cisco e NetApp e sull'esperienza dei partner nella collaborazione con clienti MEDITECH di tutte le dimensioni. L'architettura è adattabile e applica le Best practice per MEDITECH, a seconda della strategia del data center del cliente: Piccola o grande, centralizzata, distribuita o multi-tenant.
+
+Durante l'implementazione di MEDITECH, Cisco ha progettato architetture di riferimento Cisco UCS che si allineano direttamente con le Best practice di MEDITECH. Cisco UCS offre una soluzione perfettamente integrata per performance elevate, alta disponibilità, affidabilità e scalabilità per supportare le pratiche dei medici e i sistemi ospedalieri con diverse migliaia di letti.

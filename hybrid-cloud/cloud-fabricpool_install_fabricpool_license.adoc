@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html 
+keywords: install, fabricpool, license, cloud, capacity, oncommand, system, manager 
+summary: Dopo aver acquisito un file di licenza NetApp, è possibile installarlo con Gestione di sistema di OnCommand. Per installare il file di licenza, attenersi alla seguente procedura. 
+---
+= Installare la licenza FabricPool
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Dopo aver acquisito un file di licenza NetApp, è possibile installarlo con Gestione di sistema di OnCommand. Per installare il file di licenza, attenersi alla seguente procedura:
+
+. Fare clic su configurazioni.
+. Fare clic su Cluster.
+. Fare clic su licenze.
+. Fare clic su Aggiungi.
+. Fare clic su Choose Files (Scegli file) per sfogliare e selezionare un file.
+. Fare clic su Aggiungi.
+
+
+image:cloud-fabricpool_image8.png["Errore: Immagine grafica mancante"]
+
+
+
+== Capacità di licenza
+
+È possibile visualizzare la capacità della licenza utilizzando l'interfaccia utente di ONTAP o Gestione di sistema di OnCommand. Per visualizzare la capacità concessa in licenza, eseguire il seguente comando nell'interfaccia utente di ONTAP:
+
+....
+system license show-status
+....
+In Gestore di sistema di OnCommand, attenersi alla seguente procedura:
+
+. Fare clic su configurazioni.
+. Fare clic su licenze.
+. Fare clic sulla scheda Dettagli.
+
+
+image:cloud-fabricpool_image9.png["Errore: Immagine grafica mancante"]
+
+La capacità massima e la capacità corrente sono elencate nella riga licenza FabricPool.
+
+link:cloud-fabricpool_create_aws_s3_bucket.html["Creare il bucket AWS S3."]

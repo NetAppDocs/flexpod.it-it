@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, configuration, active iq unified manager, proxy, imt, deployment, interoperability, ai qm, ova, cli 
+summary: Per utilizzare il servizio IMT, le configurazioni di AIQ UM con server proxy devono essere configurate tramite la CLI. 
+---
+= Configurare il server proxy AIQ UM per il servizio IMT
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Se si utilizza un server proxy con AIQ UM per Cisco Intersight con lo storage NetApp ONTAP, è necessario configurare la configurazione tramite l'interfaccia a riga di comando (CLI) per utilizzare il servizio IMT (Interoperability Matrix Tool). Il servizio IMT è disponibile nella scheda *interoperabilità* della pagina *sistemi integrati*. Per configurare le impostazioni del server proxy AIQ UM, è necessario utilizzare la shell di diagnosi della macchina virtuale Active IQ Unified Manager.
+
+
+NOTE: Per informazioni su come accedere alla shell AIQ UM Diag, vedere https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["Come accedere alla shell di DIAG della macchina virtuale Active IQ Unified Manager (OVA)"]
+
+*Fasi*
+
+. Accedere al terminale AIQ UM ed eseguire il seguente comando per accedere a um.
++
+[listing]
+----
+um cli login -u <um maintenance user name>
+----
++
+*Esempio*
+
++
+[listing]
+----
+um cli login -u admin
+----
+. Impostare `imt_proxy_host` e. `imt_proxy_port` eseguendo i seguenti comandi.
++
+
+NOTE: Il proxy IMT è una configurazione separata dalle configurazioni proxy ASUP (AutoSupport).
+
++
+[listing]
+----
+um option set imt.https.proxy.host=<IMT_PROXY_HOST>
+um option set imt.https.proxy.port=<IMT_PROXY_PORT>
+----
++
+*Esempio*
+
++
+[listing]
+----
+um option set imt.https.proxy.host=example-proxy.cls.eng.com
+um option set imt.https.proxy.port=8200
+----
++
+
+NOTE: Le configurazioni del server proxy IMT non supportano l'autenticazione.
+
+. Visualizzare i dettagli del proxy IMT per verificare `proxy_host` e. `proxy_port` tramite il seguente comando.
++
+[listing]
+----
+um option list |grep imt
+----
+

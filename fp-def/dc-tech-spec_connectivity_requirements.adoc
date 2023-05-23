@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, cisco, ucs, fabric, interconnect, uplink, direct, san 
+summary: Di seguito sono elencati i requisiti di connettività per la configurazione FlexPod. 
+---
+= Requisiti di connettività
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Una configurazione FlexPod ha i seguenti requisiti di connettività:
+
+* Per tutti i componenti è necessaria una rete di gestione out-of-band Ethernet a 100 Mbps/1 GB separata.
+* NetApp consiglia di abilitare il supporto jumbo frame in tutto l'ambiente, ma non è necessario.
+* Le porte dell'appliance Cisco UCS Fabric Interconnect sono consigliate solo per le connessioni iSCSI e NAS.
+* Non è possibile posizionare apparecchiature aggiuntive in linea tra i componenti principali di FlexPod.
+
+
+Connessioni uplink:
+
+* Le porte dei controller di storage NetApp devono essere collegate agli switch Cisco Nexus serie 5000, 7000 o 9000 per consentire il supporto dei VPC (Virtual Port Channel).
+* Gli switch Cisco Nexus serie 5000, 7000 o 9000 sono necessari per i VPC ai controller di storage NetApp.
+* Gli switch Cisco Nexus serie 5000, 7000 o 9000 richiedono VPC per le interconnessioni fabric.
+* Per un VPC sono necessarie almeno due connessioni. Il numero di connessioni all'interno di un VPC può essere aumentato in base al carico dell'applicazione e ai requisiti di performance.
+
+
+Connessioni dirette:
+
+* È possibile raggruppare le porte dei controller di storage NetApp direttamente connesse alle interconnessioni fabric per abilitare un canale di porta. VPC non è supportato per questa configurazione.
+* I canali di porta FCoE sono consigliati per i progetti FCoE end-to-end.
+
+
+Boot SAN:
+
+* Le soluzioni FlexPod sono progettate in base a un'architettura DI avvio SAN che utilizza protocolli iSCSI, FC o FCoE. L'utilizzo delle tecnologie boot-from-SAN offre la configurazione più flessibile per l'infrastruttura del data center e abilita le ricche funzionalità disponibili all'interno di ciascun componente dell'infrastruttura. Sebbene l'avvio da SAN sia la configurazione più efficiente, l'avvio dallo storage del server locale è una configurazione valida e supportata.
+* L'avvio SAN su FC-NVME non è supportato.
+

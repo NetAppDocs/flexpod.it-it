@@ -1,0 +1,53 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_aggregate_configuration.html 
+keywords: aggregate, configuration, raid, groups, dp, storage, expansion, snapshot, copy, 
+summary: 'NetApp consiglia la tecnologia NetApp RAID DP come tipo RAID per tutti gli aggregati di un sistema NetApp FAS o AFF, inclusi i normali aggregati di Flash Pool NetApp. La documentazione MEDITECH potrebbe specificare l"utilizzo di RAID 10, ma MEDITECH ha approvato l"utilizzo di RAID DP.' 
+---
+= Configurazione dell'aggregato
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== NetApp RAID DP
+
+NetApp consiglia la tecnologia NetApp RAID DP come tipo RAID per tutti gli aggregati di un sistema NetApp FAS o AFF, inclusi i normali aggregati di Flash Pool NetApp. La documentazione MEDITECH potrebbe specificare l'utilizzo di RAID 10, ma MEDITECH ha approvato l'utilizzo di RAID DP.
+
+
+
+== Dimensione del gruppo RAID e numero di gruppi RAID
+
+La dimensione predefinita del gruppo RAID è 16. Queste dimensioni potrebbero essere o meno ottimali per gli aggregati degli host MEDITECH del sito specifico. Per il numero di dischi che NetApp consiglia di utilizzare in un gruppo RAID, vedere https://fieldportal.netapp.com/content/190829["NetApp TR-3838: Guida alla configurazione del sottosistema di storage"^].
+
+La dimensione del gruppo RAID è importante per l'espansione dello storage, in quanto NetApp consiglia di aggiungere dischi a un aggregato con uno o più gruppi di dischi uguali alla dimensione del gruppo RAID. Il numero di gruppi RAID dipende dal numero di dischi dati e dalle dimensioni del gruppo RAID. Per determinare il numero di dischi dati necessari, utilizza lo strumento di dimensionamento di NetApp System Performance Modeler (SPM). Dopo aver determinato il numero di dischi dati, regolare le dimensioni del gruppo RAID per ridurre al minimo il numero di dischi di parità entro l'intervallo consigliato per le dimensioni del gruppo RAID per tipo di disco.
+
+Per ulteriori informazioni su come utilizzare lo strumento di dimensionamento SPM per ambienti MEDITECH, vedere https://fieldportal.netapp.com/content/198446["NetApp TR-4190: Linee guida di dimensionamento NetApp per ambienti MEDITECH"^].
+
+
+
+== Considerazioni sull'espansione dello storage
+
+Quando si espandono gli aggregati con più dischi, aggiungere i dischi in gruppi che sono uguali alle dimensioni del gruppo RAID aggregato. Seguendo questo approccio è possibile garantire la coerenza delle performance nell'intero aggregato.
+
+Ad esempio, per aggiungere storage a un aggregato creato con una dimensione del gruppo RAID pari a 20, il numero di dischi che NetApp consiglia di aggiungere è uno o più gruppi da 20 dischi. Quindi, è necessario aggiungere 20, 40, 60 e così via, dischi.
+
+Dopo aver espanso gli aggregati, è possibile migliorare le performance eseguendo attività di riallocazione sui volumi interessati o aggregando per distribuire le strisce di dati esistenti sui nuovi dischi. Questa azione è utile soprattutto se l'aggregato esistente era quasi pieno.
+
+
+NOTE: È necessario pianificare la riallocazione delle pianificazioni durante le ore di non produzione, poiché si tratta di un'attività che richiede un'elevata quantità di CPU e dischi.
+
+Per ulteriori informazioni sull'utilizzo della riallocazione dopo un'espansione dell'aggregato, vedere https://fieldportal.netapp.com/content/192896["NetApp TR-3929: Guida alla riallocazione delle Best practice"^].
+
+
+
+== Copie Snapshot a livello di aggregato
+
+Impostare la riserva di copia Snapshot NetApp a livello aggregato su zero e disattivare la pianificazione Snapshot aggregata predefinita. Eliminare eventuali copie Snapshot a livello aggregato preesistenti, se possibile.
+
+link:ehr-meditech-deploy_storage_virtual_machine_configuration.html["Pagina successiva: Configurazione della macchina virtuale per lo storage."]

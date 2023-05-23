@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html 
+keywords: prerequisites, clone github repo, terraform execution, init, plan, apply, destroy 
+summary: Possiamo eseguire il piano Terraform utilizzando un controller. Puoi saltare questa sezione se hai già eseguito il tuo piano Terraform utilizzando un workflow ICO. 
+---
+= Esecuzione del terraform dal controller
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-dr-workflow.html["Precedente: Workflow DR."]
+
+[role="lead"]
+Possiamo eseguire il piano Terraform utilizzando un controller. Puoi saltare questa sezione se hai già eseguito il tuo piano Terraform utilizzando un workflow ICO.
+
+
+
+== Prerequisiti
+
+La configurazione della soluzione inizia con una workstation di gestione che ha accesso a Internet e con un'installazione funzionante di Terraform.
+
+È possibile trovare una guida per l'installazione di Terraform https://learn.hashicorp.com/tutorials/terraform/install-cli["qui"^].
+
+
+
+== Clonare GitHub repo
+
+La prima fase del processo consiste nella clonazione del repo GitHub in una nuova cartella vuota della workstation di gestione. Per clonare il repository GitHub, attenersi alla seguente procedura:
+
+. Dalla workstation di gestione, creare una nuova cartella per il progetto. Creare una nuova cartella all'interno di questa cartella denominata `/root/snapmirror-cvo` E Clone il repo GitHub in esso.
+. Aprire un'interfaccia a riga di comando o console sulla workstation di gestione e modificare le directory nella nuova cartella appena creata.
+. Clonare l'insieme GitHub utilizzando il seguente comando:
+
+
+....
+Git clone https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO
+....
+. Modificare le directory nella nuova cartella denominata `snapmirror-cvo`.
+
+
+*Esecuzione terraform*
+
+image:gcp-ncvo-image77.png["Schema per l'esecuzione di Terraform."]
+
+* *Init.* Inizializza l'ambiente Terraform (locale). Di solito viene eseguita una sola volta per sessione.
+* *Plan.* Confronta lo stato del terraform con lo stato as-in nel cloud e crea e visualizza un piano di esecuzione. Ciò non modifica la distribuzione (sola lettura).
+* *Apply.* applicare il piano dalla fase del piano. In questo modo è possibile modificare l'implementazione (lettura e scrittura).
+* *Destroy.* tutte le risorse gestite da questo specifico ambiente terraform.
++
+Per ulteriori informazioni, vedere https://www.terraform.io/cli/commands["qui"^].
+
+
+
+link:gcp-ncvo-solution-validation.html["Successivo: Convalida della soluzione."]

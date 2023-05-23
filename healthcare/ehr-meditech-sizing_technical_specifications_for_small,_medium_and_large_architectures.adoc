@@ -1,0 +1,207 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html 
+keywords: technical, specifications, small, medium, large, architectures, bill, material 
+summary: In questa sezione viene illustrata una distinta materiali di esempio per architetture storage di diverse dimensioni. 
+---
+= Specifiche tecniche per architetture piccole, medie e grandi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+In questa sezione viene illustrata una distinta materiali di esempio per architetture storage di diverse dimensioni.
+
+
+
+== Distinta dei materiali per architetture di piccole, medie e grandi dimensioni.
+
+Il design di FlexPod è un'infrastruttura flessibile che comprende diversi componenti e versioni software. Utilizzare https://fieldportal.netapp.com/content/443847["TR-4036: Specifiche tecniche di FlexPod"^] Come guida all'assemblaggio di una configurazione FlexPod valida. Le configurazioni riportate nella tabella seguente rappresentano i requisiti minimi per FlexPod e sono solo un esempio. La configurazione può essere espansa per ogni famiglia di prodotti in base alle esigenze di ambienti e casi di utilizzo diversi.
+
+Per questo esercizio di dimensionamento piccolo corrisponde a un ambiente MEDITECH di categoria 3, medio a una categoria 5 e grande a una categoria 6.
+
+|===
+|  | Piccolo | Medio | Grande 
+
+
+| Piattaforma | Una coppia ha di sistemi storage all-flash NetApp AFF A220 | Una coppia NetApp AFF A220 ha | Una coppia di sistemi storage all-flash ha NetApp AFF A300 
+
+
+| Shelf di dischi | 9 TB x 3,8 TB | 13 TB x 3,8 TB | 19 TB x 3,8 TB 
+
+
+| Dimensione del database MEDITECH | DA 3 TB A 12 TB | 17 TB | >30 TB 
+
+
+| IOPS MEDITECH | Meno di 22,000 IOPS | >25,000 IOPS | >32,000 IOPS 
+
+
+| IOPS totali | 22000 | 27000 | 35000 
+
+
+| Raw | 34,2 TB | 49,4 TB | 68,4 TB 
+
+
+| Capacità utilizzabile | 18.53TiB | 27,96TiB | 33.82TiB 
+
+
+| Capacità effettiva (efficienza dello storage 2:1) | 55,6TiB | 83,89TiB | 101,47TiB 
+|===
+
+NOTE: Alcuni ambienti dei clienti potrebbero avere più carichi di lavoro di produzione MEDITECH in esecuzione simultaneamente o potrebbero avere requisiti IOPS più elevati. In questi casi, collaborate con il team degli account NetApp per dimensionare i sistemi storage in base agli IOPS e alla capacità richiesti. Dovresti essere in grado di determinare la piattaforma giusta per i carichi di lavoro. Ad esempio, esistono clienti che eseguono con successo più ambienti MEDITECH su una coppia ha di sistemi storage all-flash NetApp AFF A700.
+
+La seguente tabella mostra il software standard richiesto per le configurazioni MEDITECH.
+
+|===
+| Software | Famiglia di prodotti | Versione o release | Dettagli 
+
+
+| Storage | ONTAP | Disponibilità generale (GA) di ONTAP 9.4 |  
+
+
+.3+| Rete | Cisco UCS Fabric Interconnects | Cisco UCSM 4.x | Versione corrente consigliata 
+
+
+| Switch Ethernet Cisco Nexus | 7.0(3)I7(6) | Versione corrente consigliata 
+
+
+| Cisco FC: Cisco MDS 9132T | 8.3(2) | Versione corrente consigliata 
+
+
+| Hypervisor | Hypervisor | VMware vSphere ESXi 6.7 |  
+
+
+|  | Macchine virtuali (VM) | Windows 2016 |  
+
+
+.4+| Gestione | Sistema di gestione dell'hypervisor | VMware vCenter Server 6.7 U1 (VCSA) |  
+
+
+| NetApp Virtual Storage Console (VSC) | VSC 7.0P1 |  
+
+
+| NetApp SnapCenter | SnapCenter 4.0 |  
+
+
+| Cisco UCS Manager | 4.x |  
+|===
+La seguente tabella mostra un piccolo esempio di configurazione (categoria 3): Componenti dell'infrastruttura.
+
+|===
+| Layer | Famiglia di prodotti | Quantità e modello | Dettagli 
+
+
+.5+| Calcolo | Chassis Cisco UCS 5108 | 1 | Supporta fino a otto blade half-width o quattro blade full-width. Aggiungi chassis con l'aumento dei requisiti dei server. 
+
+
+| Moduli i/o chassis Cisco | 2 x 2208 | 8 GB x 10 GB di porte uplink 
+
+
+| Blade server Cisco UCS | 4 x B200 M5 | Ciascuno con 2 x 14 core, velocità di clock di 2,6 GHz o superiore e 384 GB BIOS 3.2 (n. 3) 
+
+
+| Cisco UCS Virtual Interface Card | 4 x UCS 1440 | Driver FC fNIC VMware ESXi: 1.6.0.47 driver Ethernet ENIC VMware ESXi: 1.0.27.0 (vedere la matrice di interoperabilità: https://ucshcltool.cloudapps.cisco.com/public/[]) 
+
+
+| 2 Cisco UCS Fabric Interconnects (Fi) | 2 UCS 6454 Fi | Fabric interconnects di quarta generazione che supporta Ethernet 10/25/100GB e FC 32 GB 
+
+
+| Rete | Switch Ethernet Cisco | 2 x Nexus 9336c-FX2 | 1 GB, 10 GB, 25 GB, 40 GB, 100 GB 
+
+
+.2+| Rete di storage | IP Network Nexus 9k per storage BLOB |  | Chassis FI e UCS 
+
+
+| FC: CISCO MDS 9132T |  | Due switch Cisco 9132T 
+
+
+.3+| Storage | Sistema storage all-flash NetApp AFF A300 | 1 coppia ha | Cluster a 2 nodi per tutti i carichi di lavoro MEDITECH (file server, Image Server, SQL Server, VMware e così via) 
+
+
+| Shelf di dischi DS224C | 1 shelf di dischi DS224C |  
+
+
+| Disco a stato solido (SSD) | 9 x 3,8 TB |  
+|===
+La seguente tabella mostra un esempio di configurazione del supporto (categoria 5) – componenti dell'infrastruttura
+
+|===
+| Layer | Famiglia di prodotti | Quantità e modello | Dettagli 
+
+
+.5+| Calcolo | Chassis Cisco UCS 5108 | 1 | Supporta fino a otto blade half-width o quattro blade full-width. Aggiungi chassis con l'aumento dei requisiti dei server. 
+
+
+| Moduli i/o chassis Cisco | 2 x 2208 | 8 GB x 10 GB di porte uplink 
+
+
+| Blade server Cisco UCS | 6 x B200 M5 | Ciascuno con 2 x 16 core, velocità di clock di 2,5 GHz/o superiore e 384 GB o più di memoria BIOS 3.2 (n. 3) 
+
+
+| Cisco UCS Virtual Interface Card (VIC) | 6 VICS UCS 1440 | Driver FC fNIC VMware ESXi: 1.6.0.47 driver Ethernet ENIC VMware ESXi: 1.0.27.0 (vedere matrice di interoperabilità: ) 
+
+
+| 2 Cisco UCS Fabric Interconnects (Fi) | 2 UCS 6454 Fi | Fabric interconnects di quarta generazione che supporta Ethernet 10 GB/25 GB/100 GB e FC 32 GB 
+
+
+| Rete | Switch Ethernet Cisco | 2 x Nexus 9336c-FX2 | 1 GB, 10 GB, 25 GB, 40 GB, 100 GB 
+
+
+.2+| Rete di storage | IP Network Nexus 9k per storage BLOB |  |  
+
+
+| FC: CISCO MDS 9132T |  | Due switch Cisco 9132T 
+
+
+.3+| Storage | Sistema storage all-flash NetApp AFF A220 | 2 coppia ha | Cluster a 2 nodi per tutti i carichi di lavoro MEDITECH (file server, Image Server, SQL Server, VMware e così via) 
+
+
+| Shelf di dischi DS224C | 1 shelf di dischi DS224C |  
+
+
+| SSD | 13 x 3,8 TB |  
+|===
+La seguente tabella mostra un esempio di configurazione di grandi dimensioni (categoria 6): Componenti dell'infrastruttura.
+
+|===
+| Layer | Famiglia di prodotti | Quantità e modello | Dettagli 
+
+
+.5+| Calcolo | Chassis Cisco UCS 5108 | 1 |  
+
+
+| Moduli i/o chassis Cisco | 2 x 2208 | 8 porte uplink da 10 GB 
+
+
+| Blade server Cisco UCS | 8 x B200 M5 | Ciascuno con 2 x 24 core, 2,7 GHz e 768 GB BIOS 3.2 (n. 3) 
+
+
+| Cisco UCS Virtual Interface Card (VIC) | 8 VICS UCS 1440 | Driver FC fNIC VMware ESXi: 1.6.0.47 driver Ethernet ENIC VMware ESXi: 1.0.27.0 (vedere la matrice di interoperabilità: https://ucshcltool.cloudapps.cisco.com/public/[]) 
+
+
+| 2 connessioni fabric Cisco UCS (Fi) | 2 UCS 6454 Fi | Fabric interconnects di quarta generazione che supporta Ethernet 10 GB/25 GB/100 GB e FC 32 GB 
+
+
+| Rete | Switch Ethernet Cisco | 2 x Nexus 9336c-FX2 | 2 Cisco Nexus 9332PQ1, 10 GB, 25 GB, 40 GB, 100 GB 
+
+
+.2+| Rete di storage | IP Network N9k per storage BLOB |  |  
+
+
+| FC: CISCO MDS 9132T |  | Due switch Cisco 9132T 
+
+
+.3+| Storage | AFF A300 | 1 coppia ha | Cluster a 2 nodi per tutti i carichi di lavoro MEDITECH (file server, Image Server, SQL Server, VMware e così via) 
+
+
+| Shelf di dischi DS224C | 1 shelf di dischi DS224C |  
+
+
+| SSD | 19 x 3,8 TB |  
+|===
+
+NOTE: Queste configurazioni forniscono un punto di partenza per le indicazioni sul dimensionamento. Alcuni ambienti dei clienti potrebbero avere più carichi di lavoro di produzione MEDITECH e non MEDITECH in esecuzione simultaneamente, oppure potrebbero avere requisiti di IOP più elevati. È necessario collaborare con il team commerciale NetApp per dimensionare i sistemi storage in base agli IOPS, ai carichi di lavoro e alla capacità richiesti per determinare la piattaforma giusta per i carichi di lavoro.

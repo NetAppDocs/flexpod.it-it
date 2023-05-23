@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_executive_summary.html 
+keywords: NVA-1125, nva1125, 1125 
+summary:  
+---
+= NVA-1125-DESIGN: FlexPod Express con Cisco UCS serie C e AFF serie A220
+:hardbreaks:
+:allow-uri-read: 
+:firstname: *
+:author: *
+:authorinitials: *
+:authors: *
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Savita Kumari, NetApp in partnership con:image:cisco logo.png["Errore: Immagine grafica mancante"]
+
+[role="lead"]
+Le tendenze del settore indicano una vasta trasformazione del data center verso l'infrastruttura condivisa e il cloud computing. Inoltre, le organizzazioni cercano una soluzione semplice ed efficace per uffici remoti e filiali, sfruttando la tecnologia che conoscono nel proprio data center.
+
+FlexPod è un'architettura di data center pre-progettata e basata su Best practice, basata sul sistema di calcolo unificato Cisco, sulla famiglia di switch Cisco Nexus e su NetApp AFF. I componenti di FlexPod Express sono simili alle controparti del data center FlexPod, consentendo sinergie di gestione nell'intero ambiente dell'infrastruttura IT su scala ridotta. FlexPod Datacenter e FlexPod Express sono piattaforme ottimali per la virtualizzazione e per i sistemi operativi bare-metal e i carichi di lavoro aziendali.
+
+link:express-c-series-aff220-design_program_summary.html["Avanti: Riepilogo del programma."]

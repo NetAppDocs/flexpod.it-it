@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_minimum_hardware_requirements.html 
+keywords: minimum, hardware, requirements, switches, fabric, interconnects, servers, storage, controllers 
+summary: Una configurazione di FlexPod Datacenter ha requisiti hardware minimi, inclusi, a titolo esemplificativo ma non esaustivo, switch, fabric interconnects, server e storage controller NetApp. 
+---
+= Requisiti hardware minimi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Una configurazione di FlexPod Datacenter ha requisiti hardware minimi, inclusi, a titolo esemplificativo ma non esaustivo, switch, fabric interconnects, server e storage controller NetApp.
+
+È necessario utilizzare Cisco UCS Server. I server C-Series e B-Series sono stati utilizzati nei progetti validati. I Cisco Nexus Fabric Extender (FEX) sono opzionali con i server C-Series.
+
+Una configurazione FlexPod ha i seguenti requisiti hardware minimi:
+
+* Due switch Cisco Nexus in una configurazione ridondante. Questa configurazione può essere costituita da due switch ridondanti della serie Cisco Nexus 5000, 7000 o 9000. I due switch devono essere dello stesso modello e devono essere configurati nella stessa modalità operativa.
++
+Se si sta implementando un'architettura ACI, è necessario rispettare i seguenti requisiti aggiuntivi:
+
++
+** Implementare gli switch Cisco Nexus serie 9000 in una topologia Leaf-spine.
+** Utilizzare tre Cisco Application Policy Infrastructure Controller (APIC).
+
+
+* Due Cisco UCS 6200, 6300 o 6400 Series Fabric Interconnect in una configurazione ridondante.
+* Server Cisco UCS:
++
+** Se la soluzione utilizza server B-Series, uno chassis per server blade Cisco UCS 5108 B-Series più due server blade Cisco UCS B-Series più due moduli i/o (IOM) 2104, 2204/8, 2408 o 2304.
+** Se la soluzione utilizza server C-Series, due server rack Cisco UCS C-Series.
++
+Per implementazioni più estese di server rack Cisco UCS C-Series, è possibile scegliere una coppia di moduli FEX 2232PP. Tuttavia, il modello 2232PP non è un requisito hardware.
+
+
+
+* Due storage controller NetApp in una configurazione di coppia ad alta disponibilità (ha):
++
+Questa configurazione può essere costituita da qualsiasi controller di storage NetApp FAS, AFF o ASA supportato. Vedere https://hwu.netapp.com/["NetApp Hardware Universe"^] Applicazione per un elenco aggiornato dei modelli di controller FAS, AFF e ASA supportati.
+
++
+** La configurazione ha richiede due interfacce ridondanti per controller per l'accesso ai dati; le interfacce possono essere FCoE, FC o 10/25/100GB Ethernet (GbE).
+** Se la soluzione utilizza NetApp ONTAP, è necessaria una topologia di interconnessione cluster approvata da NetApp. Per ulteriori informazioni, consultare https://hwu.netapp.com/Switch/Index["Switch"^] Scheda di NetApp Hardware Universe.
+** Se la soluzione utilizza ONTAP, per l'accesso ai dati sono necessarie almeno due porte 10/25/100GbE aggiuntive per controller.
+** Per i cluster ONTAP con due nodi, è possibile configurare un cluster senza switch a due nodi.
+** Per i cluster ONTAP con più di due nodi, è necessaria una coppia di switch di interconnessione del cluster.
+
+
+* Uno shelf di dischi NetApp con qualsiasi tipo di disco supportato. Consultare la scheda Shelf di link:https://hwu.netapp.com/Shelves/Index?osTypeId=2032["NetApp Hardware Universe"^] per un elenco aggiornato dei modelli di shelf di dischi supportati.
+

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html 
+keywords: aff, storage, deployment, procedure, create, iscsi, igroups, ontap, san, boot 
+summary: Per creare igroups, eseguire i seguenti comandi dalla connessione SSH del nodo di gestione del cluster. 
+---
+= Procedura di implementazione dello storage NetApp AFF (parte 2)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Configurare lo storage di boot SAN ONTAP
+
+
+
+=== Creare igroups iSCSI
+
+
+NOTE: Per questa fase, sono necessari gli IQN iSCSI Initiator della configurazione del server.
+
+Per creare igroups, eseguire i seguenti comandi dalla connessione SSH del nodo di gestione del cluster. Per visualizzare i tre igroups creati in questa fase, eseguire `igroup show` comando.
+
+....
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-A –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_a_iSCSI-A_vNIC_IQN>>,<<var_vm_host_infra_a_iSCSI-B_vNIC_IQN>>
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-B –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_b_iSCSI-A_vNIC_IQN>>,<<var_vm_host_infra_b_iSCSI-B_vNIC_IQN>>
+....
+
+NOTE: Questa fase deve essere completata quando si aggiungono altri server Cisco UCS C-Series.
+
+
+
+== Mappare le LUN di avvio a igroups
+
+....
+To map boot LUNs to igroups, run the following commands from the cluster management SSH connection:
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra-A –igroup VM-Host-Infra-A –lun-id 0
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra-B –igroup VM-Host-Infra-B –lun-id 0
+....
+
+NOTE: Questa fase deve essere completata quando si aggiungono altri server Cisco UCS C-Series.
+
+link:express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html["Procedura di implementazione di VMware vSphere 6.7U2."]

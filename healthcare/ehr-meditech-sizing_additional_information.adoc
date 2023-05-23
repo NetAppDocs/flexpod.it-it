@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_additional_information.html 
+keywords: additional, information, guides, meditech, sizing 
+summary: Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti o siti Web. 
+---
+= Ulteriori informazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti o siti Web:
+
+* Data center FlexPod con design validato FC Cisco.
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Linee guida per l'implementazione NetApp per ambienti MEDITECH.
++
+https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/content/248456"^] (Accesso NetApp richiesto)
+
+* Linee guida di dimensionamento NetApp per ambienti MEDITECH.
++
+http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+
+* Data center FlexPod per l'implementazione Epic EHR
++
+http://www.netapp.com/us/media/tr-4693.pdf["www.netapp.com/us/media/tr-4693.pdf"^]
+
+* Area di progettazione FlexPod
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* FlexPod DC con storage FC (switch MDS) con NetApp AFF, vSphere 6.5U1 e Cisco UCS Manager
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* Cisco Healthcare
++
+https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283["https://www.cisco.com/c/en/us/solutions/industries/healthcare.html?dtid=osscdc000283"^]
+
+

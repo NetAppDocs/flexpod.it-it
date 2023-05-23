@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_additional_information.html 
+keywords: additional, information, flexpod, ransomware 
+summary: Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e/o siti Web. 
+---
+= Ulteriori informazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e/o siti Web:
+
+* Software NetApp Snapshot
++
+https://www.netapp.com/us/products/platform-os/snapshot.aspx["https://www.netapp.com/us/products/platform-os/snapshot.aspx"^]
+
+* Gestione del backup di SnapCenter
++
+https://www.netapp.com/us/products/backup-recovery/snapcenter-backup-management.aspx["https://www.netapp.com/us/products/backup-recovery/snapcenter-backup-management.aspx"^]
+
+* Conformità dei dati SnapLock
++
+https://www.netapp.com/us/products/backup-recovery/snaplock-compliance.aspx["https://www.netapp.com/us/products/backup-recovery/snaplock-compliance.aspx"^]
+
+* Documentazione sui prodotti NetApp
++
+https://www.netapp.com/us/documentation/index.aspx["https://www.netapp.com/us/documentation/index.aspx"^]
+
+* Cisco Advanced malware Protection (AMP)
++
+https://www.cisco.com/c/en/us/products/security/advanced-malware-protection/index.html["https://www.cisco.com/c/en/us/products/security/advanced-malware-protection/index.html"^]
+
+* Cisco Stealthwatch
++
+https://www.cisco.com/c/en_in/products/security/stealthwatch/index.html["https://www.cisco.com/c/en_in/products/security/stealthwatch/index.html"^]
+
+

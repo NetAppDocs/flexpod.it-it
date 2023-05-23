@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_performance_considerations.html 
+keywords: performance, considerations, size, tier, cloud, fabricpool 
+summary: Quando si prende in considerazione il dimensionamento, è necessario valutare i seguenti elementi. 
+---
+= Considerazioni sulle performance
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Dimensionare il Tier di performance
+
+Quando si prende in considerazione il dimensionamento, tenere presente che il Tier di performance deve essere in grado di svolgere le seguenti attività:
+
+* Supporto dei dati hot
+* Supporto dei dati cold fino a quando la scansione di tiering non sposta i dati nel Tier cloud
+* Supporto dei dati del Tier cloud che diventano "hot" e vengono riscritti nel Tier di performance
+* Supporto dei metadati WAFL associati al Tier cloud allegato
+
+
+Per la maggior parte degli ambienti, un rapporto performance-capacità 1:10 sugli aggregati FabricPool è estremamente conservativo, fornendo al contempo risparmi significativi sullo storage. Ad esempio, se l'intento è quello di tierare 200 TB al livello cloud, l'aggregato del Tier di performance dovrebbe essere di almeno 20 TB.
+
+
+NOTE: Le scritture dal Tier cloud al Tier performance sono disattivate se la capacità del Tier performance è superiore al 70%. In questo caso, i blocchi vengono letti direttamente dal livello cloud.
+
+
+
+== Dimensionare il Tier cloud
+
+Quando si considera il dimensionamento, l'archivio di oggetti che agisce come Tier cloud deve essere in grado di svolgere le seguenti attività:
+
+* Supporto delle letture dei dati cold esistenti
+* Supporto delle scritture di nuovi dati cold
+* Supporto dell'eliminazione e della deframmentazione degli oggetti
+

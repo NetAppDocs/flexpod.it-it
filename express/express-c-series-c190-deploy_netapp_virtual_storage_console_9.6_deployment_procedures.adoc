@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html 
+keywords: virtual, storage, console, deployment, procedures, install, nfs, vaai 
+summary: 'In questa sezione vengono descritte le procedure di implementazione di NetApp Virtual Storage Console (VSC).' 
+---
+= Procedure di implementazione di NetApp Virtual Storage Console 9.6
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+In questa sezione vengono descritte le procedure di implementazione di NetApp Virtual Storage Console (VSC).
+
+
+
+== Installare Virtual Storage Console 9.6
+
+Per installare il software VSC 9.6 utilizzando un'implementazione Open Virtualization Format (OVF), attenersi alla seguente procedura:
+
+. Accedere a vSphere Web Client > host Cluster > Deploy OVF Template (implementa modello OVF).
+. Accedere al file VSC OVF scaricato dal sito del supporto NetApp.
++
+image:express-c-series-c190-deploy_image49.png["Errore: Immagine grafica mancante"]
+
+. Inserire il nome della macchina virtuale e selezionare un data center o una cartella in cui eseguire l'implementazione. Fare clic su Avanti.
++
+image:express-c-series-c190-deploy_image50.png["Errore: Immagine grafica mancante"]
+
+. Selezionare il cluster ESXi FlexPod-Cluster e fare clic su Next (Avanti).
+. Esaminare i dettagli e fare clic su Next (Avanti).
++
+image:express-c-series-c190-deploy_image51.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su Accept (Accetta) per accettare la licenza e fare clic su Next (Avanti).
+. Selezionare il formato del disco virtuale di thin provisioning e uno degli archivi dati NFS. Fare clic su Avanti.
++
+image:express-c-series-c190-deploy_image52.png["Errore: Immagine grafica mancante"]
+
+. Da Select Networks (Seleziona reti), scegliere una rete di destinazione e fare clic su Next (Avanti).
++
+image:express-c-series-c190-deploy_image53.png["Errore: Immagine grafica mancante"]
+
+. Da Customize Template (Personalizza modello), immettere la password dell'amministratore VSC, il nome vCenter o l'indirizzo IP e altri dettagli di configurazione, quindi fare clic su Next (Avanti).
++
+image:express-c-series-c190-deploy_image54.png["Errore: Immagine grafica mancante"]
+
+. Esaminare i dettagli di configurazione immessi e fare clic su Finish (fine) per completare l'implementazione di NetApp-VSC VM.
+. Accendere la macchina virtuale NetApp-VSC e aprire la console della macchina virtuale.
+. Durante il processo di avvio delle macchine virtuali NetApp-VSC, viene visualizzato un messaggio che richiede di installare VMware Tools. Da vCenter, selezionare NetApp-VSC VM > sistema operativo guest > Installa VMware Tools.
++
+image:express-c-series-c190-deploy_image55.png["Errore: Immagine grafica mancante"]
+
+. Le informazioni sulla configurazione di rete e sulla registrazione di vCenter sono state fornite durante la personalizzazione del modello OVF. Pertanto, dopo l'esecuzione della VM NetApp-VSC, VSC, vSphere API for Storage Awareness (VASA) e VMware Storage Replication Adapter (SRA) vengono registrati in vCenter.
+. Disconnettersi dal client vCenter e accedere nuovamente. Dal menu Home, verificare che NetApp VSC sia installato.
++
+image:express-c-series-c190-deploy_image56.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== Scarica e installa il plug-in NetApp NFS VAAI
+
+Per scaricare e installare il plug-in NetApp NFS VAAI, attenersi alla seguente procedura:
+
+. Scarica il plug-in NetApp NFS 1.1.2 per VMware `. vib` Dalla pagina di download del plug-in NFS e salvarlo sul computer locale o sull'host di amministrazione.
+. Scarica il plug-in NetApp NFS per VMware VAAI:
++
+.. Accedere alla https://mysupport.netapp.com/NOW/download/software/nfs_plugin_vaai_esxi6/1.1.2/["pagina di download del software"^].
+.. Scorrere verso il basso e fare clic su NetApp NFS Plug-in for VMware VAAI.
+.. Dalla schermata iniziale del client Web vSphere, selezionare Virtual Storage Console.
+.. In Virtual Storage Console > Settings > NFS VAAI Tools (Console di storage virtuale > Impostazioni > Strumenti NFS VAAI), caricare il plug-in NFS scegliendo Select file (Seleziona file) e selezionando la posizione in cui è memorizzato il plug-in scaricato.
++
+image:express-c-series-c190-deploy_image57.png["Errore: Immagine grafica mancante"]
+
+
+
+. Fare clic su Upload (carica) per trasferire il plug-in a vCenter.
+. Selezionare l'host, quindi scegliere NetApp VSC > Install NFS Plug-in for VMware VAAI.
++
+image:express-c-series-c190-deploy_image58.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== Utilizzare le impostazioni di storage ottimali per gli host ESXi
+
+VSC consente la configurazione automatica delle impostazioni relative allo storage per tutti gli host ESXi connessi ai controller di storage NetApp. Per utilizzare queste impostazioni, attenersi alla seguente procedura:
+
+. Dalla schermata iniziale, selezionare vCenter > host e cluster. Per ciascun host ESXi, fare clic con il pulsante destro del mouse e selezionare NetApp VSC > Set Recommended Values (Imposta valori consigliati).
++
+image:express-c-series-c190-deploy_image59.png["Errore: Immagine grafica mancante"]
+
+. Controllare le impostazioni che si desidera applicare agli host vSphere selezionati. Fare clic su OK per applicare le impostazioni.
++
+image:express-c-series-c190-deploy_image60.png["Errore: Immagine grafica mancante"]
+
++
+image:express-c-series-c190-deploy_image61.png["Errore: Immagine grafica mancante"]
+
+. Riavviare L'host ESXI dopo aver applicato queste impostazioni.
+

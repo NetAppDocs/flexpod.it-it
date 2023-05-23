@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html 
+keywords: compute, cisco, nist, compliance mode, fabric interconnect, fi, advanced malware protection 
+summary: 'Un"architettura FlexPod può essere progettata con un server Cisco UCS conforme a FIPS 140-2. In conformità con il brevetto U. S. NIST, il server Cisco UCS può funzionare in modalità di conformità FIPS 140-2 livello 1.' 
+---
+= Cisco UCS Compute e FIPS 140-2 di FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["Precedente: Piano di controllo rispetto al piano dati."]
+
+[role="lead"]
+Un'architettura FlexPod può essere progettata con un server Cisco UCS conforme a FIPS 140-2. In conformità con il brevetto U. S. NIST, il server Cisco UCS può funzionare in modalità di conformità FIPS 140-2 livello 1. Per un elenco completo dei componenti Cisco conformi a FIPS, vedere https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=UCSM["Pagina FIPS 140 di Cisco"^]. Cisco UCS Manager è validato FIPS 140-2.
+
+
+
+== Cisco UCS e Fabric Interconnect
+
+Cisco UCS Manager viene implementato ed eseguito da Cisco Fabric Interconnects (IF).
+
+Per ulteriori informazioni su Cisco UCS e su come attivare FIPS, consultare https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/release/notes/CiscoUCSManager-RN-3-2.html["Documentazione di Cisco UCS Manager"^].
+
+Per attivare la modalità FIPS sull'interconnessione fabric Cisco su ciascun fabric A e B, eseguire i seguenti comandi:
+
+....
+fp-health-fabric-A# connect local-mgmt
+fp-health-fabric-A(local-mgmt)# enable fips-mode
+FIPS mode is enabled
+....
+
+NOTE: Per sostituire un Fi in un cluster su Cisco UCS Manager versione 3.2(3) con un Fi su una release precedente a Cisco UCS Manager versione 3.2(3), disattivare la modalità FIPS (disattivare `fips-mode`) Sul Fi esistente prima di aggiungere il Fi sostitutivo al cluster. Una volta creato il cluster, durante l'avvio di Cisco UCS Manager, la modalità FIPS viene attivata automaticamente.
+
+Cisco offre i seguenti prodotti chiave che possono essere implementati a livello di elaborazione o applicazione:
+
+* *Cisco Advanced malware Protection (AMP) per endpoint.* supportata sui sistemi operativi Microsoft Windows e Linux, questa soluzione integra funzionalità di prevenzione, rilevamento e risposta. Questo software di sicurezza previene le violazioni, blocca il malware nel punto di ingresso e monitora e analizza continuamente le attività di file e processi per rilevare, contenere e rimediare rapidamente alle minacce che possono eludere le difese front-line. Il componente di protezione delle attività dannose (MAP) di AMP monitora continuamente tutte le attività degli endpoint e fornisce il rilevamento in fase di esecuzione e il blocco del comportamento anomalo di un programma in esecuzione sull'endpoint. Ad esempio, quando il comportamento degli endpoint indica ransomware, i processi in errore vengono terminati, impedendo la crittografia degli endpoint e arrestando l'attacco.
+* *AMP per la sicurezza della posta elettronica.* le e-mail sono diventate il mezzo principale per diffondere malware e per eseguire cyberattacchi. In media, circa 100 miliardi di e-mail vengono scambiate in un solo giorno, il che fornisce agli autori degli attacchi un eccellente vettore di penetrazione nei sistemi degli utenti. Pertanto, è assolutamente essenziale difendersi da questa linea di attacco. AMP analizza le e-mail per individuare minacce come exploit zero-day e malware furtivo nascosto in allegati dannosi. Utilizza inoltre l'intelligence URL leader del settore per combattere i collegamenti dannosi. Offre agli utenti una protezione avanzata contro il phishing, il ransomware e altri attacchi sofisticati.
+* *Next- Generation Intrusion Prevention System (NGIPS).* Cisco firepower NGIPS può essere implementato come appliance fisica nel data center o come appliance virtuale su VMware (NGIPSv per VMware). Questo sistema di prevenzione delle intrusioni altamente efficace offre performance affidabili e un basso costo totale di proprietà. La protezione dalle minacce può essere estesa con licenze di abbonamento opzionali per fornire AMP, visibilità e controllo delle applicazioni e funzionalità di filtraggio degli URL. I NGIPS virtualizzati ispezionano il traffico tra macchine virtuali (VM) e semplificano l'implementazione e la gestione delle soluzioni NGIPS in siti con risorse limitate, aumentando la protezione per risorse fisiche e virtuali.
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["Avanti: Rete Cisco FlexPod e FIPS 140-2."]

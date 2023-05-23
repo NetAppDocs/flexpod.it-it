@@ -1,0 +1,309 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-san-configuration.html 
+keywords: san, configuration, host utility kit, discover storage, multipathing, physical volume, group, logical volume, file system, snapmirror 
+summary: 'Questa sezione descrive la configurazione lato host richiesta da EHR per consentire al software di integrarsi al meglio con lo storage NetApp. In questo segmento, discutiamo in modo specifico dell"integrazione degli host per i sistemi operativi Linux.' 
+---
+= Configurazione SAN
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-installation-and-configuration.html["Precedente: Installazione e configurazione."]
+
+[role="lead"]
+Questa sezione descrive la configurazione lato host richiesta da EHR per consentire al software di integrarsi al meglio con lo storage NetApp. In questo segmento, discutiamo in modo specifico dell'integrazione degli host per i sistemi operativi Linux. Utilizzare https://imt.netapp.com/matrix/["Tool di matrice di interoperabilità NetApp (IMT)"^] per convalidare tutte le versioni del software e del firmware.
+
+
+NOTE: La seguente procedura di configurazione è specifica per l'host CentOS 8 utilizzato in questa soluzione.
+
+
+
+== Kit di utility host NetApp
+
+NetApp consiglia di installare NetApp host Utility Kit (host Utilities) sui sistemi operativi degli host collegati ai sistemi storage NetApp e che accedono ad essi. È supportato Microsoft MPIO (Multipath i/o) nativo. Il sistema operativo deve essere compatibile con ALUA (Asymmetric Logical Unit Access) per il multipathing. L'installazione delle utility host configura le impostazioni dell'HBA (host Bus Adapter) per lo storage NetApp.
+
+È possibile scaricare le utility host di NetApp https://mysupport.netapp.com/site/products/all/details/hostutilities/downloads-tab["qui"^]. In questa soluzione, abbiamo installato Linux host Utilities 7.1 sull'host.
+
+....
+[root@hc-cloud-secure-1 ~]# rpm -ivh netapp_linux_unified_host_utilities-7-1.x86_64.rpm
+....
+
+
+== Scopri lo storage ONTAP
+
+Assicurarsi che il servizio iSCSI sia in esecuzione quando si suppone che si verifichino i log-in. Per impostare la modalità di accesso per un portale specifico su una destinazione o per tutti i portali su una destinazione, utilizzare `iscsiadm` comando.
+
+....
+[root@hc-cloud-secure-1 ~]# rescan-scsi-bus.sh
+[root@hc-cloud-secure-1 ~]# iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+[root@hc-cloud-secure-1 ~]# iscsiadm -m node -L all
+....
+Ora puoi utilizzare `sanlun` Per visualizzare le informazioni relative ai LUN collegati all'host. Assicurarsi di aver effettuato l'accesso come root sull'host.
+
+....
+[root@hc-cloud-secure-1 ~]# sanlun lun show
+controller(7mode/E-Series)/
+                                    device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+Healthcare_SVM                       /dev/sdb host33  iSCSI    200g    cDOT
+                       /vol/hc_iscsi_vol/iscsi_lun1
+
+Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
+                       /vol/hc_iscsi_vol/iscsi_lun1
+....
+
+
+== Configurare il multipathing
+
+Device Mapper Multipathing (DM-multipath) è un'utility di multipathing nativa in Linux. Può essere utilizzato per la ridondanza e per migliorare le performance. Aggrega o combina i percorsi di i/o multipli tra server e storage, in modo da creare un singolo dispositivo a livello di sistema operativo.
+
+. Prima di configurare DM-multipath sul sistema, assicurarsi che il sistema sia stato aggiornato e includa `device-mapper-multipath` pacchetto.
++
+....
+[root@hc-cloud-secure-1 ~]# rpm -qa|grep multipath
+device-mapper-multipath-libs-0.8.4-31.el8.x86_64
+device-mapper-multipath-0.8.4-31.el8.x86_64
+....
+. Il file di configurazione è `/etc/multipath.conf` file. Aggiornare il file di configurazione come mostrato di seguito.
++
+....
+[root@hc-cloud-secure-1 ~]# cat /etc/multipath.conf
+defaults {
+   path_checker      readsector0
+   no_path_retry      fail
+}
+devices {
+   device {
+      vendor         "NETAPP  "
+      product         "LUN.*"
+      no_path_retry     queue
+      path_checker      tur
+   }
+}
+....
+. Attivare e avviare i servizi multipath.
++
+....
+[root@hc-cloud-secure-1 ~]# systemctl enable multipathd.service
+[root@hc-cloud-secure-1 ~]# systemctl start  multipathd.service
+....
+. Aggiungere il modulo kernel caricabile `dm-multipath` e riavviare il servizio multipath. Infine, controllare lo stato del multipathing.
++
+....
+[root@hc-cloud-secure-1 ~]# modprobe -v dm-multipath
+insmod /lib/modules/4.18.0-408.el8.x86_64/kernel/drivers/md/dm-multipath.ko.xz
+
+[root@hc-cloud-secure-1 ~]# systemctl restart multipathd.service
+
+[root@hc-cloud-secure-1 ~]# multipath -ll
+3600a09803831494c372b545a4d786278 dm-2 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+|-+- policy='service-time 0' prio=50 status=active
+| `- 33:0:0:0 sdb 8:16 active ready running
+`-+- policy='service-time 0' prio=10 status=enabled
+`- 34:0:0:0 sdc 8:32 active ready running
+....
+
+
+
+NOTE: Per informazioni dettagliate su questi passaggi, vedere https://docs.netapp.com/us-en/ontap-sanhost/hu_centos_80.html["qui"^].
+
+
+
+== Creare un volume fisico
+
+Utilizzare `pvcreate` comando per inizializzare un dispositivo a blocchi da utilizzare come volume fisico. L'inizializzazione è analoga alla formattazione di un file system.
+
+....
+[root@hc-cloud-secure-1 ~]# pvcreate /dev/sdb
+Physical volume "/dev/sdb" successfully created.
+....
+
+
+== Creare un gruppo di volumi
+
+Per creare un gruppo di volumi da uno o più volumi fisici, utilizzare `vgcreate` comando. Questo comando crea un nuovo gruppo di volumi in base al nome e vi aggiunge almeno un volume fisico.
+
+....
+[root@hc-cloud-secure-1 ~]# vgcreate datavg /dev/sdb
+Volume group "datavg" successfully created.
+....
+Il `vgdisplay` il comando può essere utilizzato per visualizzare le proprietà dei gruppi di volumi (ad esempio dimensioni, estensioni, numero di volumi fisici e così via) in un formato fisso.
+
+....
+[root@hc-cloud-secure-1 ~]# vgdisplay datavg
+  --- Volume group ---
+  VG Name               datavg
+  System ID
+  Format                lvm2
+  Metadata Areas        1
+  Metadata Sequence No  1
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                0
+  Cur LV                0
+  Open LV               0
+  Max PV                0
+  Cur PV                1
+  Act PV                1
+  VG Size               <200.00 GiB
+  PE Size               4.00 MiB
+  Total PE              51199
+  Alloc PE / Size       0 / 0
+  Free  PE / Size       51199 / <200.00 GiB
+  VG UUID               C7jmI0-J0SS-Cq91-t6b4-A9xw-nTfi-RXcy28
+....
+
+
+== Creare un volume logico
+
+Quando si crea un volume logico, il volume logico viene ricavato da un gruppo di volumi utilizzando le estensioni libere sui volumi fisici che compongono il gruppo di volumi.
+
+....
+[root@hc-cloud-secure-1 ~]# lvcreate - l 100%FREE -n datalv datavg
+Logical volume "datalv" created.
+....
+Questo comando crea un volume logico chiamato `datalv` che utilizza tutto lo spazio non allocato nel gruppo di volumi `datavg`.
+
+
+
+== Creare il file system
+
+....
+[root@hc-cloud-secure-1 ~]# mkfs.xfs -K /dev/datavg/datalv
+meta-data=/dev/datavg/datalv     isize=512    agcount=4, agsize=13106944 blks
+         =                       sectsz=4096  attr=2, projid32bit=1
+         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+         =                       reflink=1    bigtime=0 inobtcount=0
+data     =                       bsize=4096   blocks=52427776, imaxpct=25
+         =                       sunit=0      swidth=0 blks
+naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+log      =internal log           bsize=4096   blocks=25599, version=2
+         =                       sectsz=4096  sunit=1 blks, lazy-count=1
+realtime =none                   extsz=4096   blocks=0, rtextents=0
+....
+
+
+== Creare la cartella da montare
+
+....
+[root@hc-cloud-secure-1 ~]# mkdir /file1
+....
+
+
+== Montare il file system
+
+....
+[root@hc-cloud-secure-1 ~]# mount -t xfs /dev/datavg/datalv /file1
+
+[root@hc-cloud-secure-1 ~]# df -k
+Filesystem                1K-blocks    Used Available Use% Mounted on
+devtmpfs                    8072804       0   8072804   0% /dev
+tmpfs                       8103272       0   8103272   0% /dev/shm
+tmpfs                       8103272    9404   8093868   1% /run
+tmpfs                       8103272       0   8103272   0% /sys/fs/cgroup
+/dev/mapper/cs-root        45496624 5642104  39854520  13% /
+/dev/sda2                   1038336  258712    779624  25% /boot
+/dev/sda1                    613184    7416    605768   2% /boot/efi
+tmpfs                       1620652      12   1620640   1% /run/user/42
+tmpfs                       1620652       0   1620652   0% /run/user/0
+/dev/mapper/datavg-datalv 209608708 1494520 208114188   1% /file1
+....
+Per informazioni dettagliate su queste attività, vedere la pagina link:https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/5/html/logical_volume_manager_administration/lvm_cli["Amministrazione di LVM con comandi CLI"].
+
+
+
+== Generazione di dati
+
+ `Dgen.pl` È un generatore di dati di script perl per il simulatore i/o di EHR (GenerateIO). I dati all'interno dei LUN vengono generati con l'EHR `Dgen.pl` script. Lo script è progettato per creare dati simili a quelli che si trovano all'interno di un database EHR.
+
+....
+[root@hc-cloud-secure-1 ~]# cd GenerateIO-1.17.3/
+
+[root@hc-cloud-secure-1 GenerateIO-1.17.3]# ./dgen.pl --directory /file1 --jobs 80
+
+[root@hc-cloud-secure-1 ~]# cd /file1/
+[root@hc-cloud-secure-1 file1]# ls
+dir01  dir05  dir09  dir13  dir17  dir21  dir25  dir29  dir33  dir37  dir41  dir45  dir49  dir53  dir57  dir61  dir65  dir69  dir73  dir77  dir02  dir06  dir10  dir14  dir18  dir22  dir26  dir30  dir34  dir38  dir42  dir46  dir50  dir54  dir58  dir62  dir66  dir70  dir74  dir78  dir03  dir07  dir11  dir15  dir19  dir23  dir27  dir31  dir35  dir39  dir43  dir47  dir51  dir55  dir59  dir63  dir67  dir71  dir75  dir79  dir04  dir08  dir12  dir16  dir20  dir24  dir28  dir32  dir36  dir40  dir44  dir48  dir52  dir56  dir60  dir64  dir68  dir72  dir76  dir80
+
+[root@hc-cloud-secure-1 file1]# df -k .
+Filesystem                 1K-blocks  Used       Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708  178167156  31441552   85%   /file1
+....
+Durante la corsa `Dgen.pl` per impostazione predefinita, lo script utilizza il 85% del file system per la generazione dei dati.
+
+
+
+== Configurare la replica di SnapMirror tra ONTAP on-premise e Cloud Volumes ONTAP
+
+NetApp SnapMirror replica i dati a velocità elevate su LAN o WAN, in modo da ottenere un'elevata disponibilità dei dati e una replica rapida dei dati in ambienti virtuali e tradizionali. Quando si replicano i dati nei sistemi storage NetApp e si aggiornano continuamente i dati secondari, i dati vengono mantenuti aggiornati e rimangono disponibili ogni volta che ne hai bisogno. Non sono richiesti server di replica esterni.
+
+Completare i seguenti passaggi per configurare la replica di SnapMirror tra il sistema ONTAP on-premise e CVO.
+
+. Dal menu di navigazione, selezionare *Storage* > *Canvas*.
+. In Canvas, selezionare l'ambiente di lavoro che contiene il volume di origine, trascinarlo nell'ambiente di lavoro in cui si desidera replicare il volume, quindi selezionare *Replication*.
++
+image:fhc-cvoe-image8.jpeg["Questa schermata mostra la schermata di BlueXP Canvas con la replica selezionata in un menu a discesa per l'istanza di ONTAP on-premise."]
+
++
+I passaggi rimanenti spiegano come creare una relazione sincrona tra cluster Cloud Volumes ONTAP e ONTAP on-premise.
+
+. *Impostazione peering di origine e destinazione.* se viene visualizzata questa pagina, selezionare tutte le LIF dell'intercluster per la relazione peer del cluster.
++
+image:fhc-cvoe-image9.png["Questa schermata mostra la schermata BlueXP Source peering Setup."]
+
+. *Source Volume Selection.* selezionare il volume che si desidera replicare.
++
+image:fhc-cvoe-image10.jpeg["Questa schermata mostra la schermata BlueXP Source Volume Selection (selezione volume di origine BlueXP) con un volume di quattordici volumi visualizzati."]
+
+. *Tipo di disco di destinazione e tiering.* se la destinazione è un sistema Cloud Volumes ONTAP, selezionare il tipo di disco di destinazione e scegliere se si desidera attivare il tiering dei dati.
++
+image:fhc-cvoe-image11.jpeg["Questa schermata mostra la schermata BlueXP Destination Disk Type (tipo di disco di destinazione BlueXP) con l'opzione General Purpose SSD (SSD General"]
+
+. *Nome volume di destinazione:* specificare il nome del volume di destinazione e scegliere l'aggregato di destinazione. Se la destinazione è un cluster ONTAP, è necessario specificare anche la VM di storage di destinazione.
++
+image:fhc-cvoe-image12.jpeg["Questa schermata mostra la schermata BlueXP Destination volume name (Nome volume di destinazione BlueXP) con le relative informazioni inserite."]
+
+. *Velocità di trasferimento massima.* specificare la velocità massima (in megabyte al secondo) alla quale trasferire i dati.
++
+image:fhc-cvoe-image13.jpeg["Questa schermata mostra la velocità di trasferimento massima di BlueXP con 100 MB/s."]
+
+. *Replication policy.* scegliere un criterio predefinito o fare clic su *Additional Policies*, quindi selezionare uno dei criteri avanzati. Per assistenza, https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html["scopri le policy di replica"^].
++
+image:fhc-cvoe-image14.jpeg["Questa schermata mostra la pagina BlueXP Replication Policy (Criteri di replica BlueXP) con i criteri predefiniti Mirror (Mirror) o Mirror and Backup (Mirror e backup) visualizzati."]
+
+. *Pianificazione.* scegliere una copia singola o una pianificazione ricorrente. Sono disponibili diverse pianificazioni predefinite. Se si desidera una pianificazione diversa, è necessario creare una nuova pianificazione su `destination cluster` Utilizzo di System Manager.
++
+image:fhc-cvoe-image15.jpeg["Questa schermata mostra la schermata del programma di configurazione della replica BlueXP con diverse opzioni di temporizzazione visualizzate."]
+
+. *Review.* Rivedi le tue selezioni e fai clic su *Go*.
++
+image:fhc-cvoe-image16.jpeg["Questa schermata mostra la schermata di verifica e approvazione di BlueXP Replication Setup."]
+
+
+
+Per informazioni dettagliate su questi passaggi di configurazione, vedere https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["qui"^].
+
+BlueXP avvia il processo di replica dei dati. A questo punto, è possibile visualizzare il servizio *Replication* stabilito tra il sistema ONTAP on-premise e Cloud Volumes ONTAP.
+
+image:fhc-cvoe-image17.jpeg["Questa schermata mostra la schermata di BlueXP Canvas con il servizio di replica rappresentato come una riga tra l'istanza CVO e l'istanza di ONTAP on-premise."]
+
+Nel cluster Cloud Volumes ONTAP, è possibile visualizzare il volume appena creato.
+
+image:fhc-cvoe-image18.png["Questa schermata mostra la scheda BlueXP Volumes (volumi BlueXP) con il nuovo volume visualizzato."]
+
+È inoltre possibile verificare che la relazione di SnapMirror sia stabilita tra il volume on-premise e il volume cloud.
+
+image:fhc-cvoe-image19.jpeg["Questa schermata mostra la scheda BlueXP Replications (repliche BlueXP) con informazioni relative alla relazione di replica appena creata."]
+
+Ulteriori informazioni sull'attività di replica sono disponibili nella scheda *Replication*.
+
+image:fhc-cvoe-image20.png["Questa schermata mostra informazioni estese nella scheda Replications (repliche)."]
+
+link:fhc-cvoe-solution-validation.html["Successivo: Convalida della soluzione."]

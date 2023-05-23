@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_conclusion.html 
+keywords: conclusion, scaling, hypervisor 
+summary: FlexPod offre una soluzione semplice ed efficace grazie a un design validato che utilizza componenti leader del settore. 
+---
+= Conclusione
+:allow-uri-read: 
+
+
+[role="lead"]
+FlexPod offre una soluzione semplice ed efficace grazie a un design validato che utilizza componenti leader del settore. Grazie alla scalabilità e all'offerta di opzioni per la piattaforma hypervisor, FlexPod Express può essere personalizzato in base alle specifiche esigenze di business. FlexPod Express è stato progettato tenendo conto delle piccole e medie imprese, delle filiali e delle filiali remote e di altre aziende che richiedono soluzioni dedicate.
+
+link:express-c-series-aff220-design_where_to_find_additional_information.html["Avanti: Dove trovare ulteriori informazioni."]

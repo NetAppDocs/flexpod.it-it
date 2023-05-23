@@ -1,0 +1,351 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html 
+keywords: deployment, cisco, ucs, rack, server, iscsi, vnic 
+summary: La sezione seguente fornisce una procedura dettagliata per la configurazione di un server rack standalone Cisco UCS C-Series da utilizzare nella configurazione FlexPod Express. 
+---
+= Procedura di implementazione dei server rack Cisco UCS C-Series
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+La sezione seguente fornisce una procedura dettagliata per la configurazione di un server rack standalone Cisco UCS C-Series da utilizzare nella configurazione FlexPod Express.
+
+
+
+== Eseguire la configurazione iniziale del server standalone Cisco UCS C-Series per Cisco Integrated Management Server
+
+Completare questa procedura per la configurazione iniziale dell'interfaccia CIMC per i server standalone Cisco UCS C-Series.
+
+La seguente tabella elenca le informazioni necessarie per configurare CIMC per ogni server standalone Cisco UCS C-Series.
+
+|===
+| Dettaglio | Valore di dettaglio 
+
+
+| Indirizzo IP CIMC | <<cimc_ip>> 
+
+
+| Subnet mask CIMC | <<cimc_netmask>> 
+
+
+| Gateway predefinito CIMC | <<cimc_gateway>> 
+|===
+
+NOTE: La versione di CIMC utilizzata per questa convalida è CIMC 3.1.3(g).
+
+
+
+=== Tutti i server
+
+. Collegare il dongle KVM (tastiera, video e mouse) Cisco (fornito con il server) alla porta KVM sulla parte anteriore del server. Collegare un monitor VGA e una tastiera USB alle porte dongle KVM appropriate.
+. Accendere il server e premere F8 quando richiesto per accedere alla configurazione CIMC.
++
+image:express-c-series-aff220-deploy_image8.png["Errore: Immagine grafica mancante"]
+
+. Nell'utility di configurazione di CIMC, impostare le seguenti opzioni:
++
+** Modalità scheda di interfaccia di rete (NIC):
++
+*** Dedicato [X]
+
+
+** IP (di base):
++
+*** IPV4: [X]
+*** DHCP abilitato: [ ]
+*** IP CIMC:<<cimc_ip>>
+*** Prefisso/sottorete:<<cimc_netmask>>
+*** Gateway:<<cimc_gateway>>
+
+
+** VLAN (Advanced): Lasciare deselezionato per disattivare il tagging VLAN.
++
+*** Ridondanza della NIC
+*** Nessuno: [X]
++
+image:express-c-series-aff220-deploy_image9.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+. Premere F1 per visualizzare ulteriori impostazioni.
++
+** Proprietà comuni:
++
+*** Nome host:<<esxi_host_name>>
+*** DNS dinamico: [ ]
+*** Impostazioni predefinite: Lasciare deselezionato.
+
+
+** Utente predefinito (di base):
++
+*** Password predefinita:<<admin_password>>
+*** Immettere nuovamente la password:<<admin_password>>
+*** Port properties (Proprietà porta): Utilizzare i valori predefiniti.
+*** Port profiles (profili porta): Lasciare deselezionato.
++
+image:express-c-series-aff220-deploy_image10.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+. Premere F10 per salvare la configurazione dell'interfaccia CIMC.
+. Una volta salvata la configurazione, premere Esc per uscire.
+
+
+
+
+== Configurare l'avvio iSCSI dei server Cisco UCS C-Series
+
+In questa configurazione FlexPod Express, VIC1387 viene utilizzato per l'avvio iSCSI.
+
+La seguente tabella elenca le informazioni necessarie per configurare l'avvio iSCSI.
+
+
+NOTE: Il carattere corsivo indica le variabili univoche per ciascun host ESXi.
+
+|===
+| Dettaglio | Valore di dettaglio 
+
+
+| Nome dell'iniziatore host ESXi | <<var_ucs_initiator_name_A>> 
+
+
+| IP iSCSI-A host ESXi | <<var_esxi_host_iscsiA_ip>> 
+
+
+| Host ESXi iSCSI-A network mask | <<var_esxi_host_iscsiA_mask>> 
+
+
+| ESXi host iSCSI Un gateway predefinito | <<var_esxi_host_iscsiA_gateway>> 
+
+
+| Nome B dell'iniziatore host ESXi | <<var_ucs_initiator_name_B>> 
+
+
+| IP iSCSI-B host ESXi | <<var_esxi_host_iscsiB_ip>> 
+
+
+| Maschera di rete iSCSI-B host ESXi | <<var_esxi_host_iscsiB_mask>> 
+
+
+| Gateway iSCSI-B host ESXi | <<var_esxi_host_iscsiB_gateway>> 
+
+
+| Indirizzo IP iscsi_lif01a |  
+
+
+| Indirizzo IP iscsi_lif02a |  
+
+
+| Indirizzo IP iscsi_lif01b |  
+
+
+| Indirizzo IP iscsi_lif02b |  
+
+
+| Infra_SVM IQN |  
+|===
+
+
+=== Configurazione dell'ordine di avvio
+
+Per impostare la configurazione dell'ordine di avvio, attenersi alla seguente procedura:
+
+. Dalla finestra del browser dell'interfaccia CIMC, fare clic sulla scheda Server e selezionare BIOS.
+. Fare clic su Configure Boot Order (Configura ordine di avvio), quindi su OK.
++
+image:express-c-series-aff220-deploy_image11.png["Errore: Immagine grafica mancante"]
+
+. Configurare i seguenti dispositivi facendo clic su dispositivo in Add Boot Device (Aggiungi dispositivo di avvio) e selezionando la scheda Advanced (Avanzate).
++
+** Aggiungere supporti virtuali
++
+*** NOME: KVM-CD-DVD
+*** SOTTOTIPO: DVD MAPPATO KVM
+*** Stato: Attivato
+*** Ordine: 1
+
+
+** Aggiungere l'avvio iSCSI.
++
+*** Nome: ISCSI-A.
+*** Stato: Attivato
+*** Ordine: 2
+*** Slot: MLOM
+*** Porta: 0
+
+
+** Fare clic su Add iSCSI Boot.
++
+*** Nome: ISCSI-B.
+*** Stato: Attivato
+*** Ordine: 3
+*** Slot: MLOM
+*** Porta: 1
+
+
+
+
+. Fare clic su Aggiungi dispositivo.
+. Fare clic su Save Changes (Salva modifiche), quindi su Close (Chiudi)
++
+image:express-c-series-aff220-deploy_image12.png["Errore: Immagine grafica mancante"]
+
+. Riavviare il server per eseguire l'avvio con il nuovo ordine di avvio.
+
+
+
+
+=== Disattivazione del controller RAID (se presente)
+
+Se il server C-Series contiene un controller RAID, attenersi alla seguente procedura. Non è necessario un controller RAID per l'avvio dalla configurazione SAN. In alternativa, è anche possibile rimuovere fisicamente il controller RAID dal server.
+
+. Fare clic su BIOS nel riquadro di navigazione sinistro di CIMC.
+. Selezionare Configure BIOS (Configura BIOS).
+. Scorrere verso il basso fino a PCIe slot:HBA Option ROM.
+. Se il valore non è già disattivato, impostarlo su Disabled (Disattivato).
++
+image:express-c-series-aff220-deploy_image13.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== Configurare Cisco VIC1387 per l'avvio iSCSI
+
+La seguente procedura di configurazione riguarda Cisco VIC 1387 per l'avvio iSCSI.
+
+
+
+=== Creare vNIC iSCSI
+
+. Fare clic su Add (Aggiungi) per creare una vNIC.
+. Nella sezione Add vNIC (Aggiungi vNIC), immettere le seguenti impostazioni:
++
+** Nome: ISCSI-vNIC-A.
+** MTU: 9000
+** VLAN predefinita: `\<<var_iscsi_vlan_a>>`
+** Modalità VLAN: TRUNK
+** Enable PXE boot (attiva avvio PXE): Controllare
++
+image:express-c-series-aff220-deploy_image14.png["Errore: Immagine grafica mancante"]
+
+
+
+. Fare clic su Add vNIC (Aggiungi vNIC), quindi su OK.
+. Ripetere la procedura per aggiungere una seconda vNIC.
++
+.. Assegnare un nome alla vNIC `iSCSI-vNIC-B`.
+.. Invio `\<<var_iscsi_vlan_b>>` Come VLAN.
+.. Impostare la porta uplink su `1`.
+
+
+. Selezionare la vNIC `iSCSI-vNIC-A` sulla sinistra.
++
+image:express-c-series-aff220-deploy_image15.png["Errore: Immagine grafica mancante"]
+
+. In iSCSI Boot Properties (Proprietà di avvio iSCSI), immettere i dettagli dell'iniziatore:
++
+** Nome:<<var_ucsa_initiator_name_a>>
+** Indirizzo IP:<<var_esxi_hostA_iscsiA_ip>>
+** Subnet mask:<<var_esxi_hostA_iscsiA_mask>>
+** Gateway:<<var_esxi_hostA_iscsiA_gateway>>
++
+image:express-c-series-aff220-deploy_image16.png["Errore: Immagine grafica mancante"]
+
+
+
+. Inserire i dettagli principali del target.
++
+** Name (Nome): Numero IQN di infra-SVM
+** IP address (Indirizzo IP): Indirizzo IP di `iscsi_lif01a`
+** LUN di boot: 0
+
+
+. Inserire i dettagli della destinazione secondaria.
++
+** Name (Nome): Numero IQN di infra-SVM
+** IP address (Indirizzo IP): Indirizzo IP di `iscsi_lif02a`
+** LUN di boot: 0
++
+È possibile ottenere il numero IQN dello storage eseguendo `vserver iscsi show` comando.
+
++
+
+NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un passaggio successivo.
+
++
+image:express-c-series-aff220-deploy_image17.png["Errore: Immagine grafica mancante"]
+
+
+
+. Fare clic su Configura iSCSI.
+. Selezionare la vNIC `iSCSI-vNIC- B` E fare clic sul pulsante iSCSI Boot (Avvio iSCSI) situato nella parte superiore della sezione host Ethernet Interfaces (interfacce Ethernet host).
+. Ripetere la procedura da configurare `iSCSI-vNIC-B`.
+. Inserire i dettagli dell'iniziatore.
++
+** Nome: `\<<var_ucsa_initiator_name_b>>`
+** Indirizzo IP: `\<<var_esxi_hostb_iscsib_ip>>`
+** Subnet mask: `\<<var_esxi_hostb_iscsib_mask>>`
+** Gateway: `\<<var_esxi_hostb_iscsib_gateway>>`
+
+
+. Inserire i dettagli principali del target.
++
+** Name (Nome): Numero IQN di infra-SVM
+** IP address (Indirizzo IP): Indirizzo IP di `iscsi_lif01b`
+** LUN di boot: 0
+
+
+. Inserire i dettagli della destinazione secondaria.
++
+** Name (Nome): Numero IQN di infra-SVM
+** IP address (Indirizzo IP): Indirizzo IP di `iscsi_lif02b`
+** LUN di boot: 0
++
+È possibile ottenere il numero IQN dello storage utilizzando `vserver iscsi show` comando.
+
++
+
+NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un passaggio successivo.
+
+
+
+. Fare clic su Configura ISCSI.
+. Ripetere questa procedura per configurare l'avvio iSCSI per il server Cisco UCS B.
+
+
+
+
+=== Configurare vNIC per ESXi
+
+. Dalla finestra del browser dell'interfaccia CIMC, fare clic su Inventory (inventario), quindi su Cisco VIC adapter (adattatori VIC Cisco) nel riquadro destro.
+. In schede adattatore, selezionare Cisco UCS VIC 1387, quindi selezionare le vNIC sottostanti.
++
+image:express-c-series-aff220-deploy_image18.png["Errore: Immagine grafica mancante"]
+
+. Selezionare eth0 e fare clic su Proprietà.
+. Impostare MTU su 9000. Fare clic su Salva modifiche.
++
+image:express-c-series-aff220-deploy_image19.png["Errore: Immagine grafica mancante"]
+
+. Ripetere i passaggi 3 e 4 per eth1, verificando che la porta uplink sia impostata su `1` per eth1.
++
+image:express-c-series-aff220-deploy_image20.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: Questa procedura deve essere ripetuta per ogni nodo iniziale di Cisco UCS Server e per ogni nodo aggiuntivo di Cisco UCS Server aggiunto all'ambiente.
+
+
+
+link:express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html["Pagina successiva: Procedura di implementazione dello storage NetApp AFF (parte 2)"]

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_where_to_find_additional_information.html 
+keywords: additional, information, technical, specifications 
+summary: Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e siti Web. 
+---
+= Dove trovare ulteriori informazioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e siti Web:
+
+* Documentazione sui prodotti NetApp
++
+https://docs.netapp.com/["https://docs.netapp.com/"^]
+
+* Comunicazioni di supporto NetApp
++
+https://mysupport.netapp.com/info/communications/index.html["https://mysupport.netapp.com/info/communications/index.html"^]
+
+* Tool di matrice di interoperabilità NetApp (IMT)
++
+https://mysupport.netapp.com/matrix/["https://mysupport.netapp.com/matrix/#welcome"^]
+
+* NetApp Hardware Universe
++
+https://hwu.netapp.com/["https://hwu.netapp.com/"^]
+
+* Supporto NetApp
++
+https://mysupport.netapp.com/["https://mysupport.netapp.com/"^]
+
+

@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-conclusion.html 
+keywords: conclusion 
+summary: 'Il data center FlexPod con SM-BC utilizza un data center Active-Active per garantire la business continuity e il disaster recovery per i carichi di lavoro business-critical. La soluzione in genere collega due data center implementati in ubicazioni separate e geograficamente distribuite in un"area metropolitana. La soluzione NetApp SM-BC utilizza la replica sincrona per proteggere i servizi dati business-critical da guasti del sito. La soluzione richiede che i due siti di implementazione FlexPod abbiano una latenza di rete di andata e ritorno inferiore a 10 millisecondi.' 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-validated-scenarios.html["Precedente: Convalida della soluzione - scenari validati."]
+
+[role="lead"]
+Il data center FlexPod con SM-BC utilizza un data center Active-Active per garantire la business continuity e il disaster recovery per i carichi di lavoro business-critical. La soluzione in genere collega due data center implementati in ubicazioni separate e geograficamente distribuite in un'area metropolitana. La soluzione NetApp SM-BC utilizza la replica sincrona per proteggere i servizi dati business-critical da guasti del sito. La soluzione richiede che i due siti di implementazione FlexPod abbiano una latenza di rete di andata e ritorno inferiore a 10 millisecondi.
+
+Il mediatore NetApp ONTAP implementato in un terzo sito monitora la soluzione SM-BC e consente il failover automatizzato quando viene rilevato un disastro del sito. VMware vCenter con VMware ha e la configurazione estesa di VMware vSphere Metro Storage Cluster funzionano perfettamente con NetApp SM-BC per consentire alla soluzione di soddisfare gli obiettivi RPO zero e RTO quasi zero desiderati.
+
+La soluzione FlexPod SM-BC può essere implementata anche sulle infrastrutture FlexPod esistenti se soddisfano i requisiti o aggiungendo una soluzione FlexPod aggiuntiva a un FlexPod esistente per raggiungere gli obiettivi di business continuity. NetApp e Cisco offrono ulteriori strumenti di gestione, monitoraggio e automazione, come Cisco Intersight, Ansible e HashiCorp Terraform, in modo da poter monitorare facilmente la soluzione, ottenere informazioni sulle operazioni e automatizzare l'implementazione e le operazioni.
+
+Dal punto di vista di un'applicazione business-critical come Microsoft SQL Server, un database che risiede in un datastore VMware protetto da una relazione ONTAP SM-BC CG continua a essere disponibile nonostante un'interruzione dello storage del sito. Come verificato durante il test di convalida, dopo un'interruzione dell'alimentazione del cluster di storage in cui risiede il database, si verifica un failover della relazione SM-BC CG e le transazioni Microsoft SQL Server vengono rieseguite senza interruzioni dell'applicazione.
+
+Grazie alla protezione granulare dei dati delle applicazioni, è possibile creare relazioni ONTAP SM-BC CG per le applicazioni business-critical in modo da soddisfare i requisiti di RPO zero e RTO quasi zero. Affinché il cluster VMware su cui è in esecuzione l'applicazione Microsoft SQL Server possa sopravvivere a un'interruzione dello storage del sito, le LUN di avvio degli host ESXi di ogni sito sono protette anche da una relazione SM-BC CG.
+
+La flessibilità e la scalabilità di FlexPod ti consentono di iniziare con un'infrastruttura delle giuste dimensioni, in grado di crescere e di evolversi in base ai tuoi requisiti di business. Questo design validato consente di implementare in modo affidabile il cloud privato basato su VMware vSphere su un'infrastruttura distribuita e integrata, offrendo una soluzione resiliente a molti scenari di singolo punto di errore e un guasto del sito per proteggere i servizi dati aziendali critici.
+
+link:sm-bcs-where-to-find-additional-information-and-version-history.html["Pagina successiva: Dove trovare informazioni aggiuntive e cronologia delle versioni."]

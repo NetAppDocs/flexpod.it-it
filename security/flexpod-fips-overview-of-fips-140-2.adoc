@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-overview-of-fips-140-2.html 
+keywords: fips 120-2, cryptographic module, security level, 
+summary: 'FIPS 140-2 specifica i requisiti di sicurezza per un modulo crittografico utilizzato all"interno di un sistema di sicurezza che protegge le informazioni sensibili nei sistemi informatici e di telecomunicazione.' 
+---
+= Panoramica di FIPS 140-2
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Precedente: Minacce alla cybersicurezza nel settore sanitario."]
+
+[role="lead"]
+https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.140-2.pdf["FIPS 140-2"^] specifica i requisiti di sicurezza per un modulo crittografico utilizzato all'interno di un sistema di sicurezza che protegge le informazioni sensibili nei sistemi informatici e di telecomunicazione. Un modulo crittografico deve essere un insieme di hardware, software, firmware o una combinazione. FIPS si applica agli algoritmi di crittografia, alla generazione delle chiavi e ai gestori delle chiavi contenuti all'interno di un confine crittografico. È importante comprendere che FIPS 140-2 si applica specificamente al modulo crittografico, non al prodotto, all'architettura, ai dati o all'ecosistema. Il modulo crittografico, definito nei termini chiave più avanti in questo documento, è il componente specifico (hardware, software e/o firmware) che implementa le funzioni di sicurezza approvate. Inoltre, FIPS 140-2 specifica quattro livelli. Gli algoritmi crittografici approvati sono comuni a tutti i livelli. Gli elementi e i requisiti chiave di ciascun livello di sicurezza includono:
+
+* *Livello di sicurezza 1*
++
+** Specifica i requisiti di sicurezza di base per un modulo crittografico (è richiesto almeno un algoritmo approvato o una funzione di sicurezza).
+** Per il livello 1 non sono necessari meccanismi di sicurezza fisici specifici oltre i requisiti di base per i componenti di livello di produzione.
+
+
+* *Livello di sicurezza 2*
++
+** Migliora i meccanismi di sicurezza fisica aggiungendo il requisito per l'evidenza di manomissione utilizzando soluzioni antimanomissione come rivestimenti o sigilli, blocchi su coperture rimovibili o porte dei moduli crittografici.
+** Richiede, come minimo, il RBAC (role-based access control) in cui il modulo crittografico autentica l'autorizzazione di un operatore o amministratore ad assumere un ruolo specifico ed eseguire un set corrispondente di funzioni.
+
+
+* *Livello di sicurezza 3*
++
+** Si basa sui requisiti di antimanomissione del livello 2 e tenta di impedire un ulteriore accesso ai parametri di sicurezza critici (CSP) all'interno del modulo crittografico.
+** I meccanismi di sicurezza fisici richiesti al livello 3 hanno un'elevata probabilità di rilevare e rispondere a tentativi di accesso fisico o a qualsiasi utilizzo o modifica del modulo crittografico. Ad esempio, enclosure potenti, rilevamento delle manomissioni e circuiti di risposta che azzerano tutti i CSP non crittografati quando viene aperto un coperchio rimovibile sul modulo crittografico.
+** Richiede meccanismi di autenticazione basati sull'identità per migliorare la sicurezza dei meccanismi RBAC specificati nel livello 2. Un modulo crittografico autentica l'identità di un operatore e verifica che l'operatore sia autorizzato a utilizzare un ruolo ed eseguire le funzioni del ruolo.
+
+
+* *Livello di sicurezza 4*
++
+** Il massimo livello di sicurezza in FIPS 140-2.
+** Il livello più utile per le operazioni in ambienti fisicamente non protetti.
+** A questo livello, i meccanismi di sicurezza fisica sono progettati per fornire una protezione completa intorno al modulo crittografico con la responsabilità di rilevare e rispondere a qualsiasi tentativo non autorizzato di accesso fisico.
+** La penetrazione o l'esposizione del modulo crittografico deve avere un'elevata probabilità di rilevamento e determinare l'azzeramento immediato di tutti i CSP non sicuri o non crittografati.
+
+
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["Avanti: Piano di controllo rispetto al piano dati."]

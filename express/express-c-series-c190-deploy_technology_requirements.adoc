@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_technology_requirements.html 
+keywords: technology, requirements, hardware, software, express, c, series, deployment 
+summary: Un sistema FlexPod richiede una combinazione di componenti hardware e software. FlexPod Express descrive inoltre i componenti hardware necessari per aggiungere nodi hypervisor al sistema in unità di due. 
+---
+= Requisiti tecnologici
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Un sistema FlexPod richiede una combinazione di componenti hardware e software. FlexPod Express descrive inoltre i componenti hardware necessari per aggiungere nodi hypervisor al sistema in unità di due.
+
+
+
+== Requisiti hardware
+
+Indipendentemente dall'hypervisor scelto, tutte le configurazioni FlexPod utilizzano lo stesso hardware. Pertanto, anche se i requisiti di business cambiano, è possibile utilizzare un hypervisor diverso sullo stesso hardware FlexPod Express.
+
+La seguente tabella elenca i componenti hardware necessari per la configurazione e l'implementazione di FlexPod Express. I componenti hardware utilizzati in qualsiasi implementazione della soluzione possono variare in base ai requisiti del cliente.
+
+|===
+| Hardware | Quantità 
+
+
+| Cluster a due nodi AFF C190 | 1 
+
+
+| Server Cisco C220 M5 | 2 
+
+
+| Switch Cisco Nexus 31108PC-V. | 2 
+
+
+| Cisco UCS Virtual Interface Card (VIC) 1457 per server rack Cisco UCS C220 M5 | 2 
+|===
+Questa tabella elenca l'hardware richiesto oltre alla configurazione di base per l'implementazione di 10GbE.
+
+|===
+| Hardware | Quantità 
+
+
+| Server Cisco UCS C220 M5 | 2 
+
+
+| Cisco VIC 1457 | 2 
+|===
+
+
+== Requisiti software
+
+La seguente tabella elenca i componenti software necessari per implementare le architetture delle soluzioni FlexPod Express.
+
+|===
+| Software | Versione | Dettagli 
+
+
+| Cisco Integrated Management Controller (CIMC) | 4.0.4 | Per server rack Cisco UCS C220 M5 
+
+
+| Driver Cisco Nenic | 1.0.0.29 | Per le schede di interfaccia VIC 1457 
+
+
+| Sistema operativo Cisco NX | 7.0(3)I7(6) | Per switch Cisco Nexus 31108PC-V. 
+
+
+| NetApp ONTAP | 9.6 | Per controller AFF C190 
+|===
+Questa tabella elenca il software necessario per tutte le implementazioni di VMware vSphere su FlexPod Express.
+
+|===
+| Software | Versione 
+
+
+| Appliance server VMware vCenter | 6.7U2 
+
+
+| Hypervisor VMware vSphere ESXi | 6.7U2 
+
+
+| Plug-in NetApp VAAI per ESXi | 1.1.2 
+
+
+| NetApp VSC | 9.6 
+|===

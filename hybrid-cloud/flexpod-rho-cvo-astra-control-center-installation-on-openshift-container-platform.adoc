@@ -1,0 +1,405 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html 
+keywords: environment requirements, Application management, licensing, Namespaces, StorageClass, Kubernetes resources 
+summary: È possibile installare Astra Control Center sul cluster OpenShift in esecuzione su FlexPod o su AWS con un backend di storage Cloud Volumes ONTAP. In questa soluzione, Astra Control Center viene implementato sul cluster bare-metal OpenShift. 
+---
+= Installazione di Astra Control Center su OpenShift Container Platform
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["Precedente: NetApp Cloud Volumes ONTAP."]
+
+[role="lead"]
+È possibile installare Astra Control Center sul cluster OpenShift in esecuzione su FlexPod o su AWS con un backend di storage Cloud Volumes ONTAP. In questa soluzione, Astra Control Center viene implementato sul cluster bare-metal OpenShift.
+
+Astra Control Center può essere installato utilizzando il processo standard descritto https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["qui"^] Oppure da Red Hat OpenShift OperatorHub. Astra Control Operator è un operatore certificato Red Hat. In questa soluzione, Astra Control Center viene installato utilizzando Red Hat OperatorHub.
+
+
+
+== Requisiti ambientali
+
+* Astra Control Center supporta più distribuzioni Kubernetes; per Red Hat OpenShift, le versioni supportate includono Red Hat OpenShift Container Platform 4.8 o 4.9.
+* Astra Control Center richiede le seguenti risorse oltre ai requisiti delle risorse applicative dell'ambiente e dell'utente finale:
+
+
+|===
+| Componenti | Requisito 
+
+
+| Capacità di back-end dello storage | Almeno 500 GB disponibili 
+
+
+| Nodi di lavoro | Almeno 3 nodi di lavoro, con 4 core CPU e 12 GB di RAM ciascuno 
+
+
+| Indirizzo FQDN (Fully Qualified Domain Name) | Un indirizzo FQDN per Astra Control Center 
+
+
+| Astra Trident | Astra Trident 21.04 o versione successiva installata e configurata 
+
+
+| Controller di ingresso o bilanciamento del carico | Configurare il controller di ingresso per esporre Astra Control Center con un URL o un bilanciamento del carico per fornire l'indirizzo IP che verrà risolto nell'FQDN 
+|===
+* È necessario disporre di un registro di immagini privato esistente in cui trasferire le immagini di build di Astra Control Center. È necessario fornire l'URL del registro delle immagini in cui vengono caricate le immagini.
+
+
+
+NOTE: Alcune immagini vengono estratte durante l'esecuzione di determinati flussi di lavoro e i container vengono creati e distrutti quando necessario.
+
+* Astra Control Center richiede la creazione e l'impostazione di una classe di storage come classe di storage predefinita. Centro di controllo Astra supporta i seguenti driver ONTAP forniti da Astra Trident:
++
+** ontap-nas
+** ontap-nas-flexgroup
+** ontap-san
+** ontap-san-economy
+
+
+
+
+
+NOTE: Supponiamo che i cluster OpenShift implementati abbiano Astra Trident installato e configurato con un backend ONTAP e sia definita anche una classe di storage predefinita.
+
+* Per la clonazione delle applicazioni in ambienti OpenShift, Astra Control Center deve consentire a OpenShift di montare volumi e modificare la proprietà dei file. Per modificare il criterio di esportazione ONTAP in modo da consentire queste operazioni, eseguire i seguenti comandi:
+
+
+....
+export-policy rule modify -vserver <storage virtual machine name> -policyname <policy name> -ruleindex 1 -superuser sys
+export-policy rule modify -vserver <storage virtual machine name> -policyname <policy name> -ruleindex 1 -anon 65534
+....
+
+NOTE: Per aggiungere un secondo ambiente operativo OpenShift come risorsa di calcolo gestita, assicurarsi che la funzione Astra Trident Volume snapshot sia attivata. Per abilitare e testare le snapshot dei volumi con Astra Trident, consulta la pagina ufficiale https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["Istruzioni di Astra Trident"^].
+
+* R https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["VolumeSnapClass"^] Deve essere configurato su tutti i cluster Kubernetes da cui vengono gestite le applicazioni. Questo potrebbe includere anche il cluster K8s su cui è installato Astra Control Center. Astra Control Center è in grado di gestire le applicazioni sul cluster K8s su cui è in esecuzione.
+
+
+
+
+=== Requisiti di gestione delle applicazioni
+
+* *Licensing.* per gestire le applicazioni utilizzando Astra Control Center, è necessaria una licenza Astra Control Center.
+* *Namespaces.* Uno spazio dei nomi è l'entità più grande che può essere gestita come applicazione da Astra Control Center. È possibile scegliere di filtrare i componenti in base alle etichette dell'applicazione e alle etichette personalizzate in uno spazio dei nomi esistente e gestire un sottoinsieme di risorse come applicazione.
+* *StorageClass.* se si installa un'applicazione con un StorageClass esplicitamente impostato ed è necessario clonare l'applicazione, il cluster di destinazione per l'operazione di clone deve avere la StorageClass originariamente specificata. La clonazione di un'applicazione con un StorageClass esplicitamente impostato su un cluster che non ha lo stesso StorageClass ha esito negativo.
+* *Kubernetes resources.* le applicazioni che utilizzano risorse Kubernetes non acquisite da Astra Control potrebbero non disporre di funzionalità complete di gestione dei dati applicativi. Astra Control può acquisire le seguenti risorse Kubernetes:
+
+
+|===
+| Risorse Kubernetes |  |  
+
+
+| ClusterRole | ClusterRoleBinding | ConfigMap 
+
+
+| CustomResourceDefinition | CustomResource | Lavoro di cassa 
+
+
+| DemonSet | HorizontalPodAutoscaler | Ingresso 
+
+
+| DeploymentConfig | MutatingWebhook | PersistentVolumeClaim 
+
+
+| Pod | PodDisruptionBudget | PodTemplate 
+
+
+| NetworkPolicy | ReplicaSet | Ruolo 
+
+
+| RoleBinding | Percorso | Segreto 
+
+
+| ValidatingWebhook |  |  
+|===
+
+
+== Installare Astra Control Center utilizzando OpenShift OperatorHub
+
+La seguente procedura consente di installare Astra Control Center utilizzando Red Hat OperatorHub. In questa soluzione, Astra Control Center viene installato su un cluster OpenShift bare-metal in esecuzione su FlexPod.
+
+. Scarica il bundle Astra Control Center (`astra-control-center-[version].tar.gz`) da https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["Sito di supporto NetApp"^].
+. Scaricare il file .zip per i certificati e le chiavi di Astra Control Center da https://mysupport.netapp.com/site/products/all/details/astra-control-center/downloads-tab["Sito di supporto NetApp"^].
+. Verificare la firma del bundle.
++
+....
+openssl dgst -sha256 -verify astra-control-center[version].pub -signature <astra-control-center[version].sig astra-control-center[version].tar.gz
+....
+. Estrarre le immagini Astra.
++
+....
+tar -vxzf astra-control-center-[version].tar.gz
+....
+. Passare alla directory Astra.
++
+....
+cd astra-control-center-[version]
+....
+. Aggiungere le immagini al registro locale.
++
+....
+For Docker:
+docker login [your_registry_path]OR
+For Podman:
+podman login [your_registry_path]
+....
+. Utilizzare lo script appropriato per caricare le immagini, etichettarle e inserirle nel registro locale.
++
+Per Docker:
+
++
+....
+export REGISTRY=[Docker_registry_path]
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(docker load --input ${astraImageFile} | sed 's/Loaded image: //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  docker tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  docker push ${REGISTRY}/${astraImage}
+done
+....
++
+Per Podman:
+
++
+....
+export REGISTRY=[Registry_path]
+for astraImageFile in $(ls images/*.tar) ; do
+  # Load to local cache. And store the name of the loaded image trimming the 'Loaded images: '
+  astraImage=$(podman load --input ${astraImageFile} | sed 's/Loaded image(s): //')
+  astraImage=$(echo ${astraImage} | sed 's!localhost/!!')
+  # Tag with local image repo.
+  podman tag ${astraImage} ${REGISTRY}/${astraImage}
+  # Push to the local repo.
+  podman push ${REGISTRY}/${astraImage}
+done
+....
+. Accedere alla console web del cluster OpenShift bare-metal. Dal menu laterale, selezionare Operator (operatori) > OperatorHub. Invio `astra` per visualizzare l'elenco di `netapp-acc-operator`.
++
+image:flexpod-rho-cvo-image11.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: `netapp-acc-operator` È un operatore Red Hat OpenShift certificato ed è elencato nel catalogo OperatorHub.
+
+. Selezionare `netapp-acc-operator` E fare clic su Installa.
++
+image:flexpod-rho-cvo-image12.png["Errore: Immagine grafica mancante"]
+
+. Selezionare le opzioni appropriate e fare clic su Install (Installa).
++
+image:flexpod-rho-cvo-image13.png["Errore: Immagine grafica mancante"]
+
+. Approvare l'installazione e attendere l'installazione dell'operatore.
++
+image:flexpod-rho-cvo-image14.png["Errore: Immagine grafica mancante"]
+
+. A questo punto, l'operatore viene installato correttamente e pronto per l'uso. Fare clic su View Operator (Visualizza operatore) per avviare l'installazione di Astra Control Center.
++
+image:flexpod-rho-cvo-image15.png["Errore: Immagine grafica mancante"]
+
+. Prima di installare Astra Control Center, creare il segreto pull per scaricare le immagini Astra dal registro Docker precedentemente inserito.
++
+image:flexpod-rho-cvo-image16.png["Errore: Immagine grafica mancante"]
+
+. Per estrarre le immagini di Astra Control Center dal tuo repo privato Docker, crea un segreto in `netapp-acc-operator` namespace. Questo nome segreto viene fornito nel manifesto YAML di Astra Control Center in un passaggio successivo.
++
+image:flexpod-rho-cvo-image17.png["Errore: Immagine grafica mancante"]
+
+. Dal menu laterale, selezionare Operator > Installed Operators (operatori > operatori installati) e fare clic su Create Instance (Crea istanza) nella sezione delle API fornite.
++
+image:flexpod-rho-cvo-image18.png["Errore: Immagine grafica mancante"]
+
+. Completare il modulo Create AstraControlCenter. Fornire il nome, l'indirizzo Astra e la versione di Astra.
++
+image:flexpod-rho-cvo-image19.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: In Astra Address (Indirizzo Astra), fornire l'indirizzo FQDN per Astra Control Center. Questo indirizzo viene utilizzato per accedere alla console Web di Astra Control Center. Il nome FQDN deve anche essere impostato su una rete IP raggiungibile e deve essere configurato nel DNS.
+
+. Immettere un nome account, un indirizzo e-mail, il cognome dell'amministratore e mantenere la policy di recupero del volume predefinita. Se si utilizza un bilanciamento del carico, impostare il tipo di ingresso su `AccTraefik`. In caso contrario, selezionare Generico per `Ingress.Controller`. In Image Registry (Registro immagini), immettere il percorso e il segreto del Registro di sistema dell'immagine contenitore.
++
+image:flexpod-rho-cvo-image20.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: In questa soluzione viene utilizzato il bilanciamento del carico Metallb. Pertanto, il tipo di ingresso è AccTraefik. Questo espone il gateway traefik di Astra Control Center come un servizio Kubernetes di tipo LoadBalancer.
+
+. Inserire il nome admin, configurare la scalabilità delle risorse e fornire la classe di storage. Fare clic su Crea.
++
+image:flexpod-rho-cvo-image21.png["Errore: Immagine grafica mancante"]
+
++
+Lo stato dell'istanza di Astra Control Center deve passare da Deploying (implementazione) a Ready (Pronto).
+
++
+image:flexpod-rho-cvo-image22.png["Errore: Immagine grafica mancante"]
+
+. Verificare che tutti i componenti del sistema siano stati installati correttamente e che tutti i pod siano in esecuzione.
++
+....
+root@abhinav-ansible# oc get pods -n netapp-acc-operator
+NAME                                               READY   STATUS    RESTARTS   AGE
+acc-helm-repo-77745b49b5-7zg2v                     1/1     Running   0          10m
+acc-operator-controller-manager-5c656c44c6-tqnmn   2/2     Running   0          13m
+activity-589c6d59f4-x2sfs                          1/1     Running   0          6m4s
+api-token-authentication-4q5lj                     1/1     Running   0          5m26s
+api-token-authentication-pzptd                     1/1     Running   0          5m27s
+api-token-authentication-tbtg6                     1/1     Running   0          5m27s
+asup-669df8d49-qps54                               1/1     Running   0          5m26s
+authentication-5867c5f56f-dnpp2                    1/1     Running   0          3m54s
+bucketservice-85495bc475-5zcc5                     1/1     Running   0          5m55s
+cert-manager-67f486bbc6-txhh6                      1/1     Running   0          9m5s
+cert-manager-cainjector-75959db744-4l5p5           1/1     Running   0          9m6s
+cert-manager-webhook-765556b869-g6wdf              1/1     Running   0          9m6s
+cloud-extension-5d595f85f-txrfl                    1/1     Running   0          5m27s
+cloud-insights-service-674649567b-5s4wd            1/1     Running   0          5m49s
+composite-compute-6b58d48c69-46vhc                 1/1     Running   0          6m11s
+composite-volume-6d447fd959-chnrt                  1/1     Running   0          5m27s
+credentials-66668f8ddd-8qc5b                       1/1     Running   0          7m20s
+entitlement-fd6fc5c58-wxnmh                        1/1     Running   0          6m20s
+features-756bbb7c7c-rgcrm                          1/1     Running   0          5m26s
+fluent-bit-ds-278pg                                1/1     Running   0          3m35s
+fluent-bit-ds-5pqc6                                1/1     Running   0          3m35s
+fluent-bit-ds-8l7cq                                1/1     Running   0          3m35s
+fluent-bit-ds-9qbft                                1/1     Running   0          3m35s
+fluent-bit-ds-nj475                                1/1     Running   0          3m35s
+fluent-bit-ds-x9pd8                                1/1     Running   0          3m35s
+graphql-server-698d6f4bf-kftwc                     1/1     Running   0          3m20s
+identity-5d4f4c87c9-wjz6c                          1/1     Running   0          6m27s
+influxdb2-0                                        1/1     Running   0          9m33s
+krakend-657d44bf54-8cb56                           1/1     Running   0          3m21s
+license-594bbdc-rghdg                              1/1     Running   0          6m28s
+login-ui-6c65fbbbd4-jg8wz                          1/1     Running   0          3m17s
+loki-0                                             1/1     Running   0          9m30s
+metrics-facade-75575f69d7-hnlk6                    1/1     Running   0          6m10s
+monitoring-operator-65dff79cfb-z78vk               2/2     Running   0          3m47s
+nats-0                                             1/1     Running   0          10m
+nats-1                                             1/1     Running   0          9m43s
+nats-2                                             1/1     Running   0          9m23s
+nautilus-7bb469f857-4hlc6                          1/1     Running   0          6m3s
+nautilus-7bb469f857-vz94m                          1/1     Running   0          4m42s
+openapi-8586db4bcd-gwwvf                           1/1     Running   0          5m41s
+packages-6bdb949cfb-nrq8l                          1/1     Running   0          6m35s
+polaris-consul-consul-server-0                     1/1     Running   0          9m22s
+polaris-consul-consul-server-1                     1/1     Running   0          9m22s
+polaris-consul-consul-server-2                     1/1     Running   0          9m22s
+polaris-mongodb-0                                  2/2     Running   0          9m22s
+polaris-mongodb-1                                  2/2     Running   0          8m58s
+polaris-mongodb-2                                  2/2     Running   0          8m34s
+polaris-ui-5df7687dbd-trcnf                        1/1     Running   0          3m18s
+polaris-vault-0                                    1/1     Running   0          9m18s
+polaris-vault-1                                    1/1     Running   0          9m18s
+polaris-vault-2                                    1/1     Running   0          9m18s
+public-metrics-7b96476f64-j88bw                    1/1     Running   0          5m48s
+storage-backend-metrics-5fd6d7cd9c-vcb4j           1/1     Running   0          5m59s
+storage-provider-bb85ff965-m7qrq                   1/1     Running   0          5m25s
+telegraf-ds-4zqgz                                  1/1     Running   0          3m36s
+telegraf-ds-cp9x4                                  1/1     Running   0          3m36s
+telegraf-ds-h4n59                                  1/1     Running   0          3m36s
+telegraf-ds-jnp2q                                  1/1     Running   0          3m36s
+telegraf-ds-pdz5j                                  1/1     Running   0          3m36s
+telegraf-ds-znqtp                                  1/1     Running   0          3m36s
+telegraf-rs-rt64j                                  1/1     Running   0          3m36s
+telemetry-service-7dd9c74bfc-sfkzt                 1/1     Running   0          6m19s
+tenancy-d878b7fb6-wf8x9                            1/1     Running   0          6m37s
+traefik-6548496576-5v2g6                           1/1     Running   0          98s
+traefik-6548496576-g82pq                           1/1     Running   0          3m8s
+traefik-6548496576-psn49                           1/1     Running   0          38s
+traefik-6548496576-qrkfd                           1/1     Running   0          2m53s
+traefik-6548496576-srs6r                           1/1     Running   0          98s
+trident-svc-679856c67-78kbt                        1/1     Running   0          5m27s
+vault-controller-747d664964-xmn6c                  1/1     Running   0          7m37s
+....
++
+
+NOTE: Ogni pod deve avere lo stato di esecuzione. L'implementazione dei pod di sistema potrebbe richiedere alcuni minuti.
+
+. Quando tutti i pod sono in esecuzione, eseguire il seguente comando per recuperare la password monouso. Nella versione YAML dell'output, selezionare `status.deploymentState` per il valore implementato, quindi copiare `status.uuid` valore. La password è `ACC-` Seguito dal valore UUID. (ACC-[UUID]).
++
+....
+root@abhinav-ansible# oc get acc -o yaml -n netapp-acc-operator
+....
+. In un browser, accedere all'URL utilizzando l'FQDN fornito.
+. Effettuare l'accesso utilizzando il nome utente predefinito, ovvero l'indirizzo e-mail fornito durante l'installazione e la password monouso ACC-[UUID].
++
+image:flexpod-rho-cvo-image23.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: Se si immette una password errata per tre volte, l'account amministratore viene bloccato per 15 minuti.
+
+. Modificare la password e procedere.
++
+image:flexpod-rho-cvo-image24.png["Errore: Immagine grafica mancante"]
+
+
+
+Per ulteriori informazioni sull'installazione di Astra Control Center, consultare https://docs.netapp.com/us-en/astra-control-center/get-started/install_overview.html["Panoramica dell'installazione di Astra Control Center"^] pagina.
+
+
+
+== Configurare Astra Control Center
+
+Dopo aver installato Astra Control Center, accedere all'interfaccia utente, caricare la licenza, aggiungere cluster, gestire lo storage e aggiungere bucket.
+
+. Nella home page, sotto account, andare alla scheda License (licenza) e selezionare Add License (Aggiungi licenza) per caricare la licenza Astra.
++
+image:flexpod-rho-cvo-image25.png["Errore: Immagine grafica mancante"]
+
+. Prima di aggiungere il cluster OpenShift, creare una classe di snapshot Astra Trident Volume dalla console Web OpenShift. La classe Volume snapshot viene configurata con `csi.trident.netapp.io` driver.
++
+image:flexpod-rho-cvo-image26.png["Errore: Immagine grafica mancante"]
+
+. Per aggiungere il cluster Kubernetes, accedere a Clusters nella home page e fare clic su Add Kubernetes Cluster (Aggiungi cluster Kubernetes). Quindi caricare `kubeconfig` per il cluster e fornire un nome di credenziale. Fare clic su Avanti.
++
+image:flexpod-rho-cvo-image27.png["Errore: Immagine grafica mancante"]
+
+. Le classi di storage esistenti vengono rilevate automaticamente. Selezionare la classe di storage predefinita, fare clic su Next (Avanti), quindi su Add cluster (Aggiungi cluster).
++
+image:flexpod-rho-cvo-image28.png["Errore: Immagine grafica mancante"]
+
+. Il cluster viene aggiunto in pochi minuti. Per aggiungere altri cluster OpenShift Container Platform, ripetere i passaggi 1–4.
++
+
+NOTE: Per aggiungere un ambiente operativo OpenShift aggiuntivo come risorsa di calcolo gestita, assicurarsi che Astra Trident https://netapp-trident.readthedocs.io/en/latest/kubernetes/concepts/objects.html?highlight=VolumeSnapshotClass["Oggetti VolumeSnapshotClass"^] sono definiti.
+
+. Per gestire lo storage, accedere a Backend, fare clic sui tre punti in azioni rispetto al backend che si desidera gestire. Fare clic su Gestisci.
++
+image:flexpod-rho-cvo-image29.png["Errore: Immagine grafica mancante"]
+
+. Fornire le credenziali ONTAP e fare clic su Avanti. Esaminare le informazioni e fare clic su Managed (gestito). I backend dovrebbero essere simili all'esempio seguente.
++
+image:flexpod-rho-cvo-image30.png["Errore: Immagine grafica mancante"]
+
+. Per aggiungere un bucket ad Astra Control, selezionare Bucket e fare clic su Add (Aggiungi).
++
+image:flexpod-rho-cvo-image31.png["Errore: Immagine grafica mancante"]
+
+. Selezionare il tipo di bucket e fornire il nome del bucket, il nome del server S3 o l'indirizzo IP e la credenziale S3. Fare clic su Aggiorna.
++
+image:flexpod-rho-cvo-image32.png["Errore: Immagine grafica mancante"]
+
++
+
+NOTE: In questa soluzione vengono utilizzati entrambi i bucket AWS S3 e ONTAP S3. È anche possibile utilizzare StorageGRID.
+
++
+Lo stato del bucket deve essere integro.
+
++
+image:flexpod-rho-cvo-image33.png["Errore: Immagine grafica mancante"]
+
+
+
+Come parte della registrazione del cluster Kubernetes con Astra Control Center per la gestione dei dati applicativa, Astra Control crea automaticamente associazioni di ruoli e uno spazio dei nomi di monitoraggio NetApp per raccogliere metriche e log dai pod di applicazioni e dai nodi di lavoro. Impostare una delle classi di storage basate su ONTAP supportate come predefinita.
+
+Dopo di lei https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html["Aggiungere un cluster alla gestione di Astra Control"^], È possibile installare le applicazioni sul cluster (al di fuori di Astra Control) e quindi andare alla pagina Apps (applicazioni) in Astra Control per gestire le applicazioni e le relative risorse. Per ulteriori informazioni sulla gestione delle applicazioni con Astra, consultare https://docs.netapp.com/us-en/astra-control-center/use/manage-apps.html["Requisiti di gestione delle applicazioni"^].
+
+link:flexpod-rho-cvo-solution-validation_overview.html["Pagina successiva: Panoramica sulla convalida della soluzione."]

@@ -1,0 +1,161 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases_01.html 
+keywords: use, cases, active, iq, integration, dashboards, troubleshooting, storage, optimization, custom, real, time 
+summary: Con la configurazione e la configurazione di Cloud Insights per il monitoraggio della soluzione FlexPod Datacenter, possiamo esplorare alcune delle attività che è possibile eseguire sulla dashboard per valutare e monitorare il tuo ambiente. In questa sezione, vengono evidenziati cinque casi di utilizzo principali per Cloud Insights. 
+---
+= Casi di utilizzo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Con la configurazione e la configurazione di Cloud Insights per il monitoraggio della soluzione FlexPod Datacenter, possiamo esplorare alcune delle attività che è possibile eseguire sulla dashboard per valutare e monitorare il tuo ambiente. In questa sezione, vengono evidenziati cinque casi di utilizzo principali per Cloud Insights:
+
+* Integrazione di Active IQ
+* Analisi delle dashboard in tempo reale
+* Creazione di dashboard personalizzati
+* Risoluzione avanzata dei problemi
+* Ottimizzazione dello storage
+
+
+
+
+== Integrazione di Active IQ
+
+Cloud Insights è completamente integrato nella piattaforma di monitoraggio dello storage Active IQ. Un sistema ONTAP, implementato come parte di una soluzione FlexPod Datacenter, viene configurato automaticamente per inviare informazioni a NetApp attraverso la funzione AutoSupport, integrata in ciascun sistema. Questi report vengono generati in base a una pianificazione o in modo dinamico ogni volta che viene rilevato un guasto nel sistema. I dati comunicati tramite AutoSupport vengono aggregati e visualizzati in dashboard facilmente accessibili nel menu Active IQ di Cloud Insights.
+
+
+
+=== Accedere alle informazioni Active IQ dalla dashboard di Cloud Insights
+
+Per accedere alle informazioni Active IQ dalla dashboard di Cloud Insights, attenersi alla seguente procedura:
+
+. Fare clic sull'opzione Data Collector (raccolta dati) nel menu Admin (Amministrazione) a sinistra.
++
+image:cloud-insights_image13.png["Errore: Immagine grafica mancante"]
+
+. Filtro per il Data Collector specifico nel tuo ambiente. In questo esempio, filtriamo in base al termine FlexPod.
++
+image:cloud-insights_image23.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su Data Collector per visualizzare un riepilogo dell'ambiente e dei dispositivi monitorati da tale collector.
++
+image:cloud-insights_image24.png["Errore: Immagine grafica mancante"]
+
++
+Nell'elenco dei dispositivi in basso, fare clic sul nome del sistema di storage ONTAP monitorato. Viene visualizzata una dashboard contenente le informazioni raccolte sul sistema, inclusi i seguenti dettagli:
+
++
+** Modello
+** Famiglia
+** Versione di ONTAP
+** Capacità raw
+** IOPS medi
+** Latenza media
+** Throughput medio
++
+image:cloud-insights_image25.png["Errore: Immagine grafica mancante"]
+
++
+Inoltre, in questa pagina, nella sezione Criteri di performance, è disponibile un link a NetApp Active IQ.
+
++
+image:cloud-insights_image26.png["Errore: Immagine grafica mancante"]
+
+
+
+. Per aprire una nuova scheda del browser e accedere alla pagina di riduzione dei rischi, che mostra quali nodi sono interessati, quanto critici sono i rischi e quali sono le azioni appropriate da intraprendere per correggere i problemi identificati, fare clic sul link per Active IQ.
++
+image:cloud-insights_image27.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+=== Esplora le dashboard in tempo reale
+
+Cloud Insights può visualizzare dashboard in tempo reale delle informazioni raccolte dal sistema di storage ONTAP implementato in una soluzione FlexPod per data center. L'unità di acquisizione Cloud Insights raccoglie i dati a intervalli regolari e compila il dashboard del sistema di storage predefinito con le informazioni raccolte.
+
+
+
+==== Accedi ai grafici in tempo reale dalla dashboard di Cloud Insights
+
+Dalla dashboard del sistema di storage, è possibile visualizzare l'ultima volta che Data Collector ha aggiornato le informazioni. Un esempio è illustrato nella figura seguente.
+
+image:cloud-insights_image28.png["Errore: Immagine grafica mancante"]
+
+Per impostazione predefinita, la dashboard del sistema di storage visualizza diversi grafici interattivi che mostrano le metriche a livello di sistema dal sistema di storage sottoposto a polling o da ogni singolo nodo, tra cui latenza, IOPS e throughput, nella sezione visualizzazione avanzata. Esempi di questi grafici predefiniti sono illustrati nella figura seguente.
+
+image:cloud-insights_image29.png["Errore: Immagine grafica mancante"]
+
+Per impostazione predefinita, i grafici mostrano le informazioni delle ultime tre ore, ma è possibile impostarle su un numero di valori diversi o su un valore personalizzato dall'elenco a discesa in alto a destra nella dashboard del sistema di storage. Questo è mostrato nella figura seguente.
+
+image:cloud-insights_image30.png["Errore: Immagine grafica mancante"]
+
+
+
+=== Creare dashboard personalizzati
+
+Oltre a utilizzare i dashboard predefiniti che visualizzano informazioni a livello di sistema, è possibile utilizzare Cloud Insights per creare dashboard completamente personalizzati che consentono di concentrarsi sull'utilizzo delle risorse per volumi di storage specifici nella soluzione FlexPod Datacenter, e quindi le applicazioni implementate nell'infrastruttura convergente che dipendono da questi volumi per funzionare in modo efficace. In questo modo è possibile creare una migliore visualizzazione di applicazioni specifiche e delle risorse che consumano nell'ambiente del data center.
+
+
+
+==== Creare una dashboard personalizzata per valutare le risorse di storage
+
+Per creare una dashboard personalizzata per la valutazione delle risorse di storage, attenersi alla seguente procedura:
+
+. Per creare una dashboard personalizzata, passare il mouse su dashboard nel menu principale di Cloud Insights e fare clic su + nuovo dashboard nell'elenco a discesa.
++
+image:cloud-insights_image31.png["Errore: Immagine grafica mancante"]
+
++
+Viene visualizzata la finestra New Dashboard (nuovo dashboard).
+
+. Assegnare un nome alla dashboard e selezionare il tipo di widget utilizzato per visualizzare i dati. È possibile scegliere tra diversi tipi di grafici o persino note o tipi di tabelle per visualizzare i dati raccolti.
++
+image:cloud-insights_image32.png["Errore: Immagine grafica mancante"]
+
+. Scegliere variabili personalizzate dal menu Aggiungi variabile.
++
+In questo modo, i dati presentati sono incentrati sulla visualizzazione di fattori più specifici o specializzati.
+
++
+image:cloud-insights_image33.png["Errore: Immagine grafica mancante"]
+
+. Per creare una dashboard personalizzata, selezionare il tipo di widget che si desidera utilizzare, ad esempio un grafico a torta per visualizzare l'utilizzo dello storage in base al volume:
++
+.. Selezionare il widget grafico a torta dall'elenco a discesa Aggiungi widget.
+.. Assegnare un nome al widget con un identificatore descrittivo, ad esempio `Capacity Used`.
+.. Selezionare l'oggetto che si desidera visualizzare. Ad esempio, è possibile effettuare una ricerca in base al volume dei termini chiave e selezionare `volume.performance.capacity.used`.
+.. Per filtrare in base ai sistemi storage, utilizzare il filtro e digitare il nome del sistema storage nella soluzione FlexPod Datacenter.
+.. Personalizzare le informazioni da visualizzare. Per impostazione predefinita, questa selezione mostra i volumi di dati ONTAP ed elenca i primi 10 volumi.
+.. Per salvare la dashboard personalizzata, fare clic sul pulsante Save (Salva).
++
+image:cloud-insights_image34.png["Errore: Immagine grafica mancante"]
+
++
+Dopo aver salvato il widget personalizzato, il browser torna alla pagina New Dashboard, dove viene visualizzato il widget appena creato e consente di eseguire azioni interattive, come la modifica del periodo di polling dei dati.
+
++
+image:cloud-insights_image35.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+
+
+=== Risoluzione avanzata dei problemi
+
+Cloud Insights consente di applicare metodi avanzati di troubleshooting a qualsiasi ambiente di storage in un'infrastruttura convergente FlexPod Datacenter. Utilizzando i componenti di ciascuna delle funzionalità menzionate in precedenza: Integrazione Active IQ, dashboard predefiniti con statistiche in tempo reale e dashboard personalizzati, i problemi che potrebbero insorgere vengono rilevati in anticipo e risolti rapidamente. Utilizzando l'elenco dei rischi in Active IQ, un cliente può trovare errori di configurazione segnalati che potrebbero causare problemi o scoprire bug che sono stati segnalati e versioni di codice con patch che possono rimediare. L'osservazione delle dashboard in tempo reale sulla home page di Cloud Insights può aiutare a individuare modelli di performance del sistema che potrebbero essere un indicatore precoce di un problema in aumento e contribuire a risolverlo in modo rapido. Infine, la possibilità di creare dashboard personalizzati consente ai clienti di concentrarsi sulle risorse più importanti della propria infrastruttura e di monitorarle direttamente per garantire che possano raggiungere i propri obiettivi di business continuity.
+
+
+
+=== Ottimizzazione dello storage
+
+Oltre alla risoluzione dei problemi, è possibile utilizzare i dati raccolti da Cloud Insights per ottimizzare il sistema di storage ONTAP implementato in una soluzione di infrastruttura convergente per data center FlexPod. Se un volume mostra una latenza elevata, forse perché diverse macchine virtuali con esigenze di performance elevate condividono lo stesso datastore, tali informazioni vengono visualizzate nella dashboard di Cloud Insights. Con queste informazioni, un amministratore dello storage può scegliere di migrare una o più macchine virtuali su altri volumi, migrare i volumi di storage tra Tier di aggregati o tra nodi nel sistema storage ONTAP, ottenendo un ambiente ottimizzato per le performance. Le informazioni ottenute dall'integrazione di Active IQ con Cloud Insights possono evidenziare i problemi di configurazione che portano a performance inferiori a quelle previste e fornire l'azione correttiva consigliata che, se implementata, può risolvere qualsiasi problema e garantire un sistema storage ottimizzato in modo ottimale.

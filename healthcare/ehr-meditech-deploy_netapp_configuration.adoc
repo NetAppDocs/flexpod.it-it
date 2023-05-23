@@ -1,0 +1,84 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_netapp_configuration.html 
+keywords: configuration, storage, meditech, software, environments, controllers, hardware, takeover, licenses 
+summary: 'Lo storage NetApp implementato per gli ambienti software MEDITECH utilizza i controller di storage in una configurazione a coppia ad alta disponibilità. Lo storage deve essere presentato da entrambi i controller ai server di database MEDITECH tramite il protocollo FC. La configurazione presenta lo storage di entrambi i controller per bilanciare uniformemente il carico dell"applicazione durante il normale funzionamento.' 
+---
+= Configurazione di NetApp
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Lo storage NetApp implementato per gli ambienti software MEDITECH utilizza i controller di storage in una configurazione a coppia ad alta disponibilità. Lo storage deve essere presentato da entrambi i controller ai server di database MEDITECH tramite il protocollo FC. La configurazione presenta lo storage di entrambi i controller per bilanciare uniformemente il carico dell'applicazione durante il normale funzionamento.
+
+
+
+== Configurazione di ONTAP
+
+Questa sezione descrive un esempio di procedure di implementazione e provisioning che utilizzano i relativi comandi ONTAP. L'enfasi è quella di mostrare come viene eseguito il provisioning dello storage per implementare il layout di storage consigliato da NetApp, che utilizza una coppia di controller ad alta disponibilità. Uno dei principali vantaggi di ONTAP è la possibilità di scalare in orizzontale senza disturbare le coppie ad alta disponibilità esistenti.
+
+
+
+=== Licenze ONTAP
+
+Dopo aver configurato i controller di storage, applicare le licenze per abilitare le funzionalità ONTAP consigliate da NetApp. Le licenze per i carichi di lavoro MEDITECH sono FC, CIFS e NetApp Snapshot, SnapRestore, FlexClone, E SnapMirror.
+
+Per configurare le licenze, aprire Gestione di sistema NetApp ONTAP, accedere a Configurazione-licenze, quindi aggiungere le licenze appropriate.
+
+In alternativa, eseguire il seguente comando per aggiungere le licenze utilizzando la CLI:
+
+....
+license add -license-code <code>
+....
+
+
+=== Configurazione di AutoSupport
+
+Il tool NetApp AutoSupport invia a NetApp informazioni di supporto riepilogative tramite HTTPS. Per configurare AutoSupport, eseguire i seguenti comandi ONTAP:
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== Configurazione del Takeover assistita dall'hardware
+
+Su ciascun nodo, abilitare il Takeover assistito dall'hardware per ridurre al minimo il tempo necessario per avviare un Takeover nell'improbabile caso di un guasto del controller. Per configurare il Takeover assistito dall'hardware, attenersi alla seguente procedura:
+
+. Eseguire il seguente comando ONTAP su xxx.
++
+Impostare l'opzione indirizzo partner sull'indirizzo IP della porta di gestione per `prod1-01`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. Eseguire il seguente comando ONTAP per xxx:
++
+Impostare l'opzione indirizzo partner sull'indirizzo IP della porta di gestione per `cluster1-02`.
+
++
+....
+MEDITECH::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. Eseguire il seguente comando ONTAP per abilitare il Takeover assistito dall'hardware su entrambi `prod1-01` e a. `prod1-02` Coppia di controller HA.
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist true
+MEDITECH::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+link:ehr-meditech-deploy_aggregate_configuration.html["Pagina successiva: Configurazione aggregata."]

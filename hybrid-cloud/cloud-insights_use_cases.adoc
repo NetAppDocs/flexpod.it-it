@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_use_cases.html 
+keywords: target, cases, audience, cloud, insights, flexpod, ontap 
+summary: I destinatari e i casi a cui si applica questa soluzione sono elencati in questa sezione. 
+---
+= Casi di utilizzo
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Questa soluzione si applica ai seguenti casi di utilizzo:
+
+* Organizzazioni che desiderano monitorare varie risorse e utilizzo nel proprio sistema di storage ONTAP implementato come parte di una soluzione FlexPod.
+* Organizzazioni che desiderano risolvere i problemi e ridurre i tempi di risoluzione degli incidenti che si verificano nella propria soluzione FlexPod con i sistemi AFF o FAS.
+* Organizzazioni interessate a proiezioni di ottimizzazione dei costi, tra cui dashboard personalizzati per fornire informazioni dettagliate sulle risorse sprecate e dove è possibile realizzare risparmi sui costi nel proprio ambiente FlexPod, incluso ONTAP.
+
+
+
+
+== Pubblico di riferimento
+
+Il pubblico di riferimento per la soluzione comprende i seguenti gruppi:
+
+* Dirigenti IT e responsabili dell'ottimizzazione dei costi e della business continuity.
+* Architetti di soluzioni interessati alla progettazione e alla gestione di data center o cloud ibrido.
+* Tecnici del supporto tecnico responsabili della risoluzione dei problemi e della risoluzione degli incidenti.
+
+
+È possibile configurare Cloud Insights in modo da fornire diversi tipi di dati utili che possono essere utilizzati per la pianificazione, la risoluzione dei problemi, la manutenzione e la garanzia di business continuity. Monitorando la soluzione di data center FlexPod con Cloud Insights e presentando i dati aggregati in dashboard personalizzate facilmente digeribili; non solo è possibile prevedere quando le risorse di un'implementazione devono essere scalate per soddisfare le esigenze, ma anche identificare applicazioni o volumi di storage specifici che causano problemi all'interno del sistema. In questo modo si garantisce che l'infrastruttura monitorata sia prevedibile e funzioni in base alle aspettative, consentendo a un'organizzazione di rispettare SLA definiti e di scalare l'infrastruttura in base alle necessità, eliminando sprechi e costi aggiuntivi.

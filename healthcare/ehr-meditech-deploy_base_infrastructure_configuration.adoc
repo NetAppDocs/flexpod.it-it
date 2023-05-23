@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html 
+keywords: base, infrastructure, configuration, network, storage, connections, software, host 
+summary: 'Per configurare l"infrastruttura, è necessario disporre delle seguenti connessioni di rete, connessioni di storage e software.' 
+---
+= Configurazione dell'infrastruttura di base
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Connettività di rete
+
+Prima di configurare l'infrastruttura, è necessario disporre delle seguenti connessioni di rete:
+
+* L'aggregazione di collegamenti che utilizza i canali delle porte e i canali delle porte virtuali (VPC) viene utilizzata ovunque, consentendo la progettazione di una maggiore larghezza di banda e disponibilità elevata:
++
+** VPC viene utilizzato tra gli switch Cisco Fi e Cisco Nexus.
+** Ogni server dispone di schede di interfaccia di rete virtuale (vNIC) con connettività ridondante all'Unified Fabric. Il failover NIC viene utilizzato tra gli IF per la ridondanza.
+** Ogni server dispone di vHBA (Virtual host Bus Adapter) con connettività ridondante all'Unified Fabric.
+
+
+* Cisco UCS Fi viene configurato in modalità end-host come consigliato, fornendo il pinning dinamico delle vNIC agli switch uplink.
+
+
+
+
+== Connettività dello storage
+
+Prima di configurare l'infrastruttura, è necessario disporre delle seguenti connessioni di storage:
+
+* Gruppi di interfacce per porte di storage (ifgroup, VPC)
+* Collegamento 10 GB allo switch N9K-A.
+* Collegamento 10 GB allo switch N9K-B.
+* Gestione in banda (bond attivo-passivo):
++
+** Collegamento da 1 GB allo switch di gestione N9K-A.
+** Collegamento da 1 GB allo switch di gestione N9K-B.
+
+
+* Connettività end-to-end FC da 32 GB tramite switch Cisco MDS; configurazione dello zoning a singolo iniziatore
+* Avvio SAN FC per ottenere il massimo livello di stateless computing; i server vengono avviati dalle LUN nel volume di boot che risiede nel cluster di storage AFF
+* Tutti i carichi di lavoro MEDITECH sono ospitati su LUN FC, che sono distribuiti tra i nodi dello storage controller
+
+
+
+
+== Software host
+
+È necessario installare il seguente software:
+
+* ESXi installato sui blade Cisco UCS
+* VMware vCenter installato e configurato (con tutti gli host registrati in vCenter)
+* VSC installato e registrato in VMware vCenter
+* Cluster NetApp configurato
+
+
+link:ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html["Pagina successiva: Configurazione di server blade e switch Cisco UCS."]

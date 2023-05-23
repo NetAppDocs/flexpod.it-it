@@ -1,0 +1,202 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/sm-bcs-storage.html 
+keywords: connectivity, connections, interfaces, san boot, cluster peering, ONTAP Mediator, sm-bc consistency group, volumes, luns, host mappings 
+summary: La configurazione dello storage per la soluzione FlexPod SM-BC segue le Best practice tipiche delle soluzioni FlexPod in ogni sito. Per il peering del cluster SM-BC e la replica dei dati, utilizzano i collegamenti tra siti stabiliti tra gli switch FlexPod di entrambi i siti. Nelle sezioni seguenti vengono illustrate alcune delle configurazioni e della connettività utilizzate per la convalida. 
+---
+= Convalida della soluzione - Storage
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:sm-bcs-network.html["Precedente: Convalida della soluzione - rete."]
+
+[role="lead"]
+La configurazione dello storage per la soluzione FlexPod SM-BC segue le Best practice tipiche delle soluzioni FlexPod in ogni sito. Per il peering del cluster SM-BC e la replica dei dati, utilizzano i collegamenti tra siti stabiliti tra gli switch FlexPod di entrambi i siti. Nelle sezioni seguenti vengono illustrate alcune delle configurazioni e della connettività utilizzate per la convalida.
+
+
+
+== Connettività
+
+La connettività dello storage alle IFI UCS locali e ai server blade viene fornita dagli switch Nexus del sito locale. Attraverso la connettività dello switch Nexus tra i siti, è possibile accedere allo storage anche dai blade server UCS remoti. La figura e la tabella seguenti mostrano il diagramma di connettività dello storage e un elenco di connessioni per i controller dello storage in ogni sito.
+
+image:sm-bcs-image22.png["Errore: Immagine grafica mancante"]
+
+|===
+| Dispositivo locale | Porta locale | Dispositivo remoto | Porta remota 
+
+
+| AFF A250 A. | e0c | AFF A250 B | e0c 
+
+
+|  | e0d |  | e0d 
+
+
+|  | e1a | Nexus A. | 1/10/1 
+
+
+|  | e1b |  | 1/10/2 
+
+
+|  | e1c | Nexus B | 1/10/1 
+
+
+|  | e1d |  | 1/10/2 
+
+
+| AFF A250 B | e0c | AFF A250 A. | e0c 
+
+
+|  | e0d |  | e0d 
+
+
+|  | e1a | Nexus A. | 1/10/3 
+
+
+|  | e1b |  | 1/10/4 
+
+
+|  | e1c | Nexus B | 1/10/3 
+
+
+|  | e1d |  | 1/10/4 
+|===
+
+
+== Connessioni e interfacce
+
+Due porte fisiche su ciascun controller di storage sono collegate a ciascuno switch Nexus per l'aggregazione della larghezza di banda e la ridondanza per questa convalida. Queste quattro connessioni partecipano a una configurazione di gruppo di interfacce sullo storage. Le porte corrispondenti sugli switch Nexus partecipano a un VPC per l'aggregazione e la resilienza del collegamento.
+
+I protocolli di gestione in-band, inter-cluster e storage dei dati NFS/iSCSI utilizzano VLAN. Le porte VLAN vengono create sul gruppo di interfacce per separare i diversi tipi di traffico. Le interfacce logiche (LIF) per le rispettive funzioni vengono create sulla parte superiore delle porte VLAN corrispondenti. La figura seguente mostra la relazione tra connessioni fisiche, gruppi di interfacce, porte VLAN e interfacce logiche.
+
+image:sm-bcs-image23.png["Errore: Immagine grafica mancante"]
+
+
+
+== Boot SAN
+
+NetApp consiglia di implementare l'avvio SAN per i server Cisco UCS nella soluzione FlexPod. L'implementazione dell'avvio SAN consente di proteggere in modo sicuro il sistema operativo all'interno del sistema di storage NetApp, fornendo migliori performance e flessibilità. Per questa soluzione, è stato validato l'avvio SAN iSCSI.
+
+La figura seguente mostra la connettività per l'avvio SAN iSCSI del server Cisco UCS dallo storage NetApp. Nell'avvio SAN iSCSI, a ciascun server Cisco UCS vengono assegnate due vNIC iSCSI (una per ciascun fabric SAN) che forniscono una connettività ridondante dal server fino allo storage. Le porte di storage Ethernet 10/25-G collegate agli switch Nexus (in questo esempio e1a, e1b, e1c e e1d) sono raggruppate in modo da formare un gruppo di interfacce (ifgrp) (in questo esempio, a0a). Le porte VLAN iSCSI vengono create su ifgrp e le LIF iSCSI vengono create sulle porte VLAN iSCSI.
+
+Ogni LUN di boot iSCSI viene mappato al server che si avvia da esso attraverso le LIF iSCSI associando il LUN di boot con i nomi iSCSI qualificati del server (IQN) nel relativo igroup di boot. L'igroup di boot del server contiene due IQN, uno per ogni fabric vNIC/SAN. Questa funzione consente solo al server autorizzato di accedere al LUN di avvio creato appositamente per tale server.
+
+image:sm-bcs-image24.png["Errore: Immagine grafica mancante"]
+
+
+
+== Peering dei cluster
+
+I peer del cluster ONTAP comunicano tramite le LIF dell'intercluster. Utilizzando Gestione di sistema di ONTAP per i due cluster, è possibile creare le LIF di intercluster necessarie nel pannello protezione > Panoramica.
+
+image:sm-bcs-image25.png["Errore: Immagine grafica mancante"]
+
+Per unire i due cluster, completare i seguenti passaggi:
+
+. Generare la passphrase di peering del cluster nel primo cluster.
++
+image:sm-bcs-image26.png["Errore: Immagine grafica mancante"]
+
+. Richiamare l'opzione Peer Cluster nel secondo cluster e fornire la passphrase e le informazioni LIF dell'intercluster.
++
+image:sm-bcs-image27.png["Errore: Immagine grafica mancante"]
+
+. Il pannello System Manager Protection > Overview (protezione > Panoramica di System Manager) mostra le informazioni relative ai peer del cluster.
++
+image:sm-bcs-image28.png["Errore: Immagine grafica mancante"]
+
+
+
+
+
+== Installazione e configurazione del mediatore ONTAP
+
+Il mediatore ONTAP stabilisce un quorum per i cluster ONTAP in una relazione SM-BC. Coordina il failover automatizzato quando viene rilevato un guasto e aiuta a evitare scenari di split-brain quando ogni cluster tenta contemporaneamente di stabilire il controllo come cluster primario.
+
+Prima di installare il mediatore ONTAP, consultare https://docs.netapp.com/us-en/ontap/mediator/index.html["Installare o aggiornare il servizio di supporto ONTAP"^] Pagina per i prerequisiti, le versioni di Linux supportate e le procedure per l'installazione sui vari sistemi operativi Linux supportati.
+
+Una volta installato il mediatore ONTAP, è possibile aggiungere il certificato di sicurezza del mediatore ONTAP ai cluster ONTAP e configurare il mediatore ONTAP nel pannello protezione > Panoramica di Gestione sistema. La seguente schermata mostra la GUI di configurazione del mediatore ONTAP.
+
+image:sm-bcs-image29.png["Errore: Immagine grafica mancante"]
+
+Dopo aver fornito le informazioni necessarie, il mediatore ONTAP configurato viene visualizzato nel pannello protezione > Panoramica di Gestione sistema.
+
+image:sm-bcs-image30.png["Errore: Immagine grafica mancante"]
+
+
+
+== Gruppo di coerenza SM-BC
+
+Un gruppo di coerenza offre una garanzia di coerenza dell'ordine di scrittura per un workload dell'applicazione che copre un insieme di volumi specificati. Per ONTAP 9.10.1, ecco alcune delle limitazioni e delle limitazioni più importanti.
+
+* Il numero massimo di relazioni di gruppo di coerenza SM-BC in un cluster è 20.
+* Il numero massimo di volumi supportati per relazione SM-BC è 16.
+* Il numero massimo di endpoint totali di origine e destinazione in un cluster è 200.
+
+
+Per ulteriori informazioni, consultare la documentazione di ONTAP SM-BC sul https://docs.netapp.com/us-en/ontap/smbc/smbc_plan_additional_restrictions_and_limitations.html["restrizioni e limitazioni"^].
+
+Per la configurazione della convalida, è stato utilizzato Gestore di sistema di ONTAP per creare i gruppi di coerenza per proteggere le LUN di avvio ESXi e le LUN degli archivi dati condivisi per entrambi i siti. La finestra di dialogo per la creazione di gruppi di coerenza è accessibile selezionando protezione > Panoramica > protezione per la business continuity > Proteggi gruppo di coerenza. Per creare un gruppo di coerenza, fornire i volumi di origine, il cluster di destinazione e le informazioni sulla macchina virtuale di storage di destinazione necessari per la creazione.
+
+image:sm-bcs-image31.png["Errore: Immagine grafica mancante"]
+
+Nella tabella seguente sono elencati i quattro gruppi di coerenza creati e i volumi inclusi in ciascun gruppo di coerenza per il test di convalida.
+
+|===
+| System Manager | Gruppo di coerenza | Volumi 
+
+
+| Sito A | cg_esxi_a. | esxi_a. 
+
+
+| Sito A | cg_infra_datastore_a. | infra_datastore_a_01 infra_datastore_a_02 
+
+
+| Sito B | cg_esxi_b | esxi_b 
+
+
+| Sito B | cg_infra_datastore_b | infra_datastore_b_01 infra_datastore_b_02 
+|===
+Una volta creati, i gruppi di coerenza vengono visualizzati sotto le rispettive relazioni di protezione nel sito A e nel sito B.
+
+Questa schermata mostra le relazioni dei gruppi di coerenza nel sito A.
+
+image:sm-bcs-image32.png["Errore: Immagine grafica mancante"]
+
+Questa schermata mostra le relazioni dei gruppi di coerenza nel sito B.
+
+image:sm-bcs-image33.png["Errore: Immagine grafica mancante"]
+
+Questa schermata mostra i dettagli delle relazioni del gruppo di coerenza per il gruppo cg_infra_datastore_b.
+
+image:sm-bcs-image34.png["Errore: Immagine grafica mancante"]
+
+
+
+== Volumi, LUN e mappature host
+
+Una volta creati i gruppi di coerenza, SnapMirror sincronizza i volumi di origine e di destinazione in modo che i dati possano essere sempre sincronizzati. I volumi di destinazione del sito remoto riportano i nomi dei volumi con il _dest end (fine destinazione). Ad esempio, per il volume esxi_a nel cluster del sito A, nel sito B è presente un volume esxi_a_dest Data Protection (DP) corrispondente
+
+Questa schermata mostra le informazioni sul volume per il sito A.
+
+image:sm-bcs-image35.png["Errore: Immagine grafica mancante"]
+
+Questa schermata mostra le informazioni sul volume per il sito B.
+
+image:sm-bcs-image36.png["Errore: Immagine grafica mancante"]
+
+Per facilitare il failover trasparente delle applicazioni, è necessario mappare anche i LUN SM-BC mirrorati agli host dal cluster di destinazione. In questo modo, gli host possono visualizzare correttamente i percorsi verso le LUN dai cluster di origine e di destinazione. Il `igroup show` e. `lun show` Le uscite per il sito A e il sito B vengono acquisite nelle due schermate seguenti. Con le mappature create, ogni host ESXi nel cluster vede il proprio LUN di avvio SAN come ID 0 e tutte e quattro le LUN degli archivi dati iSCSI condivisi.
+
+Questa schermata mostra la mappatura di igroups e LUN host per un cluster del sito A.
+
+image:sm-bcs-image37.png["Errore: Immagine grafica mancante"]
+
+Questa schermata mostra la mappatura di igroups e LUN host per il cluster del sito B.
+
+image:sm-bcs-image38.png["Errore: Immagine grafica mancante"]
+
+link:sm-bcs-virtualization.html["Successivo: Convalida della soluzione - virtualizzazione."]

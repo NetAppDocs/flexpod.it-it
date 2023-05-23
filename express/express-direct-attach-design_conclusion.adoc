@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_conclusion.html 
+keywords:  
+summary:  
+---
+= Conclusione
+:allow-uri-read: 
+
+
+[role="lead"]
+FlexPod offre una soluzione semplice ed efficace grazie a un design validato che utilizza componenti leader del settore. Grazie alla scalabilità e all'offerta di opzioni per una piattaforma hypervisor, FlexPod Express può essere personalizzato in base a specifiche esigenze di business. FlexPod Express è stato progettato per le piccole e medie imprese, le ROBOs e altre aziende che richiedono soluzioni dedicate.
+
+link:express-direct-attach-design_where_to_find_additional_information.html["Avanti: Dove trovare ulteriori informazioni."]

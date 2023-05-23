@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: sm-bcs-abstract.html 
+keywords:  
+summary:  
+---
+= Astratto
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+FlexPod DataCenter con NetApp SnapMirror Business Continuity (SM-BC) e la soluzione ONTAP 9.10 proteggono i dati business-critical da uno scenario di guasto di un sito oltre a scenari con singolo punto di errore. Questo report tecnico offre una panoramica della soluzione FlexPod SM-BC e dei suoi componenti e mette in evidenza alcuni aspetti di configurazione e convalida della soluzione.

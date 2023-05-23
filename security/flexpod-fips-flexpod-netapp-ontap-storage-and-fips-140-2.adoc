@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html 
+keywords: storage, data plane, control plane, encryption, NAE CLI, nve, key management, external key management 
+summary: NetApp offre una vasta gamma di hardware, software e servizi, che possono includere vari componenti dei moduli crittografici validati in base allo standard. Pertanto, NetApp utilizza una serie di approcci per la conformità FIPS 140-2 per il piano di controllo e il piano dati. 
+---
+= Storage NetApp ONTAP e FIPS 140-2 di FlexPod
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["Precedente: Rete Cisco FlexPod e FIPS 140-2."]
+
+[role="lead"]
+NetApp offre una vasta gamma di hardware, software e servizi, che possono includere vari componenti dei moduli crittografici validati in base allo standard. Pertanto, NetApp utilizza una serie di approcci per la conformità FIPS 140-2 per il piano di controllo e il piano dati:
+
+* NetApp include moduli crittografici che hanno ottenuto la convalida di livello 1 per la crittografia dei dati in transito e dei dati a riposo.
+* NetApp acquisisce moduli hardware e software che sono stati convalidati FIPS 140-2 dai fornitori di tali componenti. Ad esempio, la soluzione NetApp Storage Encryption sfrutta dischi convalidati FIPS livello 2.
+* I prodotti NetApp possono utilizzare un modulo validato in modo conforme allo standard anche se il prodotto o la funzionalità non rientra nei limiti della convalida. Ad esempio, NetApp Volume Encryption (NVE) è conforme a FIPS 140-2. Anche se non convalidato separatamente, sfrutta il modulo crittografico NetApp, validato al livello 1. Per conoscere le specifiche di conformità per la versione di ONTAP in uso, contatta il tuo SME FlexPod.
+
+
+*I moduli NetApp Cryptographic sono validati FIPS 140-2 livello 1*
+
+* NetApp Cryptographic Security Module (NCSM) è validato FIPS 140-2 livello 1.
+
+
+*I dischi con crittografia automatica NetApp sono convalidati FIPS 140-2 livello 2*
+
+NetApp acquista dischi con crittografia automatica (SED) che sono stati convalidati FIPS 140-2 dall'OEM (Original Equipment Manufacturer); i clienti che cercano questi dischi devono specificarli al momento dell'ordine. I dischi sono validati al livello 2. I seguenti prodotti NetApp possono sfruttare i SED validati:
+
+* Sistemi storage AFF A-Series e FAS
+* Sistemi storage e-Series ed EF-Series
+
+
+*NetApp aggregate Encryption e NetApp Volume Encryption*
+
+Le tecnologie NVE e NetApp aggregate Encryption (NAE) consentono la crittografia dei dati rispettivamente a livello di volume e aggregato, rendendo la soluzione indipendente dal disco fisico.
+
+NVE è una soluzione di crittografia dei dati a riposo basata su software disponibile a partire da ONTAP 9.1 ed è conforme a FIPS 140-2 a partire da ONTAP 9.2. NVE consente a ONTAP di crittografare i dati per ogni volume per la granularità. NAE, disponibile con ONTAP 9.6, è un'espansione di NVE; consente a ONTAP di crittografare i dati per ogni volume e i volumi possono condividere le chiavi nell'aggregato. Sia NVE che NAE utilizzano la crittografia AES a 256 bit. I dati possono anche essere memorizzati su disco senza SED. NVE e NAE consentono di utilizzare le funzionalità di efficienza dello storage anche quando la crittografia è attivata. La crittografia solo a livello di applicazione consente di ridurre tutti i vantaggi dell'efficienza dello storage. Con NVE e NAE, l'efficienza dello storage viene mantenuta perché i dati provengono dalla rete attraverso NetApp WAFL al livello RAID, che determina se i dati devono essere crittografati. Per una maggiore efficienza dello storage, è possibile utilizzare la deduplica aggregata con NAE. I volumi NVE e NAE possono coesistere sullo stesso aggregato NAE. Gli aggregati NAE non supportano volumi non crittografati.
+
+Ecco come funziona il processo: Quando i dati vengono crittografati, vengono inviati al modulo crittografico convalidato FIPS 140-2 livello 1. Il modulo crittografico crittografa i dati e li invia di nuovo al livello RAID. I dati crittografati vengono quindi inviati al disco. Pertanto, con la combinazione di NVE e NAE, i dati sono già crittografati durante il percorso verso il disco. Le letture seguono il percorso inverso. In altre parole, i dati lasciano il disco crittografato, vengono inviati a RAID, vengono decifrati dal modulo crittografico e quindi inviati al resto dello stack, come mostrato nella figura seguente.
+
+image:flexpod-fips-image3.png["Errore: Immagine grafica mancante"]
+
+
+NOTE: NVE utilizza un modulo di crittografia software validato FIPS 140-2 livello 1.
+
+Per ulteriori informazioni su NVE, vedere https://www.netapp.com/us/media/ds-3899.pdf["Scheda informativa di NVE"^].
+
+NVE protegge i dati nel cloud. Cloud Volumes ONTAP e Azure NetApp Files sono in grado di fornire la crittografia dei dati conforme a FIPS 140-2 a riposo.
+
+A partire da ONTAP 9.7, gli aggregati e i volumi appena creati vengono crittografati per impostazione predefinita quando si dispone della licenza NVE e della gestione delle chiavi integrata o esterna. A partire da ONTAP 9.6, è possibile utilizzare la crittografia a livello di aggregato per assegnare le chiavi all'aggregato contenente per i volumi da crittografare. I volumi creati nell'aggregato vengono crittografati per impostazione predefinita. È possibile ignorare l'impostazione predefinita quando si crittografa il volume.
+
+
+
+== Comandi ONTAP NAE CLI
+
+Prima di eseguire i seguenti comandi CLI, assicurarsi che il cluster disponga della licenza NVE richiesta.
+
+Per creare un aggregato e crittografarlo, eseguire il seguente comando (quando viene eseguito su un'interfaccia CLI del cluster ONTAP 9.6 e versioni successive):
+
+....
+fp-health::> storage aggregate create -aggregate aggregatename -encrypt-with-aggr-key true
+....
+Per convertire un aggregato non NAE in un aggregato NAE An, eseguire il seguente comando (se eseguito su una CLI cluster ONTAP 9.6 e versioni successive):
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename  -node svmname -encrypt-with-aggr-key true
+....
+Per convertire un aggregato NAE in un aggregato non NAE, eseguire il seguente comando (quando viene eseguito su una CLI cluster ONTAP 9.6 e versioni successive):
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename -node svmname -encrypt-with-aggr-key false
+....
+
+
+== Comandi CLI NVE di ONTAP
+
+A partire da ONTAP 9.6, è possibile utilizzare la crittografia a livello di aggregato per assegnare le chiavi all'aggregato contenente per i volumi da crittografare. I volumi creati nell'aggregato vengono crittografati per impostazione predefinita.
+
+Per creare un volume su un aggregato abilitato NAE, eseguire il seguente comando (se eseguito su una CLI cluster ONTAP 9.6 e versioni successive):
+
+....
+fp-health::> volume create -vserver svmname -volume volumename -aggregate aggregatename -encrypt true
+....
+Per abilitare la crittografia di un volume esistente "inplace" senza uno spostamento del volume, eseguire il seguente comando (se eseguito su un'interfaccia CLI del cluster ONTAP 9.6 e versioni successive):
+
+....
+fp-health::> volume encryption conversion start -vserver svmname -volume volumename
+....
+Per verificare che i volumi siano abilitati per la crittografia, eseguire il seguente comando CLI:
+
+....
+fp-health::> volume show -is-encrypted true
+....
+
+
+== NSE
+
+NSE utilizza i SED per eseguire la crittografia dei dati attraverso un meccanismo con accelerazione hardware.
+
+NSE è configurato per utilizzare dischi con crittografia automatica FIPS 140-2 livello 2 per facilitare la conformità e il ritorno delle parti di ricambio, consentendo la protezione dei dati inattivi tramite crittografia trasparente dei dischi AES a 256 bit. I dischi eseguono tutte le operazioni di crittografia dei dati internamente, come illustrato nella figura seguente, inclusa la generazione della chiave di crittografia. Per impedire l'accesso non autorizzato ai dati, il sistema di storage deve autenticarsi con il disco utilizzando una chiave di autenticazione stabilita al primo utilizzo del disco.
+
+image:flexpod-fips-image4.png["Errore: Immagine grafica mancante"]
+
+
+NOTE: NSE utilizza la crittografia hardware su ogni disco, convalidata FIPS 140-2 livello 2.
+
+Per ulteriori informazioni su NSE, consultare https://www.netapp.com/us/media/ds-3213-en.pdf["Scheda tecnica NSE"^].
+
+
+
+== Gestione delle chiavi
+
+Lo standard FIPS 140-2 si applica al modulo crittografico come definito dal confine, come mostrato nella figura seguente.
+
+image:flexpod-fips-image5.png["Errore: Immagine grafica mancante"]
+
+Key Manager tiene traccia di tutte le chiavi di crittografia utilizzate da ONTAP. I SED NSE utilizzano il gestore delle chiavi per impostare le chiavi di autenticazione per i SED NSE. Quando si utilizza il gestore delle chiavi, la soluzione combinata NVE e NAE è composta da un modulo di crittografia software, chiavi di crittografia e un gestore delle chiavi. Per ciascun volume, NVE utilizza una chiave di crittografia dati XTS-AES 256 univoca, archiviata dal gestore delle chiavi. La chiave utilizzata per un volume di dati è univoca per il volume di dati in quel cluster e viene generata quando viene creato il volume crittografato. Allo stesso modo, un volume NAE utilizza chiavi di crittografia dati XTS-AES 256 univoche per aggregato, memorizzate anche dal gestore delle chiavi. Le chiavi NAE vengono generate quando viene creato l'aggregato crittografato. ONTAP non genera in anticipo le chiavi, le riutilizza o le visualizza in testo normale, ma vengono memorizzate e protette dal gestore delle chiavi.
+
+
+
+== Supporto per gestore chiavi esterno
+
+A partire da ONTAP 9.3, i key manager esterni sono supportati sia nelle soluzioni NVE che NSE. Lo standard FIPS 140-2 si applica al modulo crittografico utilizzato nell'implementazione del vendor specifico. Nella maggior parte dei casi, i clienti FlexPod e ONTAP utilizzano una delle seguenti soluzioni validate (in base al http://mysupport.netapp.com/matrix["Matrice di interoperabilità NetApp"^]) responsabili chiave:
+
+* Gemalto o SafeNet ALL'INDIRIZZO
+* Vormetric (Thales)
+* IBM SKLM
+* Utimaco (in precedenza Microfous, HPE)
+
+
+Il backup delle chiavi di autenticazione NSE e NVMe SED viene eseguito su un gestore di chiavi esterno utilizzando LO standard di settore OASIS Key Management Interoperability Protocol (KMIP). Solo il sistema di storage, il disco e il gestore delle chiavi hanno accesso alla chiave e l'unità non può essere sbloccata se viene spostata all'esterno del dominio di sicurezza, impedendo così la perdita di dati. Il gestore delle chiavi esterno memorizza anche le chiavi di crittografia del volume NVE e le chiavi di crittografia aggregate NAE. Se il controller e i dischi vengono spostati e non hanno più accesso al gestore delle chiavi esterno, i volumi NVE e NAE non saranno accessibili e non potranno essere decifrati.
+
+Il seguente comando di esempio aggiunge due server di gestione delle chiavi all'elenco di server utilizzati dal gestore delle chiavi esterno per la macchina virtuale dello store (SVM) `svmname1`.
+
+....
+fp-health::> security key-manager external add-servers -vserver svmname1 -key-servers 10.0.0.20:15690, 10.0.0.21:15691
+....
+Quando un data center FlexPod viene utilizzato in uno scenario di multi-tenancy, ONTAP consente agli utenti di fornire una separazione di tenancy per motivi di sicurezza a livello di SVM.
+
+Per verificare l'elenco dei key manager esterni, eseguire il seguente comando CLI:
+
+....
+fp-health::> security key-manager external show
+....
+
+
+== Combinazione della crittografia per la doppia crittografia (difesa a più livelli)
+
+Se è necessario separare l'accesso ai dati e assicurarsi che i dati siano sempre protetti, i SED NSE possono essere combinati con la crittografia a livello di rete o fabric. I SED NSE agiscono come un backstop se un amministratore dimentica di configurare o configurare in modo errato la crittografia di livello superiore. Per due diversi livelli di crittografia, è possibile combinare i SED NSE con NVE e NAE.
+
+
+
+== Modalità FIPS del piano di controllo a livello di cluster NetApp ONTAP
+
+Il software per la gestione dei dati NetApp ONTAP dispone di una configurazione in modalità FIPS che crea un'istanza di un livello di sicurezza aggiunto per il cliente. Questa modalità FIPS si applica solo al piano di controllo. Quando la modalità FIPS è attivata, in conformità con gli elementi chiave di FIPS 140-2, Transport Layer Security v1 (TLSv1) e SSLv3 sono disattivati e solo TLS v1.1 e TLS v1.2 rimangono attivati.
+
+
+NOTE: Il pannello di controllo a livello di cluster ONTAP in modalità FIPS è conforme a FIPS 140-2 livello 1. La modalità FIPS a livello di cluster utilizza un modulo crittografico basato su software fornito da NCSM.
+
+La modalità di conformità FIPS 140-2 per il piano di controllo a livello di cluster protegge tutte le interfacce di controllo di ONTAP. Per impostazione predefinita, la modalità solo FIPS 140-2 è disattivata; tuttavia, è possibile abilitarla impostando `is- fips-enabled` parametro a. `true` per `security config modify` comando.
+
+Per attivare la modalità FIPS sul cluster ONTAP, eseguire il seguente comando:
+
+....
+fp-health::> security config modify -interface SSL -is-fips-enabled true
+....
+Quando la modalità SSL FIPS è attivata, la comunicazione SSL da ONTAP al client esterno o ai componenti server esterni a ONTAP utilizzerà la crittografia conforme a FIPS per SSL.
+
+Per visualizzare lo stato FIPS dell'intero cluster, eseguire i seguenti comandi:
+
+....
+fp-health::> set advanced
+fp-health::*> security config modify -interface SSL -is-fips-enabled true
+....
+link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["Avanti: Vantaggi della soluzione dell'infrastruttura convergente FlexPod."]

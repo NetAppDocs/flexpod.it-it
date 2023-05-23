@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_other_requirements.html 
+keywords: requirements, flexpod, express, software, hardware, cisco, imt, hcl 
+summary: Di seguito sono elencati ulteriori requisiti per FlexPod Express. 
+---
+= Altri requisiti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+I requisiti aggiuntivi per FlexPod Express includono:
+
+* Sono richiesti contratti di supporto validi per tutte le apparecchiature, tra cui:
++
+** Supporto SMARTnet per apparecchiature Cisco
+** Supporto SupportEdge Advisor o SupportEdge Premium per le apparecchiature NetApp
+
+
+* Tutti i componenti software devono essere elencati e supportati in http://support.netapp.com/matrix/["NetApp IMT"^].
+* Tutti i componenti hardware NetApp devono essere elencati e supportati su https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^].
+* Tutti i componenti hardware Cisco devono essere elencati e supportati su https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
+

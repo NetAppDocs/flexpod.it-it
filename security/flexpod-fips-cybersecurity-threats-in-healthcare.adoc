@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-cybersecurity-threats-in-healthcare.html 
+keywords: ransomware, malware, extortion, data breach, malicious agents 
+summary: 'Le minacce per l"assistenza sanitaria sono di natura multidimensionale e di impatto. I governi di tutto il mondo hanno adottato varie disposizioni per garantire ePHI. Gli effetti negativi e la natura in evoluzione delle minacce per l"assistenza sanitaria rendono difficile per le organizzazioni sanitarie difendere tutte le minacce.' 
+---
+= Minacce alla cybersicurezza nel settore sanitario
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-introduction.html["Precedente: Introduzione."]
+
+[role="lead"]
+Ogni problema presenta una nuova opportunità: Un esempio di tale opportunità è rappresentato dalla pandemia di COVID. Secondo a. https://www.hhs.gov/sites/default/files/2020-hph-cybersecurty-retrospective-tlpwhite.pdf["report"^] Dal programma Cybersecurity del Department of Health and Human Services (HHS), la risposta COVID ha portato a un aumento del numero di attacchi ransomware. Ci sono stati 6,000 nuovi domini internet registrati solo nella terza settimana di marzo 2020. Oltre il 50% dei domini ospitava malware. Gli attacchi ransomware sono stati responsabili di quasi il 50% di tutte le violazioni dei dati sanitari nel 2020 che hanno colpito più di 630 organizzazioni sanitarie e circa 29 milioni di cartelle cliniche. Diciannove leakers/siti hanno raddoppiato l'estorsione. Con il 24.5%, il settore sanitario ha registrato il maggior numero di violazioni dei dati nel 2020.
+
+Gli agenti dannosi hanno tentato di violare la sicurezza e la privacy delle informazioni sanitarie protette (PHI) vendendo le informazioni o minacciando di distruggerle o di esporle. Spesso vengono effettuati tentativi mirati e di trasmissione di massa per ottenere un accesso non autorizzato a ePHI. Circa il 75% delle cartelle cliniche dei pazienti esposte nella seconda metà del 2020 era dovuto a dipendenti aziendali compromessi.
+
+Il seguente elenco di organizzazioni sanitarie è stato preso di mira dagli agenti dannosi:
+
+* Sistemi ospedalieri
+* Laboratori di life science
+* Laboratori di ricerca
+* Strutture di riabilitazione
+* Ospedali e cliniche della comunità
+
+
+La diversità delle applicazioni che costituiscono un'organizzazione sanitaria è innegabile e sempre più complessa. Gli uffici per la sicurezza delle informazioni devono fornire una governance per la vasta gamma di sistemi E risorse IT. La figura seguente illustra le funzionalità cliniche di un sistema ospedaliero tipico.
+
+image:flexpod-fips-image2.png["Errore: Immagine grafica mancante"]
+
+I dati dei pazienti sono al centro dell'immagine. La perdita dei dati dei pazienti e lo stigma associato a condizioni mediche sensibili sono molto reali. Altri problemi sensibili includono il rischio di esclusione sociale, ricatti, profiling, vulnerabilità al marketing mirato, sfruttamento e potenziale responsabilità finanziaria nei confronti dei pagatori in merito alle informazioni mediche al di là dei privilegi del pagatore.
+
+Le minacce per l'assistenza sanitaria sono di natura multidimensionale e di impatto. I governi di tutto il mondo hanno adottato varie disposizioni per garantire ePHI. Gli effetti negativi e la natura in evoluzione delle minacce per l'assistenza sanitaria rendono difficile per le organizzazioni sanitarie difendere tutte le minacce.
+
+Di seguito viene riportato un elenco delle minacce più comuni identificate nel settore sanitario:
+
+* Attacchi ransomware
+* Perdita o furto di apparecchiature o dati con informazioni sensibili
+* Attacchi di phishing
+* Attacchi contro i dispositivi medici collegati che possono compromettere la sicurezza del paziente
+* Attacchi di phishing via e-mail
+* Perdita o furto di apparecchiature o dati
+* Compromissione del protocollo del desktop remoto
+* Vulnerabilità del software
+
+
+Le organizzazioni del settore sanitario operano in un ambiente legale e normativo complicato quanto i loro ecosistemi digitali. Questo ambiente include, a titolo esemplificativo e non esaustivo, i seguenti elementi:
+
+* Office of the National Coordinator (for Healthcare Technology) Standard di interoperabilità con Electronic Health Information Technology con certificazione ONC
+* Medicare Access e il Children's Health Insurance Program ReAuthorization Act (MACRA)/uso significativo
+* Obblighi multipli ai sensi della Food and Drug Administration (FDA)
+* I processi di accreditamento della Joint Commission
+* Requisiti HIPAA
+* Requisiti HITECH
+* Standard minimi di rischio accettabili per i pagatori
+* Norme di sicurezza e privacy statali
+* Requisiti del Federal Information Security Modernization Act come incorporati nei contratti federali e nelle borse di ricerca attraverso agenzie come gli istituti nazionali di salute
+* Payment Card Industry Data Security Standard (PCI-DSS)
+* Requisiti relativi all'abuso di sostanze e all'amministrazione dei servizi di salute mentale (SAMHSA)
+* Il Gramm-Leach-Bliley Act per l'elaborazione finanziaria
+* La legge di Stark in relazione alla fornitura di servizi alle organizzazioni affiliate
+* Family Educational Rights and Privacy Act (FERPA) per le istituzioni che partecipano all'istruzione superiore
+* Genetic Information Nondiscrimination Act (GINA)
+* Il nuovo regolamento generale sulla protezione dei dati (GDPR) nell'Unione europea
+
+
+Gli standard dell'architettura di sicurezza sono in rapida evoluzione per impedire agli attori malintenzionati di influire sui sistemi informativi sanitari. Uno di questi standard è FIPS 140-2, definito dal National Institute of Standards and Technology (NIST). La pubblicazione FIPS 140-2 descrive in dettaglio gli Stati Uniti requisiti governativi per un modulo crittografico. I requisiti di sicurezza coprono le aree correlate a una progettazione sicura e all'implementazione di un modulo crittografico e possono essere applicati a HIT. I confini crittografici ben definiti consentono una gestione più semplice della sicurezza, mantenendo al contempo aggiornati i moduli crittografici. Questi limiti aiutano a prevenire i deboli moduli di crittografia che possono essere facilmente sfruttati da utenti malintenzionati. Inoltre, possono contribuire a prevenire gli errori umani durante la gestione dei moduli crittografici standard.
+
+NIST insieme a Communications Security Establishment (CSE) hanno definito il programma di convalida del modulo crittografico (CMVP) per certificare i moduli crittografici per i livelli di convalida FIPS 140-2. Utilizzando un modulo certificato FIPS 140-2, le organizzazioni federali devono proteggere i dati sensibili o preziosi mentre sono a riposo e in movimento. A causa del suo successo nella protezione di informazioni sensibili o preziose, molti sistemi sanitari hanno scelto di crittografare ePHI utilizzando i moduli crittografici FIPS 140-2 oltre il livello minimo di sicurezza richiesto dalla legge.
+
+Sfruttare e implementare le funzionalità FIPS 140-2 di FlexPod richiede solo ore (non giorni). La conformità FIPS è a portata di mano per la maggior parte delle organizzazioni sanitarie, indipendentemente dalle dimensioni. Con confini crittografici chiaramente definiti e semplici fasi di implementazione ben documentate, un'architettura FlexPod conforme a FIPS 140-2 può creare una solida base di sicurezza per l'infrastruttura e consentire semplici miglioramenti per aumentare ulteriormente la protezione per le minacce alla sicurezza.
+
+link:flexpod-fips-overview-of-fips-140-2.html["Pagina successiva: Panoramica di FIPS 140-2."]

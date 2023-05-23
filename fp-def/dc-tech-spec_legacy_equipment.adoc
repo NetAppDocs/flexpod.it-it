@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, cisco, end, life, eol, flexpod, datacenter, technical, specifications 
+summary: 'FlexPod è una soluzione flessibile che consente di utilizzare le apparecchiature esistenti e le nuove apparecchiature attualmente in vendita da Cisco e NetApp. Occasionalmente, alcuni modelli di apparecchiature di Cisco e NetApp sono indicati come EOL (End of Life).' 
+---
+= Apparecchiature legacy
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod è una soluzione flessibile che consente di utilizzare le apparecchiature esistenti e le nuove apparecchiature attualmente in vendita da Cisco e NetApp. Occasionalmente, alcuni modelli di apparecchiature di Cisco e NetApp sono indicati come EOL (End of Life).
+
+Anche se questi modelli di apparecchiature non sono più disponibili, se si è acquistato uno di questi modelli prima della data di fine disponibilità (EOA), è possibile utilizzare l'apparecchiatura in una configurazione FlexPod. È possibile fare riferimento a un elenco completo dei modelli di apparecchiature legacy supportati in FlexPod che non sono più in vendita sul https://mysupport.netapp.com/info/eoa/index.html["Indice di fine disponibilità dei programmi di assistenza e supporto NetApp"^].
+
+Per ulteriori informazioni sulle apparecchiature Cisco legacy, consultare gli avvisi Cisco EOL e EOA per http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Server rack Cisco UCS C-Series"^], http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/eos-eol-notice-listing.html["Server blade Cisco UCS serie B."^], e. https://www.cisco.com/c/en/us/products/eos-eol-listing.html["Switch Nexus"^].
+
+Il supporto del fabric FC legacy include quanto segue:
+
+* Fabric da 2 GB
+* Fabric da 4 GB
+
+
+Il software legacy include:
+
+* NetApp Data ONTAP funziona in 7-Mode, 7.3.5 e versioni successive
+* Da ONTAP 8.1.x a 9.0.x
+* Cisco UCS Manager 1.3 e versioni successive
+* Cisco UCS Manager da 2.1 a 2.2.7
+

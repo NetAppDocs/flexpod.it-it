@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__optional_features.html 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+summary: In questa sezione vengono descritte le funzioni opzionali di FlexPod Express. 
+---
+= Funzionalità opzionali
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+In questa sezione vengono descritte le funzioni opzionali di FlexPod Express.
+
+
+
+== Opzione di boot iSCI
+
+L'architettura FlexPod utilizza l'avvio iSCSI. I requisiti minimi per l'opzione di boot iSCSI includono:
+
+* Una licenza/funzione iSCSI attivata sul controller di storage NetApp
+* Un adattatore Ethernet a due porte da 10 Gbps su ciascun nodo della coppia ha del controller di storage NetApp
+* Un adattatore nel server Cisco UCS in grado di eseguire l'avvio iSCSI
+
+
+
+
+== Opzioni di configurazione
+
+Questa sezione fornisce ulteriori informazioni sulla configurazione richiesta e validata nell'architettura FlexPod Express.
+
+
+
+=== FlexPod Express con Cisco UCS serie C e AFF serie C190
+
+La figura seguente illustra la soluzione FlexPod Express con Cisco UCS serie C e AFF serie C190. Questa soluzione supporta entrambi gli uplink da 10 GbE.
+
+image:fp-express-tech-spec_image2.png["Errore: Immagine grafica mancante"]
+
+Per ulteriori informazioni su questa configurazione, consultare la Guida all'implementazione di FlexPod con VMware vSphere 6.7 e NetApp AFF C190 NVA (in corso).
+
+
+
+=== FlexPod Express con Cisco UCS Mini e AFF A220 e FAS 2750/2720
+
+La figura seguente illustra la configurazione gestita da FlexPod con Cisco UCS.
+
+image:fp-express-tech-spec_image3.png["Errore: Immagine grafica mancante"]
+
+Per ulteriori informazioni su questa configurazione, vedere https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express con VMware vSphere 6.7U1 e NetApp AFF A220 con storage basato su IP collegato direttamente"^].

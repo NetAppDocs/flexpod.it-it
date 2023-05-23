@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-vxlan-design.html 
+keywords: flexpod, cisco, vmware, data, center, vsphere, vxlan, ontap, cloud, public 
+summary: 'Cisco Validated Designs (CVD) è costituito da sistemi e soluzioni progettati, testati e documentati per facilitare e migliorare le implementazioni dei clienti.' 
+---
+= Data center FlexPod con VMware vSphere 7.0, fabric Cisco VXLAN a sito singolo e NetApp ONTAP 9.7 - progettazione
+:allow-uri-read: 
+
+
+Ramesh Isaac, Cisco Abhinav Singh, NetApp
+
+[role="lead"]
+Cisco Validated Designs (CVD) è costituito da sistemi e soluzioni progettati, testati e documentati per facilitare e migliorare le implementazioni dei clienti. Questi design incorporano un'ampia gamma di tecnologie e prodotti in un portfolio di soluzioni sviluppate per soddisfare le esigenze di business dei clienti. Cisco e NetApp hanno collaborato per offrire FlexPod, che funge da base per una varietà di carichi di lavoro, e offrire design architetturali robusti, efficienti e scalabili per soddisfare i requisiti dei clienti. Una soluzione FlexPod è un approccio validato per l'implementazione di tecnologie e prodotti Cisco e NetApp per la creazione di un'infrastruttura di cloud pubblico e privato condivisa.
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html["Data center FlexPod con VMware vSphere 7.0, fabric Cisco VXLAN a sito singolo e NetApp ONTAP 9.7 - progettazione"^]

@@ -1,0 +1,100 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_meditech_modules_and_components.html 
+keywords: meditech, modules, components, application, function, type 
+summary: 'L"applicazione MEDITECH copre diversi moduli e componenti.' 
+---
+= Moduli E componenti MEDITECH
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+L'applicazione MEDITECH copre diversi moduli e componenti. La seguente tabella elenca le funzioni trattate da questi moduli. Per ulteriori informazioni sulla configurazione e l'implementazione di questi moduli, consultare la documentazione MEDITECH.
+
+|===
+| Funzione | Tipo 
+
+
+| Connettività  a| 
+* Server Web
+* Server applicativo live (WI – integrazione Web)
+* Test del server applicazioni (WI)
+* Server di autenticazione SAML (WI)
+* Server proxy SAML (WI)
+* Server di database
+
+
+
+
+| Infrastruttura  a| 
+* File server
+* Client processi in background
+* Server di connessione
+* Server delle transazioni
+
+
+
+
+| Scansione e archiviazione  a| 
+* Server di immagini
+
+
+
+
+| Repository di dati  a| 
+* SQL Server
+
+
+
+
+| Analytics aziendali e clinici  a| 
+* Server di live intelligence (BCA)
+* Server di intelligence di test (BCA)
+* Server di database (BCA)
+
+
+
+
+| Assistenza a casa  a| 
+* Soluzione per siti remoti
+* Connettività
+* Infrastruttura
+* Stampa in corso
+* Dispositivi di campo
+* Scansione
+* Requisiti del sito in hosting
+* Configurazione del firewall
+
+
+
+
+| Supporto  a| 
+* Client processi in background (CAL - licenza di accesso client)
+
+
+
+
+| Dispositivi dell'utente  a| 
+* Tablet
+* Dispositivi fissi
+
+
+
+
+| Stampa in corso  a| 
+* Server di stampa di rete attivo (obbligatorio; potrebbe già esistere)
+* Test del server di stampa di rete (obbligatorio; potrebbe già esistere)
+
+
+
+
+| Requisito di terze parti  a| 
+* Primo database (FDB) MedKnowledge Framework v4.3
+
+
+|===

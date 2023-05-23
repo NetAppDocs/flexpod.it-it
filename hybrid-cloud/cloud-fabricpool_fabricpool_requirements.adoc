@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html 
+keywords: cloud, fabricpool, flexpod, requirements, platforms, intercluster, lif, connectivity, volume, licensing, object, store, profiler 
+summary: 'FabricPool richiede ONTAP 9.2 o versione successiva e l"utilizzo di aggregati di SSD su qualsiasi piattaforma elencata in questa sezione.' 
+---
+= Requisiti FabricPool
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FabricPool richiede ONTAP 9.2 o versione successiva e l'utilizzo di aggregati di SSD su qualsiasi piattaforma elencata in questa sezione. I requisiti FabricPool aggiuntivi dipendono dal livello cloud collegato. Per le piattaforme AFF entry-level con una capacità fissa e relativamente ridotta come NetApp AFF C190, FabricPool può essere estremamente efficace per lo spostamento dei dati inattivi nel Tier cloud.
+
+
+
+== Piattaforme
+
+FabricPool è supportato sulle seguenti piattaforme:
+
+* NetApp AFF
++
+** R800
+** A700S, A700
+** A320, A300
+** A220, A200
+** C190
+** AFF8080, AFF8060 E AFF8040
+
+
+* NetApp FAS
++
+** FAS9000
+** FAS8200
+** FAS8080, FAS8060 E FAS8040
+** FAS2750, FAS2720
+** FAS2650, FAS2620
+
+
+
+
+
+NOTE: Solo gli aggregati di SSD sulle piattaforme FAS possono utilizzare FabricPool.
+
+* Tier cloud
++
+** Alibaba Cloud Object Storage Service (accesso standard e non frequente)
+** Amazon S3 (Standard, Standard-IA, One zone-IA, Intelligent-Tiering)
+** Amazon Commercial Cloud Services (C2S)
+** Google Cloud Storage (multi-regionale, regionale, nearline, coldline)
+** IBM Cloud Object Storage (Standard, Vault, Cold Vault, Flex)
+** Storage Blob Microsoft Azure (caldo e freddo)
+
+
+
+
+
+
+== LIF di intercluster
+
+Le coppie di cluster ad alta disponibilità (ha) che utilizzano FabricPool richiedono due interfacce logiche intercluster (LIFF) per comunicare con il livello cloud. NetApp consiglia di creare una LIF intercluster su coppie ha aggiuntive per collegare perfettamente i Tier cloud anche agli aggregati su tali nodi.
+
+La LIF utilizzata da ONTAP per connettersi all'archivio di oggetti AWS S3 deve trovarsi su una porta a 10 Gbps.
+
+Se su un nodo con routing diverso viene utilizzato più LIF Intercluser, NetApp consiglia di inserirli in spazi IPdiversi. Durante la configurazione, FabricPool può selezionare diversi spazi IP, ma non è in grado di selezionare specifici LIF di intercluster all'interno di uno spazio IPSpace.
+
+
+NOTE: La disattivazione o l'eliminazione di un LIF intercluster interrompe la comunicazione con il livello cloud.
+
+
+
+== Connettività
+
+La latenza di lettura FabricPool è una funzione della connettività al livello cloud. Le LIF di intercluster che utilizzano porte a 10 Gbps, illustrate nella figura seguente, offrono performance adeguate. NetApp consiglia di validare la latenza e il throughput dello specifico ambiente di rete per determinare l'effetto che ha sulle performance di FabricPool.
+
+
+NOTE: Quando si utilizza FabricPool in ambienti a basse performance, i requisiti minimi di performance per le applicazioni client devono continuare a essere soddisfatti e gli obiettivi dei tempi di recovery devono essere adeguati di conseguenza.
+
+image:cloud-fabricpool_image6.png["Errore: Immagine grafica mancante"]
+
+
+
+=== Profiler dell'archivio di oggetti
+
+Il profiler dell'archivio di oggetti, un esempio del quale è illustrato di seguito ed è disponibile tramite l'interfaccia CLI di ONTAP, verifica la latenza e le performance di throughput degli archivi di oggetti prima che siano collegati a un aggregato FabricPool.
+
+
+NOTE: Il Tier cloud deve essere aggiunto a ONTAP prima di poter essere utilizzato con il profiler dell'archivio di oggetti.
+
+Avviare il profiler dell'archivio di oggetti dalla modalità avanzata dei privilegi in ONTAP con il seguente comando:
+
+....
+storage aggregate object-store profiler start -object-store-name <name> -node <name>
+....
+Per visualizzare i risultati, eseguire il seguente comando:
+
+....
+storage aggregate object-store profiler show
+....
+I Tier cloud non offrono performance simili a quelle riscontrate nel Tier di performance (in genere GB al secondo). Sebbene gli aggregati FabricPool possano facilmente fornire performance simili a quelle di SATA, possono tollerare anche latenze fino a 10 secondi e un basso throughput per le soluzioni di tiering che non richiedono performance simili a quelle di SATA.
+
+image:cloud-fabricpool_image7.png["Errore: Immagine grafica mancante"]
+
+
+
+== Volumi
+
+Il thin provisioning dello storage è una pratica standard per l'amministratore dell'infrastruttura virtuale FlexPod. NetApp Virtual Storage Console (VSC) esegue il provisioning dei volumi di storage per gli archivi dati VMware senza alcuna garanzia di spazio (thin provisioning) e con impostazioni di efficienza dello storage ottimizzate in base alle Best practice NetApp. Se si utilizza VSC per creare datastore VMware, non è necessaria alcuna azione aggiuntiva, in quanto non è necessario assegnare alcuna garanzia di spazio al volume del datastore.
+
+
+NOTE: FabricPool non può collegare un Tier cloud a un aggregato che contiene volumi utilizzando una garanzia di spazio diversa da Nessuno (ad esempio, volume).
+
+....
+volume modify -space-guarantee none
+....
+Impostazione di `space-guarantee none` il parametro fornisce il thin provisioning per il volume. La quantità di spazio consumata dai volumi con questo tipo di garanzia aumenta man mano che vengono aggiunti i dati, anziché essere determinata dalla dimensione iniziale del volume. Questo approccio è essenziale per FabricPool perché il volume deve supportare i dati del Tier cloud che diventano "hot" e vengono riportati al Tier di performance.
+
+
+
+== Licensing
+
+FabricPool richiede una licenza basata sulla capacità quando si collegano provider di storage a oggetti di terze parti (come Amazon S3) come Tier cloud per sistemi flash ibridi AFF e FAS.
+
+Le licenze FabricPool sono disponibili in formato perpetuo o a termine (1 o 3 anni).
+
+Il tiering al Tier cloud si interrompe quando la quantità di dati (capacità utilizzata) memorizzati nel Tier cloud raggiunge la capacità concessa in licenza. I dati aggiuntivi, incluse le copie SnapMirror sui volumi che utilizzano la policy di tiering completo, non possono essere suddivisi in più livelli fino a quando la capacità della licenza non viene aumentata. Anche se il tiering si ferma, i dati sono ancora accessibili dal Tier cloud. I dati cold aggiuntivi rimangono sugli SSD fino all'aumento della capacità concessa in licenza.
+
+Con l'acquisto di qualsiasi nuovo cluster ONTAP 9.5 o successivo, viene fornita una licenza FabricPool a termine gratuita da 10 TB di capacità, anche se potrebbero essere applicati costi di supporto aggiuntivi. Le licenze FabricPool (inclusa la capacità aggiuntiva per le licenze esistenti) possono essere acquistate con incrementi di 1 TB.
+
+Una licenza FabricPool può essere eliminata solo da un cluster che non contiene aggregati FabricPool.
+
+
+NOTE: Le licenze FabricPool sono disponibili in tutto il cluster. L'UUID dovrebbe essere disponibile al momento dell'acquisto di una licenza (`cluster identify show`). Per ulteriori informazioni sulla licenza, fare riferimento a. https://kb.netapp.com/onprem/ontap/dm/FabricPool/ONTAP_FabricPool_(FP)_Licensing_Overview["Knowledge base di NetApp"^].

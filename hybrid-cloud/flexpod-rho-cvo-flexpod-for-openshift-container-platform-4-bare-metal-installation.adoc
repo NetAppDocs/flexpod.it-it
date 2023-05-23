@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html 
+keywords: platform 4, openshift, bare-metal, vmware, installation 
+summary: 'Questa pagina descrive la topologia logica e l"installazione di FlexPod per la piattaforma container OpenShift 4 bare-metal.' 
+---
+= Installazione bare-metal di FlexPod per piattaforma container OpenShift 4
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-components.html["Precedente: Componenti della soluzione."]
+
+[role="lead"]
+Per informazioni sulla progettazione bare-metal di FlexPod per la piattaforma container OpenShift 4, sui dettagli di implementazione e sull'installazione e configurazione di NetApp Astra Trident, vedere https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["FlexPod con OpenShift Guida alla progettazione e all'implementazione validate di Cisco (CVD)"^]. Questo CVD copre l'implementazione di FlexPod e della piattaforma container OpenShift utilizzando Ansible. Il CVD fornisce inoltre informazioni dettagliate sulla preparazione dei nodi di lavoro, sull'installazione di Astra Trident, sul backend dello storage e sulle configurazioni di classe storage, che sono i pochi prerequisiti per l'implementazione e la configurazione di Astra Control Center.
+
+La figura seguente illustra la piattaforma container OpenShift 4 Bare Metal su FlexPod.
+
+image:flexpod-rho-cvo-image8.png["Errore: Immagine grafica mancante"]
+
+
+
+== Installazione di FlexPod per piattaforma container OpenShift 4 su VMware
+
+Per ulteriori informazioni sull'implementazione di Red Hat OpenShift Container Platform 4 su FlexPod con VMware vSphere, vedere https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html["Data center FlexPod per piattaforma container OpenShift 4"^].
+
+La figura seguente illustra FlexPod per piattaforma container OpenShift 4 su vSphere.
+
+image:flexpod-rho-cvo-image9.png["Errore: Immagine grafica mancante"]
+
+link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["Avanti: Red Hat OpenShift su AWS."]

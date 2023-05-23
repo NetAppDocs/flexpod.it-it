@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_conclusion.html 
+keywords: cloud, fabricpool, flexpod, conclusion 
+summary: 'Il percorso verso il cloud varia tra le organizzazioni, tra le business unit e persino tra le business unit all"interno delle organizzazioni.' 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Il percorso verso il cloud varia tra le organizzazioni, tra le business unit e persino tra le business unit all'interno delle organizzazioni. Alcuni scelgono un'adozione rapida, mentre altri adottano un approccio più conservativo. FabricPool si inserisce nella strategia cloud delle organizzazioni indipendentemente dalle loro dimensioni e dalla loro velocità di adozione del cloud, dimostrando ulteriormente i vantaggi in termini di efficienza e scalabilità di un'infrastruttura FlexPod.

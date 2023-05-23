@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html 
+keywords: user token, terraform cloud target, agents, api 
+summary: Questa pagina descrive come connettere Cisco Intersight e Terraform Cloud, come generare un token utente, come richiedere un target cloud terraform e come aggiungere agenti Terraform Cloud. 
+---
+= Integrazione del cloud terraform con prerequisito ICO
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-cisco-intersight-configuration.html["Precedente: Configurazione di Cisco Intersight."]
+
+
+
+== Procedura 1: Connettere Cisco Intersight e Terraform Cloud
+
+. Richiedi o crea un target cloud Terraform fornendo i dettagli dell'account Terraform Cloud pertinente.
+. Creare un target di Terraform Cloud Agent per i cloud privati in modo che i clienti possano installare l'agente nel data center e abilitare la comunicazione con Terraform Cloud.
++
+Per ulteriori informazioni, seguire https://intersight.com/help/saas/features/terraform_cloud/admin["questo link"^].
+
+
+
+
+
+== Procedura 2: Generazione del token utente
+
+Come parte dell'aggiunta di una destinazione per Terraform Cloud, devi fornire il nome utente e il token API dalla pagina delle impostazioni di Terraform Cloud.
+
+. Accedi a Terraform Cloud e vai a *User Tokens*: https://app.terraform.io/app/settings/tokens["https://app.terraform.io/app/settings/tokens"^].
+. Fare clic su *Crea un nuovo token API*.
+. Assegnare un nome da ricordare e salvare il token in un luogo sicuro.
+
+
+
+
+== Procedura 3: Richiesta di rimborso del target cloud Terraform
+
+. Accedere a Intersight con i privilegi di account Administrator, Device Administrator o Device Technician.
+. Accedere a *ADMIN > Target > Richiedi un nuovo target*.
+. In *Categorie*, fare clic su *Cloud*.
+. Fare clic su *Terraform Cloud* e fare clic su *Start*.
++
+image:gcp-ncvo-image3.png["Schermata della selezione del tipo di destinazione in Cisco Intersight."]
+
+. Immettere un nome per la destinazione, il nome utente per Terraform Cloud, il token API e un'organizzazione predefinita in Terraform Cloud, come mostrato nell'immagine seguente.
+. Nel campo *Default Managed Hosts*, assicurarsi di aggiungere i seguenti collegamenti insieme ad altri host gestiti:
++
+** github.com
+** github-releases.githubusercontent.com
++
+image:gcp-ncvo-image4.png["Schermata del campo Default Managed host (host gestito predefinito)."]
+
+
+
+
+
+Se tutto viene inserito correttamente, il target di Terraform Cloud verrà visualizzato nella sezione *Intersight targets*.
+
+
+
+== Procedura 4: Aggiunta di agenti Terraform Cloud
+
+Prerequisiti:
+
+* Destinazione di Terraform Cloud.
+* Ha richiesto Intersight Assist in Intersight prima di implementare Terraform Cloud Agent.
+
+
+
+NOTE: È possibile richiedere solo cinque agenti per ciascun Assist.
+
+
+NOTE: Dopo aver creato la connessione a Terraform, è necessario eseguire lo spin up di un Terraform Agent per eseguire il codice Terraform.
+
+. Fare clic su *Claim Terraform Cloud Agent* dall'elenco a discesa della destinazione di Terraform Cloud.
+. Inserire i dettagli dell'agente Terraform Cloud. La seguente schermata mostra i dettagli di configurazione per l'agente Terraform.
++
+image:gcp-ncvo-image5.png["Schermata che mostra i dettagli di configurazione per l'agente Terraform."]
+
+
+
+
+NOTE: È possibile aggiornare qualsiasi proprietà di Terraform Agent. Se la destinazione si trova nello stato *non connesso* e non si trova mai nello stato *connesso*, non è stato generato alcun token per l'agente Terraform.
+
+Una volta completata la convalida dell'agente e generato un token, non è possibile riconfigurare l'organizzazione e/o il pool di agenti. La corretta implementazione di un agente Terraform è indicata dallo stato *connesso*.
+
+Dopo aver attivato e richiesto l'integrazione di Terraform Cloud, puoi implementare uno o più agenti di Terraform Cloud in Cisco Intersight Assist. L'agente Terraform Cloud viene modellato come target figlio dell'obiettivo di Terraform Cloud. Quando si richiede l'obiettivo dell'agente, viene visualizzato un messaggio che indica che la richiesta di rimborso è in corso.
+
+Dopo alcuni secondi, la destinazione viene spostata nello stato *connesso* e la piattaforma Intersight instrada i pacchetti HTTPS dall'agente al gateway Terraform Cloud.
+
+Il tuo Agente Terraform deve essere correttamente richiesto e deve essere visualizzato sotto obiettivi come *connesso*.
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["Avanti: Configurare il provider di servizi cloud pubblico."]

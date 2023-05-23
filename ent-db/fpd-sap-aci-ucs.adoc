@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-aci-ucs.html 
+keywords: flexpod, datacenter, cisco, aci, ucs, aff, a-series 
+summary: 'Questo documento descrive l"architettura e le procedure di implementazione dell"opzione di integrazione del data center su misura SAP HANA sull"infrastruttura FlexPod.' 
+---
+= Data center FlexPod per SAP con Cisco ACI, Cisco UCS Manager 4.0 e NetApp AFF Serie A.
+:allow-uri-read: 
+
+
+Pramod Ramamurthy, Cisco Marco Schoen, NetApp
+
+[role="lead"]
+Questo documento descrive l'architettura e le procedure di implementazione dell'opzione di integrazione del data center su misura SAP HANA sull'infrastruttura FlexPod, che è composta da:
+
+* Cisco UCS Computing System (Cisco UCS) supportato dai processori scalabili Intel Xeon di seconda generazione.
+* Prodotti di switching che sfruttano Cisco Application Centric Infrastructure (ACI).
+* Array AFF NetApp Serie A.
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html["Data center FlexPod per SAP con Cisco ACI, Cisco UCS Manager 4.0 e NetApp AFF Serie A."^]

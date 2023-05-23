@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html 
+keywords: create, aws, s3, bucket, cloud, fabricpool, flexpod, tiers, create 
+summary: I bucket sono contenitori di archivi di oggetti che contengono dati. È necessario fornire il nome e la posizione del bucket in cui i dati vengono memorizzati prima di poter essere aggiunti a un aggregato come Tier cloud. 
+---
+= Creare il bucket AWS S3
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+I bucket sono contenitori di archivi di oggetti che contengono dati. È necessario fornire il nome e la posizione del bucket in cui i dati vengono memorizzati prima di poter essere aggiunti a un aggregato come Tier cloud.
+
+
+NOTE: I bucket non possono essere creati utilizzando Gestione di sistema di OnCommand, Gestore unificato di OnCommand o ONTAP.
+
+FabricPool supporta l'attacco di un bucket per aggregato, come illustrato nella figura seguente. Un singolo bucket può essere collegato a un singolo aggregato e un singolo bucket può essere collegato a più aggregati. Tuttavia, un singolo aggregato non può essere collegato a più bucket. Sebbene sia possibile collegare un singolo bucket a più aggregati in un cluster, NetApp sconsiglia di collegare un singolo bucket ad aggregati in più cluster.
+
+Quando si pianifica un'architettura di storage, considerare come la relazione bucket-to-aggregate potrebbe influire sulle performance. Molti provider di archivi di oggetti impostano un numero massimo di IOPS supportati a livello di bucket o container. Gli ambienti che richiedono le massime performance devono utilizzare più bucket per ridurre la possibilità che le limitazioni IOPS dello storage a oggetti possano influire sulle performance di più aggregati FabricPool. Collegare un singolo bucket o container a tutti gli aggregati FabricPool in un cluster potrebbe essere più vantaggioso per gli ambienti che apprezzano la gestibilità rispetto alle performance di livello cloud.
+
+image:cloud-fabricpool_image10.png["Errore: Immagine grafica mancante"]
+
+
+
+== Creare un bucket S3
+
+. Nella console di gestione AWS dalla home page, immettere S3 nella barra di ricerca.
+. Seleziona lo storage scalabile S3 nel cloud.
++
+image:cloud-fabricpool_image11.png["Errore: Immagine grafica mancante"]
+
+. Nella home page di S3, selezionare Create Bucket (Crea bucket).
+. Immettere un nome conforme al DNS e scegliere la regione in cui creare il bucket.
++
+image:cloud-fabricpool_image12.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su Create (Crea) per creare il bucket dell'archivio di oggetti.
+
+
+link:cloud-fabricpool_add_a_cloud_tier_to_ontap.html["Avanti: Aggiungi un Tier cloud a ONTAP"]

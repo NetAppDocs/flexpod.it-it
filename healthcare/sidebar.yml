@@ -1,0 +1,92 @@
+---
+section: healthcare
+title: Settore sanitario
+entries:
+- title: FlexPod per la genomica
+  type: solutions
+  entries:
+  - title: Introduzione
+    url: "/healthcare/flexpod-genomics-introduction.html"
+  - title: Vantaggi dell'implementazione di workload genomici su FlexPod
+    url: "/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html"
+  - title: Componenti hardware e software dell'infrastruttura della soluzione
+    url: "/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html"
+  - title: Genomica - Installazione ed esecuzione di GATK
+    url: "/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html"
+  - title: Output per l'esecuzione di GATK utilizzando il file jar
+    url: "/healthcare/flexpod-genomics-appendix-a.html"
+  - title: Output per l'esecuzione di GATK utilizzando lo script ./gatk
+    url: "/healthcare/flexpod-genomics-appendix-b.html"
+  - title: Output per l'esecuzione di GATK utilizzando il motore Cromwell
+    url: "/healthcare/flexpod-genomics-appendix-c.html"
+  - title: Configurazione della GPU
+    url: "/healthcare/flexpod-genomics-appendix-d-gpu-setup.html"
+  - title: Conclusione
+    url: "/healthcare/flexpod-genomics-conclusion.html"
+- title: Guida al dimensionamento direzionale di FlexPod per MEDITECH
+  type: solutions
+  entries:
+  - title: Panoramica
+    url: "/healthcare/ehr-meditech-sizing_introduction.html"
+  - title: Panoramica SUL CARICO di lavoro DI MEDITECH
+    url: "/healthcare/ehr-meditech-sizing_meditech_workload_overview.html"
+  - title: Specifiche tecniche per architetture piccole, medie e grandi
+    url: "/healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html"
+  - title: Ulteriori informazioni
+    url: "/healthcare/ehr-meditech-sizing_additional_information.html"
+  - title: Ringraziamenti
+    url: "/healthcare/ehr-meditech-sizing_acknowledgments.html"
+- title: Guida all'implementazione di FlexPod Datacenter per MEDITECH
+  type: solutions
+  entries:
+  - title: Panoramica
+    url: "/healthcare/ehr-meditech-deploy_overview.html"
+  - title: Progettazione
+    url: "/healthcare/ehr-meditech-deploy_design.html"
+  - title: Implementazione e configurazione
+    entries:
+    - title: Panoramica
+      url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
+    - title: Configurazione dell'infrastruttura di base
+      url: "/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html"
+    - title: Configurazione di server blade e switch Cisco UCS
+      url: "/healthcare/ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html"
+    - title: Best practice per la configurazione di ESXi
+      url: "/healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html"
+    - title: Configurazione di NetApp
+      url: "/healthcare/ehr-meditech-deploy_netapp_configuration.html"
+    - title: Configurazione dell'aggregato
+      url: "/healthcare/ehr-meditech-deploy_aggregate_configuration.html"
+    - title: Configurazione della macchina virtuale per lo storage
+      url: "/healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html"
+    - title: Configurazione del volume
+      url: "/healthcare/ehr-meditech-deploy_volume_configuration.html"
+    - title: Configurazione del LUN
+      url: "/healthcare/ehr-meditech-deploy_lun_configuration.html"
+    - title: Configurazione del gruppo iniziatore
+      url: "/healthcare/ehr-meditech-deploy_initiator_group_configuration.html"
+    - title: Mappature LUN
+      url: "/healthcare/ehr-meditech-deploy_lun_mappings.html"
+  - title: Moduli E componenti MEDITECH
+    url: "/healthcare/ehr-meditech-deploy_meditech_modules_and_components.html"
+  - title: Ringraziamenti
+    url: "/healthcare/ehr-meditech-deploy_acknowledgments.html"
+  - title: Dove trovare ulteriori informazioni
+    url: "/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html"
+- title: FlexPod per imaging medicale
+  type: solutions
+  entries:
+  - title: Panoramica
+    url: "/healthcare/medical-imaging_introduction.html"
+  - title: Architettura
+    url: "/healthcare/medical-imaging_architecture.html"
+  - title: Componenti hardware e software dell'infrastruttura della soluzione
+    url: "/healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html"
+  - title: Dimensionamento della soluzione
+    url: "/healthcare/medical-imaging_solution_sizing.html"
+  - title: Best practice
+    url: "/healthcare/medical-imaging_best_practices.html"
+  - title: Conclusione
+    url: "/healthcare/medical-imaging_conclusion.html"
+  - title: Ulteriori informazioni
+    url: "/healthcare/medical-imaging_additional_information.html"

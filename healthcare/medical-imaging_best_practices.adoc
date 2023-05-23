@@ -1,0 +1,211 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_best_practices.html 
+keywords: secure, multitenancy, availability, storage, best, practices, san, boot, efficiency, thin, provisioning,, service, quality, medical, imaging 
+summary: In questa sezione vengono descritte le Best practice per la progettazione del cluster di storage NetApp FlexPod Express. 
+---
+= Best practice
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Best practice per lo storage
+
+
+
+=== Alta disponibilità
+
+Il design del cluster di storage NetApp offre alta disponibilità a ogni livello:
+
+* Nodi del cluster
+* Connettività storage back-end
+* TEC RAID in grado di sostenere tre guasti dei dischi
+* RAID DP in grado di sostenere due guasti dei dischi
+* Connettività fisica a due reti fisiche da ciascun nodo
+* Percorsi di dati multipli per LUN e volumi di storage
+
+
+
+
+=== Multi-tenancy sicura
+
+Le storage virtual machine (SVM) di NetApp forniscono un array di storage virtuale per separare il dominio di sicurezza, le policy e le reti virtuali. NetApp consiglia di creare SVM separate per ogni organizzazione tenant che ospita i dati nel cluster di storage.
+
+
+
+=== Best practice per lo storage NetApp
+
+Prendere in considerazione le seguenti Best practice per lo storage NetApp:
+
+* Abilitare sempre la tecnologia NetApp AutoSupport, che invia a NetApp informazioni riepilogative sul supporto tramite HTTPS.
+* Per ottenere la massima disponibilità e mobilità, assicurarsi di creare una LIF per ogni SVM su ciascun nodo del cluster NetApp ONTAP. ALUA (Asymmetric Logical Unit Access) viene utilizzato per analizzare i percorsi e identificare i percorsi attivi ottimizzati (diretti) rispetto ai percorsi attivi non ottimizzati. ALUA viene utilizzato sia per FC, FCoE e iSCSI.
+* Un volume contenente solo LUN non deve essere montato internamente, né è necessario un percorso di giunzione.
+* Se si utilizza il protocollo CHAP (Challenge-Handshake Authentication Protocol) in ESXi per l'autenticazione di destinazione, è necessario configurarlo anche in ONTAP. Utilizzare la CLI (`vserver iscsi security create`) O Gestore di sistema NetApp ONTAP (modificare la sicurezza dell'iniziatore in Storage > SVM > Impostazioni SVM > protocolli > iSCSI).
+
+
+
+
+=== Boot SAN
+
+NetApp consiglia di implementare l'avvio SAN per i server Cisco UCS nella soluzione FlexPod Datacenter. Questa fase consente al sistema operativo di essere protetto in modo sicuro dal sistema di storage NetApp AFF, fornendo performance migliori. Il design delineato in questa soluzione utilizza l'avvio SAN iSCSI.
+
+Nell'avvio SAN iSCSI, a ogni Cisco UCS Server vengono assegnate due vNIC iSCSI (una per ogni fabric SAN), che forniscono connettività ridondante fino allo storage. Le porte di storage di questo esempio, e2a e e2e, collegate agli switch Cisco Nexus, sono raggruppate in modo da formare una porta logica chiamata gruppo di interfacce (ifgrp) (in questo esempio, a0a). Le VLAN iSCSI vengono create sull'igroup e le LIF iSCSI vengono create sui gruppi di porte iSCSI (in questo esempio, a0a-<iSCSI-A-VLAN>). Il LUN di avvio iSCSI viene esposto ai server attraverso il LIF iSCSI utilizzando igroups. Questo approccio consente solo al server autorizzato di accedere al LUN di avvio. Per il layout di porta e LIF, vedere la figura seguente.
+
+image:medical-imaging_image8.png["Errore: Immagine grafica mancante"]
+
+A differenza delle interfacce di rete NAS, le interfacce di rete SAN non sono configurate per il failover durante un guasto. Se invece un'interfaccia di rete non è disponibile, l'host sceglie un nuovo percorso ottimizzato per un'interfaccia di rete disponibile. ALUA, uno standard supportato da NetApp, fornisce informazioni sulle destinazioni SCSI, consentendo a un host di identificare il percorso migliore per lo storage.
+
+
+
+=== Efficienza dello storage e thin provisioning
+
+NetApp è leader del settore nell'innovazione dell'efficienza dello storage, ad esempio con la prima deduplica per i carichi di lavoro primari e con la compattazione dei dati inline, che migliora la compressione e memorizza file di piccole dimensioni e i/o in modo efficiente. ONTAP supporta la deduplica in linea e in background, nonché la compressione inline e in background.
+
+Per sfruttare i vantaggi della deduplica in un ambiente a blocchi, le LUN devono essere con thin provisioning. Anche se il LUN viene ancora considerato dall'amministratore della macchina virtuale come una capacità fornita, i risparmi della deduplica vengono restituiti al volume per essere utilizzati per altre esigenze. NetApp consiglia di implementare questi LUN in volumi FlexVol con thin provisioning e capacità doppia rispetto al LUN. Quando si implementa il LUN in questo modo, il volume FlexVol funge semplicemente da quota. Lo storage utilizzato dal LUN viene riportato nel volume FlexVol e nel relativo aggregato.
+
+Per ottenere il massimo risparmio sulla deduplica, è consigliabile pianificare la deduplica in background. Tuttavia, questi processi utilizzano le risorse di sistema quando sono in esecuzione. Pertanto, idealmente, è necessario pianificarli in tempi meno attivi (come i fine settimana) o eseguirli più frequentemente per ridurre la quantità di dati modificati da elaborare. La deduplica automatica in background sui sistemi AFF ha un effetto molto minore sulle attività in primo piano. La compressione in background (per sistemi basati su disco rigido) consuma anche le risorse, pertanto è consigliabile considerarla solo per carichi di lavoro secondari con requisiti di performance limitati.
+
+
+
+=== Qualità del servizio
+
+I sistemi che eseguono il software ONTAP possono utilizzare la funzione QoS dello storage ONTAP per limitare il throughput in megabit al secondo (Mbps) e per limitare gli IOPS per diversi oggetti di storage come file, LUN, volumi o intere SVM. La QoS adattiva viene utilizzata per impostare un piano IOPS (minimo QoS) e un soffitto (massimo QoS), che si regolano dinamicamente in base alla capacità del datastore e allo spazio utilizzato.
+
+I limiti di throughput sono utili per controllare carichi di lavoro sconosciuti o di test prima di un'implementazione per confermare che non influiscono su altri carichi di lavoro. Questi limiti possono essere utilizzati anche per limitare un carico di lavoro ingombrante dopo che è stato identificato. Sono supportati anche i livelli minimi di servizio basati sugli IOPS per fornire performance costanti per gli oggetti SAN in ONTAP.
+
+Con un datastore NFS, è possibile applicare una policy di QoS all'intero volume FlexVol o ai singoli file del disco macchina virtuale (VMDK) al suo interno. Con gli archivi di dati VMFS (volumi condivisi cluster [CSV] in Hyper-V) che utilizzano LUN ONTAP, è possibile applicare i criteri di QoS al volume FlexVol che contiene le LUN o alle singole LUN. Tuttavia, poiché ONTAP non è a conoscenza di VMFS, non è possibile applicare i criteri di qualità del servizio ai singoli file VMDK. Quando si utilizza VMware Virtual Volumes (VVol) con VSC 7.1 o versione successiva, è possibile impostare il QoS massimo su singole macchine virtuali utilizzando il profilo di capacità dello storage.
+
+Per assegnare un criterio QoS a una LUN, inclusi VMFS o CSV, è possibile ottenere la SVM ONTAP (visualizzata come `Vserver`), il percorso del LUN e il numero di serie dal menu Storage Systems (sistemi storage) nella home page del VSC. Selezionare il sistema di storage (SVM), quindi Related Objects (oggetti correlati) > SAN. Utilizzare questo approccio quando si specifica la qualità del servizio utilizzando uno degli strumenti ONTAP.
+
+È possibile impostare il limite massimo di throughput QoS su un oggetto in Mbps e in IOPS. Se si utilizzano entrambi, il primo limite raggiunto viene applicato da ONTAP. Un carico di lavoro può contenere più oggetti e una policy QoS può essere applicata a uno o più carichi di lavoro. Quando applichi una policy a più workload, questi condividono il limite totale della policy. Gli oggetti nidificati non sono supportati (ad esempio, per un file all'interno di un volume, non possono avere una propria policy). I valori minimi di QoS possono essere impostati solo in IOPS.
+
+
+
+=== Layout dello storage
+
+In questa sezione vengono fornite le Best practice per il layout di LUN, volumi e aggregati sullo storage.
+
+
+
+==== LUN dello storage
+
+Per ottenere performance, gestione e backup ottimali, NetApp consiglia le seguenti Best practice di progettazione LUN:
+
+* Creare un LUN separato per memorizzare i dati del database e i file di log.
+* Creare un LUN separato per ogni istanza per memorizzare i backup del log del database Oracle. I LUN possono far parte dello stesso volume.
+* Provisioning delle LUN con thin provisioning (disattivazione dell'opzione Space Reservation) per file di database e file di log.
+* Tutti i dati di imaging sono ospitati in LUN FC. Creare queste LUN in volumi FlexVol distribuiti tra gli aggregati di proprietà di diversi nodi storage controller.
+
+
+Per il posizionamento delle LUN in un volume di storage, seguire le linee guida della sezione successiva.
+
+
+
+==== Volumi di storage
+
+Per ottenere performance e gestione ottimali, NetApp consiglia le seguenti Best practice per la progettazione dei volumi:
+
+* Isolare i database con query i/o-intensive su volumi di storage separati.
+* I file di dati possono essere posizionati su un singolo LUN o volume, ma si consiglia di utilizzare più volumi/LUN per un throughput più elevato.
+* Il parallelismo di i/o può essere ottenuto utilizzando qualsiasi filesystem supportato quando si utilizzano più LUN.
+* Posizionare i file di database e i log delle transazioni su volumi separati per aumentare la granularità del ripristino.
+* Considerare l'utilizzo di attributi di volume come dimensioni automatiche, Snapshot Reserve, QoS e così via.
+
+
+
+
+==== Aggregati
+
+Gli aggregati sono i principali container di storage per le configurazioni di storage NetApp e contengono uno o più gruppi RAID costituiti da dischi di dati e dischi di parità.
+
+NetApp ha eseguito vari test di caratterizzazione dei carichi di lavoro i/o utilizzando aggregati condivisi e dedicati con file di dati e file di log delle transazioni separati. I test dimostrano che un grande aggregato con più gruppi e unità RAID (HDD o SSD) ottimizza e migliora le performance dello storage ed è più facile da gestire per gli amministratori per due motivi:
+
+* Un grande aggregato rende disponibili le capacità di i/o di tutti i dischi per tutti i file.
+* Un grande aggregato consente l'utilizzo più efficiente dello spazio su disco.
+
+
+Per un disaster recovery efficace, NetApp consiglia di collocare la replica asincrona su un aggregato che fa parte di un cluster di storage separato nel sito di disaster recovery e di utilizzare la tecnologia SnapMirror per replicare il contenuto.
+
+Per ottenere performance di storage ottimali, NetApp consiglia di disporre di almeno il 10% di spazio libero in un aggregato.
+
+La guida al layout degli aggregati di storage per i sistemi AFF A300 (con due shelf di dischi con 24 dischi) include:
+
+* Conserva due dischi di riserva.
+* Utilizzare la partizione avanzata dei dischi per creare tre partizioni su ciascun disco: Root e dati.
+* Utilizzare un totale di 20 partizioni dati e due partizioni di parità per ciascun aggregato.
+
+
+
+
+== Best practice per il backup
+
+NetApp SnapCenter viene utilizzato per i backup di macchine virtuali e database. NetApp consiglia le seguenti Best practice per il backup:
+
+* Quando SnapCenter viene implementato per creare copie Snapshot per i backup, disattivare la pianificazione Snapshot per FlexVol che ospita le macchine virtuali e i dati delle applicazioni.
+* Creare un FlexVol dedicato per i LUN di boot host.
+* Utilizzare una policy di backup simile o singola per le macchine virtuali che hanno lo stesso scopo.
+* Utilizzare una policy di backup simile o singola per tipo di carico di lavoro; ad esempio, utilizzare una policy simile per tutti i carichi di lavoro del database. Utilizza policy diverse per database, server Web, desktop virtuali degli utenti finali e così via.
+* Abilitare la verifica del backup in SnapCenter.
+* Configurare l'archiviazione delle copie Snapshot di backup nella soluzione di backup NetApp SnapVault.
+* Configurare la conservazione dei backup sullo storage primario in base alla pianificazione dell'archiviazione.
+
+
+
+
+== Best practice per l'infrastruttura
+
+
+
+=== Best practice per il networking
+
+NetApp consiglia le seguenti Best practice per il networking:
+
+* Assicurarsi che il sistema includa NIC fisiche ridondanti per il traffico di produzione e di storage.
+* VLAN separate per traffico iSCSI, NFS e SMB/CIFS tra calcolo e storage.
+* Assicurarsi che il sistema includa una VLAN dedicata per l'accesso client al sistema di imaging medicale.
+
+
+Ulteriori Best practice per il networking sono disponibili nelle guide alla progettazione e all'implementazione dell'infrastruttura FlexPod.
+
+
+
+== Calcolo delle Best practice
+
+NetApp consiglia le seguenti Best practice di calcolo:
+
+* Assicurarsi che ogni vCPU specificata sia supportata da un core fisico.
+
+
+
+
+== Best practice per la virtualizzazione
+
+NetApp consiglia le seguenti Best practice per la virtualizzazione:
+
+* Utilizzare VMware vSphere 6 o versione successiva.
+* Impostare il BIOS del server host ESXi e il livello del sistema operativo su Custom Controlled - High Performance (controllo personalizzato - prestazioni elevate).
+* Creazione di backup durante le ore di lavoro non di punta.
+
+
+
+
+== Best practice per il sistema di imaging medicale
+
+Consultare le seguenti Best practice e alcuni requisiti di un tipico sistema di imaging medicale:
+
+* Non eseguire il commit eccessivo della memoria virtuale.
+* Assicurarsi che il numero totale di vCPU corrisponda al numero di CPU fisiche.
+* Se si dispone di un ambiente di grandi dimensioni, sono necessarie VLAN dedicate.
+* Configurare le macchine virtuali del database con cluster ha dedicati.
+* Assicurarsi che i VMDK del sistema operativo delle macchine virtuali siano ospitati in uno storage Tier 1 veloce.
+* Collabora con il fornitore del sistema di imaging medicale per identificare l'approccio migliore per preparare i modelli di macchine virtuali per una rapida implementazione e manutenzione.
+* Le reti di gestione, storage e produzione richiedono la segregazione LAN per il database, con VLAN isolate per VMware vMotion.
+* Utilizza la tecnologia di replica basata su array di storage NetApp chiamata https://www.netapp.com/us/media/tr-4015.pdf["SnapMirror"^] Invece della replica basata su vSphere.
+* Utilizzare tecnologie di backup che sfruttano le API VMware; le finestre di backup devono essere al di fuori delle normali ore di produzione.
+

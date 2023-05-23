@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express,c, series, deployment, infrastructure, verified, architecture, converged, case 
+summary: Questa soluzione FlexPod Express fa parte del programma di infrastruttura convergente FlexPod. 
+---
+= Panoramica della soluzione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Questa soluzione FlexPod Express fa parte del programma di infrastruttura convergente FlexPod.
+
+
+
+== Programma di infrastruttura convergente FlexPod
+
+Le architetture di riferimento FlexPod vengono fornite come Cisco Validated Design (CVD) o NetApp Verified Architectures (NVA). Sono consentite deviazioni in base ai requisiti del cliente rispetto a un determinato CVD o NVA se queste variazioni non creano una configurazione non supportata.
+
+Il programma FlexPod include due soluzioni: FlexPod Express e FlexPod Datacenter.
+
+* *FlexPod Express.* offre ai clienti una soluzione entry-level con tecnologie Cisco e NetApp.
+* *FlexPod Datacenter.* offre una base polivalente ottimale per diversi carichi di lavoro e applicazioni.
+
+
+image:express-c-series-c190-deploy_image1.png["Errore: Immagine grafica mancante"]
+
+
+
+== Programma NetApp Verified Architecture
+
+Il programma NetApp Verified Architecture offre ai clienti un'architettura verificata per le soluzioni NetApp. Un'architettura verificata di NetApp offre un'architettura della soluzione NetApp con le seguenti qualità:
+
+* Testato a fondo
+* Prescrittivo in natura
+* Rischi di implementazione ridotti al minimo
+* Accelerazione del time-to-market
+
+
+In questa guida viene illustrato in dettaglio il design di FlexPod con VMware vSphere. Inoltre, questo design utilizza il nuovissimo sistema AFF C190 (con NetApp ONTAP® 9.6), Cisco Nexus 31108 e i server Cisco UCS C-Series C220 M5 come nodi hypervisor.
+
+
+
+== Tecnologia della soluzione
+
+Questa soluzione sfrutta le più recenti tecnologie di NetApp, Cisco e VMware. Questa soluzione include il nuovo NetApp AFF C190 con ONTAP 9.6, due switch Cisco Nexus 31108 e server rack Cisco UCS C220 M5 con VMware vSphere 6.7U2. Questa soluzione validata utilizza la tecnologia 10 GbE. Viene inoltre fornita una guida su come scalare la capacità di calcolo aggiungendo due nodi hypervisor alla volta, in modo che l'architettura FlexPod Express possa adattarsi alle esigenze di business in evoluzione di un'organizzazione.
+
+image:express-c-series-c190-deploy_image2.png["Errore: Immagine grafica mancante"]
+
+
+NOTE: Per utilizzare in modo efficiente le quattro porte 10GbE fisiche del VIC 1457, creare due collegamenti aggiuntivi da ciascun server agli switch rack superiori.
+
+
+
+== Riepilogo del caso d'utilizzo
+
+La soluzione FlexPod Express può essere applicata a diversi casi di utilizzo, tra cui:
+
+* Uffici remoti o filiali
+* Piccole e medie imprese
+* Ambienti che richiedono una soluzione dedicata e conveniente
+
+
+FlexPod Express è la soluzione ideale per carichi di lavoro misti e virtualizzati. Sebbene questa soluzione sia stata validata con vSphere 6.7U2, supporta qualsiasi versione vSphere qualificata con gli altri componenti dal NetApp Interoperability Matrix Tool. NetApp consiglia di implementare vSphere 6.7U2 per via delle correzioni e delle funzionalità avanzate, come ad esempio:
+
+* Nuovo supporto del protocollo per il backup e il ripristino di un'appliance server vCenter, inclusi HTTP, HTTPS, FTP, FTPS, SCP, NFS E SMB.
+* Nuovo dal punto di vista funzionale quando si utilizza la libreria di contenuti. La sincronizzazione dei modelli VM nativi tra le librerie di contenuti è ora disponibile quando vCenter Server è configurato per la modalità link avanzata.
+* Una pagina aggiornata del plug-in del client.
+* Miglioramenti aggiunti in vSphere Update Manager (VUM) e nel client vSphere. È ora possibile eseguire le azioni di collegamento, verifica della conformità e correzione, il tutto da un'unica schermata.
+
+
+Per ulteriori informazioni su questo argomento, vedere https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["Pagina vSphere 6.7U2"^] e a. https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["VCenter Server 6.7U2 - Note di release"^].

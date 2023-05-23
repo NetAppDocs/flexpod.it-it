@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html 
+keywords: attach, cloud, tier, ontap, aggregate, fabricpool, flexpod, ontap, cli, oncommand, system, manager 
+summary: 'Una volta aggiunto e identificato da ONTAP, un archivio di oggetti deve essere collegato a un aggregato per creare un FabricPool. Questa attività può essere completata utilizzando Gestore di sistema di OnCommand o l"interfaccia utente di ONTAP.' 
+---
+= Collegare un Tier cloud a un aggregato ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Una volta aggiunto e identificato da ONTAP, un archivio di oggetti deve essere collegato a un aggregato per creare un FabricPool. Questa attività può essere completata utilizzando Gestore di sistema di OnCommand o l'interfaccia utente di ONTAP.
+
+È possibile collegare più di un tipo di archivio di oggetti a un cluster, ma è possibile collegare un solo tipo di archivio di oggetti a ciascun aggregato. Ad esempio, un aggregato può utilizzare Google Cloud e un altro aggregato può utilizzare Amazon S3, ma un aggregato non può essere associato a entrambi.
+
+
+NOTE: Collegare un Tier cloud a un aggregato è un'azione permanente. Un Tier cloud non può essere disconnesso da un aggregato a cui è stato collegato.
+
+
+
+== Gestore di sistema di OnCommand
+
+Per associare un Tier cloud a un aggregato utilizzando Gestione di sistema di OnCommand, completare i seguenti passaggi:
+
+. Avviare Gestore di sistema di OnCommand.
+. Fare clic su applicazioni e livelli.
++
+image:cloud-fabricpool_image14.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su Storage Tier.
+. Fare clic su un aggregato.
+. Fare clic su azioni e selezionare Allega Tier cloud.
++
+image:cloud-fabricpool_image15.png["Errore: Immagine grafica mancante"]
+
+. Seleziona un livello cloud.
+. Visualizzare e aggiornare i criteri di tiering per i volumi sull'aggregato (facoltativo). Per impostazione predefinita, il criterio di tiering del volume è impostato su Snapshot-Only (solo snapshot).
+. Fare clic su Salva.
+
+
+
+
+== CLI ONTAP
+
+Per collegare un Tier cloud a un aggregato utilizzando l'interfaccia utente di ONTAP, eseguire i seguenti comandi:
+
+....
+storage aggregate object-store attach
+-aggregate <name>
+-object-store-name <name>
+....
+Esempio:
+
+....
+storage aggregate object-store attach -aggregate aggr1 -object-store-name - aws_infra_fp_bk_1
+....
+link:cloud-fabricpool_set_volume_tiering_policy.html["Successivo: Impostare la policy di tiering dei volumi."]

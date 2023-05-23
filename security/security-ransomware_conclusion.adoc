@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_conclusion.html 
+keywords: ransomware, attack, data, backup, recovery, business, planning 
+summary: 'Gli autori consigliano di non pagare un riscatto in caso di attacco, perché in questo modo si rafforza la fiducia dell"utente malintenzionato nel proprio modello di business. Le operazioni di backup e ripristino dei dati svolgono una parte importante del ripristino ransomware. Pertanto, devono essere inclusi come parte integrante della pianificazione aziendale.' 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Ransomware è un prodotto di crimine organizzato e gli autori degli attacchi non operano con l'etica. Possono astenersi dal fornire la chiave per la decifratura anche dopo aver ricevuto il riscatto. La vittima non solo perde i propri dati, ma anche una notevole quantità di denaro e si trova ad affrontare le conseguenze associate alla perdita dei dati di produzione.
+
+Secondo a. https://www.forbes.com/sites/leemathews/2018/03/09/why-you-should-never-pay-a-ransomware-ransom/["Articolo di Forbes"^], solo il 19% delle vittime del ransomware ottiene i propri dati dopo aver pagato il riscatto. Pertanto, gli autori consigliano di non pagare un riscatto in caso di attacco, in quanto ciò rafforza la fiducia dell'utente malintenzionato nel proprio modello di business.
+
+Le operazioni di backup e ripristino dei dati svolgono una parte importante del ripristino ransomware. Pertanto, devono essere inclusi come parte integrante della pianificazione aziendale. L'implementazione di queste operazioni deve essere preventivata in modo da non compromettere le funzionalità di recovery in caso di attacco.
+
+La chiave è scegliere il partner tecnologico corretto in questo percorso e FlexPod fornisce la maggior parte delle funzionalità necessarie in modo nativo senza costi aggiuntivi in un sistema FAS all-flash.

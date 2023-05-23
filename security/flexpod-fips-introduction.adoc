@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-introduction.html 
+keywords: tr4892, 4892introduction, hitech, fips, hit, ephi, 
+summary: 'Questo documento è una panoramica tecnica di un"infrastruttura FlexPod basata su Cisco Unified Computing System (Cisco UCS), Cisco Nexus, Cisco MDS e NetApp ONTAP per l"hosting di una o più applicazioni IT per il settore sanitario o soluzioni che richiedono la conformità alla sicurezza FIPS 140-2.' 
+---
+= TR-4892: Soluzione FlexPod conforme alla sicurezza FIPS 140-2 per il settore sanitario
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+JayaKishore Esanakula, NetApp John McAbel, Cisco
+
+[role="lead"]
+La Health Information Technology for Economic and Clinical Health Act (HITECH) richiede una crittografia certificata FIPS (Federal Information Processing Standard) 140-2 di ePHI (Electronic Protected Health Information). Le applicazioni e il software HIT (Health Information Technology) devono essere conformi a FIPS 140-2 per ottenere la certificazione Promoving Interoperability Program (in precedenza significativo programma di incentivi per l'utilizzo). I fornitori e gli ospedali idonei devono utilizzare un HIT conforme a FIPS 140-2 (livello 1) per ricevere gli incentivi Medicare e Medicaid e per evitare le sanzioni per il rimborso da parte del Center for Medicare and Medicaid (CMS). Gli algoritmi di crittografia certificati FIPS 140-2 si qualificano come protezioni tecniche richieste in base a. https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html["Regola di sicurezza"^] Del Health Information Portability and Accountability Act (HIPAA).
+
+FIPS 140-2 è un standard governativo che definisce i requisiti di sicurezza per i moduli crittografici in hardware, software e firmware che proteggono le informazioni sensibili. La conformità allo standard è richiesta per l'utilizzo da parte degli Stati Uniti enti governativi, e spesso viene utilizzato anche in settori regolamentati come i servizi finanziari e l'assistenza sanitaria. Questo report tecnico aiuta il lettore a comprendere lo standard di sicurezza FIPS 140-2 ad alto livello. Inoltre, aiuta il pubblico a comprendere le varie minacce affrontate dalle organizzazioni sanitarie. Infine, il report tecnico aiuta a capire come un sistema FlexPod conforme a FIPS 140-2 può contribuire a proteggere le risorse sanitarie quando viene implementato su un'infrastruttura convergente FlexPod.
+
+
+
+== Scopo
+
+Questo documento è una panoramica tecnica di un'infrastruttura FlexPod basata su Cisco Unified Computing System (Cisco UCS), Cisco Nexus, Cisco MDS e NetApp ONTAP per ospitare una o più applicazioni IT per il settore sanitario o soluzioni che richiedono la conformità alla sicurezza FIPS 140-2.
+
+
+
+== Pubblico
+
+Il presente documento è destinato ai responsabili tecnici del settore sanitario, ai tecnici delle soluzioni partner Cisco e NetApp e al personale dei servizi professionali. NetApp presuppone che il lettore abbia una buona comprensione dei concetti di dimensionamento di calcolo e storage, nonché una familiarità tecnica con le minacce per il settore sanitario, la sicurezza sanitaria, i sistemi IT per il settore sanitario, Cisco UCS e i sistemi storage NetApp.
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["Avanti: Minacce alla cybersicurezza nel settore sanitario."]

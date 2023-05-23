@@ -1,0 +1,149 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_sizing.html 
+keywords: solution, sizing, storage, comput, network, cisco, ucs, infrastructure 
+summary: 'Questa sezione descrive il numero di studi e i requisiti dell"infrastruttura corrispondenti.' 
+---
+= Dimensionamento della soluzione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== Dimensionamento dello storage
+
+Questa sezione descrive il numero di studi e i requisiti dell'infrastruttura corrispondenti.
+
+I requisiti di storage elencati nella tabella seguente presuppongono che i dati esistenti siano del valore di 1 anno più la crescita prevista per 1 anno di studio nel sistema primario (Tier 1, 2). Le esigenze di storage aggiuntive per la crescita prevista per 3 anni oltre i primi 2 anni sono elencate separatamente.
+
+|===
+|  | Piccolo | Medio | Grande 
+
+
+| Studi annuali | <250.000 studi | 250.000-500.000 studi | 500.000–1 milione di studi 
+
+
+4+| Storage di livello 1 
+
+
+| IOPS (media) | 1,5 K-5K | 5.000–15.000 | 15.000-40.000 
+
+
+| IOPS (picco) | 5K | 20.000 | 65.000 
+
+
+| Throughput | 50 Mbps | 50 Mbps | 100 Mbps 
+
+
+| Capacity Data Center 1 (1 anno di dati vecchi e 1 anno di nuovo studio) | 70 TB | 140 TB | 260 TB 
+
+
+| Capacity data center 1 (necessità aggiuntiva di 4 anni per il nuovo studio) | 25 TB | 45 TB | 80 TB 
+
+
+| Capacity data center 2 (1 anno di dati vecchi e 1 anno di nuovo studio) | 45 TB | 110 TB | 165 TB 
+
+
+| Capacity data center 2 (necessità aggiuntiva di 4 anni per il nuovo studio) | 25 TB | 45 TB | 80 TB 
+
+
+4+| Storage di livello 2 
+
+
+| IOPS (media) | 1.000 | 2K | 3.000 
+
+
+| Data center di capacità 1 | 320 TB | 800 TB | 2000 TB 
+|===
+
+
+== Dimensionamento del calcolo
+
+La tabella seguente elenca i requisiti di calcolo per i sistemi di imaging medicale di piccole, medie e grandi dimensioni.
+
+|===
+|  | Piccolo | Medio | Grande 
+
+
+| Studi annuali | <250.000 studi | 250.000-500.000 studi | 500.000–1 milione di studi 
+
+
+4+| Data center 1 
+
+
+| Numero di macchine virtuali | 21 | 27 | 35 
+
+
+| Numero totale di CPU virtuali (vCPU) | 56 | 124 | 220 
+
+
+| Requisito di memoria totale | 225 GB | 450 GB | 900 GB 
+
+
+| Specifiche dei server fisici (blade) (si supponga 1 vCPU -=1 core) | 4 server con 20 core e 192 GB di RAM ciascuno | 8 server con 20 core e 128 GB di RAM ciascuno | 14 server con 20 core e 128 GB di RAM ciascuno 
+
+
+4+| Data center 2 
+
+
+| Numero di macchine virtuali | 15 | 17 | 22 
+
+
+| Numero totale di vCPU | 42 | 72 | 140 
+
+
+| Requisito di memoria totale | 179 GB | 243 GB | 513 GB 
+
+
+| Specifiche dei server fisici (blade) (si supponga che 1 vCPU = 1 core) | 3 server con 20 core e 168 GB di RAM ciascuno | 6 server con 20 core e 128 GB di RAM ciascuno | 8 server con 24 core e 128 GB di RAM ciascuno 
+|===
+
+
+== Dimensionamento dell'infrastruttura Cisco UCS e networking
+
+La tabella seguente elenca i requisiti di rete e dell'infrastruttura Cisco UCS per i sistemi di imaging medicale di piccole, medie e grandi dimensioni.
+
+|===
+|  | Piccolo | Medio | Grande 
+
+
+4+| Data center 1 
+
+
+| Numero di porte del nodo di storage | 2 adattatori di rete convergenti (CNA); 2 FCS | 2 CNA; 2 FCS | 2 CNA; 2 FCS 
+
+
+| Porte switch di rete IP (Cisco Nexus 9000) | switch a 48 porte | switch a 48 porte | switch a 48 porte 
+
+
+| Switch FC (Cisco MDS) | switch a 32 porte | switch a 32 porte | switch a 48 porte 
+
+
+| Numero di chassis Cisco UCS | 1 x 5108 | 1 x 5108 | 2 x 5108 
+
+
+| Cisco UCS Fabric Interconnect | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+4+| Data center 2 
+
+
+| Numero di chassis Cisco UCS | 1 x 5108 | 1 x 5108 | 1 x 5108 
+
+
+| Cisco UCS Fabric Interconnect | 2 x 6332 | 2 x 6332 | 2 x 6332 
+
+
+| Numero di porte del nodo di storage | 2 CNA; 2 FCS | 2 CNA; 2 FCS | 2 CNA; 2 FCS 
+
+
+| Porte switch di rete IP (Cisco Nexus 9000) | switch a 48 porte | switch a 48 porte | switch a 48 porte 
+
+
+| Switch FC (Cisco MDS) | switch a 32 porte | switch a 32 porte | switch a 48 porte 
+|===

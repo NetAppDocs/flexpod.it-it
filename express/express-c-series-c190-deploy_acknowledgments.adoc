@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_acknowledgments.html 
+keywords: author, acknowledgements, express, c, series, c190, deployment, flexpod 
+summary: Gli autori desiderano ringraziare John George per il suo supporto e il suo contributo a questo progetto. 
+---
+= Ringraziamenti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Gli autori desiderano ringraziare John George per il suo supporto e il suo contributo a questo progetto.

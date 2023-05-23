@@ -1,0 +1,78 @@
+---
+section: fp-def
+title: Definizione FlexPod
+entries:
+- title: Specifiche tecniche di FlexPod Express
+  type: solutions
+  entries:
+  - title: Panoramica
+    url: "/fp-def/fp-express-tech-spec_overview.html"
+  - title: Piattaforme FlexPod
+    url: "/fp-def/fp-express-tech-spec_flexpod_platforms.html"
+  - title: Regole FlexPod
+    url: "/fp-def/fp-express-tech-spec_flexpod_rules.html"
+  - title: Configurazioni FlexPod supportate e validate
+    url: "/fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html"
+  - title: Software per lo storage
+    url: "/fp-def/fp-express-tech-spec_storage_software.html"
+  - title: Requisiti hardware minimi
+    url: "/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html"
+  - title: Requisiti software minimi
+    url: "/fp-def/fp-express-tech-spec_minimum_software_requirements.html"
+  - title: Requisiti di connettività
+    url: "/fp-def/fp-express-tech-spec_connectivity_requirements.html"
+  - title: Altri requisiti
+    url: "/fp-def/fp-express-tech-spec_other_requirements.html"
+  - title: Funzionalità opzionali
+    url: "/fp-def/fp-express-tech-spec__optional_features.html"
+  - title: Componenti Cisco
+    url: "/fp-def/fp-express-tech-spec__cisco_components.html"
+  - title: Componenti NetApp
+    url: "/fp-def/fp-express-tech-spec__netapp_components.html"
+  - title: Requisiti di alimentazione e cablaggio
+    url: "/fp-def/fp-express-tech-spec__power_and_cabling_requirements.html"
+  - title: Specifiche tecniche e riferimenti
+    url: "/fp-def/fp-express-tech-spec__technical_specifications_and_references.html"
+  - title: Architetture e attrezzature precedenti
+    url: "/fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html"
+  - title: Apparecchiature legacy
+    url: "/fp-def/fp-express-tech-spec_legacy_equipment.html"
+  - title: Ulteriori informazioni
+    url: "/fp-def/fp-express-tech-spec_additional_information.html"
+- title: Specifiche tecniche del data center FlexPod
+  type: solutions
+  entries:
+  - title: Panoramica
+    url: "/fp-def/dc-tech-spec_solution_overview.html"
+  - title: Piattaforme FlexPod
+    url: "/fp-def/dc-tech-spec_flexpod_platforms.html"
+  - title: Regole FlexPod
+    url: "/fp-def/dc-tech-spec_flexpod_rules.html"
+  - title: Configurazioni FlexPod supportate e validate
+    url: "/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html"
+  - title: NetApp ONTAP
+    url: "/fp-def/dc-tech-spec_netapp_ontap.html"
+  - title: Switching delle modalità operative di Cisco Nexus
+    url: "/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html"
+  - title: Requisiti hardware minimi
+    url: "/fp-def/dc-tech-spec_minimum_hardware_requirements.html"
+  - title: Requisiti software minimi
+    url: "/fp-def/dc-tech-spec_minimum_software_requirements.html"
+  - title: Requisiti di connettività
+    url: "/fp-def/dc-tech-spec_connectivity_requirements.html"
+  - title: Altri requisiti
+    url: "/fp-def/dc-tech-spec_other_requirements.html"
+  - title: Funzionalità opzionali
+    url: "/fp-def/dc-tech-spec_optional_features.html"
+  - title: Componenti Cisco
+    url: "/fp-def/dc-tech-spec_cisco_components.html"
+  - title: Componenti NetApp
+    url: "/fp-def/dc-tech-spec_netapp_components.html"
+  - title: Requisiti di alimentazione e cablaggio
+    url: "/fp-def/dc-tech-spec_power_and_cabling_requirements.html"
+  - title: Specifiche tecniche e riferimenti
+    url: "/fp-def/dc-tech-spec_technical_specifications_and_references.html"
+  - title: Apparecchiature legacy
+    url: "/fp-def/dc-tech-spec_legacy_equipment.html"
+  - title: Dove trovare ulteriori informazioni
+    url: "/fp-def/dc-tech-spec_where_to_find_additional_information.html"
