@@ -79,52 +79,51 @@ Quando gli ambienti NetApp Storage e vCenter sono disponibili in Cisco Intersigh
 Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:
 
 +
-** Aggiungi policy di esportazione dello storage al volume
-** Collegare gli iniziatori a Storage host
-** Disconnettere Storage Export Policy dal volume
-** Modifica aggregati per Storage Virtual Machine
-** Modifica la regola dei criteri di esportazione dello storage
-** Modifica policy Snapshot storage
-** Modifica la pianificazione della policy Snapshot dello storage
-** Espandere il LUN dello storage
-** Espandere Storage Volume (Volume di storage)
-** Trova NetApp igroup LUN Map
-** Trova LUN storage per ID
-** Trova volume di storage per ID
-** Nuova policy di esportazione dello storage
-** Nuova regola dei criteri di esportazione dello storage
-** Nuova interfaccia Fibre Channel per lo storage NetApp
-** Nuovo host storage
-** Nuova interfaccia IP dello storage
-** Nuovo LUN dello storage
-** Nuovo ID LUN storage
-** Nuovo NetApp Storage NAS Smart Volume
-** Nuovo NetApp Storage Smart LUN
-** Nuova policy Snapshot dello storage
-** Nuova pianificazione della policy Snapshot dello storage
-** Nuova macchina virtuale per lo storage
-** Nuovo volume di storage
-** Nuova snapshot del volume di storage
-** Rimuovere la policy di esportazione dello storage
-** Rimuovere la regola dei criteri di esportazione dello storage
-** Rimuovere l'interfaccia FC dello storage
-** Rimuovere l'host di storage
-** Rimuovere l'interfaccia IP dello storage
-** Rimuovere il LUN dello storage
-** Rimuovere l'ID LUN dello storage
-** Rimuovere NetApp Storage Smart LUN
-** Rimuovere Storage Snapshot Policy
-** Rimuovere la pianificazione della policy Snapshot dello storage
-** Rimuovere Storage Virtual Machine
-** Rimuovere il volume di storage
-** Rimuovere Storage Volume Snapshot
-** Rinominare Storage Volume Snapshot
+** Aggiungi policy di esportazione al volume NetApp
+** Aggiungere gli iniziatori al gruppo di iniziatori NetApp
+** Aggiungi regola al criterio di esportazione NetApp
+** Aggiungi pianificazione alla policy di snapshot NetApp
+** Modifica gli aggregati NetApp per la macchina virtuale di storage
+** Modifica regola policy di esportazione NetApp
+** Modifica policy snapshot NetApp
+** Modifica la pianificazione delle policy di Snapshot di NetApp
+** Espandere LUN NetApp
+** Trova mappa LUN del gruppo iniziatore NetApp
+** Trova LUN NetApp per ID
+** Trova volume NetApp per ID
+** Nuova policy di esportazione NetApp
+** Nuova interfaccia dati NetApp FC
+** Nuovo gruppo iniziatore NetApp
+** Nuova interfaccia dati iSCSI NetApp
+** Nuovo LUN NetApp
+** Nuova mappa del LUN NetApp
+** Nuova interfaccia dati NAS NetApp
+** Nuovo volume smart NAS NetApp
+** Nuova LUN smart NetApp
+** Nuova policy Snapshot di NetApp
+** Nuova macchina virtuale per lo storage NetApp
+** Nuovo volume NetApp
+** Nuova istantanea del volume NetApp
+** Rimuovi policy di esportazione dal volume NetApp
+** Rimuovi policy di esportazione NetApp
+** Rimuovere l'interfaccia dati FC NetApp
+** Rimuovere il gruppo iniziatore NetApp
+** Rimuovere l'interfaccia IP NetApp
+** Rimuovere il LUN NetApp
+** Rimuovere la mappa del LUN NetApp
+** Rimuovere il volume smart NAS NetApp
+** Rimuovere il LUN intelligente NetApp
+** Rimuovere la policy Snapshot di NetApp
+** Rimuovere la macchina virtuale dello storage NetApp
+** Rimuovere il volume NetApp
+** Rimuovere l'istantanea del volume NetApp
+** Rimuovi regola dal criterio di esportazione NetApp
+** Rimuovi pianificazione dalla policy istantanea di NetApp
+** Rinominare l'istantanea del volume NetApp
+** Aggiornare la capacità del volume NetApp
 +
-
-NOTE: Le attività del nuovo volume smart NAS e del nuovo LUN smart storage funzionano solo con ONTAP 9.8 e versioni successive. ONTAP 9.7P1 è attualmente la versione minima supportata.
-
-
-
-
-
 Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video https://tv.netapp.com/detail/video/6228095945001["Orchestrazione dello storage NetApp ONTAP in Cisco Intersight"^].
+
+
+
+

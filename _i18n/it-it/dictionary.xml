@@ -5991,7 +5991,6 @@
   <block id="881413045c8af6a58c42bcc219b2ba2d" category="paragraph">Per monitorare e orchestrare lo storage NetApp da Cisco Intersight, è necessario che NetApp Active IQ Unified Manager e Cisco Intersight Assist Virtual Appliance siano installati nell'ambiente vCenter.</block>
   <block id="535c7b50cee98be8fc0e8e0894346790" category="section-title">Installare o aggiornare NetApp Active IQ Unified Manager</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">Documentazione NetApp Active IQ Unified Manager</block>
-  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">Installare o eseguire l'aggiornamento a Active IQ Unified Manager (è richiesta la versione più recente, attualmente 9.12 GA) se non è stato fatto. Per istruzioni, consultare <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
   <block id="916e11edd7302abcc99270b63af50410" category="section-title">Installare l'appliance virtuale Cisco Intersight Assist</block>
   <block id="6d6948b0a48e475952bf18dc3895f7a3" category="inline-link">Requisiti di licenza, sistema e rete di Cisco Intersight Virtual Appliance</block>
   <block id="dd2e3bcd8cbadfd776b8fdcd3811c9e8" category="paragraph">Assicurarsi di rispettare le<block ref="7800eff9d9526a65a7a22ce932db0f9b" category="inline-link-rx"></block>.</block>
@@ -6043,7 +6042,6 @@
   <block id="8f7052d0c9b4ba227843ecc0873ab47c" category="cell">Dettagli dei requisiti</block>
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 e versioni successive</block>
   <block id="45699291c017a65a90e4bb25860f4315" category="cell">NetApp Active IQ Unified Manager</block>
-  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">È richiesta la versione più recente di NetApp Active IQ Unified Manager (attualmente 9.12 GA)</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">Storage array NetApp</block>
   <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">Tutti gli storage array ONTAP ASA, AFF e FAS sono supportati per ONTAP 9.7P1 e versioni successive</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">Hypervisor per la virtualizzazione</block>
@@ -6139,7 +6137,6 @@
   <block id="b184dfcc61c7724494e910c3ecf1995d" category="list-text">Aggiunto<block ref="338f563067f31f40365630725588e1ff" prefix=" " category="inline-code"></block> opzione al nodo</block>
   <block id="6b2cd9fd5e6df687c3d2d950a0504cb2" category="list-text">Aggiunto un oggetto per CDP neighbor</block>
   <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer</block>
-  <block id="1b178e202b7d2a2988fd16b3b67c6a9b" category="list-text">Aggiunta delle attività di storage per il workflow NetApp all'interno di Cisco Intersight. Vedere <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> Per un elenco completo delle attività di storage NetApp.</block>
   <block id="b9365bb9132d1eb8770275a763fc5d69" category="section-title">Gennaio 2022</block>
   <block id="c3c52ee83b368023b0bc4d56084cc12c" category="list-text">Aggiunta di allarmi di interoperabilità basati su eventi per NetApp Active IQ Unified Manager 9.10 o versioni successive.</block>
   <block id="3dd3b14e38a8724b67d519dfefeec2a4" category="admonition">Per garantire compatibilità e funzionalità complete con le versioni future, si consiglia di aggiornare NetApp Active IQ Unified Manager alla versione 9.10.</block>
@@ -6152,7 +6149,6 @@
   <block id="b97365a71bc0d2d2926a3cc84b0a78ae" category="list-text">Il volume ha una sezione di capacità di snapshot</block>
   <block id="d3c7d299e5b74bd5cd1d1b7633e85f3b" category="list-text">Le licenze ora vengono visualizzate correttamente</block>
   <block id="a5f3f63c2f6e1d6d4605650633b9ce8a" category="section-title">Ottobre 2021</block>
-  <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">Elenco aggiornato delle attività di storage NetApp disponibili in Cisco Intersight. Vedere <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> Per un elenco completo delle attività di storage NetApp.</block>
   <block id="754b6987e50dda52c9ced2b9e6a1c5a2" category="list-text">Aggiunta della colonna Health nella pagina Cluster list (elenco cluster).</block>
   <block id="b9af62df3144700ecbf415dca380fa7b" category="list-text">Ulteriori dettagli sono ora disponibili nella pagina Generale per un cluster selezionato.</block>
   <block id="9413b697ad103ecb2a9939006df613ac" category="list-text">La tabella Server NTP è ora accessibile dal riquadro di navigazione.</block>
@@ -6205,44 +6201,6 @@
   <block id="054075501dbbc3039c5d0b5dab12a766" category="list-text">Selezionare *Crea flusso di lavoro*.</block>
   <block id="17fd08459c8a5f34d6f93f908fc4fc70" category="list-text">Aggiungi attività di storage e virtualizzazione ai tuoi flussi di lavoro.</block>
   <block id="16823263a74001ecb22c9fecdb2d8af2" category="paragraph">Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:</block>
-  <block id="054ea9c656473e275b7ae5b69269cc81" category="list-text">Aggiungi policy di esportazione dello storage al volume</block>
-  <block id="0de3d10d428301dc752a4aea634acb40" category="list-text">Collegare gli iniziatori a Storage host</block>
-  <block id="4ff4c642392f4f69f68614bbc7a2a203" category="list-text">Disconnettere Storage Export Policy dal volume</block>
-  <block id="091e9fb66636892d6015097e15c3353a" category="list-text">Modifica aggregati per Storage Virtual Machine</block>
-  <block id="2133699c47edcf42d3f21fca79b3cbc4" category="list-text">Modifica la regola dei criteri di esportazione dello storage</block>
-  <block id="a61be198effbf7f1dc853d340112e634" category="list-text">Modifica policy Snapshot storage</block>
-  <block id="8078f3fdaf127a36179526d045fad2cc" category="list-text">Modifica la pianificazione della policy Snapshot dello storage</block>
-  <block id="aa4edcb7e57123151162ef878a3a3bb4" category="list-text">Espandere il LUN dello storage</block>
-  <block id="cb036c70939fadc3637cbeb990d0a969" category="list-text">Espandere Storage Volume (Volume di storage)</block>
-  <block id="01b698a596504162b7fcdf910e9175db" category="list-text">Trova NetApp igroup LUN Map</block>
-  <block id="9e5d320b5556f2516f70b24e91d5f757" category="list-text">Trova LUN storage per ID</block>
-  <block id="783d5727a583df3d75bb078907ef7716" category="list-text">Trova volume di storage per ID</block>
-  <block id="3fa3b03210322aa88ea23ab989f0bd00" category="list-text">Nuova regola dei criteri di esportazione dello storage</block>
-  <block id="9fc1d1408b035b5f699e246b36f2e395" category="list-text">Nuova interfaccia Fibre Channel per lo storage NetApp</block>
-  <block id="a5df94fc588067cf92394a3554329601" category="list-text">Nuova interfaccia IP dello storage</block>
-  <block id="d7e057b4be4f5aec2f39a363e6970a26" category="list-text">Nuovo LUN dello storage</block>
-  <block id="4c807515ded4b2b7b3cea9068a98c67c" category="list-text">Nuovo ID LUN storage</block>
-  <block id="c6751b7723c681fbbc53d1ece3f78e57" category="list-text">Nuovo NetApp Storage NAS Smart Volume</block>
-  <block id="8221f154a0cd2642f264529279893b96" category="list-text">Nuovo NetApp Storage Smart LUN</block>
-  <block id="5cb81d48ffabbd08e273eb1371ff2113" category="list-text">Nuova policy Snapshot dello storage</block>
-  <block id="46c325550313b45bd974662a8ba5d5c5" category="list-text">Nuova pianificazione della policy Snapshot dello storage</block>
-  <block id="e86a1c0d2603c82b6b81f234dae454af" category="list-text">Nuovo volume di storage</block>
-  <block id="469a3f87c703625ad34e802940619510" category="list-text">Nuova snapshot del volume di storage</block>
-  <block id="40f53794e58186747b2ca794fc115708" category="list-text">Rimuovere la policy di esportazione dello storage</block>
-  <block id="aebccc1ede7dceb6a8cb87a8f8ff76e7" category="list-text">Rimuovere la regola dei criteri di esportazione dello storage</block>
-  <block id="c6bda77442a097d5afa5bfaa2aa4e765" category="list-text">Rimuovere l'interfaccia FC dello storage</block>
-  <block id="92deb106459eb050b785db2fe57cce48" category="list-text">Rimuovere l'host di storage</block>
-  <block id="0027d78119d537368b4fd4055fdfdd69" category="list-text">Rimuovere l'interfaccia IP dello storage</block>
-  <block id="bd400b36b257aae8e728e6440fee9fe6" category="list-text">Rimuovere il LUN dello storage</block>
-  <block id="020226a8130f1d7d0a9df708c3d7b600" category="list-text">Rimuovere l'ID LUN dello storage</block>
-  <block id="93eafe4433d296a1dd07b95ce951c9a7" category="list-text">Rimuovere NetApp Storage Smart LUN</block>
-  <block id="9b9d199f57b9023464de44d3dca11130" category="list-text">Rimuovere Storage Snapshot Policy</block>
-  <block id="7a1c4f4a4587adf0b4172f03a5a10160" category="list-text">Rimuovere la pianificazione della policy Snapshot dello storage</block>
-  <block id="2205b729cc3612050bfabb80d4d267a0" category="list-text">Rimuovere Storage Virtual Machine</block>
-  <block id="f44bd35636cd69c25b2f240a770ab0a5" category="list-text">Rimuovere il volume di storage</block>
-  <block id="979a9d34e9735d1cf374866a119573d2" category="list-text">Rimuovere Storage Volume Snapshot</block>
-  <block id="474a3e1f12f91f621ea325e1f70cc8e3" category="list-text">Rinominare Storage Volume Snapshot</block>
-  <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">Le attività del nuovo volume smart NAS e del nuovo LUN smart storage funzionano solo con ONTAP 9.8 e versioni successive. ONTAP 9.7P1 è attualmente la versione minima supportata.</block>
   <block id="aed9e8ce86d6b67ac26c7d1937461e90" category="inline-link">Orchestrazione dello storage NetApp ONTAP in Cisco Intersight</block>
   <block id="efd91dc6276bbe52b654d531a05b3658" category="paragraph">Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video<block ref="9c51a52bc77cfd7dca26d970b0100330" category="inline-link-rx"></block>.</block>
   <block id="fa776a6d8035e935e3ca744e1a9a7d09" category="summary">Per ulteriori informazioni, consulta i documenti di riferimento e i siti Web.</block>
@@ -9777,4 +9735,53 @@
   <block id="340fa1f87f63e070c848c0a3971065d1" category="sidebar">Data center FlexPod con VMware vSphere 6.7 U1, Cisco UCS di quarta generazione e NetApp AFF A-Series - implementazione</block>
   <block id="547f2b068920d0dde11bc754c475c7e1" category="sidebar">Data center FlexPod con multi-pod ACI, NetApp MetroCluster IP e VMware vSphere 6.7 - implementazione</block>
   <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">NVMe end-to-end per FlexPod con Cisco UCSM, VMware vSphere 7.0 e NetApp ONTAP 9</block>
+  <block id="32c88669445a60f20d5c4768cafb4635" category="paragraph">Installare o eseguire l'aggiornamento a Active IQ Unified Manager (è richiesta la versione più recente, attualmente 9.13RC1) se non è stata eseguita questa operazione. Per istruzioni, consultare <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>.</block>
+  <block id="9944591da8cbd48d8dd6e6366955da50" category="list-text">Aggiungi policy di esportazione al volume NetApp</block>
+  <block id="39fcfcb06d577fe28a1681ec59bd8813" category="list-text">Aggiungere gli iniziatori al gruppo di iniziatori NetApp</block>
+  <block id="316ae23c10623d9e2fd5c26d0162e4e1" category="list-text">Aggiungi regola al criterio di esportazione NetApp</block>
+  <block id="c1e75562a1ee05d4eb3bdd4ce416c7fe" category="list-text">Aggiungi pianificazione alla policy di snapshot NetApp</block>
+  <block id="dcbe38495fab1770c2244fae824e4567" category="list-text">Modifica gli aggregati NetApp per la macchina virtuale di storage</block>
+  <block id="a3e01372be0fd350672ec9026d00bfd1" category="list-text">Modifica regola policy di esportazione NetApp</block>
+  <block id="b2909ba12d7d2bd66cbc580aafe6b228" category="list-text">Modifica policy snapshot NetApp</block>
+  <block id="5fa98424f4171475b37db60b2dc77260" category="list-text">Modifica la pianificazione delle policy di Snapshot di NetApp</block>
+  <block id="390a620db962909d07928ed78ef53204" category="list-text">Espandere LUN NetApp</block>
+  <block id="3183eade83f0193ab35b8970f2c68664" category="list-text">Trova mappa LUN del gruppo iniziatore NetApp</block>
+  <block id="1b746e0205a5cc7f2d0108c9ea93762d" category="list-text">Trova LUN NetApp per ID</block>
+  <block id="8a80e56d5db5a1442049e0f62400b9ca" category="list-text">Trova volume NetApp per ID</block>
+  <block id="e949897c1607f632d83cf0938dee40a7" category="list-text">Nuova policy di esportazione NetApp</block>
+  <block id="f990c67abc9fb266464d487c346d3612" category="list-text">Nuova interfaccia dati NetApp FC</block>
+  <block id="61f173414a4053b33c1cfee676b76b4b" category="list-text">Nuovo gruppo iniziatore NetApp</block>
+  <block id="63e40433e460c62f2accc6e3a45c06fb" category="list-text">Nuova interfaccia dati iSCSI NetApp</block>
+  <block id="fa78246b0e8c6de1cd52645f02831c86" category="list-text">Nuovo LUN NetApp</block>
+  <block id="087a2a891ca2a561f44d5917021c6689" category="list-text">Nuova mappa del LUN NetApp</block>
+  <block id="d73757020a56b91ae816c18a56f9c49d" category="list-text">Nuova interfaccia dati NAS NetApp</block>
+  <block id="31cd130de62753275b838e4c22c01d0e" category="list-text">Nuovo volume smart NAS NetApp</block>
+  <block id="6cf2feff2e371abb80aba7e5aaea379a" category="list-text">Nuova LUN smart NetApp</block>
+  <block id="8b9572adccfac5fa05a86f00dbb8eab2" category="list-text">Nuova policy Snapshot di NetApp</block>
+  <block id="d0de55422275f1183147b3b00bf46341" category="list-text">Nuova macchina virtuale per lo storage NetApp</block>
+  <block id="7205da2b815c287ae127a2a0759e3dc8" category="list-text">Nuovo volume NetApp</block>
+  <block id="c88e88f622d355fa885cd07b661181fa" category="list-text">Nuova istantanea del volume NetApp</block>
+  <block id="c77322d3208fc6cc1fcbf66f2cff2064" category="list-text">Rimuovi policy di esportazione dal volume NetApp</block>
+  <block id="08b4ef99dd90f65a917162dae5001a9b" category="list-text">Rimuovi policy di esportazione NetApp</block>
+  <block id="f1c19806910ec96f1866a311f4e2c040" category="list-text">Rimuovere l'interfaccia dati FC NetApp</block>
+  <block id="de9b0e25e74ef14a03e62f3d048bee50" category="list-text">Rimuovere il gruppo iniziatore NetApp</block>
+  <block id="a6ba73691dd59717e2dd9c330b72c2ec" category="list-text">Rimuovere l'interfaccia IP NetApp</block>
+  <block id="291f295b31590fc97f1bc8ba5251c2f8" category="list-text">Rimuovere il LUN NetApp</block>
+  <block id="0fb99f556df156305cff85e0176d63ce" category="list-text">Rimuovere la mappa del LUN NetApp</block>
+  <block id="0694de58ab2e822e387b823e51e54841" category="list-text">Rimuovere il volume smart NAS NetApp</block>
+  <block id="a131b61917fb652a85f68945d920f91f" category="list-text">Rimuovere il LUN intelligente NetApp</block>
+  <block id="f227d28aa4a5d8fad82d2fed00d7aee1" category="list-text">Rimuovere la policy Snapshot di NetApp</block>
+  <block id="9f85cc47bf61f32b9cd68d5ff30afd1f" category="list-text">Rimuovere la macchina virtuale dello storage NetApp</block>
+  <block id="bbc2e677fd4417e3186aad3353a3f4a8" category="list-text">Rimuovere il volume NetApp</block>
+  <block id="90e86a915d7d7728d267251ca74d65aa" category="list-text">Rimuovere l'istantanea del volume NetApp</block>
+  <block id="f31b13d8f87aef5c7ef5df3f708aa577" category="list-text">Rimuovi regola dal criterio di esportazione NetApp</block>
+  <block id="7d9b1145d4ddecd2b63b6017eb559a79" category="list-text">Rimuovi pianificazione dalla policy istantanea di NetApp</block>
+  <block id="fcfa83f92e088a38cb0b8b964782a825" category="list-text">Rinominare l'istantanea del volume NetApp</block>
+  <block id="cf1b3d281850307ef3dfced3bacedd94" category="list-text">Aggiornare la capacità del volume NetApp</block>
+  <block id="76d2b8dc750167185cbc6e1c83deac4f" category="cell">È richiesta la versione più recente di NetApp Active IQ Unified Manager (attualmente 9.13RC1)</block>
+  <block id="411d690288852abddc39378b2989bfda" category="section-title">Giugno 2023</block>
+  <block id="b4099ff97cb0b64945972224373faec4" category="admonition">È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13RC1 per garantire compatibilità e funzionalità complete con la versione più recente.</block>
+  <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">Nomi aggiornati per le attività di storage NetApp. Vedere <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> per l'elenco completo delle attività rinominate.</block>
+  <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">Aggiunta delle attività di storage per il workflow NetApp all'interno di Cisco Intersight. Vedere <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> Per un elenco completo delle attività di storage NetApp.</block>
+  <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">Elenco aggiornato delle attività di storage NetApp disponibili in Cisco Intersight. Vedere <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> Per un elenco completo delle attività di storage NetApp.</block>
 </blocks>

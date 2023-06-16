@@ -18,6 +18,16 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+== Giugno 2023
+
+
+NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13RC1 per garantire compatibilità e funzionalità complete con la versione più recente.
+
+* Nomi aggiornati per le attività di storage NetApp. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"^] per l'elenco completo delle attività rinominate.
+
+
+
+
 == Aprile 2023
 
 * Aggiunte le schede Criteri di protezione (SnapMirror) e Criteri Snapshot nella pagina Criteri all'interno della sezione inventario dell'interfaccia utente.
@@ -90,7 +100,7 @@ NOTE: Per garantire compatibilità e funzionalità complete con le versioni futu
 * Aggiunta di AutoSupport all'inventario del cluster
 * Aggiunto `cdpd.enable` opzione al nodo
 * Aggiunto un oggetto per CDP neighbor
-* Aggiunta delle attività di storage per il workflow NetApp all'interno di Cisco Intersight. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"] Per un elenco completo delle attività di storage NetApp.
+* Aggiunta delle attività di storage per il workflow NetApp all'interno di Cisco Intersight. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"^] Per un elenco completo delle attività di storage NetApp.
 
 
 
@@ -117,7 +127,7 @@ NOTE: Per garantire compatibilità e funzionalità complete con le versioni futu
 
 == Ottobre 2021
 
-* Elenco aggiornato delle attività di storage NetApp disponibili in Cisco Intersight. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"] Per un elenco completo delle attività di storage NetApp.
+* Elenco aggiornato delle attività di storage NetApp disponibili in Cisco Intersight. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"^] Per un elenco completo delle attività di storage NetApp.
 * Aggiunta della colonna Health nella pagina Cluster list (elenco cluster).
 * Ulteriori dettagli sono ora disponibili nella pagina Generale per un cluster selezionato.
 * La tabella Server NTP è ora accessibile dal riquadro di navigazione.
