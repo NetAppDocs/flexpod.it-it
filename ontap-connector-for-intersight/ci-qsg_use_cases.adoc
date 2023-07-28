@@ -79,15 +79,27 @@ Quando gli ambienti NetApp Storage e vCenter sono disponibili in Cisco Intersigh
 Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:
 
 +
+** Aggiungi ACL alla condivisione CIFS di NetApp
+** Aggiungi corrispondenza client alla regola dei criteri di esportazione NetApp
 ** Aggiungi policy di esportazione al volume NetApp
 ** Aggiungere gli iniziatori al gruppo di iniziatori NetApp
 ** Aggiungi regola al criterio di esportazione NetApp
 ** Aggiungi pianificazione alla policy di snapshot NetApp
+** Confermare lo stato della licenza NetApp
+** Confermare lo stato del protocollo FCP della macchina virtuale di storage NetApp
 ** Modifica gli aggregati NetApp per la macchina virtuale di storage
+** Modifica policy NetApp asincrona SnapMirror
+** Modifica autorizzazione ACL condivisione CIFS NetApp
 ** Modifica regola policy di esportazione NetApp
 ** Modifica policy snapshot NetApp
 ** Modifica la pianificazione delle policy di Snapshot di NetApp
+** Modifica lo stile di sicurezza del volume NetApp
+** Modifica policy snapshot volume NetApp
+** Abilitare i servizi CIFS di NetApp
 ** Espandere LUN NetApp
+** Nuova policy SnapMirror asincrona di NetApp
+** Nuovo server CIFS NetApp
+** Nuova condivisione CIFS NetApp
 ** Trova mappa LUN del gruppo iniziatore NetApp
 ** Trova LUN NetApp per ID
 ** Trova volume NetApp per ID
@@ -95,24 +107,35 @@ Di seguito sono riportate le attività di storage NetApp disponibili da Cisco In
 ** Nuova interfaccia dati NetApp FC
 ** Nuovo gruppo iniziatore NetApp
 ** Nuova interfaccia dati iSCSI NetApp
+** Nuovi mirrori di condivisione del carico NetApp per il volume root SVM
 ** Nuovo LUN NetApp
 ** Nuova mappa del LUN NetApp
 ** Nuova interfaccia dati NAS NetApp
 ** Nuovo volume smart NAS NetApp
 ** Nuova LUN smart NetApp
+** Nuova relazione SnapMirror di NetApp per il volume
 ** Nuova policy Snapshot di NetApp
 ** Nuova macchina virtuale per lo storage NetApp
 ** Nuovo volume NetApp
 ** Nuova istantanea del volume NetApp
+** Registrare il DNS per la macchina virtuale dello storage NetApp
+** Rimuovere l'ACL dalla condivisione CIFS di NetApp
+** Rimuovi corrispondenza client dalla regola dei criteri di esportazione NetApp
 ** Rimuovi policy di esportazione dal volume NetApp
+** Rimuovere l'iniziatore dal gruppo di iniziatori NetApp
+** Rimuovere il server CIFS NetApp
+** Rimuovere la condivisione CIFS di NetApp
 ** Rimuovi policy di esportazione NetApp
 ** Rimuovere l'interfaccia dati FC NetApp
 ** Rimuovere il gruppo iniziatore NetApp
 ** Rimuovere l'interfaccia IP NetApp
+** Rimuovere i mirrori di condivisione del carico di NetApp per il volume root SVM
 ** Rimuovere il LUN NetApp
 ** Rimuovere la mappa del LUN NetApp
 ** Rimuovere il volume smart NAS NetApp
 ** Rimuovere il LUN intelligente NetApp
+** Rimuovere la relazione SnapMirror di NetApp per il volume
+** Rimuovere il criterio SnapMirror di NetApp
 ** Rimuovere la policy Snapshot di NetApp
 ** Rimuovere la macchina virtuale dello storage NetApp
 ** Rimuovere il volume NetApp
@@ -120,6 +143,7 @@ Di seguito sono riportate le attività di storage NetApp disponibili da Cisco In
 ** Rimuovi regola dal criterio di esportazione NetApp
 ** Rimuovi pianificazione dalla policy istantanea di NetApp
 ** Rinominare l'istantanea del volume NetApp
+** Aggiornare i mirrori di condivisione del carico di NetApp per il volume root SVM
 ** Aggiornare la capacità del volume NetApp
 +
 Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video https://tv.netapp.com/detail/video/6228095945001["Orchestrazione dello storage NetApp ONTAP in Cisco Intersight"^].

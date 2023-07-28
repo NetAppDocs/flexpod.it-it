@@ -18,6 +18,32 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+== Luglio 2023
+
+
+NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13GA per garantire compatibilità e funzionalità complete con la versione più recente.
+
+* Nomi aggiornati per le attività di storage NetApp. Per un elenco completo delle attività rinominate, vedere caso d'utilizzo 3 flussi di lavoro personalizzati utilizzando un modulo senza designer.
+* L'indirizzo IP dell'interfaccia NFS è stato aggiunto come output del task nuovo volume smart NAS NetApp.
+* Un controllo che il trasporto ASUP sia HTTPS è stato aggiunto alla scheda Verifiche.
+* Il tipo di Tier corretto per tutti i Tier viene ora visualizzato correttamente nell'interfaccia utente dei Tier.
+* Tutte le licenze conformi vengono ora visualizzate correttamente nella pagina Licenses (licenze).
+* Nella pagina delle condivisioni viene ora visualizzato un valore preciso per le condivisioni CIFS senza o senza home directory.
+* L'ordinamento e il filtraggio sono ora abilitati per la colonna mappata nella pagina LUN.
+* L'ordinamento e il filtraggio hanno attivato la colonna Authentication Enabled (autenticazione abilitata) nella pagina NTP Servers (Server NTP).
+* Aggiunti nuovi controlli e le seguenti categorie corrispondenti alla scheda Verifiche.
++
+** Sicurezza
+** Anti-ransomware
+** Disponibilità
+** Altro
+
+
+* Nella vista Dettagli inventario, viene ora utilizzato il report invece della capacità fisica utilizzata.
+
+
+
+
 == Giugno 2023
 
 
