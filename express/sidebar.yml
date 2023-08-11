@@ -111,26 +111,6 @@ entries:
     url: "/express/express-c-series-aff220-deploy_conclusion.html"
   - title: Dove trovare ulteriori informazioni
     url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
-- title: Guida alla progettazione di FlexPod Express con VMware vSphere 6.7U1 e NetApp
-    AFF A220 con Direct-Attached IP-Based Storage
-  type: solutions
-  entries:
-  - title: Panoramica
-    url: "/express/express-direct-attach-design_overview.html"
-  - title: Riepilogo del programma
-    url: "/express/express-direct-attach-design_program_summary.html"
-  - title: Panoramica della soluzione
-    url: "/express/express-direct-attach-design_solution_overview.html"
-  - title: Requisiti tecnologici
-    url: "/express/express-direct-attach-design_technology_requirements.html"
-  - title: Scelte di progettazione
-    url: "/express/express-direct-attach-design_design_choices.html"
-  - title: Verifica della soluzione
-    url: "/express/express-direct-attach-design_solution_verification.html"
-  - title: Conclusione
-    url: "/express/express-direct-attach-design_conclusion.html"
-  - title: Dove trovare ulteriori informazioni
-    url: "/express/express-direct-attach-design_where_to_find_additional_information.html"
 - title: FlexPod Express con VMware vSphere 6.7U1 e NetApp AFF A220 con storage basato
     su IP direct-attached
   type: solutions
