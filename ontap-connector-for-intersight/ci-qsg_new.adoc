@@ -18,6 +18,18 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+== Agosto 2023
+
+
+NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13GA per garantire compatibilità e funzionalità complete con la versione più recente.
+
+* È stata migliorata l'attività Nuova LUN smart NetApp per indicare chiaramente la disponibilità di opzioni di selezione per la creazione di un nuovo gruppo iniziatore o la selezione di un gruppo iniziatore esistente. Quando gli utenti ora selezionano la casella per creare un nuovo gruppo iniziatore, il parametro per la scelta di un gruppo iniziatore esistente non è più disponibile. Se gli utenti deselezionano la casella per creare un nuovo gruppo iniziatore, il parametro gruppo iniziatore esistente diventa disponibile.
+* Miglioramento delle attività Nuova mappa LUN NetApp e Rimozione mappa LUN NetApp. La nuova relazione tra il LUN e il gruppo iniziatore è ora aggiornata. L'inventario dell'interfaccia utente viene aggiornato immediatamente per il LUN e il gruppo iniziatore all'esecuzione dell'attività.
+* La pagina Controlla ora carica correttamente la prima volta che gli utenti accedono e non richiede più un aggiornamento.
+
+
+
+
 == Luglio 2023
 
 
