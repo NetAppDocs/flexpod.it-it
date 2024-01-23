@@ -20,7 +20,7 @@ Per monitorare e orchestrare lo storage NetApp da Cisco Intersight, è necessari
 
 == Installare o aggiornare NetApp Active IQ Unified Manager
 
-Installare o eseguire l'aggiornamento a Active IQ Unified Manager (è richiesta la versione più recente, attualmente 9.13GA) se non è stata eseguita questa operazione. Per istruzioni, consultare link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentazione NetApp Active IQ Unified Manager"].
+Installare o aggiornare a Active IQ Unified Manager (è necessaria l'ultima versione, attualmente 9.14RC1) se non è stato fatto. Per istruzioni, consultare link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Documentazione NetApp Active IQ Unified Manager"].
 
 
 
@@ -47,10 +47,10 @@ image::ci-qsg_image2.png[Schermata della configurazione implementazione del mode
 
 .. Nella pagina *Personalizza modello*, personalizzare le proprietà di distribuzione del modello OVF. La password dell'amministratore viene utilizzata per gli utenti locali: admin(`webUI/cli/ssh`).
 +
-image::ci-qsg_image3.png[Errore: Immagine grafica mancante]
+image::ci-qsg_image3.png[Schermata della schermata Deploy OVF Template (modello OVF distribuzione)]
 
 +
-image::ci-qsg_image4.png[Errore: Immagine grafica mancante]
+image::ci-qsg_image4.png[Schermata della schermata Deploy OVF Template (modello OVF distribuzione)]
 
 .. Fare clic su *Avanti*.
 
