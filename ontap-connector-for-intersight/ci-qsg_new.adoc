@@ -18,10 +18,14 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+== Gennaio 2024
+
+* Orchestrazione dello storage di NetApp tramite workflow di riferimento ora disponibili per il download in GitHub attraverso il https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Repository del flusso di lavoro Intersight FlexPod"^]. Per ulteriori informazioni sui nuovi flussi di lavoro di riferimento in GitHub, vedere link:ci-qsg_use_cases.html["Caso d'utilizzo 2: Orchestrazione dello storage NetApp con flussi di lavoro di riferimento"^].
+
+
+
+
 == Novembre 2023
-
-
-NOTE: È necessario eseguire un aggiornamento a NetApp Active IQ Unified Manager 9.14RC1 per garantire la compatibilità e la piena funzionalità con la versione più recente.
 
 * È stata aggiunta la pagina NVMe Namespaces nella sezione Inventory dell'interfaccia utente.
 
