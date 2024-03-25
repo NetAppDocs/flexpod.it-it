@@ -6082,7 +6082,6 @@
   <block id="16823263a74001ecb22c9fecdb2d8af2" category="paragraph">Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:</block>
   <block id="aed9e8ce86d6b67ac26c7d1937461e90" category="inline-link">Orchestrazione dello storage NetApp ONTAP in Cisco Intersight</block>
   <block id="efd91dc6276bbe52b654d531a05b3658" category="paragraph">Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video<block ref="9c51a52bc77cfd7dca26d970b0100330" category="inline-link-rx"></block>.</block>
-  <block id="d95867deadfe690e40f42068d6b59df8" category="doc">Riferimenti</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">Per ulteriori informazioni, consulta i seguenti documenti e siti Web:</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Panoramica introduttiva di Cisco Intersight</block>
@@ -9733,4 +9732,26 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">Informazioni correlate</block>
   <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Centro di assistenza Cisco Intersight</block>
   <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">Le note legali forniscono l'accesso a dichiarazioni di copyright, marchi, brevetti e altro ancora.</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">Note legali</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">Copyright</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">Marchi</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NETAPP, il logo NETAPP e i marchi elencati nella pagina dei marchi NetApp sono marchi di NetApp, Inc. Altri nomi di società e prodotti potrebbero essere marchi dei rispettivi proprietari.</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">Brevetti</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">Un elenco aggiornato dei brevetti di proprietà di NetApp è disponibile all'indirizzo:</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">Direttiva sulla privacy</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="6c5a2d8729b8ce5ae6b035791d668adb" category="sidebar">Basata su tecnologie all'avanguardia di NetApp e Cisco e scelta da migliaia di clienti in tutto il mondo, la piattaforma FlexPod soddisfa e supera le sfide della semplificazione delle implementazioni per un'architettura di data center Best-in-class. Composta da tecnologie preconvalidate di storage, rete e server, la FlexPod è progettata per aumentare la reattività DELL'IT alle esigenze organizzative, ridurre i costi di calcolo e offrire massimo uptime e minimi rischi. Semplificando la distribuzione di dati e applicazioni, la tua azienda ottiene il vantaggio di eseguire nuovi servizi e carichi di lavoro in ambienti edge, core o nel cloud.</block>
+  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod - inizia qui</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novità</block>
+  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">Video e demo</block>
+  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">Blog</block>
+  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">Ai e analisi moderna dei dati con FlexPod</block>
+  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">Applicazioni aziendali FlexPod e database aziendali</block>
+  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud ibrido con FlexPod</block>
+  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod per VDI</block>
+  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Settore sanitario con FlexPod</block>
 </blocks>
