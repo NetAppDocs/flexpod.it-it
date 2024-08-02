@@ -19,7 +19,7 @@ indexpage:
     - title: Novità
       url: https://fieldportal.netapp.com/content/1668183
     - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod
+      url: https://media.netapp.com/search?q=FlexPod
     - title: Blog
       url: https://blog.netapp.com/tag/Flexpod/
   - title: Ai e analisi moderna dei dati con FlexPod
@@ -27,13 +27,11 @@ indexpage:
     - title: Novità
       url: https://www.flexpod.com/solutions/use-cases/machine-learning/
     - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod%20AI
+      url: https://media.netapp.com/search?q=FlexPod%20AI
     - title: Blog
       url: https://blog.netapp.com/tag/Flexpod/
   - title: Applicazioni aziendali FlexPod e database aziendali
     links:
-    - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod%20SAP
     - title: Blog
       url: https://blog.netapp.com/tag/Flexpod/
   - title: Cloud ibrido con FlexPod
@@ -41,22 +39,18 @@ indexpage:
     - title: Novità
       url: https://flexpod.com/solutions/use-cases/hybrid-cloud/
     - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
+      url: https://media.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
     - title: Blog
       url: https://blog.netapp.com/tag/Flexpod/
   - title: FlexPod per VDI
     links:
     - title: Novità
       url: https://www.flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/
-    - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod%20VDI
     - title: Blog
       url: https://blog.netapp.com/tag/Flexpod/
   - title: Settore sanitario con FlexPod
     links:
     - title: Novità
       url: https://flexpod.com/solutions/verticals/healthcare/
-    - title: Video e demo
-      url: https://tv.netapp.com/search?q=FlexPod%20Healthcare
     - title: Blog
       url: https://blog.netapp.com/tag/Healthcare/

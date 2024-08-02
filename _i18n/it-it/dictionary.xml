@@ -5933,8 +5933,6 @@
   <block id="ebd1193b80c5bb1e5a3c2f4ca7d1ad9f" category="paragraph">Viene avviato il processo di download e installazione. I file binari vengono trasferiti da Intersight Cloud all'appliance on-premise. Il tempo di completamento varia in base alla larghezza di banda di Intersight Cloud.</block>
   <block id="f9d402f73c06490b49744c7260f10c18" category="summary">Una volta installato Cisco Intersight Assist, puoi richiedere i tuoi dispositivi di storage e virtualizzazione NetApp.</block>
   <block id="7351a1047aea1d8e523aae1df309c347" category="doc">Obiettivi delle richieste di rimborso</block>
-  <block id="ff2e4aa830d38c99b2010a91bd562775" category="inline-link">Richiedi un target tramite Cisco Intersight Assist.</block>
-  <block id="6bc0022874ff4b98cf45584e525e1f00" category="paragraph">Una volta installato Cisco Intersight Assist, puoi richiedere i tuoi dispositivi di storage e virtualizzazione NetApp. Torna alla pagina *obiettivi dell'intervista* e Aggiungi i tuoi obiettivi vCenter e NetApp Active IQ Unified Manager. Per ulteriori informazioni sul processo di richiesta di rimborso, guarda il video<block ref="30d5424c5fce71a06fbbaa3ffc76fb0e" category="inline-link-rx"></block></block>
   <block id="c27675fd33dbae852257d83ae0b40ee3" category="admonition">Assicurarsi che il gateway API di NetApp Active IQ Unified Manager (AIQ UM) sia attivato.</block>
   <block id="914be32cb08524e05323b3adb9bc0c3f" category="paragraph">Da NetApp IQ Unified Manager, accedere a *Impostazioni &gt; generali &gt; Impostazioni delle funzioni*.</block>
   <block id="94a25ce3cfde50ac05004124838a8585" category="inline-image-macro">Schermata di NetApp AIQ UM API Gateway abilitato</block>
@@ -6069,7 +6067,6 @@
   <block id="3565f69c284244db8d5ca84b622ee9f7" category="list-text">Vai a *Storage* e naviga attraverso l'inventario dello storage NetApp.</block>
   <block id="e409ef30600b1f6d6feda5ec5cf2b09a" category="list-text">Aggiungi *Widgets* per lo storage NetApp al tuo *Monitor Dashboard*.</block>
   <block id="2a304a1348456ccd2234cd71a81bd338" category="inline-link">collegamento</block>
-  <block id="c93483174eb31dc7fbbe326f1c100f35" category="paragraph">Ecco un<block ref="e0428282d0e7de772227d65a22541ae5" category="inline-link-rx"></block> Al video che mostra le funzionalità di monitoraggio dello storage NetApp ONTAP di Cisco Intersight.</block>
   <block id="4eddc275f6028504b4d1bbed1e6ae1cb" category="section-title">Caso d'utilizzo 2: Orchestrazione dello storage NetApp con flussi di lavoro di riferimento</block>
   <block id="ad394a42593fccfc9f89e6e10730a3c0" category="list-text">Aggiungere il target vCenter a Intersight tramite Intersight Assist.</block>
   <block id="97e1e380ad6fec970bc1c31e70c64a7a" category="section-title">Caso d'utilizzo 3: Flussi di lavoro personalizzati utilizzando un modulo senza designer</block>
@@ -6080,8 +6077,6 @@
   <block id="054075501dbbc3039c5d0b5dab12a766" category="list-text">Selezionare *Crea flusso di lavoro*.</block>
   <block id="17fd08459c8a5f34d6f93f908fc4fc70" category="list-text">Aggiungi attività di storage e virtualizzazione ai tuoi flussi di lavoro.</block>
   <block id="16823263a74001ecb22c9fecdb2d8af2" category="paragraph">Di seguito sono riportate le attività di storage NetApp disponibili da Cisco Intersight:</block>
-  <block id="aed9e8ce86d6b67ac26c7d1937461e90" category="inline-link">Orchestrazione dello storage NetApp ONTAP in Cisco Intersight</block>
-  <block id="efd91dc6276bbe52b654d531a05b3658" category="paragraph">Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video<block ref="9c51a52bc77cfd7dca26d970b0100330" category="inline-link-rx"></block>.</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">Per ulteriori informazioni, consulta i seguenti documenti e siti Web:</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Panoramica introduttiva di Cisco Intersight</block>
@@ -9754,4 +9749,5 @@
   <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud ibrido con FlexPod</block>
   <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod per VDI</block>
   <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Settore sanitario con FlexPod</block>
+  <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">Una volta installato Cisco Intersight Assist, puoi richiedere i tuoi dispositivi di storage e virtualizzazione NetApp. Torna alla pagina *obiettivi dell'intervista* e Aggiungi i tuoi obiettivi vCenter e NetApp Active IQ Unified Manager.</block>
 </blocks>

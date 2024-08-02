@@ -26,9 +26,6 @@ Quando l'ambiente di storage NetApp è disponibile in Cisco Intersight, è possi
 . Aggiungere i dispositivi NetApp AIQ UM in Intersight Assist.
 . Vai a *Storage* e naviga attraverso l'inventario dello storage NetApp.
 . Aggiungi *Widgets* per lo storage NetApp al tuo *Monitor Dashboard*.
-+
-Ecco un https://tv.netapp.com/detail/video/6228096841001["collegamento"^] Al video che mostra le funzionalità di monitoraggio dello storage NetApp ONTAP di Cisco Intersight.
-
 
 
 
@@ -156,9 +153,6 @@ Di seguito sono riportate le attività di storage NetApp disponibili da Cisco In
 ** Rinominare l'istantanea del volume NetApp
 ** Aggiornare i mirrori di condivisione del carico di NetApp per il volume root SVM
 ** Aggiornare la capacità del volume NetApp
-+
-Per ulteriori informazioni sulla personalizzazione dei flussi di lavoro con le attività di storage e virtualizzazione NetApp, guarda il video https://tv.netapp.com/detail/video/6228095945001["Orchestrazione dello storage NetApp ONTAP in Cisco Intersight"^].
-
 
 
 
