@@ -26,7 +26,7 @@ https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/co
 
 * Linee guida di dimensionamento NetApp per ambienti MEDITECH.
 +
-http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
 
 * Data center FlexPod per l'implementazione Epic EHR
 +

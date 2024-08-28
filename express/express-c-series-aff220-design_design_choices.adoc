@@ -37,7 +37,7 @@ Inoltre, è possibile sfruttare la partizione dei dati root sul sistema AFF A220
 
 image:express-c-series-aff220-design_image6.png["Errore: Immagine grafica mancante"]
 
-Queste sono solo alcune funzionalità chiave che integrano la soluzione FlexPod Express. Per ulteriori informazioni sulle funzionalità aggiuntive di ONTAP 9.4, vedere https://www.netapp.com/us/media/ds-3231.pdf["Scheda informativa sul software di gestione dei dati ONTAP 9"^]. Inoltre, consulta NetApp http://docs.netapp.com/ontap-9/index.jsp["Centro documentazione di ONTAP 9"^], Che è stato aggiornato per includere ONTAP 9.4.
+Queste sono solo alcune funzionalità chiave che integrano la soluzione FlexPod Express. Per informazioni dettagliate sulle funzioni e le funzionalità aggiuntive di ONTAP 9.4, vedere https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Scheda informativa sul software di gestione dei dati ONTAP 9"^] . Inoltre, vedere NetApp http://docs.netapp.com/ontap-9/index.jsp["Centro documentazione di ONTAP 9"^] , che è stato aggiornato per includere ONTAP 9.4.
 
 
 

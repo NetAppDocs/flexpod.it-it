@@ -206,6 +206,6 @@ Consultare le seguenti Best practice e alcuni requisiti di un tipico sistema di 
 * Assicurarsi che i VMDK del sistema operativo delle macchine virtuali siano ospitati in uno storage Tier 1 veloce.
 * Collabora con il fornitore del sistema di imaging medicale per identificare l'approccio migliore per preparare i modelli di macchine virtuali per una rapida implementazione e manutenzione.
 * Le reti di gestione, storage e produzione richiedono la segregazione LAN per il database, con VLAN isolate per VMware vMotion.
-* Utilizza la tecnologia di replica basata su array di storage NetApp chiamata https://www.netapp.com/us/media/tr-4015.pdf["SnapMirror"^] Invece della replica basata su vSphere.
+* Utilizza la tecnologia di replica basata su storage array NetApp denominata https://www.netapp.com/pdf.html?item=/media/17229-tr4015pdf.pdf["SnapMirror"^] invece della replica basata su vSphere.
 * Utilizzare tecnologie di backup che sfruttano le API VMware; le finestre di backup devono essere al di fuori delle normali ore di produzione.
 

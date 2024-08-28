@@ -49,7 +49,7 @@ NetApp SnapMirror offre funzionalità di replica dei dati leader del settore che
 * Maggiore efficienza inline con la compressione di rete.
 
 
-Ulteriori informazioni sono disponibili https://www.netapp.com/us/media/ds-3820.pdf["qui"^].
+Ulteriori informazioni sono disponibili https://www.netapp.com/pdf.html?item=/media/8327-ds-3820.pdf["qui"^].
 
 La tabella riportata di seguito elenca ciascun livello richiesto da un sistema di imaging medicale tipico per la latenza specifica e le caratteristiche di performance del throughput.
 
@@ -224,7 +224,7 @@ Un tipico sistema di imaging medicale utilizza un'architettura a più livelli. I
 
 Un tipico sistema di imaging medicale consente l'accesso alle immagini per due diversi set di utenti: Utente/radiologo diagnostico o medico che ha ordinato l'imaging.
 
-I radiologi in genere utilizzano visualizzatori di diagnostica high-end abilitati per la grafica che vengono eseguiti su workstation di elaborazione e grafica high-end fisiche o parte di un'infrastruttura di desktop virtuale. Se stai per iniziare il tuo percorso nell'infrastruttura di desktop virtuale, puoi trovare ulteriori informazioni https://www.netapp.com/us/media/na-flexpod-vdi.pdf["qui"^].
+I radiologi in genere utilizzano visualizzatori di diagnostica high-end abilitati per la grafica che vengono eseguiti su workstation di elaborazione e grafica high-end fisiche o parte di un'infrastruttura di desktop virtuale. Se si sta per iniziare il percorso dell'infrastruttura desktop virtuale, è possibile trovare ulteriori informazioni https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["qui"^] .
 
 Quando l'uragano Katrina ha distrutto due dei principali ospedali di insegnamento della Louisiana, i leader si sono riuniti e hanno costruito un sistema di cartelle cliniche elettroniche resiliente che includeva oltre 3000 desktop virtuali in tempi record. Ulteriori informazioni sull'architettura di riferimento dei casi di utilizzo e sui bundle di riferimento FlexPod sono disponibili https://blog.netapp.com/virtual-desktop-infrastructure-bundles["qui"^].
 
@@ -238,7 +238,7 @@ Il sistema di imaging medico può fornire l'accesso alle immagini a una comunit�
 
 I sistemi di imaging medico possono anche supportare centri medici accademici che necessitano di sistemi PACS o di imaging per l'utilizzo in classe. Per supportare le attività accademiche, un tipico sistema di imaging medicale può avere le funzionalità di un sistema PACS con un ingombro ridotto o un ambiente di imaging solo didattico. I tipici sistemi di archiviazione indipendenti dal vendor e alcuni sistemi di imaging medicale di livello Enterprise offrono funzionalità di morphing delle etichette delle immagini DICOM per rendere anonime le immagini utilizzate a scopo didattico. Il morphing dei tag consente alle organizzazioni sanitarie di scambiare immagini DICOM tra sistemi di imaging medicali di diversi fornitori in modo indipendente dal vendor. Inoltre, il morphing dei tag consente ai sistemi di imaging medicale di implementare una funzionalità di archiviazione indipendente dal vendor a livello aziendale per le immagini mediche.
 
-I sistemi di imaging medicale stanno iniziando a utilizzare https://www.netapp.com/us/media/sb-flexpod-datacenter-ai.pdf["Funzionalità di calcolo basate su GPU"^] migliorare i flussi di lavoro umani pre-elaborando le immagini e migliorando così l'efficienza. I tipici sistemi di imaging medico aziendale sfruttano le funzionalità di efficienza dello storage NetApp leader del settore. I sistemi di imaging medicale aziendali utilizzano in genere RMAN per le attività di backup, ripristino e ripristino. Per ottenere performance migliori e ridurre il tempo necessario per la creazione dei backup, è disponibile la tecnologia Snapshot per le operazioni di backup e la tecnologia SnapMirror per la replica.
+I sistemi di imaging medicale stanno iniziando ad https://www.netapp.com/pdf.html?item=/media/7398-sb-flexpod-datacenter-aipdf.pdf["Funzionalità di calcolo basate su GPU"^] essere utilizzati per migliorare i flussi di lavoro umani grazie alla pre-elaborazione delle immagini e quindi al miglioramento dell'efficienza. I tipici sistemi di imaging medico aziendale sfruttano le funzionalità di efficienza dello storage NetApp leader del settore. I sistemi di imaging medicale aziendali utilizzano in genere RMAN per le attività di backup, ripristino e ripristino. Per ottenere performance migliori e ridurre il tempo necessario per la creazione dei backup, è disponibile la tecnologia Snapshot per le operazioni di backup e la tecnologia SnapMirror per la replica.
 
 La figura seguente mostra i componenti logici dell'applicazione in una vista architetturale a più livelli.
 

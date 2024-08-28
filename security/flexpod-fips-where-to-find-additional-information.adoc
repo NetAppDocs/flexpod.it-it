@@ -36,7 +36,7 @@ https://fieldportal.netapp.com/content/902303[]
 
 * Guida al rafforzamento di NetApp ONTAP 9
 +
-https://www.netapp.com/us/media/tr-4569.pdf[]
+https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf[]
 
 * NetApp Encryption Power Guide
 +
@@ -44,11 +44,11 @@ https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-nve%2Fhome
 
 * Scheda informativa su NVE e NAE
 +
-https://www.netapp.com/us/media/ds-3899.pdf[]
+https://www.netapp.com/pdf.html?item=/media/17070-ds-3899.pdf[]
 
 * Scheda informativa NSE
 +
-https://www.netapp.com/us/media/ds-3213-en.pdf[]
+https://www.netapp.com/pdf.html?item=/media/7563-ds-3213-en.pdf[]
 
 * Centro documentazione di ONTAP 9
 +
@@ -120,7 +120,7 @@ https://www.netapp.com/media/19793-tr-4865.pdf[]
 
 * Ai nel settore sanitario
 +
-https://www.netapp.com/us/media/na-369.pdf[]
+https://www.netapp.com/pdf.html?item=/media/7393-na-369pdf.pdf[]
 
 * FlexPod per il settore sanitario semplifica la tua trasformazione
 +

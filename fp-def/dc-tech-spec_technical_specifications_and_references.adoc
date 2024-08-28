@@ -366,25 +366,25 @@ Tutti i modelli disponibili di controller di storage FAS sono supportati per l'u
 | Componente | Documentazione sulla piattaforma controller della serie FAS 
 
 
-| Serie FAS9000 | https://www.netapp.com/us/media/ds-3810.pdf["Scheda informativa della serie FAS9000"] 
+| Serie FAS9000 | https://www.netapp.com/pdf.html?item=/media/8939-ds-3810.pdf["Scheda informativa della serie FAS9000"^] 
 
 
-| Serie FAS8700 | https://www.netapp.com/us/media/ds-4020.pdf["Scheda informativa della serie FAS8700"] 
+| Serie FAS8700 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Scheda informativa della serie FAS8700"^] 
 
 
-| Serie FAS8300 | https://www.netapp.com/us/media/ds-4020.pdf["Scheda informativa della serie FAS8300"] 
+| Serie FAS8300 | https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Scheda informativa della serie FAS8300"^] 
 
 
 | Serie FAS500f | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["Scheda informativa della serie FAS500f"] 
 
 
-| Serie FAS2700 | https://www.netapp.com/us/media/ds-3929.pdf["Scheda informativa della serie FAS2700"] 
+| Serie FAS2700 | https://www.netapp.com/pdf.html?item=/media/8937-ds-3929.pdf["Scheda informativa della serie FAS2700"^] 
 |===
 
 
 === AFF Serie A.
 
-Tutti gli attuali modelli di storage controller NetApp AFF Serie A sono supportati per l'utilizzo in FlexPod. Per ulteriori informazioni, consultare https://www.netapp.com/us/media/ds-3582.pdf["Specifiche tecniche di AFF"^] scheda tecnica e nella https://hwu.netapp.com/["NetApp Hardware Universe"^]. Per informazioni dettagliate su un modello AFF specifico, consultare la documentazione specifica per la piattaforma riportata nella tabella seguente.
+Tutti gli attuali modelli di storage controller NetApp AFF Serie A sono supportati per l'utilizzo in FlexPod. Ulteriori informazioni sono disponibili nella https://www.netapp.com/media/7828-DS-3582-AFF-A-Series.pdf["Specifiche tecniche di AFF"^] scheda tecnica e nella https://hwu.netapp.com/["NetApp Hardware Universe"^] . Per informazioni dettagliate su un modello AFF specifico, consultare la documentazione specifica per la piattaforma riportata nella tabella seguente.
 
 |===
 | Componente | Documentazione sulla piattaforma del controller AFF Serie A. 

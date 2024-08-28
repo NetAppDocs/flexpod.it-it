@@ -108,5 +108,5 @@ Le licenze NetApp SupportEdge Premium sono necessarie per l'architettura FlexPod
 | Licenze per il supporto NetApp | Codice del ricambio | Specifiche tecniche 
 
 
-| SupportEdge Premium 4 ore on-site - mesi: 36 | CS-O2-4HR | https://www.netapp.com/us/media/supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"] 
+| SupportEdge Premium 4 ore on-site - mesi: 36 | CS-O2-4HR | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["NetApp SupportEdge Premium"^] 
 |===

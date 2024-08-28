@@ -67,11 +67,11 @@ image:fp-express-tech-spec_image6.png["Errore: Immagine grafica mancante"]
 
 Le precedenti architetture verificate con FlexPod Express sono ancora supportate. I documenti relativi all'architettura e all'implementazione includono:
 
-* link:http://www.netapp.com/us/media/nva-0016-flexpod-express.pdf["FlexPod Express con Cisco UCS serie C e NetApp serie FAS2500"]
-* link:http://www.netapp.com/us/media/nva-0020-deploy.pdf["FlexPod Express con VMware vSphere 6.0: Configurazioni piccole e medie"]
-* link:http://www.netapp.com/us/media/nva-0017-flexpod-express.pdf["FlexPod Express con VMware vSphere 6.0: Configurazione di grandi dimensioni"]
-* link:http://www.netapp.com/us/media/nva-0021-deploy.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configurazioni piccole e medie"]
-* link:http://www.netapp.com/us/media/tr-4350.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configurazione di grandi dimensioni"]
+* link:https://www.netapp.com/pdf.html?item=/media/12441-nva-0016-flexpod-express.pdf["FlexPod Express con Cisco UCS serie C e NetApp serie FAS2500"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12442-nva-0020-deploy.pdf["FlexPod Express con VMware vSphere 6.0: Configurazioni piccole e medie"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12443-nva-0017-flexpod-express.pdf["FlexPod Express con VMware vSphere 6.0: Configurazione di grandi dimensioni"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12444-nva-0021-deploypdf.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configurazioni piccole e medie"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12445-tr-4350.pdf["FlexPod Express con Microsoft Windows Server 2012 R2 Hyper-V: Configurazione di grandi dimensioni"^]
 
 
 
