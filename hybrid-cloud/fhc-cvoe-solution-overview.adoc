@@ -52,16 +52,16 @@ Il data center FlexPod integrato con NetApp Cloud Volumes ONTAP offre i seguenti
 * *Protezione personalizzata.* Cloud Volumes ONTAP offre replica dei dati a livello di blocco da ONTAP al cloud che mantiene aggiornata la destinazione attraverso aggiornamenti incrementali. Gli utenti possono specificare una pianificazione di sincronizzazione per determinare quando le modifiche all'origine vengono trasferite. In questo modo si ottiene una protezione personalizzata per tutti i tipi di dati sanitari.
 * *Failover e failover.* in caso di disastro, gli amministratori dello storage possono impostare rapidamente il failover sui volumi cloud. Quando il sito primario viene ripristinato, i nuovi dati creati nell'ambiente DR vengono sincronizzati di nuovo con i volumi di origine, consentendo di ristabilire la replica dei dati secondari. In questo modo, i dati del settore sanitario possono essere facilmente ripristinati senza interruzioni.
 * *Efficienza.* lo spazio di storage e i costi per la copia del cloud secondario sono ottimizzati mediante compressione dei dati, thin provisioning e deduplica. I dati del settore sanitario vengono trasferiti a livello di blocco in forma compressa e deduplicata, migliorando la velocità dei trasferimenti. Inoltre, i dati vengono automaticamente suddivisi in livelli per lo storage a oggetti a basso costo e riportati allo storage dalle performance elevate solo quando si accede, ad esempio in uno scenario di DR. In questo modo si riducono significativamente i costi di storage in corso.
-* *Ransomware Protection.* la protezione ransomware NetApp BlueXP esegue la scansione delle origini dati in ambienti cloud e on-premise, rileva le vulnerabilità di sicurezza e fornisce il loro stato di sicurezza attuale e il punteggio dei rischi. Fornisce quindi consigli pratici che è possibile analizzare e seguire per rimediare. In questo modo, puoi proteggere i tuoi dati sanitari critici da attacchi ransomware.
+* *Protezione ransomware.*  La protezione ransomware NetApp Console analizza le fonti di dati in ambienti on-premise e cloud, rileva le vulnerabilità della sicurezza e fornisce il loro stato di sicurezza attuale e il punteggio di rischio.  Fornisce quindi raccomandazioni pratiche che è possibile approfondire e seguire per porre rimedio.  Ciò consente di proteggere i dati sanitari critici dagli attacchi ransomware.
 
 
 
 
 == Topologia della soluzione
 
-In questa sezione viene descritta la topologia logica della soluzione. La figura seguente rappresenta la topologia della soluzione composta dall'ambiente on-premise di FlexPod, dal CVO (NetApp Cloud Volumes ONTAP) eseguito su Amazon Web Services (AWS) e dalla piattaforma NetApp BlueXP SaaS.
+Questa sezione descrive la topologia logica della soluzione.  La figura seguente rappresenta la topologia della soluzione composta dall'ambiente FlexPod on-premise, NetApp Cloud Volumes ONTAP (CVO) in esecuzione su Amazon Web Services (AWS) e dalla piattaforma SaaS NetApp Console .
 
-image:fhc-cvoe-image2.jpeg["Questa immagine mostra la replica di SnapMirror tra un'istanza di FlexPod che esegue ONTAP e NetApp Cloud Volumes ONTAP in esecuzione nel cloud pubblico hte."]
+image:fhc-cvoe-image2.png["Questa immagine illustra la replica SnapMirror tra un'istanza FlexPod che esegue ONTAP e NetApp Cloud Volumes ONTAP in esecuzione nel cloud pubblico."]
 
 I piani di controllo e i piani di dati sono chiaramente indicati tra gli endpoint. Il piano dati viene eseguito tra l'istanza di ONTAP in esecuzione su FAS all-flash in FlexPod e l'istanza CVO di NetApp in AWS sfruttando una connessione VPN sicura sito-sito. La replica dei dati dei carichi di lavoro del settore sanitario dal data center FlexPod on-premise a NetApp Cloud Volumes ONTAP è gestita dalla replica di NetApp SnapMirror. Questa soluzione supporta anche il backup e il tiering opzionali dei dati cold che risiedono nell'istanza NetApp CVO in AWS S3.
 
