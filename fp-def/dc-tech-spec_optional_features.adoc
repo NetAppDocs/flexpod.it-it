@@ -56,7 +56,7 @@ Un FC-NVMe end-to-end estende perfettamente l'infrastruttura SAN esistente di un
 
 È possibile utilizzare un trasporto SAN FC 32G esistente per trasportare contemporaneamente carichi di lavoro NVMe e SCSI.
 
-La figura seguente illustra il data center FlexPod per FC con Cisco MDS.
+La figura seguente illustra il FlexPod Datacenter per FC con Cisco MDS.
 
 Per ulteriori informazioni sulle configurazioni FlexPod e sui vantaggi in termini di prestazioni, vedere https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["Presentazione del white paper NVMe end-to-end per FlexPod."^]
 

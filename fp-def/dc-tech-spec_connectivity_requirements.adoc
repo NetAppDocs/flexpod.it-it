@@ -18,7 +18,7 @@ Una configurazione FlexPod ha i seguenti requisiti di connettività:
 
 * Per tutti i componenti è necessaria una rete di gestione out-of-band Ethernet a 100 Mbps/1 GB separata.
 * NetApp consiglia di abilitare il supporto jumbo frame in tutto l'ambiente, ma non è necessario.
-* Le porte dell'appliance Cisco UCS Fabric Interconnect sono consigliate solo per le connessioni iSCSI e NAS.
+* Standalone Cisco UCS Fabric Interconnect appliance ports sono consigliate solo per connessioni iSCSI. Quando si utilizzano connessioni NAS con le porte dell'appliance, sono necessari switch Nexus / compliant aggiuntivi per determinati scenari di guasto.
 * Non è possibile posizionare apparecchiature aggiuntive in linea tra i componenti principali di FlexPod.
 
 

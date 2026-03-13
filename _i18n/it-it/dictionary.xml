@@ -4677,7 +4677,6 @@
   <block id="ab2679ebd7bb85b68b87dac6f34ef516" category="section-title">FC-NVMe end-to-end</block>
   <block id="2ab8f358a48c3adedd1b97e6666780f8" category="paragraph">Un FC-NVMe end-to-end estende perfettamente l'infrastruttura SAN esistente di un cliente per le applicazioni in tempo reale, offrendo al contempo IOPS e throughput migliorati con latenza ridotta.</block>
   <block id="8dd9321868b043ece197778143e64bbf" category="paragraph">È possibile utilizzare un trasporto SAN FC 32G esistente per trasportare contemporaneamente carichi di lavoro NVMe e SCSI.</block>
-  <block id="fd0ff70a9cca8bfe56248a07829be7a8" category="paragraph">La figura seguente illustra il data center FlexPod per FC con Cisco MDS.</block>
   <block id="a152d851b543a6ecd1fe98d32802053d" category="inline-link">Presentazione del white paper NVMe end-to-end per FlexPod.</block>
   <block id="866ad53e2454a700c7d99a0f7dec80e8" category="paragraph">Per ulteriori informazioni sulle configurazioni FlexPod e sui vantaggi in termini di prestazioni, vedere<block ref="04abdacba4c78c835f0c4c4ee5dcd30c" category="inline-link-rx"></block></block>
   <block id="37baea605e04392e4eb7f7acb8348221" category="inline-link">TR-4684: Implementazione e configurazione di SAN moderne con NVMe</block>
@@ -5635,7 +5634,6 @@
   <block id="9fa25f8311910b1006f80d391d0a3536" category="paragraph">Una configurazione FlexPod ha i seguenti requisiti di connettività:</block>
   <block id="e795892d600814d6840b0ee7736d41f5" category="list-text">Per tutti i componenti è necessaria una rete di gestione out-of-band Ethernet a 100 Mbps/1 GB separata.</block>
   <block id="5b779adbc97d83ba730345c0da406e99" category="list-text">NetApp consiglia di abilitare il supporto jumbo frame in tutto l'ambiente, ma non è necessario.</block>
-  <block id="9751fb7a1c932f1a507e6bc465e97861" category="list-text">Le porte dell'appliance Cisco UCS Fabric Interconnect sono consigliate solo per le connessioni iSCSI e NAS.</block>
   <block id="402b72870e5c312873b1fff0d32a5515" category="list-text">Non è possibile posizionare apparecchiature aggiuntive in linea tra i componenti principali di FlexPod.</block>
   <block id="36f60790070b535bbd9bc08abb34d9ac" category="paragraph">Connessioni uplink:</block>
   <block id="489d802b7e6f447e30c1735cd6577bac" category="list-text">Le porte dei controller di storage NetApp devono essere collegate agli switch Cisco Nexus serie 5000, 7000 o 9000 per consentire il supporto dei VPC (Virtual Port Channel).</block>
@@ -9710,4 +9708,6 @@
   <block id="1ae823e8252cefe82659e80378adf180" category="paragraph">Dopo che l'SVM è stato arrestato, il<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block> il volume non è visibile nella Console.</block>
   <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
   <block id="17a7b956a1673e2b7eed84e47e417df1" category="paragraph"><block ref="17a7b956a1673e2b7eed84e47e417df1" category="inline-link-rx"></block></block>
+  <block id="f1c50a66fa0c1697f61a708311b1b73c" category="list-text">Standalone Cisco UCS Fabric Interconnect appliance ports sono consigliate solo per connessioni iSCSI. Quando si utilizzano connessioni NAS con le porte dell'appliance, sono necessari switch Nexus / compliant aggiuntivi per determinati scenari di guasto.</block>
+  <block id="fefa97ce70467bf33d6e5e77d6b7e1ce" category="paragraph">La figura seguente illustra il FlexPod Datacenter per FC con Cisco MDS.</block>
 </blocks>
