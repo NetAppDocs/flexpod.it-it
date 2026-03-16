@@ -9245,8 +9245,6 @@
   <block id="f63c99bc92f7bc3f7b439ecf41cac3e8" category="paragraph">FabricPool richiede ONTAP 9.2 o versioni successive. Ulteriori requisiti di FabricPool dipendono dalla versione di ONTAP utilizzata e dal livello cloud collegato. Nelle versioni precedenti a ONTAP 9.8, FabricPool è supportato solo su livelli locali SSD. Il supporto per gli aggregati HDD è stato aggiunto in ONTAP 9.8. Per le piattaforme AFF di base con una capacità fissa e relativamente ridotta, come NetApp AFF C190, FabricPool può essere molto efficace per spostare i dati inattivi sul livello cloud.</block>
   <block id="d468c66669ca3541addf2625862a45c3" category="list-text">NetApp FAS FabricPool è supportato su tutte le piattaforme in grado di eseguire ONTAP 9.2, ad eccezione delle seguenti:</block>
   <block id="0ef00e20c875ece8831080e8f1bbb3c2" category="list-text">FAS2554, FAS2552, FAS2520</block>
-  <block id="8e772168b909da1192f1390eefebf46a" category="admonition">Consultare il<block ref="4a10a242abfc417db8b7f541b42667ce" category="inline-link-rx"></block> [NetApp Hardware Universe^] per le informazioni più recenti sulle piattaforme supportate con FabricPool.</block>
-  <block id="b4175dd799877e6f2e03c951f0c6669e" category="list-text">NetApp ONTAP Select [NOTA] NetApp consiglia di utilizzare livelli locali FabricPool interamente basati su SSD.</block>
   <block id="cace94490e6f78c8158ef33aaf3690a1" category="list-text">Amazon S3 (Standard, Standard-IA, One Zone-IA, Intelligent-Tiering, Glacier Instant Retrieval)</block>
   <block id="2ef43a2bc7cabeb4a5df5a73553f38d9" category="list-text">Google Cloud Storage (Multi-Regional, Regional, Nearline, Coldline, Archive)</block>
   <block id="ab53c57de26665bffe42f38b84a1dcf1" category="list-text">NetApp StorageGRID 10.3 e versioni successive</block>
@@ -9257,4 +9255,8 @@
   <block id="744133334e4697a948297d67bcb2b599" category="list-text">NetApp Cloud Volumes per Google Cloud</block>
   <block id="0c16ab47cc76c62a7a3f488898b16c5f" category="list-text">NetApp Cloud Volumes ONTAP per AWS</block>
   <block id="82b968b6479bb7577ee3b6f333ea4527" category="list-text">NetApp Cloud Volumes ONTAP per Azure</block>
+  <block id="653e35b244515da6e28d0b4768efb3b4" category="cell">2 x C19/C20 o 2 x C14/C19</block>
+  <block id="9c731b980c2b703bfdb439c7056b1bfd" category="admonition">Si prega di fare riferimento a<block ref="c4dd6ba7b5ae102345b7377110dc849b" category="inline-link-rx"></block> per le informazioni più recenti sulle piattaforme supportate con FabricPool.</block>
+  <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
+  <block id="9044f591b913b8cf0cc25f90afe3223c" category="admonition">NetApp consiglia di utilizzare livelli locali FabricPool interamente basati su SSD.</block>
 </blocks>

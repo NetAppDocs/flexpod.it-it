@@ -102,7 +102,7 @@ La seguente tabella elenca le porte di alimentazione richieste per ciascuna peri
 | DS224C | 2 x C13/C14 
 
 
-| DS460C | 2 x C13/C14 
+| DS460C | 2 x C19/C20 o 2 x C14/C19 
 
 
 | DS2246 | 2 x C13/C14 
@@ -114,7 +114,7 @@ La seguente tabella elenca le porte di alimentazione richieste per ciascuna peri
 | Shelf di dischi e-Series | Porte di alimentazione richieste 
 
 
-| DE460C | 2 x C14/C20 
+| DE460C | 2 x C19/C20 o 2 x C14/C19 
 
 
 | DE224C | 2 x C14/C20 

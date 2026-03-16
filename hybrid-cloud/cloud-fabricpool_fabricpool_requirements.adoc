@@ -32,9 +32,13 @@ FabricPool è supportato sulle seguenti piattaforme:
 
 
 
-NOTE: Consultare il https://hwu.netapp.com/DetailViews/Home.aspx[] [NetApp Hardware Universe^] per le informazioni più recenti sulle piattaforme supportate con FabricPool.
+NOTE: Si prega di fare riferimento a https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe"^] per le informazioni più recenti sulle piattaforme supportate con FabricPool.
 
-* NetApp ONTAP Select [NOTA] NetApp consiglia di utilizzare livelli locali FabricPool interamente basati su SSD.
+* NetApp ONTAP Select
++
+
+NOTE: NetApp consiglia di utilizzare livelli locali FabricPool interamente basati su SSD.
+
 * Tier cloud
 +
 ** Alibaba Cloud Object Storage Service (accesso standard e non frequente)
