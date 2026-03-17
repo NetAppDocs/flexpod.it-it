@@ -13,9 +13,9 @@ summary: 'NetApp offre una singola soluzione di gestione dei dati per le applica
 :imagesdir: ./../media/
 
 
-In collaborazione con:image:cisco logo.png["logo cisco"]
-
 Kamini Singh, NetApp
+
+In collaborazione con:image:cisco logo.png["logo cisco"]
 
 [role="lead"]
 La chiave per fare una trasformazione digitale è semplicemente fare di più con i dati. Gli ospedali generano e richiedono grandi quantità di dati per gestire la propria organizzazione e servire i pazienti in modo efficace. Le informazioni vengono raccolte ed elaborate durante il trattamento dei pazienti e la gestione dei programmi del personale e delle risorse mediche.
