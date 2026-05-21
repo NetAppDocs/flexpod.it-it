@@ -18,25 +18,15 @@ In questa sezione vengono descritti i requisiti software minimi per le diverse v
 
 
 
-== Requisiti software per FlexPod Express con NetApp AFF o FAS
+== Requisiti software per FlexPod Express con NetApp AFF/ ASA/ FAS
 
-I requisiti software per FlexPod Express con NetApp FAS includono:
+I requisiti software per il FlexPod Express con NetApp AFF/ ASA/ FAS includono:
 
-* ONTAP 9.1 o versione successiva
-* Cisco NX-OS versione 7.0(3)I6(1) o successiva
-* Nella configurazione gestita da Cisco UCS, Cisco UCS Manager UCS 4.0(1b)
+* ONTAP 9.16 o versioni successive
+* Cisco NX-OS versione 10.4(6)M o successiva
 
+
+
+NOTE: Tutte le versioni software elencate in questa sezione rappresentano i requisiti minimi per i componenti hardware (NetApp e Cisco) elencati nelle sezioni successive del documento.
 
 Tutti i software devono essere elencati e supportati in http://support.netapp.com/matrix/["NetApp IMT"^]. Alcune funzionalità software potrebbero richiedere versioni di codice più recenti rispetto ai valori minimi elencati nelle architetture precedenti.
-
-
-
-== Requisiti software per FlexPod Express con e-Series
-
-I requisiti software per FlexPod Express con e-Series includono:
-
-* Software e-Series SANtricity 11.30 o superiore
-* Cisco UCS Manager 4.0(1b).
-
-
-Tutti i software devono essere elencati e supportati in http://support.netapp.com/matrix/["NetApp IMT"^].
