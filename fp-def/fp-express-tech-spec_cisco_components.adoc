@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec__cisco_components.html 
-keywords: cisco, components, server, options, rack, ucs, nexus, switches, x-series-direct, c-series 
+keywords: cisco, components, blade, server, options, rack, ucs, nexus, switches 
 summary: 'Cisco contribuisce in modo sostanziale alla progettazione e all"architettura di FlexPod Express e contribuisce ai livelli di calcolo e di rete della soluzione.' 
 ---
 = Componenti Cisco
@@ -18,125 +18,75 @@ Cisco contribuisce in modo sostanziale alla progettazione e all'architettura di 
 
 
 
-== Cisco UCS X-Series Direct
+== Opzioni dei server blade Cisco UCS B-Series
 
-Cisco UCS X-Series Direct è una nuova architettura che integra una coppia di Cisco UCS Fabric Interconnect 9108 100G con Cisco UCS X9508 Chassis e Cisco UCS X-Series Compute nodes per offrire la soluzione UCS X-Series Direct.
-
-Cisco UCS X-Series Direct è composto dai seguenti componenti:
-
-* Cisco UCS 9108 100G Interconnessione Fabric
-* Chassis Cisco UCS X9508
-* Nodi di calcolo Cisco UCS X-Series
-* Componenti opzionali: nodi PCIe e modulo X-Fabric
-
-
-
-NOTE: Per le specifiche tecniche complete di UCS X-Direct, fare riferimento a questo link: https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x-series-direct-ds.html["Cisco UCS X-Series Direct Scheda tecnica"].
-
-Consultare le tabelle seguenti per le specifiche tecniche dei componenti X-Series Direct.
+I blade Cisco UCS B-Series attualmente supportati nella piattaforma Cisco UCS Mini sono B200 M5 e B420 M4. Altri blade verranno elencati nella tabella seguente man mano che saranno supportati nella piattaforma Cisco UCS Mini.
 
 |===
+| Server Cisco UCS B-Series | Codice del ricambio | Specifiche tecniche 
 
 
-| Cisco UCS Fabric Interconnect | Codice del ricambio | Specifiche tecniche 
+| CISCO UCS B200 M5 | UCSB-B200-M5 | https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-b200-m5-blade-server/model.html[] 
 
 
-| UCS 9108 100G Fabric Interconnect | UCSX-S9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-fabric-interconnect-9108-100g.pdf["Cisco UCS 9108 Fabric Interconnect"] 
-|===
-|===
-| Chassis Cisco UCS X-Series | Codice del ricambio | Specifiche tecniche 
+| CISCO UCS B200 M4 | UCSB-B200-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m4-specsheet.pdf[] 
 
 
-| Chassis Cisco UCS X9508 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html?ccid=cc002456&oid=dstcsm026317["Chassis Cisco UCS X9508"] 
-|===
-|===
-| Nodi di calcolo Cisco UCS X-Series | Codice del ricambio | Specifiche tecniche 
-
-
-| Cisco UCS X210c M7 | UCSX-210C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m7-compute-node-ds.html["Nodo di calcolo Cisco UCS X210c M7"] 
-
-
-| Cisco UCS X210c M8 | UCSX-210C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x210c-m8-compute-node-ds.html["Nodo di calcolo Cisco UCS X210c M8"] 
-
-
-| Cisco UCS X215c M8 | UCSX-215C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x215c-m8-compute-node-ds.html["Nodo di calcolo Cisco UCS X215c M8"] 
-
-
-| Cisco UCS X410c M7 | UCSX-410C-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m7-compute-node-ds.html["Nodo di calcolo Cisco UCS X410c M7"] 
-
-
-| Cisco UCS X410c M8 | UCSX-410C-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-x410c-m8-compute-node-ds.html["Nodo di calcolo Cisco UCS X410c M8"] 
-|===
-|===
-| Moduli Cisco UCS X-Series | Codice del ricambio | Specifiche tecniche 
-
-
-| Modulo Cisco UCS 9108 Intelligent Fabric | UCSX-I-9108-100G | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/cisco-ucs-9108-100g-intelligent-fabric-module-spec-sheet.pdf["Modulo Cisco UCS 9108 Intelligent Fabric"] 
-
-
-| Modulo Cisco UCS X9516 X-Fabric | UCSX-FS-9516 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/ucs-9516-x-fabric-module-ds.html["Modulo Cisco UCS X9516 X-Fabric"] 
-
-
-| Modulo Cisco UCS X9416 X-Fabric | UCSX-FS-9416 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/solution-overview-c22-2432175.html?ccid=cc002456&oid=sowcsm025665["Modulo Cisco UCS X9416 X-Fabric"] 
+| CISCO UCS B420 M4 | UCSB-B420-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b420m4-spec-sheet.pdf[] 
 |===
 
 
 == Opzioni dei server rack Cisco UCS C-Series
 
-I server rack Cisco UCS serie C sono disponibili in versioni a una o due unità rack (RU), con varie opzioni di CPU, memoria e I/O. I codici prodotto elencati nella tabella seguente si riferiscono ai server base. Non includono CPU, memoria, unità disco, schede Peripheral Component Interconnect Express (PCIe). Sono disponibili e supportate diverse opzioni di configurazione nell'architettura FlexPod.
-
-La seguente tabella elenca le opzioni di Cisco UCS C-Series rack Server.
+I blade Cisco UCS C-Series sono disponibili in versioni a una o due unità rack (RU), con varie opzioni di CPU, memoria e I/O. I codici prodotto elencati nella tabella seguente si riferiscono al base server; non includono CPU, memoria, unità disco, schede PCIe o il Cisco FEX. Sono disponibili e supportate diverse opzioni di configurazione in FlexPod.
 
 |===
 | Server rack Cisco UCS C-Series | Codice del ricambio | Specifiche tecniche 
 
 
-| Cisco UCS C220 M7 | UCSC-C220-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m7-rack-server-ds.html["Server rack Cisco UCS C220 M7"] 
+| CISCO UCS C220 M4 | UCSC-C220-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
 
 
-| Cisco UCS C220 M8 | UCSC-C220-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c220-m8-rack-server-ds.html["Server rack Cisco UCS C220 M8"] 
+| CISCO UCS C240 M4 | UCSC-C240-M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m4-sff-spec-sheet.pdf[] 
 
 
-| CISCO UCS C225 M6 | UCSC-C225-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m6-sff-rack-server-ds.html["Server rack Cisco UCS C225 M6"] 
-
-
-| Cisco UCS C225 M8 | UCSC-C225-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c225-m8-rack-server-ds.html["Server rack Cisco UCS C225 M8"] 
-
-
-| Cisco UCS C240 M7 | UCSC-C240-M7 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m7-rack-server-ds.html["Server rack Cisco UCS C240 M7"] 
-
-
-| Cisco UCS C240 M8 | UCSC-C240-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c240-m8-rack-server-ds.html["Server rack Cisco UCS C240 M8"] 
-
-
-| CISCO UCS C245 M6 | UCSC-C245-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m6-sff-rack-server-ds.html["Server rack Cisco UCS C245 M6"] 
-
-
-| Cisco UCS C245 M8 | UCSC-C245-M8 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/ucs-c245-m8-rack-server-ds.html["Server rack Cisco UCS C245 M8"] 
+| CISCO UCS C460 M4 | UCSC-C460-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c460m4_specsheet.pdf[] 
 |===
 
 
 == Switch Cisco Nexus
 
-Sono necessari switch Cisco Nexus ridondanti nell'architettura FlexPod.
+Sono necessari switch ridondanti per tutte le architetture FlexPod Express.
+
+L'architettura FlexPod Express con NetApp AFF o FAS è realizzata con lo switch Cisco Nexus 31108. FlexPod Express con l'architettura Cisco UCS Mini (gestita da Cisco UCS) è validata utilizzando lo switch Cisco Nexus 3524. Questa configurazione può essere implementata anche con uno switch standard.
+
+Il FlexPod Express con E-Series può essere implementato con uno switch standard.
+
+La tabella seguente elenca i codici articolo per i chassis Cisco Nexus series; non include moduli SFP aggiuntivi o moduli extra.
 
 |===
-| Switch Cisco Nexus | Specifiche tecniche 
+| Switch Cisco Nexus Series | Codice del ricambio | Specifiche tecniche 
 
 
-| Cisco Nexus serie 9200 switch | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Switch Cisco Nexus serie 9200"] 
+| Cisco Nexus 3048 | N3K-C3048TP-1GE | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-685363.html[] 
 
 
-| Switch Cisco Nexus serie 9300 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html["Switch Cisco Nexus serie 9300"] 
+| Cisco Nexus 31108 | N3K-C31108PC-V | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 9396 | N9K-C9396PX | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html[] 
+
+
+| Cisco Nexus 3172 | N3K-C3172 | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html[] 
 |===
 
 
 == Opzioni di licenza del supporto Cisco
 
-Sono necessari contratti di supporto TSANet validi su tutte le apparecchiature Cisco nell'architettura FlexPod Express.
+Sono necessari contratti di supporto SMARTnet validi su tutte le apparecchiature Cisco nell'architettura FlexPod Express.
 
 
-NOTE: Le licenze necessarie e i relativi codici prodotto possono variare a seconda del prodotto e della configurazione. Si consiglia di verificare i requisiti di licenza con il proprio rappresentante commerciale Cisco o NetApp prima di effettuare l'ordine.
+NOTE: Le licenze necessarie e i relativi codici articolo devono essere verificati dal vostro rappresentante di vendita, poiché possono variare a seconda del prodotto.
 
 La seguente tabella elenca le opzioni di licenza per il supporto Cisco.
 
@@ -144,5 +94,5 @@ La seguente tabella elenca le opzioni di licenza per il supporto Cisco.
 | Licenze Cisco Support | Guida alla licenza 
 
 
-| TSANet | https://www.tsanet.org/cisco-tsanet-case-study/[] 
+| SMARTnet 24x7x4 | http://www.cisco.com/web/services/portfolio/product-technical-support/smartnet/index.html[] 
 |===
