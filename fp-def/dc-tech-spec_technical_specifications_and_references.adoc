@@ -390,19 +390,19 @@ Tutti gli attuali modelli di storage controller NetApp AFF Serie A sono supporta
 | Componente | Documentazione sulla piattaforma del controller AFF Serie A. 
 
 
-| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/index.html["Documentazione sulla piattaforma AFF A800"] 
+| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/install-setup.html["Documentazione sulla piattaforma AFF A800"] 
 
 
-| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/fas9000/index.html["Documentazione sulla piattaforma AFF A700"] 
+| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/a700/install-setup.html["Documentazione sulla piattaforma AFF A700"] 
 
 
-| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/a700s/index.html["Documentazione sulla piattaforma AFF A700s"] 
+| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/a700s/install-setup.html["Documentazione sulla piattaforma AFF A700s"] 
 
 
-| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/index.html["Documentazione sulla piattaforma AFF A400"] 
+| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/install-setup.html["Documentazione sulla piattaforma AFF A400"] 
 
 
-| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/index.html["Documentazione sulla piattaforma AFF A250"] 
+| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/install-setup.html["Documentazione sulla piattaforma AFF A250"] 
 |===
 
 

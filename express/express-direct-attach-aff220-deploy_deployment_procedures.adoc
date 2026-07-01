@@ -450,7 +450,7 @@ Verificare che i componenti hardware e software che si desidera utilizzare siano
 
 ==== Controller di storage
 
-Seguire le procedure di installazione fisica per i controller in https://library-clnt.dmz.netapp.com/documentation/docweb/index.html?productID=62331&language=en-US["Documentazione di AFF A220"^].
+Segui le procedure di installazione fisica per i controller nel  https://docs.netapp.com/us-en/ontap-systems/a220/install-setup.html["Documentazione di AFF A220"^].
 
 
 
@@ -2392,7 +2392,7 @@ NOTE: Gli IP del server DNS non sono stati precedentemente immessi nell'IP KVM, 
 
 . Invio `VMware-VMvisor-Installer-6.7.0.update01-10302608.x86_64.iso` Come nome del file remoto.
 +
-Questo ISO VMware ESXi 6.7U1 può essere scaricato da https://my.vmware.com/group/vmware/details?downloadGroup=ESXI650A&productId=614["Download VMware"^].
+Questa ISO di VMware ESXi 6.7U1 può essere scaricata da  https://support.broadcom.com/group/ecx/downloads["Portale di supporto Broadcom"^].
 
 . Immettere il percorso del server Web al file ISO nel campo percorso remoto.
 . Fare clic su OK per creare vMedia Mount.
@@ -2726,9 +2726,9 @@ Esistono diversi metodi per installare ESXi in un ambiente VMware. Queste proced
 
 Se l'immagine personalizzata VMware ESXi non è stata scaricata, completare i seguenti passaggi per completare il download:
 
-. Fare clic sul seguente collegamento: https://my.vmware.com/group/vmware/details?downloadGroup=OEM-ESXI67U1-CISCO&productId=742[VMware vSphere Hypervisor (ESXi) 6.7U1.^]
-. Sono necessari un ID utente e una password su https://www.vmware.com/["vmware.com"^] per scaricare questo software.
-. Scaricare il .`iso` file.
+. Accedi al sito di download del portale di supporto Broadcom: https://support.broadcom.com/group/ecx/downloads["https://support.broadcom.com/group/ecx/downloads"^].
+. Avrai bisogno di un ID utente e di una password Broadcom. Cerca le ISO personalizzate di VMware vSphere Hypervisor (ESXi).
+. Scarica l'immagine personalizzata Cisco per ESXi 6.7U1 Install CD.
 
 
 

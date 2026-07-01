@@ -31,7 +31,7 @@ Assicurarsi di rispettare le https://www.cisco.com/c/en/us/td/docs/unified_compu
 *Fasi*
 
 . Creare un account Cisco Intersight. Visitare il sito https://intersight.com/["https://intersight.com/"^] Per creare il tuo account Intersight. Per creare un account Cisco Intersight, è necessario disporre di un ID Cisco valido.
-. Scarica Intersight Virtual Appliance all'indirizzo https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]. Per ulteriori informazioni, consultare https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guida all'installazione e all'aggiornamento di Intersight Appliance"^].
+. Scarica l'appliance virtuale Cisco Intersight da  https://software.cisco.com/download/home/286319499/type/286323047/release/1.1.7-0.a["software.cisco.com"^]. Per ulteriori informazioni, vai su  https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["Guida all'installazione e all'aggiornamento di Intersight Appliance"^].
 . Implementare OVA. DNS e NTP sono necessari per implementare OVA.
 +
 .. Configurare DNS con Record a/PTR e CNAME Alias prima di implementare OVA. Vedere l'esempio riportato di seguito.
@@ -57,7 +57,7 @@ image::ci-qsg_image4.png[Schermata della schermata Deploy OVF Template (modello 
 
 . Post-implementazione dell'appliance Intersight Assist.
 +
-.. Selezionare https://FQDN-of-your-appliance[] per completare la configurazione post-installazione dell'appliance.
+.. Vai su  `https://<FQDN-of-your-appliance>` per completare la configurazione post-installazione del tuo appliance.
 +
 Il processo di installazione viene avviato automaticamente. L'installazione può richiedere fino a un'ora a seconda della larghezza di banda fino a Intersight.com. Dopo l'accensione della macchina virtuale, il sito sicuro può richiedere anche alcuni secondi.
 

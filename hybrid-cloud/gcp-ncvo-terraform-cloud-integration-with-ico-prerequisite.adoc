@@ -22,7 +22,7 @@ link:gcp-ncvo-cisco-intersight-configuration.html["Precedente: Configurazione di
 . Richiedi o crea un target cloud Terraform fornendo i dettagli dell'account Terraform Cloud pertinente.
 . Creare un target di Terraform Cloud Agent per i cloud privati in modo che i clienti possano installare l'agente nel data center e abilitare la comunicazione con Terraform Cloud.
 +
-Per ulteriori informazioni, seguire https://intersight.com/help/saas/features/terraform_cloud/admin["questo link"^].
+Per ulteriori informazioni, segui  https://community.cisco.com/t5/data-center-and-cloud-knowledge-base/intersight-service-for-terraform/ta-p/4301093["questo link"^].
 
 
 

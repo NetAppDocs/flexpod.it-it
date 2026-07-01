@@ -14,8 +14,8 @@ summary: 'È possibile visualizzare una dimostrazione video dell"utilizzo di Net
 
 
 [role="lead"]
-È possibile vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per valutare le risorse in un ambiente on-premise https://netapp.hubs.vidyard.com/watch/1ycNWx4hzFsaV1dQHFyxY2?["qui"^].
+Puoi vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per valutare le risorse in un ambiente on-premises https://www.netapp.com/video/fxujqwwhoqg/complete-observability-with-cloud-insights/["qui"^].
 
-È possibile vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per monitorare l'infrastruttura e impostare soglie di allarme per l'infrastruttura https://netapp.hubs.vidyard.com/watch/DgUxcxES3Ujdqe1JhhkfAW["qui"^].
+Puoi vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per monitorare l'infrastruttura e impostare le soglie di avviso per l'infrastruttura https://www.youtube.com/watch?v=TdMpXR_-U0M["qui"^].
 
-È possibile vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per valutare le singole applicazioni nell'ambiente https://netapp.hubs.vidyard.com/watch/vcC4RGoD54DPp8Th9hyhu3["qui"^].
+Puoi vedere una dimostrazione video sull'utilizzo di NetApp Cloud Insights per valutare le singole applicazioni nell'ambiente https://www.youtube.com/watch?v=AVQ-a-du664["qui"^].

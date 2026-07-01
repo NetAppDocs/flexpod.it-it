@@ -135,7 +135,7 @@ Per informazioni dettagliate, vederelink:https://www.vmware.com/products/vcenter
 
 == Revisioni hardware e software
 
-Questa soluzione cloud ibrida può essere estesa a qualsiasi ambiente FlexPod che esegue versioni supportate di software, firmware e hardware come definito nellink:http://support.netapp.com/matrix/["Tool di matrice di interoperabilità NetApp"^] ,link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilità hardware e software UCS"^] , Elink:https://www.vmware.com/resources/compatibility/search.php["Guida alla compatibilità VMware"^] .
+Questa soluzione cloud ibrida può essere estesa a qualsiasi ambiente FlexPod che esegue versioni supportate di software, firmware e hardware come definito in link:http://mysupport.netapp.com/matrix["Tool di matrice di interoperabilità NetApp"^], link:https://ucshcltool.cloudapps.cisco.com/public/["Compatibilità hardware e software UCS"^] e link:https://www.vmware.com/resources/compatibility/search.php["Guida alla compatibilità VMware"^].
 
 La seguente tabella mostra le revisioni hardware e software di FlexPod on-premise.
 

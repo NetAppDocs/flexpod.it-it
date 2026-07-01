@@ -16,7 +16,7 @@ summary: Per configurare VMware vCenter Server 6.7 e il clustering vSphere, comp
 [role="lead"]
 Per configurare VMware vCenter Server 6.7 e il clustering vSphere, attenersi alla seguente procedura:
 
-. Selezionare `\https://\<<FQDN or IP of vCenter>>/vsphere-client/`.
+. Vai a  `https://<<FQDN or IP of vCenter>>/vsphere-client/`.
 . Fare clic su Launch vSphere Client.
 . Accedere con il nome utente mailto:administrator@vspehre.local[Administrator^]@vsphere.local e la password SSO immessa durante il processo di configurazione di VCSA.
 . Fare clic con il pulsante destro del mouse sul nome di vCenter e selezionare New Datacenter (nuovo data center).
@@ -77,7 +77,7 @@ NOTE: Questo processo deve essere completato per tutti gli host aggiuntivi aggiu
 
 Per configurare il coredump sugli host ESXi, attenersi alla seguente procedura:
 
-. Accedere a https:// https://172.21.181.105:5480/ui/services["VCenter"^] IP:5480/, inserire root come nome utente e la password root.
+. Accedi a  `https://<vCenter IP>:5480`, inserisci root come nome utente e inserisci la password di root.
 . Fare clic su Services (servizi) e selezionare VMware vSphere ESXI Dump Collector.
 . Avviare il servizio VMware vSphere ESXI Dump Collector.
 +

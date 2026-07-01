@@ -17,12 +17,12 @@ link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["Precedente
 
 
 
-== Procedura 1: Accesso a NetApp Cloud Manager
+== Procedura 1: Accedi alla NetApp Console
 
-Per accedere a NetApp Cloud Manager e ad altri servizi cloud, devi iscriverti a. https://cloud.netapp.com/["NetApp Cloud Central"^].
+Per accedere ai servizi cloud NetApp, registrati ed effettua il login utilizzando il  https://console.netapp.com["NetApp Console"^].
 
 
-NOTE: Per configurare le aree di lavoro e gli utenti nell'account Cloud Central, fare clic su https://docs.netapp.com/us-en/occm/task_setting_up_cloud_central_accounts.html["qui"^].
+NOTE: Per configurare aree di lavoro e utenti nell'account NetApp Console, fai clic su  https://docs.netapp.com/us-en/occm/task_setting_up_cloud_central_accounts.html["qui"^].
 
 
 

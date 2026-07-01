@@ -58,9 +58,9 @@ La seguente procedura descrive come installare VMware ESXi su ciascun host.
 
 
 
-=== Scarica L'immagine personalizzata di ESXI 6.7 Cisco
+=== Scarica l'immagine personalizzata Cisco di ESXi 6.7
 
-. Passare a. https://my.vmware.com/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/6_7["Pagina di download di VMware vSphere"^] Per ISO personalizzati.
+. Vai alla  https://support.broadcom.com/group/ecx/downloads["Sito di download del portale di supporto Broadcom"^] per le ISO personalizzate.
 . Fare clic su Vai a Download accanto al CD di installazione Cisco Custom Image for ESXi 6.7 GA.
 . Scaricare il CD di installazione Cisco Custom Image per ESXi 6.7 GA (ISO).
 
