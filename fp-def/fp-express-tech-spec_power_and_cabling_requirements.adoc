@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_power_and_cabling_requirements.html 
-keywords: power, cabling, requirements, flexpod, express, cisco, ucs, minimum, cabling 
-summary: In questa sezione vengono descritti i requisiti di alimentazione e di cablaggio minimi per un design FlexPod Express. 
+keywords: power, cabling, requirements, flexpod, express, cisco, ucs, cabling 
+summary: Questa sezione descrive i requisiti di alimentazione e le linee guida per il cablaggio degli alloggiamenti per dischi in un design FlexPod Express. 
 ---
-= Requisiti di alimentazione e cablaggio
+= Linee guida per l'alimentazione e il cablaggio
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,168 +14,50 @@ summary: In questa sezione vengono descritti i requisiti di alimentazione e di c
 
 
 [role="lead"]
-In questa sezione vengono descritti i requisiti di alimentazione e di cablaggio minimi per un design FlexPod Express.
+Questa sezione descrive i requisiti di alimentazione e le linee guida per il cablaggio di un design FlexPod Express.
 
 
 
 == Requisiti di alimentazione
 
-I requisiti di alimentazione sono basati su U.S. E si presume l'utilizzo dell'alimentazione CA. Altri paesi potrebbero avere requisiti di alimentazione diversi. Per la maggior parte dei componenti sono disponibili anche opzioni di alimentazione a corrente continua (CC). Per ulteriori informazioni sulla potenza massima richiesta e altre informazioni dettagliate sull'alimentazione, consultare le specifiche tecniche dettagliate di ciascun componente hardware.
+I requisiti di alimentazione per FlexPod Express variano in base alla posizione in cui viene installata la configurazione FlexPod Express.
 
-Per informazioni dettagliate sull'alimentazione di Cisco UCS, consultare la http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS Power Calculator"^].
+Per ulteriori dati sulla potenza massima richiesta e per altre informazioni dettagliate sulla potenza, consulta la link:https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_technical_specifications_and_references.html["specifiche tecniche"^] per ciascun componente hardware.
 
-La seguente tabella elenca le porte di alimentazione richieste per ciascuna periferica.
+Per informazioni dettagliate sull'alimentazione di Cisco UCS, consultare la http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calcolatore di alimentazione Cisco UCS"^].
 
-|===
-| Switch Cisco Nexus | Cavi di alimentazione necessari 
-
-
-| Cisco Nexus 3048 | 2 cavi di alimentazione C13/C14 per ciascuno switch Cisco Nexus serie 3000 
+Per i dati relativi all'alimentazione dello storage controller NetApp, consulta la  http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe"^]. In *Piattaforme*, seleziona la piattaforma di storage che vuoi usare (ad esempio, AFF A20), seleziona la versione di ONTAP e poi fai clic su *Mostra risultati*. I dati relativi al cavo di alimentazione sono elencati nella sezione *Cavi di alimentazione supportati* e per dettagli su dimensioni, peso, potenza ecc. fai riferimento alla sezione *Dimensioni, peso, rumorosità, alimentazione*.
 
 
-| Cisco Nexus 3524 | 2 cavi di alimentazione C13/C14 per ciascuno switch Cisco Nexus serie 3000 
+
+== Linee guida per il cablaggio
+
+Questa sezione fornisce linee guida generali per il cablaggio di un design FlexPod Express.
+
+* Assicurati della ridondanza della connettività per le connessioni di elaborazione e di storage.
+* La velocità delle connessioni deve essere compatibile con i componenti collegati.
+* Consulta la sezione link:https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_flexpod_express_topologies.html["FlexPod Express topologie"^] per ulteriori linee guida sul cablaggio per topologie specifiche.
 
 
-| Cisco Nexus 9396 | 2 cavi di alimentazione C13/C14 per ciascuno switch Cisco Nexus serie 9000 
-|===
-|===
-| Chassis Cisco UCS | Cavi di alimentazione necessari 
-
-
-| Cisco UCS 5108 | 2 CAB-US515P-C19-US/CAB-US520-C19-US per ogni chassis Cisco UCS 
-|===
-|===
-| Server Cisco UCS B-Series | Cavi di alimentazione necessari 
-
-
-| CISCO UCS B200 M4 | N/D; il server blade è alimentato dallo chassis 
-
-
-| CISCO UCS B420 M4 | N/D; il server blade è alimentato dallo chassis 
-
-
-| CISCO UCS B200 M5 | N/D; il server blade è alimentato dallo chassis 
-
-
-| CISCO UCS B480 M5 | N/D; il server blade è alimentato dallo chassis 
-|===
-|===
-| Server Cisco UCS C-Series | Porte di alimentazione richieste 
-
-
-| CISCO UCS C220 M4 .3+| 2 cavi di alimentazione C13/C14 per ciascun server Cisco UCS 
-
-
-| CISCO UCS C240 M4 
-
-
-| CISCO UCS C460 M4 CISCO UCS C220 M5 CISCO UCS C240 M5 CISCO UCS C480 M5 
-|===
-|===
-| Controller NetApp FAS | Porte di alimentazione richieste (per coppia ha) 
-
-
-| FAS2554 | 2 x C13/C14 
-
-
-| FAS2552 | 2 x C13/C14 
-
-
-| FAS2520 | 2 x C13/C14 
-
-
-| FAS8020 | 2 x C13/C14 
-|===
-|===
-| Controller e-Series | Porte di alimentazione richieste (per coppia ha) 
-
-
-| E2824 | 2 x C14/C20 
-|===
-|===
-| Shelf di dischi NetApp FAS | Porte di alimentazione richieste 
-
-
-| DS212C | 2 x C13/C14 
-
-
-| DS224C | 2 x C13/C14 
-
-
-| DS460C | 2 x C19/C20 o 2 x C14/C19 
-
-
-| DS2246 | 2 x C13/C14 
-
-
-| DS4246 | 4 x C13/C14 
-|===
-|===
-| Shelf di dischi e-Series | Porte di alimentazione richieste 
-
-
-| DE460C | 2 x C19/C20 o 2 x C14/C19 
-
-
-| DE224C | 2 x C14/C20 
-
-
-| DE212C | 2 x C14/C20 
-|===
-
-
-== Requisiti minimi per i cavi
-
-In questa sezione vengono descritti i requisiti minimi per i cavi per un design FlexPod Express. La maggior parte delle implementazioni FlexPod richiede cavi aggiuntivi, ma il numero varia in base alle dimensioni e all'ambito dell'implementazione.
-
-La seguente tabella elenca il numero minimo di cavi necessari per ciascun dispositivo.
+La tabella seguente fornisce le linee guida per il cablaggio degli shelf di dischi NetApp che possono essere utilizzati in una progettazione FlexPod Express.
 
 |===
-| Switch Cisco Nexus serie 3000 | Cavi necessari 
 
 
-| Cisco Nexus 31108 .5+| Almeno due cavi 10 GbE in fibra o Twinax per switch 
+| Shelf di dischi | Linee guida per il cablaggio 
 
 
-| Cisco Nexus 3172PQ 
-
-
-| Cisco Nexus 3048 
-
-
-| Cisco Nexus 3524 
-
-
-| Cisco Nexus 9396 
-
-
-| DS212C |  
-
-
-| DS2246 .4+| Il numero di cavi SAS dipende dalla configurazione specifica degli shelf di dischi 
-
-
-| DS460C 
+| DS212C .3+| link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html#configuration-rules["Regole di cablaggio SAS"^] 
 
 
 | DS224C 
 
 
-| DS4246 
+| DS460C 
 
 
-| E2800  a| 
-* Almeno un cavo Gigabit Ethernet (1 GbE) per la gestione per controller
-* Almeno due cavi 10GbE per controller (per iSCSI) o due cavi FC che soddisfano i requisiti di velocità
+| NS224 .2+| link:https://docs.netapp.com/us-en/ontap-systems/drive-shelves/index.html["Requisiti e best practice per lo shelf NS224"^] 
 
 
-
-
-| DE460C | 2 cavi mini-SAS HD per shelf di dischi 
-
-
-| DE224C | 2 cavi mini-SAS HD per shelf di dischi 
-
-
-| DE212C | 2 cavi mini-SAS HD per shelf di dischi 
+| NS224 con NSM100B 
 |===

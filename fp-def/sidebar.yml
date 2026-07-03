@@ -17,10 +17,12 @@ entries:
     url: "/fp-def/fp-express-tech-spec_storage_software.html"
   - title: Requisiti hardware minimi
     url: "/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html"
-  - title: Requisiti software minimi
-    url: "/fp-def/fp-express-tech-spec_minimum_software_requirements.html"
+  - title: Raccomandazioni sulla versione del software
+    url: "/fp-def/fp-express-tech-spec_software_recommendation.html"
   - title: Requisiti di connettività
     url: "/fp-def/fp-express-tech-spec_connectivity_requirements.html"
+  - title: FlexPod Express Topologie
+    url: "/fp-def/fp-express-tech-spec_flexpod_express_topologies.html"
   - title: Altri requisiti
     url: "/fp-def/fp-express-tech-spec_other_requirements.html"
   - title: Funzionalità opzionali
@@ -33,10 +35,10 @@ entries:
     url: "/fp-def/fp-express-tech-spec_power_and_cabling_requirements.html"
   - title: Specifiche tecniche e riferimenti
     url: "/fp-def/fp-express-tech-spec_technical_specifications_and_references.html"
-  - title: Architetture e attrezzature precedenti
-    url: "/fp-def/fp-express-tech-spec_previous_architectures_and_equipment.html"
-  - title: Apparecchiature legacy
-    url: "/fp-def/fp-express-tech-spec_legacy_equipment.html"
+  - title: Stato del supporto delle apparecchiature
+    url: "/fp-def/fp-express-tech-spec_equipment_support_status.html"
+  - title: Distribuzione automatizzata
+    url: "/fp-def/fp-express-tech-spec_automation.html"
   - title: Ulteriori informazioni
     url: "/fp-def/fp-express-tech-spec_additional_information.html"
 - title: Specifiche tecniche del data center FlexPod
