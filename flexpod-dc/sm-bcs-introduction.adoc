@@ -21,6 +21,7 @@ Jyh-ishing Chen, NetApp
 
 
 
+[[flexpod-solution]]
 == Soluzione FlexPod
 
 FlexPod è un'architettura per data center con infrastruttura convergente basata su Best practice che include i seguenti componenti di Cisco e NetApp:
@@ -42,6 +43,7 @@ Ciascuna delle famiglie di componenti FlexPod illustrate (Cisco UCS, switch Cisc
 
 
 
+[[disaster-recovery-and-business-continuity]]
 == Disaster recovery e business continuity
 
 Le aziende possono adottare diversi metodi per garantire che possano ripristinare rapidamente le applicazioni e i servizi dati in caso di disastri. La disponibilità di un piano di disaster recovery (DR) e business continuity (BC), l'implementazione di una soluzione che soddisfi gli obiettivi di business e l'esecuzione di test regolari degli scenari di disastro consente alle aziende di eseguire il ripristino da un disastro e di continuare i servizi business critici in seguito a una situazione di disastro.
@@ -54,6 +56,7 @@ Per le aziende che si affidano ai servizi dati per la generazione di ricavi, pot
 
 
 
+[[recovery-point-objective-and-recovery-time-objective]]
 == Obiettivo del punto di ripristino e obiettivo del tempo di ripristino
 
 L'RPO (Recovery Point Objective) misura la quantità di dati, in termini di tempo, che è possibile permettersi di perdere, o il punto in cui è possibile ripristinare i dati. Con un piano di backup giornaliero, un'azienda potrebbe perdere un giorno di dati perché le modifiche apportate ai dati dall'ultimo backup potrebbero andare perse in caso di disastro. Per i servizi dati business-critical e mission-critical, potrebbe essere necessario un RPO zero e un piano e infrastrutture associati per proteggere i dati senza alcuna perdita di dati.
@@ -62,6 +65,7 @@ L'RTO (Recovery Time Objective) misura il tempo che è possibile dedicare a non 
 
 
 
+[[sm-bc]]
 == SM-BC
 
 A partire da ONTAP 9.8, è possibile proteggere i carichi di lavoro SAN per il failover trasparente delle applicazioni con NetApp SM-BC. È possibile creare relazioni di gruppo di coerenza tra due cluster AFF o due cluster ASA per la replica dei dati in modo da ottenere un RPO pari a zero e un RTO pari quasi a zero.

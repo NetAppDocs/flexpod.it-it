@@ -43,18 +43,21 @@ NetApp e Cisco si sono adoperati per implementare miglioramenti incrementali nel
 
 
 
+[[scope]]
 == Scopo
 
 La piattaforma di infrastruttura convergente FlexPod consente a un'organizzazione sanitaria di ospitare uno o più carichi di lavoro di genomica, insieme ad altre applicazioni sanitarie cliniche e non cliniche. Questo report tecnico utilizza uno strumento di genomica open-source e standard di settore chiamato GATK durante la convalida della piattaforma FlexPod. Tuttavia, una discussione più approfondita sulla genomica o sul GATK non rientra nell'ambito di questo documento.
 
 
 
+[[audience]]
 == Pubblico
 
 Il presente documento è destinato ai responsabili tecnici del settore sanitario, ai tecnici delle soluzioni partner Cisco e NetApp e al personale dei servizi professionali. NetApp presuppone che il lettore abbia una buona comprensione dei concetti di dimensionamento di calcolo e storage, nonché una familiarità tecnica con le minacce per il settore sanitario, la sicurezza sanitaria, i sistemi IT per il settore sanitario, Cisco UCS e i sistemi storage NetApp.
 
 
 
+[[hospital-capabilities-deployed-on-flexpod]]
 == Funzionalità ospedaliere implementate su FlexPod
 
 Un ospedale tipico dispone di un insieme diversificato di sistemi IT. La maggior parte di questi sistemi viene acquistata da un vendor, mentre pochissimi sono costruiti dal sistema ospedaliero in casa. Pertanto, il sistema ospedaliero deve gestire un ambiente di infrastruttura diversificato nei propri data center. Quando gli ospedali unificano i propri sistemi in una piattaforma di infrastruttura convergente come FlexPod, le organizzazioni possono standardizzare le operazioni del data center. Con FlexPod, le organizzazioni sanitarie possono implementare sistemi clinici e non clinici sulla stessa piattaforma, unificando in tal modo le operazioni del data center.

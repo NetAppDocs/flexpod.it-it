@@ -42,6 +42,7 @@ Se utilizzato con FlexPod, FabricPool offre tre criteri di tiering dei volumi, a
 
 
 
+[[oncommand-system-manager]]
 == Gestore di sistema di OnCommand
 
 Per modificare la policy di tiering di un volume utilizzando Gestione di sistema di OnCommand, attenersi alla seguente procedura:
@@ -58,6 +59,7 @@ image:cloud-fabricpool_image16.png["Errore: Immagine grafica mancante"]
 
 
 
+[[ontap-cli]]
 == CLI ONTAP
 
 Per modificare il criterio di tiering di un volume utilizzando l'interfaccia utente di ONTAP, eseguire il seguente comando:

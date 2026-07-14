@@ -18,6 +18,7 @@ I controller di storage NetApp forniscono la base dello storage nell'architettur
 
 
 
+[[netapp-storage-controller-options]]
 == Opzioni di storage controller NetApp
 
 Sono necessari controller ridondanti delle serie AFF, ASA o FAS nell'architettura FlexPod Express. I controller eseguono il software ONTAP. Al momento dell'ordine dei controller di storage, la versione software preferita può essere precaricata sui controller. Per ONTAP, il cluster può essere implementato sia con una coppia di switch di interconnessione del cluster, sia in una configurazione di cluster senza switch.
@@ -33,13 +34,13 @@ Le famiglie di controller elencate nella tabella sottostante sono adatte all'uti
 | NetApp entry-level storage Family per FlexPod Express | Modello | Specifiche tecniche 
 
 
-.2+| AFF Serie A. | A20 .3+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Documentazione AFF"] 
+.2+| AFF Serie A. | A20 .2+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["Documentazione di AFF A-Series"] 
 
 
 | A30 
 
 
-| AFF C-Series | C30 
+| AFF C-Series | C30 | https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["Documentazione AFF C-Series"] 
 
 
 .2+| ASA A-Series | A20 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["Documentazione ASA"] 
@@ -51,18 +52,20 @@ Le famiglie di controller elencate nella tabella sottostante sono adatte all'uti
 | ASA C-Series | C30 
 
 
-.2+| FAS | FAS 2750 .2+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Documentazione FAS"] 
+.3+| FAS | FAS 2750 .3+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["Documentazione FAS"] 
 
 
 | FAS 2820 
+
+
+| FAS 50 
 |===
 
 
+[[netapp-disk-shelves-and-disks]]
 == Shelf di dischi e dischi NetApp
 
-Per i controller di archiviazione è necessario almeno un alloggiamento per dischi NetApp.
-
-Il tipo di shelf NetApp selezionato determina i tipi di dischi disponibili all'interno di tale shelf.
+È necessario almeno un alloggiamento dischi NetApp per i controller di storage che non dispongono di un alloggiamento dischi integrato. Il tipo di alloggiamento NetApp selezionato determina quali tipi di unità disco sono disponibili all'interno di quell'alloggiamento.
 
 
 NOTE: Per tutti gli shelf di dischi e i codici dei dischi, rivolgersi al rappresentante commerciale.
@@ -91,6 +94,7 @@ Per ottenere l'elenco delle unità supportate per il tuo disk shelf, vai a link:
 |===
 
 
+[[netapp-software-licensing-options]]
 == Opzioni di licenza software NetApp
 
 La tabella seguente elenca le opzioni di licenza del software NetApp.
@@ -108,6 +112,7 @@ Per ulteriori informazioni sulle licenze software NetApp, consulta questo link: 
 
 
 
+[[netapp-support-licensing-options]]
 == Opzioni di licenza del supporto NetApp
 
 Sono necessarie licenze SupportEdge Premium e i codici prodotto di tali licenze variano in base alle opzioni selezionate nella progettazione FlexPod.

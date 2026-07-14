@@ -18,6 +18,7 @@ Questa sezione fornisce una procedura dettagliata per la configurazione di un se
 
 
 
+[[perform-the-initial-cisco-ucs-c-series-standalone-server-setup-for-cimc]]
 == Eseguire la configurazione iniziale del server standalone Cisco UCS C-Series per CIMC
 
 Completare questa procedura per la configurazione iniziale dell'interfaccia CIMC per i server standalone Cisco UCS C-Series.
@@ -41,6 +42,7 @@ NOTE: La versione di CIMC utilizzata per questa convalida è CIMC 4.0.(4).
 
 
 
+[[all-servers]]
 === Tutti i server
 
 . Collegare il dongle KVM (tastiera, video e mouse) Cisco (fornito con il server) alla porta KVM sulla parte anteriore del server. Collegare un monitor VGA e una tastiera USB alle porte dongle KVM appropriate.
@@ -117,6 +119,7 @@ Port profiles (profili porta): Lasciare deselezionato.
 
 
 
+[[configure-cisco-ucs-c-series-servers-iscsi-boot]]
 == Configurare l'avvio iSCSI dei server Cisco UCS C-Series
 
 In questa configurazione FlexPod Express, VIC1457 viene utilizzato per l'avvio iSCSI.
@@ -170,6 +173,7 @@ NOTE: Un font corsivo indica le variabili univoche per ogni host ESXi.
 |===
 
 
+[[boot-order-configuration]]
 === Configurazione dell'ordine di avvio
 
 Per impostare la configurazione dell'ordine di avvio, attenersi alla seguente procedura:
@@ -238,6 +242,7 @@ image:express-c-series-c190-deploy_image8.png["Errore: Immagine grafica mancante
 
 
 
+[[disable-raid-controller-if-present]]
 === Disattivazione del controller RAID (se presente)
 
 Se il server C-Series contiene un controller RAID, attenersi alla seguente procedura. Non è necessario un controller RAID per l'avvio dalla configurazione SAN. In alternativa, è anche possibile rimuovere fisicamente il controller RAID dal server.
@@ -253,6 +258,7 @@ image:express-c-series-c190-deploy_image9.png["Errore: Immagine grafica mancante
 
 
 
+[[configure-cisco-vic1457-for-iscsi-boot]]
 == Configurare Cisco VIC1457 per l'avvio iSCSI
 
 La seguente procedura di configurazione riguarda Cisco VIC 1457 per l'avvio iSCSI.
@@ -270,6 +276,7 @@ image:express-c-series-c190-deploy_image10.png["Errore: Immagine grafica mancant
 
 
 
+[[create-iscsi-vnics]]
 === Creare vNIC iSCSI
 
 Per creare vNIC iSCSI, attenersi alla seguente procedura:
@@ -377,6 +384,7 @@ NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un 
 
 
 
+[[configure-vnics-for-esxi]]
 === Configurare vNIC per ESXi
 
 Per configurare le vNIC per ESXi, attenersi alla seguente procedura:

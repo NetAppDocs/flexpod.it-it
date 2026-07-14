@@ -25,6 +25,7 @@ Per configurare VMware vCenter Server 6.7 e il clustering vSphere, attenersi all
 
 
 
+[[create-a-vsphere-cluster]]
 == Creare un cluster vSphere
 
 Per creare un cluster vSphere, attenersi alla seguente procedura:
@@ -40,6 +41,7 @@ image:express-c-series-c190-deploy_image45.png["Errore: Immagine grafica mancant
 
 
 
+[[add-the-esxi-hosts-to-the-cluster]]
 == Aggiungere gli host ESXi al cluster
 
 Per aggiungere gli host ESXi al cluster, attenersi alla seguente procedura:
@@ -73,6 +75,7 @@ NOTE: Questo processo deve essere completato per tutti gli host aggiuntivi aggiu
 
 
 
+[[configure-coredump-on-the-esxi-hosts]]
 == Configurare il coredump sugli host ESXi
 
 Per configurare il coredump sugli host ESXi, attenersi alla seguente procedura:

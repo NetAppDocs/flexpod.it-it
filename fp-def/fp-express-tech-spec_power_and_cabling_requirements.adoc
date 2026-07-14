@@ -18,6 +18,7 @@ Questa sezione descrive i requisiti di alimentazione e le linee guida per il cab
 
 
 
+[[power-requirements]]
 == Requisiti di alimentazione
 
 I requisiti di alimentazione per FlexPod Express variano in base alla posizione in cui viene installata la configurazione FlexPod Express.
@@ -30,6 +31,7 @@ Per i dati relativi all'alimentazione dello storage controller NetApp, consulta 
 
 
 
+[[cabling-guidelines]]
 == Linee guida per il cablaggio
 
 Questa sezione fornisce linee guida generali per il cablaggio di un design FlexPod Express.

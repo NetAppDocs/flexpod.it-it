@@ -21,6 +21,7 @@ NOTE: L'avvio SAN è facoltativo ma fortemente consigliato, perché ti permette 
 
 
 
+[[iscsi-boot-option]]
 == Opzione di boot iSCI
 
 I requisiti minimi per l'opzione di avvio iSCSI includono:
@@ -32,6 +33,7 @@ I requisiti minimi per l'opzione di avvio iSCSI includono:
 
 
 
+[[cisco-ucs-x-series-direct-and-direct-attached-aff-asa-fas-option]]
 == Opzione Direct e Direct-Attached AFF/ASA/FAS di Cisco UCS X-Series
 
 NetApp storage controller possono essere collegati direttamente agli interconnettori fabric di Cisco UCS senza alcuno switch SAN a monte. FlexPod Express supporta sia l'avvio FC che iSCSI con UCS X-Series Direct.

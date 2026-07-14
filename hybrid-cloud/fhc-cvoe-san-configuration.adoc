@@ -23,6 +23,7 @@ NOTE: La seguente procedura di configurazione è specifica per l'host CentOS 8 u
 
 
 
+[[netapp-host-utility-kit]]
 == Kit di utility host NetApp
 
 NetApp consiglia di installare NetApp host Utility Kit (host Utilities) sui sistemi operativi degli host collegati ai sistemi storage NetApp e che accedono ad essi. È supportato Microsoft MPIO (Multipath i/o) nativo. Il sistema operativo deve essere compatibile con ALUA (Asymmetric Logical Unit Access) per il multipathing. L'installazione delle utility host configura le impostazioni dell'HBA (host Bus Adapter) per lo storage NetApp.
@@ -34,6 +35,7 @@ NetApp consiglia di installare NetApp host Utility Kit (host Utilities) sui sist
 ....
 
 
+[[discover-ontap-storage]]
 == Scopri lo storage ONTAP
 
 Assicurarsi che il servizio iSCSI sia in esecuzione quando si suppone che si verifichino i log-in. Per impostare la modalità di accesso per un portale specifico su una destinazione o per tutti i portali su una destinazione, utilizzare `iscsiadm` comando.
@@ -59,6 +61,7 @@ Healthcare_SVM                       /dev/sdc host34  iSCSI    200g    cDOT
 ....
 
 
+[[configure-multipathing]]
 == Configurare il multipathing
 
 Device Mapper Multipathing (DM-multipath) è un'utility di multipathing nativa in Linux. Può essere utilizzato per la ridondanza e per migliorare le performance. Aggrega o combina i percorsi di i/o multipli tra server e storage, in modo da creare un singolo dispositivo a livello di sistema operativo.
@@ -116,6 +119,7 @@ NOTE: Per informazioni dettagliate su questi passaggi, vedere https://docs.netap
 
 
 
+[[create-physical-volume]]
 == Creare un volume fisico
 
 Utilizzare `pvcreate` comando per inizializzare un dispositivo a blocchi da utilizzare come volume fisico. L'inizializzazione è analoga alla formattazione di un file system.
@@ -126,6 +130,7 @@ Physical volume "/dev/sdb" successfully created.
 ....
 
 
+[[create-volume-group]]
 == Creare un gruppo di volumi
 
 Per creare un gruppo di volumi da uno o più volumi fisici, utilizzare `vgcreate` comando. Questo comando crea un nuovo gruppo di volumi in base al nome e vi aggiunge almeno un volume fisico.
@@ -161,6 +166,7 @@ Il `vgdisplay` il comando può essere utilizzato per visualizzare le proprietà 
 ....
 
 
+[[create-logical-volume]]
 == Creare un volume logico
 
 Quando si crea un volume logico, il volume logico viene ricavato da un gruppo di volumi utilizzando le estensioni libere sui volumi fisici che compongono il gruppo di volumi.
@@ -173,6 +179,7 @@ Questo comando crea un volume logico chiamato `datalv` che utilizza tutto lo spa
 
 
 
+[[create-file-system]]
 == Creare il file system
 
 ....
@@ -190,6 +197,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[make-folder-to-mount]]
 == Creare la cartella da montare
 
 ....
@@ -197,6 +205,7 @@ realtime =none                   extsz=4096   blocks=0, rtextents=0
 ....
 
 
+[[mount-the-file-system]]
 == Montare il file system
 
 ....
@@ -219,6 +228,7 @@ Per informazioni dettagliate su queste attività, vedere la pagina link:https://
 
 
 
+[[data-generation]]
 == Generazione di dati
 
  `Dgen.pl`è un generatore di dati di script Perl per il simulatore I/O di EHR (GenerateIO).  I dati all'interno delle LUN vengono generati con l'EHR `Dgen.pl` sceneggiatura.  Lo script è progettato per creare dati simili a quelli presenti in un database EHR.
@@ -240,6 +250,7 @@ Durante la corsa `Dgen.pl` per impostazione predefinita, lo script utilizza il 8
 
 
 
+[[configure-snapmirror-replication-between-on-premises-ontap-and-cloud-volumes-ontap]]
 == Configurare la replica di SnapMirror tra ONTAP on-premise e Cloud Volumes ONTAP
 
 NetApp SnapMirror replica i dati a velocità elevate su LAN o WAN, in modo da ottenere un'elevata disponibilità dei dati e una replica rapida dei dati in ambienti virtuali e tradizionali. Quando si replicano i dati nei sistemi storage NetApp e si aggiornano continuamente i dati secondari, i dati vengono mantenuti aggiornati e rimangono disponibili ogni volta che ne hai bisogno. Non sono richiesti server di replica esterni.

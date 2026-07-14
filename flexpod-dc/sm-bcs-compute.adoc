@@ -20,6 +20,7 @@ La configurazione di calcolo per la soluzione FlexPod SM-BC segue le Best practi
 
 
 
+[[connectivity]]
 == Connettività
 
 La connettività tra i server blade UCS B200 e gli IOM viene fornita dalla scheda VIC UCS attraverso le connessioni del backplane dello chassis UCS 5108. Gli UCS 2204XP Fabric Extender utilizzati per la convalida dispongono di sedici porte 10G ciascuna per connettersi agli otto server blade half-width, ad esempio due per ciascun server. Per aumentare la larghezza di banda della connettività del server, è possibile aggiungere un VIC aggiuntivo basato su mezzanino per collegare il server all'IOM UCS 2408 alternativo, che fornisce quattro connessioni 10G a ciascun server.
@@ -104,6 +105,7 @@ NOTE: È possibile ottenere un'ulteriore larghezza di banda utilizzando componen
 
 
 
+[[service-profiles]]
 == Profili di servizio
 
 Uno chassis per server blade con interconnessioni fabric gestite da UCS Manager (UCSM) o Cisco Intersight può astrarre i server utilizzando i profili di servizio disponibili in UCSM e i profili server in Intersight. Questa convalida utilizza UCSM e profili di servizio per semplificare la gestione del server. Con i profili di servizio, è possibile sostituire o aggiornare un server semplicemente associando il profilo di servizio originale al nuovo hardware.
@@ -123,6 +125,7 @@ I profili di servizio creati supportano i seguenti elementi per gli host VMware 
 
 
 
+[[san-boot]]
 == Boot SAN
 
 Per la configurazione di boot SAN iSCSI, i parametri di boot iSCSI sono impostati in modo da consentire l'avvio iSCSI da entrambi i fabric iSCSI. Per adattarsi allo scenario di failover SM-BC in cui un LUN di avvio SAN iSCSI viene servito dal cluster secondario quando il cluster primario non è disponibile, la configurazione di destinazione statica iSCSI deve includere destinazioni sia dal sito A che dal sito B. Inoltre, per massimizzare la disponibilità del LUN di avvio, configurare le impostazioni dei parametri di avvio iSCSI per l'avvio da tutti i controller di storage.

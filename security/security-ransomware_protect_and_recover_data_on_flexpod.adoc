@@ -18,6 +18,7 @@ Questa sezione descrive come è possibile ripristinare i dati di un utente final
 
 
 
+[[testbed-overview]]
 == Panoramica testbed
 
 Per mostrare il rilevamento, la correzione e la prevenzione di FlexPod, è stato creato un testbed basato sulle linee guida specificate nell'ultima piattaforma CVD disponibile al momento della stesura del presente documento: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["FlexPod Datacenter con VMware vSphere 6.7 U1, Cisco UCS 4a generazione e NetApp AFF A-Series CVD"^].
@@ -26,6 +27,7 @@ Una macchina virtuale Windows 2016, che forniva una condivisione CIFS dal softwa
 
 
 
+[[state-of-vm-and-its-files-prior-to-an-attack]]
 == Stato della macchina virtuale e dei relativi file prima di un attacco
 
 Questa sezione mostra lo stato dei file prima di un attacco alla macchina virtuale e la condivisione CIFS ad essa mappata.
@@ -44,6 +46,7 @@ image:security-ransomware_image5.png["Errore: Immagine grafica mancante"]
 
 
 
+[[deduplication-and-snapshot-information-before-an-attack]]
 == Deduplica e informazioni Snapshot prima di un attacco
 
 I dettagli sull'efficienza dello storage e le dimensioni della copia Snapshot prima di un attacco vengono indicati e utilizzati come riferimento durante la fase di rilevamento.
@@ -66,6 +69,7 @@ image:security-ransomware_image9.png["Errore: Immagine grafica mancante"]
 
 
 
+[[wannacry-infection-on-vm-and-cifs-share]]
 == Infezione WannaCry su VM e condivisione CIFS
 
 In questa sezione viene illustrato come il malware WannaCry è stato introdotto nell'ambiente FlexPod e le successive modifiche apportate al sistema.
@@ -84,6 +88,7 @@ image:security-ransomware_image11.png["Errore: Immagine grafica mancante"]
 
 
 
+[[case-1-wannacry-encrypts-the-file-system-within-the-vm-and-mapped-cifs-share]]
 === Caso 1: WannaCry crittografa il file system all'interno della VM e della condivisione CIFS mappata
 
 Il file system locale e la condivisione CIFS mappata sono stati crittografati dal malware WannaCry.
@@ -166,6 +171,7 @@ image:security-ransomware_image24.png["Errore: Immagine grafica mancante"]
 
 
 
+[[case-2-wannacry-encrypts-file-system-within-the-vm-and-tries-to-encrypt-the-mapped-cifs-share-that-is-protected-through-fpolicy]]
 === Caso 2: WannaCry crittografa il file system all'interno della macchina virtuale e tenta di crittografare la condivisione CIFS mappata protetta tramite FPolicy
 
 

@@ -21,6 +21,7 @@ NOTE: FlexPod utilizza l'appliance server vCenter (VCSA).
 
 
 
+[[download-the-vmware-vcenter-server-appliance]]
 == Scarica VMware vCenter Server Appliance
 
 Per scaricare VMware vCenter Server Appliance (VCSA), attenersi alla seguente procedura:

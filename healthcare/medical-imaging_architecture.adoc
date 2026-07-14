@@ -22,12 +22,14 @@ image:medical-imaging_image3.png["Errore: Immagine grafica mancante"]
 
 
 
+[[storage-architecture]]
 == Architettura dello storage
 
 Utilizzare le linee guida sull'architettura dello storage in questa sezione per configurare l'infrastruttura di storage per un sistema di imaging medicale aziendale.
 
 
 
+[[storage-tiers]]
 === Tier di storage
 
 Un tipico ambiente di imaging medicale aziendale è costituito da diversi livelli di storage. Ogni Tier presenta requisiti specifici per le performance e il protocollo di storage. Lo storage NetApp supporta varie tecnologie RAID; ulteriori informazioni sono disponibili https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-psmg%2FGUID-488B0EC4-3B03-4566-8321-5B8E568F34E4.html["qui"^]. Ecco come i sistemi storage NetApp AFF soddisfano le esigenze dei diversi Tier di storage per il sistema di imaging:
@@ -67,6 +69,7 @@ La tabella riportata di seguito elenca ciascun livello richiesto da un sistema d
 |===
 
 
+[[storage-network-connectivity]]
 === Connettività di rete storage
 
 
@@ -108,6 +111,7 @@ La tabella riportata di seguito elenca ciascun livello richiesto da un sistema d
 
 
 
+[[backup-and-recovery]]
 === Backup e recovery
 
 Il data center di FlexPod si basa su un array di storage gestito dal software di gestione dei dati NetApp ONTAP. Il software ONTAP si è evoluto in oltre 20 anni per fornire molte funzionalità di gestione dei dati per macchine virtuali, database Oracle, condivisioni di file SMB/CIFS e NFS. Fornisce inoltre tecnologie di protezione come la tecnologia Snapshot di NetApp, la tecnologia SnapMirror e la tecnologia di replica dei dati NetApp FlexClone. Il software NetApp SnapCenter dispone di un server e di un client GUI per utilizzare le funzionalità Snapshot, SnapRestore e FlexClone di ONTAP per il backup e il ripristino di macchine virtuali, file share SMB/CIFS, NFS e database Oracle.
@@ -139,6 +143,7 @@ NetApp MetroCluster configurazioni sono utilizzate da migliaia di aziende in tut
 
 
 
+[[networking]]
 == Networking
 
 Una coppia di switch Cisco Nexus fornisce percorsi ridondanti per il traffico IP dal calcolo allo storage e per i client esterni del visualizzatore di immagini del sistema di imaging medicale:
@@ -157,6 +162,7 @@ Una coppia di switch Cisco Nexus fornisce percorsi ridondanti per il traffico IP
 
 
 
+[[computecisco-unified-computing-system]]
 == Calcolo: Cisco Unified Computing System
 
 Due fabric Cisco UCS attraverso diverse interconnessioni fabric forniscono due domini di errore. Ogni fabric è collegato sia agli switch di rete IP che a diversi switch di rete FC.
@@ -172,6 +178,7 @@ Profili di servizio identici per ogni blade Cisco UCS vengono creati in base all
 
 
 
+[[virtualization]]
 == Virtualizzazione
 
 Il cluster host VMware ESXi esegue workload VM. Il cluster comprende istanze di ESXi in esecuzione sui server blade Cisco UCS.
@@ -194,6 +201,7 @@ Ciascun host ESXi include i seguenti componenti di rete:
 
 
 
+[[medical-imaging-system-architecture]]
 == Architettura del sistema di imaging medicale
 
 Nelle organizzazioni sanitarie, i sistemi di imaging medicale sono applicazioni critiche e ben integrati nei flussi di lavoro clinici che iniziano dalla registrazione dei pazienti e terminano con le attività correlate alla fatturazione nel ciclo dei ricavi.

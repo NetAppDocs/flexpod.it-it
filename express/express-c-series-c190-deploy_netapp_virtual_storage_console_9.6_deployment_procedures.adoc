@@ -18,6 +18,7 @@ In questa sezione vengono descritte le procedure di implementazione di NetApp Vi
 
 
 
+[[install-virtual-storage-console-9-6]]
 == Installare Virtual Storage Console 9.6
 
 Per installare il software VSC 9.6 utilizzando un'implementazione Open Virtualization Format (OVF), attenersi alla seguente procedura:
@@ -64,6 +65,7 @@ image:express-c-series-c190-deploy_image56.png["Errore: Immagine grafica mancant
 
 
 
+[[download-and-install-the-netapp-nfs-vaai-plug-in]]
 == Scarica e installa il plug-in NetApp NFS VAAI
 
 Per scaricare e installare il plug-in NetApp NFS VAAI, attenersi alla seguente procedura:
@@ -89,6 +91,7 @@ image:express-c-series-c190-deploy_image58.png["Errore: Immagine grafica mancant
 
 
 
+[[use-the-optimal-storage-settings-for-the-esxi-hosts]]
 == Utilizzare le impostazioni di storage ottimali per gli host ESXi
 
 VSC consente la configurazione automatica delle impostazioni relative allo storage per tutti gli host ESXi connessi ai controller di storage NetApp. Per utilizzare queste impostazioni, attenersi alla seguente procedura:

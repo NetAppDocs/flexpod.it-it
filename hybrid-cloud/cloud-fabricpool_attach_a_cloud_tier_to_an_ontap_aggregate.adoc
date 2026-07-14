@@ -23,6 +23,7 @@ NOTE: Collegare un Tier cloud a un aggregato è un'azione permanente. Un Tier cl
 
 
 
+[[oncommand-system-manager]]
 == Gestore di sistema di OnCommand
 
 Per associare un Tier cloud a un aggregato utilizzando Gestione di sistema di OnCommand, completare i seguenti passaggi:
@@ -45,6 +46,7 @@ image:cloud-fabricpool_image15.png["Errore: Immagine grafica mancante"]
 
 
 
+[[ontap-cli]]
 == CLI ONTAP
 
 Per collegare un Tier cloud a un aggregato utilizzando l'interfaccia utente di ONTAP, eseguire i seguenti comandi:

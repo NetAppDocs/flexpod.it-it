@@ -28,6 +28,7 @@ In particolare, i casi di utilizzo relativamente pochi validati in questa soluzi
 
 
 
+[[application-development-and-testing-devtest]]
 == Sviluppo e test delle applicazioni (sviluppo/test)
 
 Per accelerare lo sviluppo delle applicazioni, è possibile clonare rapidamente i dati replicati nel sito di DR e utilizzarli per lo sviluppo e il test delle applicazioni. La co-locazione degli ambienti di DR e di sviluppo/test può migliorare significativamente l'utilizzo delle strutture di backup o DR, mentre i cloni on-demand di sviluppo/test offrono il numero di copie di dati necessario per arrivare più rapidamente alla produzione.
@@ -146,6 +147,7 @@ In questo modo è possibile utilizzare l'ambiente DR per lo sviluppo/test delle 
 
 
 
+[[disaster-recovery]]
 == Disaster recovery
 
 La tecnologia SnapMirror viene utilizzata anche come parte dei piani di DR. Se i dati critici vengono replicati in una posizione fisica diversa, un disastro grave non deve causare lunghi periodi di indisponibilità dei dati per le applicazioni business-critical. I client possono accedere ai dati replicati in rete fino al ripristino del sito di produzione da corruzione, eliminazione accidentale, disastro naturale e così via.
@@ -257,6 +259,7 @@ In questa sezione viene illustrata la corretta risoluzione di uno scenario di di
 
 
 
+[[verification-of-data-on-the-production-site]]
 == Verifica dei dati sul sito di produzione
 
 Una volta ripristinato il sito di produzione, è necessario assicurarsi che la configurazione originale sia ripristinata e che i client siano in grado di accedere ai dati dal sito di origine.

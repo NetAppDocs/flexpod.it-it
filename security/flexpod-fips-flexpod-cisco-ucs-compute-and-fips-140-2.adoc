@@ -20,6 +20,7 @@ Un'architettura FlexPod può essere progettata con un server Cisco UCS conforme 
 
 
 
+[[cisco-ucs-and-fabric-interconnect]]
 == Cisco UCS e Fabric Interconnect
 
 Cisco UCS Manager viene implementato ed eseguito da Cisco Fabric Interconnects (IF).

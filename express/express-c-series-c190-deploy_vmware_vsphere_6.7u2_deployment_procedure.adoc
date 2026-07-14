@@ -26,12 +26,14 @@ NOTE: Questa procedura deve essere completata per tutti i nodi aggiuntivi aggiun
 
 
 
+[[log-in-to-cimc-interface-for-cisco-ucs-c-series-standalone-servers]]
 == Accedere all'interfaccia CIMC per i server standalone Cisco UCS C-Series
 
 La procedura riportata di seguito illustra in dettaglio il metodo di accesso all'interfaccia CIMC per i server standalone Cisco UCS C-Series. È necessario accedere all'interfaccia CIMC per eseguire il KVM virtuale, che consente all'amministratore di avviare l'installazione del sistema operativo tramite supporti remoti.
 
 
 
+[[all-hosts]]
 === Tutti gli host
 
 . Accedere a un browser Web e immettere l'indirizzo IP dell'interfaccia CIMC per Cisco UCS C-Series. Questa fase avvia l'applicazione GUI CIMC.
@@ -53,12 +55,14 @@ NOTE: Potrebbe essere necessario fare clic su Activate Virtual Devices (attiva d
 
 
 
+[[install-vmware-esxi]]
 == Installare VMware ESXi
 
 La seguente procedura descrive come installare VMware ESXi su ciascun host.
 
 
 
+[[download-esxi-6-7u2-cisco-custom-image]]
 === Scarica l'immagine personalizzata Cisco ESXi 6.7U2
 
 . Vai alla  https://support.broadcom.com/group/ecx/downloads["Sito di download del portale di supporto Broadcom"^] per le ISO personalizzate.
@@ -79,12 +83,14 @@ image:express-c-series-c190-deploy_image18.png["Errore: Immagine grafica mancant
 
 
 
+[[set-up-vmware-esxi-host-management-networking]]
 == Configurare il networking per la gestione degli host VMware ESXi
 
 La seguente procedura descrive come aggiungere la rete di gestione per ciascun host VMware ESXi.
 
 
 
+[[all-hosts]]
 === Tutti gli host
 
 . Una volta riavviato il server, immettere l'opzione per personalizzare il sistema premendo F2.
@@ -131,6 +137,7 @@ esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4
 
 
 
+[[configure-esxi-host]]
 == Configurare l'host ESXi
 
 Utilizzare le informazioni contenute nella seguente tabella per configurare ciascun host ESXi.
@@ -188,6 +195,7 @@ Utilizzare le informazioni contenute nella seguente tabella per configurare cias
 |===
 
 
+[[log-in-to-the-esxi-host]]
 === Accedere all'host ESXi
 
 Per accedere all'host ESXi, attenersi alla seguente procedura:
@@ -199,6 +207,7 @@ Per accedere all'host ESXi, attenersi alla seguente procedura:
 
 
 
+[[configure-iscsi-boot]]
 === Configurare l'avvio iSCSI
 
 Per configurare l'avvio iSCSI, attenersi alla seguente procedura:
@@ -247,6 +256,7 @@ image:express-c-series-c190-deploy_image21.png["Errore: Immagine grafica mancant
 
 
 
+[[configure-iscsi-multipathing]]
 === Configurare il multipathing iSCSI
 
 Per configurare il multipathing iSCSI sugli host ESXi, attenersi alla seguente procedura:
@@ -277,6 +287,7 @@ NOTE: È possibile trovare gli indirizzi IP LIF iSCSI eseguendo il comando di vi
 
 
 
+[[configure-the-esxi-host]]
 === Configurare l'host ESXi
 
 Per configurare l'avvio di ESXi, attenersi alla seguente procedura:
@@ -297,6 +308,7 @@ NOTE: Il metodo hash IP per il bilanciamento del carico richiede che lo switch f
 
 
 
+[[configure-the-port-groups-and-vmkernel-nics]]
 === Configurare i gruppi di porte e le NIC VMkernel
 
 Per configurare i gruppi di porte e le NIC VMkernel, attenersi alla seguente procedura:
@@ -357,6 +369,7 @@ NOTE: Esistono diversi modi per configurare il networking ESXi, tra cui l'utiliz
 
 
 
+[[mount-the-first-datastores]]
 === Montare i primi datastore
 
 I primi datastore da montare sono `infra_datastore` Datastore per macchine virtuali e `infra_swap` Datastore per i file di swap delle macchine virtuali.
@@ -390,6 +403,7 @@ image:express-c-series-c190-deploy_image30.png["Errore: Immagine grafica mancant
 
 
 
+[[configure-ntp]]
 === Configurare NTP
 
 Per configurare NTP per un host ESXi, attenersi alla seguente procedura:
@@ -406,6 +420,7 @@ image:express-c-series-c190-deploy_image31.png["Errore: Immagine grafica mancant
 
 
 
+[[move-the-vm-swap-file-location]]
 === Spostare la posizione del file di swap della macchina virtuale
 
 Questi passaggi forniscono informazioni dettagliate sullo spostamento della posizione del file di swap della macchina virtuale.

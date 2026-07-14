@@ -30,6 +30,7 @@ image:sm-bcs-image39.png["Errore: Immagine grafica mancante"]
 
 
 
+[[end-to-end-network-connectivity]]
 == Connettività di rete end-to-end
 
 La soluzione FlexPod SM-BC include infrastrutture FlexPod in ogni sito, connettività di rete tra siti e mediatore ONTAP implementato in un terzo sito per soddisfare gli obiettivi RPO e RTO richiesti. La figura seguente mostra la connettività di rete end-to-end tra i server Cisco UCS B200M5 di ciascun sito e lo storage NetApp con funzionalità SM-BC all'interno di un sito e tra siti.
@@ -42,6 +43,7 @@ L'architettura Layer-2 estesa viene utilizzata per un data fabric multi-sito per
 
 
 
+[[virtual-networking]]
 == Networking virtuale
 
 Ciascun host del cluster viene implementato utilizzando reti virtuali identiche, indipendentemente dalla sua posizione. La progettazione separa i diversi tipi di traffico utilizzando gli switch virtuali VMware (vSwitch) e VMware Virtual Distributed Switch (VDS). VMware vSwitch viene utilizzato principalmente per le reti dell'infrastruttura FlexPod e VDS per le reti applicative, ma non è necessario.
@@ -58,6 +60,7 @@ In questa progettazione vengono utilizzati due vSwitch di avvio iSCSI. L'avvio i
 
 
 
+[[vm-host-affinity-groups-and-rules]]
 == Regole e gruppi di affinità VM-host
 
 Per consentire l'esecuzione delle macchine virtuali su qualsiasi host ESXi in entrambi i siti SM-BC, tutti gli host ESXi devono montare gli archivi dati iSCSI da entrambi i siti. Se gli archivi dati di entrambi i siti sono montati correttamente da tutti gli host ESXi, è possibile migrare una macchina virtuale tra qualsiasi host con vMotion e la macchina virtuale mantiene comunque l'accesso a tutti i dischi virtuali creati da tali archivi dati.
@@ -78,6 +81,7 @@ image:sm-bcs-image44.png["Errore: Immagine grafica mancante"]
 
 
 
+[[vsphere-ha-heartbeat]]
 == VSphere ha heartbeat
 
 VMware vSphere ha dispone di un meccanismo heartbeat per la convalida dello stato dell'host. Il meccanismo heartbeat primario avviene attraverso la rete e il meccanismo heartbeat secondario attraverso il datastore. Se non vengono ricevuti heartbeat, decide se è isolato dalla rete eseguendo il ping del gateway predefinito o degli indirizzi di isolamento configurati manualmente. Per il battito cardiaco del datastore, VMware consiglia di aumentare i datastore heartbeat da un minimo di due a quattro per un cluster allungato.

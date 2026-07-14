@@ -18,6 +18,7 @@ NetApp supporta diversi componenti opzionali per migliorare ulteriormente le arc
 
 
 
+[[metrocluster]]
 == MetroCluster
 
 FlexPod supporta entrambe le varianti del software NetApp MetroCluster per una disponibilità continua, in configurazioni cluster a due o quattro nodi. MetroCluster offre la replica sincrona per i carichi di lavoro critici. Richiede una configurazione a doppio sito connessa allo switch Cisco. La distanza massima supportata tra i siti è di circa 300 km (186 miglia) per MetroCluster FC e aumenta fino a circa 435 km per MetroCluster IP. Le seguenti figure illustrano un data center FlexPod con architettura NetApp MetroCluster e un data center FlexPod con architettura IP NetApp MetroCluster.
@@ -50,6 +51,7 @@ image:dc-tech-spec_image12.png["Errore: Immagine grafica mancante"]
 
 
 
+[[end-to-end-fc-nvme]]
 == FC-NVMe end-to-end
 
 Un FC-NVMe end-to-end estende perfettamente l'infrastruttura SAN esistente di un cliente per le applicazioni in tempo reale, offrendo al contempo IOPS e throughput migliorati con latenza ridotta.
@@ -66,6 +68,7 @@ image:dc-tech-spec_image3.png["Errore: Immagine grafica mancante"]
 
 
 
+[[fc-san-boot-through-cisco-mds]]
 == Avvio SAN FC tramite Cisco MDS
 
 Per fornire una maggiore scalabilità utilizzando una rete SAN dedicata, FlexPod supporta switch FC tramite Cisco MDS e switch Nexus con supporto FC come Cisco Nexus 93108TC-FX. L'opzione di boot FC SAN tramite Cisco MDS ha i seguenti requisiti hardware e di licenza:
@@ -85,6 +88,7 @@ image:dc-tech-spec_image5.png["Errore: Immagine grafica mancante"]
 
 
 
+[[fc-san-boot-with-cisco-nexus]]
 == Boot FC SAN con Cisco Nexus
 
 La classica opzione di boot FC SAN ha i seguenti requisiti hardware e di licenza:
@@ -107,6 +111,7 @@ image:dc-tech-spec_image6.png["Errore: Immagine grafica mancante"]
 
 
 
+[[fcoe-san-boot-option]]
 == Opzione di boot SAN FCoE
 
 L'opzione di boot SAN FCoE ha i seguenti requisiti hardware e di licenza:
@@ -128,6 +133,7 @@ image:dc-tech-spec_image7.png["Errore: Immagine grafica mancante"]
 
 
 
+[[iscsi-boot-option]]
 == Opzione di boot iSCI
 
 L'opzione di boot iSCSI ha i seguenti requisiti hardware e di licenza:
@@ -143,6 +149,7 @@ image:dc-tech-spec_image8.png["Errore: Immagine grafica mancante"]
 
 
 
+[[cisco-ucs-direct-connect-with-netapp-storage]]
 == Connessione diretta Cisco UCS con lo storage NetApp
 
 I controller NetApp AFF e FAS possono essere collegati direttamente alle interconnessioni fabric UCS di Cisco senza switch SAN upstream.

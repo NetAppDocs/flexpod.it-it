@@ -15,6 +15,7 @@ summary: Quando si prende in considerazione il dimensionamento, è necessario va
 
 
 
+[[size-the-performance-tier]]
 == Dimensionare il Tier di performance
 
 Quando si prende in considerazione il dimensionamento, tenere presente che il Tier di performance deve essere in grado di svolgere le seguenti attività:
@@ -32,6 +33,7 @@ NOTE: Le scritture dal Tier cloud al Tier performance sono disattivate se la cap
 
 
 
+[[size-the-cloud-tier]]
 == Dimensionare il Tier cloud
 
 Quando si considera il dimensionamento, l'archivio di oggetti che agisce come Tier cloud deve essere in grado di svolgere le seguenti attività:

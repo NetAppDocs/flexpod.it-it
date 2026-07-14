@@ -27,6 +27,7 @@ image:cloud-fabricpool_image10.png["Errore: Immagine grafica mancante"]
 
 
 
+[[create-an-s3-bucket]]
 == Creare un bucket S3
 
 . Nella console di gestione AWS dalla home page, immettere S3 nella barra di ricerca.

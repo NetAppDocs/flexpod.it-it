@@ -15,6 +15,7 @@ summary: 'Questa sezione descrive il numero di studi e i requisiti dell"infrastr
 
 
 
+[[storage-sizing]]
 == Dimensionamento dello storage
 
 Questa sezione descrive il numero di studi e i requisiti dell'infrastruttura corrispondenti.
@@ -62,6 +63,7 @@ I requisiti di storage elencati nella tabella seguente presuppongono che i dati 
 |===
 
 
+[[compute-sizing]]
 == Dimensionamento del calcolo
 
 La tabella seguente elenca i requisiti di calcolo per i sistemi di imaging medicale di piccole, medie e grandi dimensioni.
@@ -104,6 +106,7 @@ La tabella seguente elenca i requisiti di calcolo per i sistemi di imaging medic
 |===
 
 
+[[networking-and-cisco-ucs-infrastructure-sizing]]
 == Dimensionamento dell'infrastruttura Cisco UCS e networking
 
 La tabella seguente elenca i requisiti di rete e dell'infrastruttura Cisco UCS per i sistemi di imaging medicale di piccole, medie e grandi dimensioni.

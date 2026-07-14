@@ -17,6 +17,7 @@ link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["Precedente: Cal
 
 
 
+[[cisco-mds]]
 == Cisco MDS
 
 Piattaforma Cisco MDS serie 9000 con software 8.4.x IS https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["Conforme a FIPS 140-2"^]. Cisco MDS implementa moduli crittografici e i seguenti servizi per SNMPv3 e SSH.
@@ -114,6 +115,7 @@ Per ulteriori informazioni, vedere https://www.cisco.com/c/en/us/td/docs/switche
 
 
 
+[[cisco-nexus]]
 == Cisco Nexus
 
 Gli switch Cisco Nexus serie 9000 (versione 9.3) sono https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["Conforme a FIPS 140-2"^]. Cisco Nexus implementa moduli crittografici e i seguenti servizi per SNMPv3 e SSH.

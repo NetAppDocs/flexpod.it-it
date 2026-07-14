@@ -20,6 +20,7 @@ Per ulteriori informazioni sulle informazioni descritte in questo documento, con
 
 
 
+[[flexpod]]
 == FlexPod
 
 * Pagina iniziale di FlexPod
@@ -78,6 +79,7 @@ https://github.com/NetApp/harvest/releases["https://github.com/NetApp/harvest/re
 
 
 
+[[sm-bc]]
 == SM-BC
 
 * SM-BC
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/ontap/mediator/index.html["https://docs.netapp.com
 
 
 
+[[vmware-vsphere-ha-and-vsphere-metro-storage-cluster]]
 == VMware vSphere ha e vSphere Metro Storage Cluster
 
 * Creazione e utilizzo di cluster vSphere ha
@@ -138,6 +141,7 @@ https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-tier-1-applications-and
 
 
 
+[[microsoft-sql-and-hammerdb]]
 == Microsoft SQL e HammerDB
 
 * Microsoft SQL Server 2019
@@ -156,6 +160,7 @@ https://www.hammerdb.com["https://www.hammerdb.com"^]
 
 
 
+[[compatibility-matrix]]
 == Matrice di compatibilità
 
 * Matrice di compatibilità hardware Cisco UCS
@@ -178,6 +183,7 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 
 
+[[version-history]]
 == Cronologia delle versioni
 
 |===

@@ -18,6 +18,7 @@ Questi sono alcuni esempi di casi di utilizzo per il monitoraggio e l'orchestraz
 
 
 
+[[use-case-1-monitoring-netapp-storage-inventory-and-widgets]]
 == Caso d'utilizzo 1: Monitoraggio dell'inventario e dei widget dello storage NetApp
 
 Quando l'ambiente di storage NetApp è disponibile in Cisco Intersight, è possibile monitorare in dettaglio gli oggetti di storage NetApp dall'inventario dello storage e ottenere una panoramica dai widget di storage.
@@ -30,6 +31,7 @@ Quando l'ambiente di storage NetApp è disponibile in Cisco Intersight, è possi
 
 
 
+[[use-case-2-netapp-storage-orchestration-using-reference-workflows]]
 == Caso d'utilizzo 2: Orchestrazione dello storage NetApp con workflow di riferimento
 
 Quando lo storage NetApp e gli ambienti vCenter sono disponibili in Cisco Intersight, puoi utilizzare i workflow di riferimento end-to-end disponibili in GitHub attraverso il https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Repository del flusso di lavoro Intersight FlexPod"^].
@@ -73,6 +75,7 @@ Segue un elenco dei workflow disponibili nel repository FlexPod-Intersight-Workf
 
 
 
+[[use-case-3-custom-workflows-using-designer-free-form]]
 == Caso d'utilizzo 3: Flussi di lavoro personalizzati utilizzando un modulo senza designer
 
 Quando gli ambienti NetApp Storage e vCenter sono disponibili in Cisco Intersight, è possibile creare flussi di lavoro personalizzati utilizzando le attività di storage e virtualizzazione di NetApp.

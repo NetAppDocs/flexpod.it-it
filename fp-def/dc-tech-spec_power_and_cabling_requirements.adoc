@@ -18,6 +18,7 @@ Un design FlexPod presenta requisiti minimi per l'alimentazione e il cablaggio.
 
 
 
+[[power-requirements]]
 == Requisiti di alimentazione
 
 I requisiti di alimentazione per il data center FlexPod variano in base alla posizione in cui è installata la configurazione del data center FlexPod.
@@ -30,6 +31,7 @@ Per i dati sull'alimentazione dei controller di storage NetApp, consultare http:
 
 
 
+[[minimum-cable-requirements]]
 == Requisiti minimi per i cavi
 
 Il numero e il tipo di cavi e adattatori richiesti variano in base all'implementazione del data center FlexPod. Il tipo di cavo, il tipo di ricetrasmettitore e il numero vengono determinati durante il processo di progettazione in base alle proprie esigenze. La tabella seguente elenca il numero minimo di cavi necessari.

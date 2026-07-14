@@ -22,6 +22,7 @@ La soluzione descritta in questo report tecnico è la configurazione del servizi
 
 
 
+[[customer-value]]
 == Valore per il cliente
 
 La soluzione qui descritta offre valore ai clienti interessati a una soluzione di monitoraggio completa per i propri ambienti di cloud ibrido, in cui ONTAP viene implementato come sistema di storage primario. Sono inclusi gli ambienti FlexPod che utilizzano i sistemi storage NetApp AFF e FAS.

@@ -17,6 +17,7 @@ In collaborazione con:image:cisco logo.png["Errore: Immagine grafica mancante"]
 
 
 
+[[introduction]]
 == Introduzione
 
 NetApp e Cisco hanno collaborato per fornire Cisco Intersight, una vista a singolo pannello dell'ecosistema FlexPod. Questa integrazione semplificata crea una piattaforma di gestione unificata per tutti i componenti dell'infrastruttura FlexPod e della soluzione FlexPod. Cisco Intersight consente di monitorare lo storage NetApp, il calcolo Cisco e l'inventario VMware. Consente inoltre di orchestrare o automatizzare i flussi di lavoro per eseguire le attività di storage e virtualizzazione in tandem.

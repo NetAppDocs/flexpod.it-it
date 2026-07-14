@@ -20,6 +20,7 @@ Possiamo eseguire il piano Terraform utilizzando un controller. Puoi saltare que
 
 
 
+[[prerequisites]]
 == Prerequisiti
 
 La configurazione della soluzione inizia con una workstation di gestione che ha accesso a Internet e con un'installazione funzionante di Terraform.
@@ -28,6 +29,7 @@ La configurazione della soluzione inizia con una workstation di gestione che ha 
 
 
 
+[[clone-github-repo]]
 == Clonare GitHub repo
 
 La prima fase del processo consiste nella clonazione del repo GitHub in una nuova cartella vuota della workstation di gestione. Per clonare il repository GitHub, attenersi alla seguente procedura:

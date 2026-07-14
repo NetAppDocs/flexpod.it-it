@@ -18,6 +18,7 @@ Una volta rivendicati i target, i widget di storage NetApp, l'inventario dello s
 
 
 
+[[storage-inventory-overview]]
 == Panoramica dell'inventario dello storage
 
 La seguente schermata visualizza la schermata *Operate > Storage* (funzionamento > archiviazione).
@@ -33,6 +34,7 @@ image:ci-qsg_image10.png["la schermata mostra la panoramica del cluster di stora
 
 
 
+[[storage-widgets]]
 == Widget per lo storage
 
 Per visualizzare i widget di storage, selezionare *Monitoring > Dashboards > View NetApp storage widgets* (monitoraggio > Dashboard > Visualizza widget di storage NetApp).

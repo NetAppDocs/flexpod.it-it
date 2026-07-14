@@ -18,6 +18,7 @@ Il `tiering-minimum-cooling-days` L'impostazione determina il numero di giorni c
 
 
 
+[[auto]]
 == Automatico
 
 L'impostazione predefinita `tiering-minimum-cooling-days` L'impostazione per il criterio di tiering automatico è 31 giorni.
@@ -31,12 +32,14 @@ NOTE: Lo storage a oggetti non è transazionale come lo storage a file o a blocc
 
 
 
+[[snapshot-only]]
 == Solo Snapshot
 
 L'impostazione predefinita `tiering-minimum-cooling-days` L'impostazione per la policy di tiering Snapshot-Only è di 2 giorni. Un minimo di 2 giorni offre un tempo aggiuntivo per i processi in background per fornire la massima efficienza dello storage e impedisce ai processi di protezione dei dati quotidiani di dover leggere i dati dal Tier cloud.
 
 
 
+[[ontap-cli]]
 == CLI ONTAP
 
 Per modificare un volume `tiering-minimum-cooling-days` Impostando utilizzando l'interfaccia utente di ONTAP, eseguire il seguente comando:

@@ -57,6 +57,7 @@ A partire da ONTAP 9.7, gli aggregati e i volumi appena creati vengono crittogra
 
 
 
+[[ontap-nae-cli-commands]]
 == Comandi ONTAP NAE CLI
 
 Prima di eseguire i seguenti comandi CLI, assicurarsi che il cluster disponga della licenza NVE richiesta.
@@ -78,6 +79,7 @@ fp-health::> storage aggregate modify -aggregate aggregatename -node svmname -en
 ....
 
 
+[[ontap-nve-cli-commands]]
 == Comandi CLI NVE di ONTAP
 
 A partire da ONTAP 9.6, è possibile utilizzare la crittografia a livello di aggregato per assegnare le chiavi all'aggregato contenente per i volumi da crittografare. I volumi creati nell'aggregato vengono crittografati per impostazione predefinita.
@@ -99,6 +101,7 @@ fp-health::> volume show -is-encrypted true
 ....
 
 
+[[nse]]
 == NSE
 
 NSE utilizza i SED per eseguire la crittografia dei dati attraverso un meccanismo con accelerazione hardware.
@@ -114,6 +117,7 @@ Per ulteriori informazioni su NSE, vedere https://www.netapp.com/pdf.html?item=/
 
 
 
+[[key-management]]
 == Gestione delle chiavi
 
 Lo standard FIPS 140-2 si applica al modulo crittografico come definito dal confine, come mostrato nella figura seguente.
@@ -124,6 +128,7 @@ Key Manager tiene traccia di tutte le chiavi di crittografia utilizzate da ONTAP
 
 
 
+[[support-for-external-key-manager]]
 == Supporto per gestore chiavi esterno
 
 A partire da ONTAP 9.3, i key manager esterni sono supportati sia nelle soluzioni NVE che NSE. Lo standard FIPS 140-2 si applica al modulo crittografico utilizzato nell'implementazione del vendor specifico. Nella maggior parte dei casi, i clienti FlexPod e ONTAP utilizzano una delle seguenti soluzioni validate (in base al http://mysupport.netapp.com/matrix["Matrice di interoperabilità NetApp"^]) responsabili chiave:
@@ -150,12 +155,14 @@ fp-health::> security key-manager external show
 ....
 
 
+[[combine-encryption-for-double-encryption-layered-defense]]
 == Combinazione della crittografia per la doppia crittografia (difesa a più livelli)
 
 Se è necessario separare l'accesso ai dati e assicurarsi che i dati siano sempre protetti, i SED NSE possono essere combinati con la crittografia a livello di rete o fabric. I SED NSE agiscono come un backstop se un amministratore dimentica di configurare o configurare in modo errato la crittografia di livello superiore. Per due diversi livelli di crittografia, è possibile combinare i SED NSE con NVE e NAE.
 
 
 
+[[netapp-ontap-cluster-wide-control-plane-fips-mode]]
 == Modalità FIPS del piano di controllo a livello di cluster NetApp ONTAP
 
 Il software per la gestione dei dati NetApp ONTAP dispone di una configurazione in modalità FIPS che crea un'istanza di un livello di sicurezza aggiunto per il cliente. Questa modalità FIPS si applica solo al piano di controllo. Quando la modalità FIPS è attivata, in conformità con gli elementi chiave di FIPS 140-2, Transport Layer Security v1 (TLSv1) e SSLv3 sono disattivati e solo TLS v1.1 e TLS v1.2 rimangono attivati.

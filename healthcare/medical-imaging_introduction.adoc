@@ -69,6 +69,7 @@ Una piattaforma di sistemi di imaging medicale ben architettata è al centro del
 
 
 
+[[overall-solution-benefits]]
 == Vantaggi generali della soluzione
 
 Eseguendo un ambiente applicativo di imaging su una base architetturale FlexPod, la tua organizzazione sanitaria può aspettarsi un miglioramento della produttività del personale e una riduzione delle spese di capitale e operative. FlexPod offre un prodotto rigorosamente testato, prevalidato e convergente, progettato e progettato per offrire performance di sistema prevedibili a bassa latenza e alta disponibilità. Questo approccio offre elevati livelli di comfort e, in ultima analisi, tempi di risposta ottimali per gli utenti del sistema di imaging medicale.
@@ -106,18 +107,21 @@ image:medical-imaging_image2.png["Errore: Immagine grafica mancante"]
 
 
 
+[[scope]]
 == Scopo
 
 Questo documento fornisce una panoramica tecnica di un'infrastruttura FlexPod basata su Cisco UCS e NetApp ONTAP per l'hosting di questa soluzione di imaging medicale.
 
 
 
+[[audience]]
 == Pubblico
 
 Il presente documento è destinato ai responsabili tecnici del settore sanitario, ai tecnici delle soluzioni partner Cisco e NetApp e al personale dei servizi professionali. NetApp presuppone che il lettore abbia una buona comprensione dei concetti di dimensionamento di calcolo e storage, nonché una buona familiarità tecnica con il sistema di imaging medicale, Cisco UCS e i sistemi storage NetApp.
 
 
 
+[[medical-imaging-application]]
 == Applicazione di imaging medicale
 
 Una tipica applicazione di imaging medicale offre una suite di applicazioni che insieme costituiscono una soluzione di imaging di livello Enterprise per le piccole, medie e grandi organizzazioni sanitarie.
@@ -161,18 +165,21 @@ Il cuore della suite di prodotti è costituito dalle seguenti funzionalità clin
 
 
 
+[[size-of-the-healthcare-organization-and-platform-sizing]]
 == Dimensioni dell'organizzazione sanitaria e dimensionamento della piattaforma
 
 Le organizzazioni del settore sanitario possono essere classificate in maniera ampia utilizzando metodi basati su standard che aiutano programmi come ACO. Una di queste classificazioni utilizza il concetto di una rete integrata clinica (CIN). Un gruppo di ospedali può essere chiamato CIN se collaborano e rispettano protocolli clinici standard e percorsi comprovati per migliorare il valore dell'assistenza e ridurre i costi dei pazienti. Gli ospedali all'interno di una rete CIN dispongono di controlli e pratiche per i medici di bordo che seguono i valori fondamentali della rete CIN. Tradizionalmente, una rete di erogazione integrata (IDN) è stata limitata a ospedali e gruppi di medici. Un CIN attraversa i tradizionali confini dell'IDN e un CIN può ancora far parte di un ACO. Seguendo i principi di una CIN, le organizzazioni sanitarie possono essere classificate in piccole, medie e grandi.
 
 
 
+[[small-healthcare-organizations]]
 === Piccole organizzazioni sanitarie
 
 Un'organizzazione sanitaria è di piccole dimensioni se include un solo ospedale con ambulatori e un reparto degente, ma non fa parte di un CIN. I medici lavorano come operatori sanitari e coordinano l'assistenza ai pazienti durante un percorso di cura. Queste piccole organizzazioni includono generalmente strutture gestite da medici. Potrebbero offrire o meno cure di emergenza e traumi come assistenza integrata per il paziente. In genere, un'organizzazione sanitaria di piccole dimensioni esegue circa 250,000 studi di imaging clinico all'anno. I centri di imaging sono considerati piccole organizzazioni sanitarie e offrono servizi di imaging. Alcuni forniscono anche servizi di dettatura radiologica ad altre organizzazioni.
 
 
 
+[[medium-healthcare-organizations]]
 === Organizzazioni sanitarie di medie dimensioni
 
 Un'organizzazione sanitaria considerata di medie dimensioni se include più sistemi ospedalieri con organizzazioni mirate, come ad esempio:
@@ -192,6 +199,7 @@ In un'organizzazione sanitaria di medie dimensioni, i medici seguono i principi 
 
 
 
+[[large-healthcare-organizations]]
 === Grandi organizzazioni sanitarie
 
 Un'organizzazione sanitaria è considerata di grandi dimensioni se include le caratteristiche di un'organizzazione sanitaria di medie dimensioni e offre le capacità cliniche di medie dimensioni alla comunità in diverse aree geografiche.
@@ -213,10 +221,12 @@ Prima di esaminare il modo in cui queste organizzazioni di dimensioni diverse si
 
 
 
+[[flexpod]]
 == FlexPod
 
 
 
+[[cisco-unified-computing-system]]
 === Cisco Unified Computing System
 
 Cisco UCS è costituito da un singolo dominio di gestione che è interconnesso con un'infrastruttura i/o unificata. Cisco UCS per ambienti di imaging medico è stato allineato con le raccomandazioni e le Best practice dell'infrastruttura del sistema di imaging medico NetApp, in modo che l'infrastruttura possa fornire informazioni critiche sui pazienti con la massima disponibilità.
@@ -247,6 +257,7 @@ Cisco Unified Computing System unisce server e reti di livello di accesso. Quest
 
 
 
+[[cisco-ucs-manager]]
 === Cisco UCS Manager
 
 Cisco UCS Manager offre una gestione integrata e unificata per tutti i componenti software e hardware di Cisco UCS. Utilizzando la tecnologia a connessione singola, UCS Manager gestisce, controlla e amministra più chassis per migliaia di macchine virtuali. Attraverso una GUI intuitiva, una CLI o un'API XML, gli amministratori utilizzano il software per gestire l'intero Cisco UCS come singola entità logica. Cisco UCS Manager risiede su una coppia di fabric Interconnect Cisco UCS 6300 Series che utilizzano una configurazione di Active-standby in cluster per una disponibilità elevata.
@@ -259,6 +270,7 @@ Per ulteriori informazioni su Cisco UCS Manager, consultare https://www.cisco.co
 
 
 
+[[cisco-ucs-differentiators]]
 === Elementi di differenziazione di Cisco UCS
 
 Cisco Unified Computing System sta rivoluzionando il modo in cui i server vengono gestiti nel data center. Scopri i seguenti elementi distintivi di Cisco UCS e Cisco UCS Manager:
@@ -281,6 +293,7 @@ Cisco Unified Computing System sta rivoluzionando il modo in cui i server vengon
 
 
 
+[[cisco-nexus-ip-and-mds-switches]]
 === Switch Cisco Nexus IP e MDS
 
 Gli switch Cisco Nexus e Cisco MDS Multilayer director offrono connettività di livello Enterprise e consolidamento SAN. Le reti di storage multiprotocollo Cisco aiutano a ridurre i rischi aziendali fornendo flessibilità e opzioni: FC, Fibre Connection (FICON), FC over Ethernet (FCoE), iSCSI e FC over IP (FCIP).
@@ -298,6 +311,7 @@ Insieme, Cisco UCS con switch Cisco Nexus e MDS Multilayer director offrono una 
 
 
 
+[[netapp-all-flash-storage]]
 === Storage all-flash NetApp
 
 Lo storage NetApp che esegue il software ONTAP riduce i costi di storage complessivi offrendo al contempo tempi di risposta in lettura e scrittura a bassa latenza e IOPS elevati richiesti dai carichi di lavoro del sistema di imaging medicale. Per creare un sistema di storage ottimale che soddisfi i requisiti tipici dei sistemi di imaging medicale, ONTAP supporta configurazioni di storage all-flash e ibride. Lo storage flash NetApp offre ai clienti del sistema di imaging medicale come te i componenti chiave delle performance elevate e della reattività per supportare le operazioni del sistema di imaging medicale sensibili alla latenza. Creando più domini di errore in un singolo cluster, la tecnologia NetApp può anche isolare gli ambienti di produzione dagli ambienti non di produzione. Inoltre, garantendo che le performance del sistema non scenda al di sotto di un determinato livello per i carichi di lavoro con QoS minimo ONTAP, NetApp riduce i problemi di performance del sistema.
@@ -317,6 +331,7 @@ Per l'imaging medicale, ONTAP è stato validato dalla maggior parte dei sistemi 
 
 
 
+[[host-virtualization-vmware-vsphere]]
 === Virtualizzazione host: VMware vSphere
 
 Le architetture FlexPod sono validate con VMware vSphere 6.x, la piattaforma di virtualizzazione leader del settore. VMware ESXi 6.x viene utilizzato per implementare ed eseguire le macchine virtuali. VCenter Server Appliance 6.x viene utilizzato per gestire host e macchine virtuali ESXi. Per formare un cluster VMware ESXi vengono utilizzati più host ESXi eseguiti su blade Cisco UCS B200 M5. Il cluster VMware ESXi raggruppa le risorse di calcolo, memoria e rete di tutti i nodi del cluster e fornisce una piattaforma resiliente per le macchine virtuali in esecuzione sul cluster. Le funzionalità del cluster VMware ESXi, l'alta disponibilità di vSphere e il DRS (Distributed Resource Scheduler) contribuiscono alla tolleranza del cluster vSphere per resistere agli errori e aiutano a distribuire le risorse tra gli host VMware ESXi.

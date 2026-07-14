@@ -18,6 +18,7 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+[[january-2024]]
 == Gennaio 2024
 
 * Orchestrazione dello storage di NetApp tramite workflow di riferimento ora disponibili per il download in GitHub attraverso il https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["Repository del flusso di lavoro Intersight FlexPod"^]. Per ulteriori informazioni sui nuovi flussi di lavoro di riferimento in GitHub, vedere link:ci-qsg_use_cases.html["Caso d'utilizzo 2: Orchestrazione dello storage NetApp con flussi di lavoro di riferimento"^].
@@ -25,6 +26,7 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+[[november-2023]]
 == Novembre 2023
 
 * È stata aggiunta la pagina NVMe Namespaces nella sezione Inventory dell'interfaccia utente.
@@ -32,6 +34,7 @@ Questa sezione elenca le nuove funzionalità e funzionalità disponibili per Cis
 
 
 
+[[august-2023]]
 == Agosto 2023
 
 
@@ -44,6 +47,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13GA p
 
 
 
+[[july-2023]]
 == Luglio 2023
 
 
@@ -70,6 +74,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13GA p
 
 
 
+[[june-2023]]
 == Giugno 2023
 
 
@@ -80,6 +85,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13RC1 
 
 
 
+[[april-2023]]
 == Aprile 2023
 
 * Aggiunte le schede Criteri di protezione (SnapMirror) e Criteri Snapshot nella pagina Criteri all'interno della sezione inventario dell'interfaccia utente.
@@ -92,6 +98,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.13RC1 
 
 
 
+[[january-2023]]
 == Gennaio 2023
 
 
@@ -103,6 +110,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.12 GA 
 
 
 
+[[august-2022]]
 == Agosto 2022
 
 
@@ -120,6 +128,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.11 GA 
 
 
 
+[[july-2022]]
 == Luglio 2022
 
 * Videografica migliorata per il rapporto di riduzione dei dati del cluster ora disponibile nel Capacity Widget
@@ -139,6 +148,7 @@ NOTE: È necessario un aggiornamento a NetApp Active IQ Unified Manager 9.11 GA 
 
 
 
+[[april-2022]]
 == Aprile 2022
 
 
@@ -157,6 +167,7 @@ NOTE: Per garantire compatibilità e funzionalità complete con le versioni futu
 
 
 
+[[january-2022]]
 == Gennaio 2022
 
 * Aggiunta di allarmi di interoperabilità basati su eventi per NetApp Active IQ Unified Manager 9.10 o versioni successive.
@@ -177,6 +188,7 @@ NOTE: Per garantire compatibilità e funzionalità complete con le versioni futu
 
 
 
+[[october-2021]]
 == Ottobre 2021
 
 * Elenco aggiornato delle attività di storage NetApp disponibili in Cisco Intersight. Vedere link:ci-qsg_use_cases.html["USA i flussi di lavoro personalizzati del caso 3 utilizzando un modulo senza designer"^] Per un elenco completo delle attività di storage NetApp.
@@ -195,6 +207,7 @@ NOTE: Le suddette metriche delle performance sono disponibili solo per gli stora
 
 
 
+[[known-issues]]
 == Problemi noti
 
 * Se si utilizza una versione di AIQUM 9.11 o precedente, si verificherà una discrepanza tra i valori visualizzati nella pagina Storage List (elenco di storage) e il grafico a barre della capacità nella pagina Storage General (Generale archiviazione). Per risolvere questo problema, eseguire l'aggiornamento a AIQUM 9.12 o superiore per garantire la precisione dei valori di capacità visualizzati.

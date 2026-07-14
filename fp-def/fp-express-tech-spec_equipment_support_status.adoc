@@ -24,6 +24,7 @@ Prima di implementare o effettuare la manutenzione delle apparecchiature FlexPod
 
 
 
+[[checking-netapp-equipment-support]]
 == Controllo del supporto delle apparecchiature NetApp
 
 NetApp fornisce informazioni di supporto tramite Hardware Universe (HWU).
@@ -42,6 +43,7 @@ NOTE: Per visualizzare tutte le piattaforme, cambia il filtro *Ciclo di vita del
 
 
 
+[[checking-cisco-equipment-support]]
 == Verifica del supporto per le apparecchiature Cisco
 
 Cisco fornisce le date di fine vendita e fine supporto nelle pagine di supporto dei prodotti Cisco.
