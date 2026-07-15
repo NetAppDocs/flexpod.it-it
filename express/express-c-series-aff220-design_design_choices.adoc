@@ -34,11 +34,11 @@ I sistemi NetApp AFF A220 utilizzano il nuovo software ONTAP 9.4. ONTAP 9.4 è i
 
 ONTAP 9.4 dispone di diverse funzionalità adatte alla soluzione FlexPod Express. In primo luogo, l'impegno di NetApp per l'efficienza dello storage, che può essere una delle funzionalità più importanti per le piccole implementazioni. Le caratteristiche di efficienza dello storage di NetApp come deduplica, compressione e thin provisioning sono disponibili in ONTAP 9.4 con una nuova aggiunta, la compattazione. Poiché il sistema NetApp WAFL scrive sempre blocchi da 4 KB, la compattazione combina più blocchi in un blocco da 4 KB quando i blocchi non utilizzano lo spazio allocato di 4 KB. La seguente figura illustra questo processo.
 
-image:express-c-series-aff220-design_image5.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image5.png[""]
 
 Inoltre, è possibile sfruttare la partizione dei dati root sul sistema AFF A220. Questa partizione consente di eseguire lo striping dell'aggregato root e di due aggregati di dati tra i dischi del sistema. Pertanto, entrambi i controller di un cluster AFF A220 a due nodi possono sfruttare le prestazioni di tutti i dischi dell'aggregato. Vedere la figura seguente.
 
-image:express-c-series-aff220-design_image6.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image6.png[""]
 
 Queste sono solo alcune funzionalità chiave che integrano la soluzione FlexPod Express. Per informazioni dettagliate sulle funzioni e le funzionalità aggiuntive di ONTAP 9.4, vedere https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["Scheda informativa sul software di gestione dei dati ONTAP 9"^] . Inoltre, vedere NetApp http://docs.netapp.com/ontap-9/index.jsp["Centro documentazione di ONTAP 9"^] , che è stato aggiornato per includere ONTAP 9.4.
 
@@ -57,7 +57,7 @@ Le specifiche delle performance includono:
 * MTU (Maximum Transmission Unit) configurabile fino a 9216 byte (frame jumbo)
 
 
-image:express-c-series-aff220-design_image7.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image7.png[""]
 
 Per ulteriori informazioni sugli switch Cisco Nexus 3172, consultare https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Scheda tecnica degli switch Cisco Nexus 3172PQ, 3172TQ, 3172TQ-32T, 3172PQ-XL e 3172TQ-XL"^].
 
@@ -78,7 +78,7 @@ I server rack Cisco UCS C-Series offrono i seguenti vantaggi:
 * Maggiore scelta per i clienti con vantaggi esclusivi in un pacchetto rack familiare
 
 
-image:express-c-series-aff220-design_image8.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image8.png[""]
 
 Il server rack Cisco UCS C220 M5 (nella figura precedente) è tra i server per applicazioni e infrastrutture aziendali generici più versatili del settore. Si tratta di un server rack a due socket ad alta densità che offre performance ed efficienza leader di settore per un'ampia gamma di carichi di lavoro, tra cui virtualizzazione, collaborazione e applicazioni bare-metal. I server rack Cisco UCS C-Series possono essere implementati come server standalone o come parte di Cisco UCS per sfruttare le innovazioni di Unified Computing basate su standard di Cisco che aiutano a ridurre il TCO dei clienti e ad aumentare l'agilità del business.
 
@@ -97,7 +97,7 @@ Cisco UCS VIC 1387 (nella figura seguente) offre QSFP+ 40GbE e FC over Ethernet 
 
 
 
-image:express-c-series-aff220-design_image9.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image9.png[""]
 
 Per ulteriori informazioni sull'adattatore Cisco UCS VIC 1387, consultare https://www.cisco.com/c/en/us/products/interfaces-modules/ucs-virtual-interface-card-1387/index.html["Cisco UCS Virtual Interface Card 1387"^] scheda tecnica.
 
@@ -107,7 +107,7 @@ Il modulo Cisco QSA converte una porta QSFP in una porta SFP o SFP+. Con questo 
 
 
 
-image:express-c-series-aff220-design_image10.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-design_image10.png[""]
 
 
 

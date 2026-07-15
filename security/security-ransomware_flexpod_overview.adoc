@@ -18,7 +18,7 @@ FlexPod è un'architettura pre-progettata, integrata e validata che combina i se
 
 La figura seguente illustra l'architettura FlexPod e evidenzia chiaramente l'alta disponibilità in tutti i livelli dello stack. I componenti dell'infrastruttura di storage, rete e calcolo sono configurati in modo che le operazioni possano eseguire il failover istantaneo al partner sopravvissuto in caso di guasto di uno dei componenti.
 
-image:security-ransomware_image2.png["Errore: Immagine grafica mancante"]
+image:security-ransomware_image2.png[""]
 
 Un vantaggio importante per un sistema FlexPod è la sua pre-progettazione, integrazione e validazione per diversi carichi di lavoro. Vengono pubblicate guide dettagliate di progettazione e implementazione per ogni convalida della soluzione. Questi documenti includono le Best practice da adottare per consentire ai carichi di lavoro di essere eseguiti senza problemi su FlexPod. Queste soluzioni sono costruite con i migliori prodotti di calcolo, rete e storage e una serie di funzionalità che si concentrano sulla sicurezza e la protezione avanzata dell'intera infrastruttura.
 

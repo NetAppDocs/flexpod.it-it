@@ -45,7 +45,7 @@ Nel campo Container Name (Nome contenitore), immettere il nome del bucket o del 
 . Fare clic su Save and Allega aggregati.
 
 
-image:cloud-fabricpool_image13.png["Errore: Immagine grafica mancante"]
+image:cloud-fabricpool_image13.png[""]
 
 
 

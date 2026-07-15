@@ -15,7 +15,7 @@ summary: La soluzione descritta in questo report tecnico è la configurazione de
 
 Alan Cowles, NetApp
 
-In collaborazione con:image:cisco logo.png["Errore: Immagine grafica mancante"]
+In collaborazione con: image:cisco logo.png[""]
 
 [role="lead"]
 La soluzione descritta in questo report tecnico è la configurazione del servizio NetApp Cloud Insights per il monitoraggio del sistema di storage NetApp AFF A800 con NetApp ONTAP, implementato come parte di una soluzione per data center FlexPod.

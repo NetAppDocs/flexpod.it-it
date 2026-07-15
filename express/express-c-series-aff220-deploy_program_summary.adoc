@@ -10,7 +10,7 @@ summary: 'Le tendenze del settore indicano una vasta trasformazione del data cen
 
 Savita Kumari, NetApp
 
-In collaborazione con:image:cisco logo.png["Errore: Immagine grafica mancante"]
+In collaborazione con: image:cisco logo.png[""]
 
 [role="lead"]
 Le tendenze del settore indicano una vasta trasformazione del data center verso l'infrastruttura condivisa e il cloud computing. Inoltre, le organizzazioni cercano una soluzione semplice ed efficace per uffici remoti e filiali, sfruttando la tecnologia con cui hanno familiarità nel proprio data center.

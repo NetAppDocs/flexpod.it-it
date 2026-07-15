@@ -25,7 +25,7 @@ La configurazione dello storage per la soluzione FlexPod SM-BC segue le Best pra
 
 La connettività dello storage alle IFI UCS locali e ai server blade viene fornita dagli switch Nexus del sito locale. Attraverso la connettività dello switch Nexus tra i siti, è possibile accedere allo storage anche dai blade server UCS remoti. La figura e la tabella seguenti mostrano il diagramma di connettività dello storage e un elenco di connessioni per i controller dello storage in ogni sito.
 
-image:sm-bcs-image22.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image22.png[""]
 
 |===
 | Dispositivo locale | Porta locale | Dispositivo remoto | Porta remota 
@@ -75,7 +75,7 @@ Due porte fisiche su ciascun controller di storage sono collegate a ciascuno swi
 
 I protocolli di gestione in-band, inter-cluster e storage dei dati NFS/iSCSI utilizzano VLAN. Le porte VLAN vengono create sul gruppo di interfacce per separare i diversi tipi di traffico. Le interfacce logiche (LIF) per le rispettive funzioni vengono create sulla parte superiore delle porte VLAN corrispondenti. La figura seguente mostra la relazione tra connessioni fisiche, gruppi di interfacce, porte VLAN e interfacce logiche.
 
-image:sm-bcs-image23.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image23.png[""]
 
 
 
@@ -88,7 +88,7 @@ La figura seguente mostra la connettività per l'avvio SAN iSCSI del server Cisc
 
 Ogni LUN di boot iSCSI viene mappato al server che si avvia da esso attraverso le LIF iSCSI associando il LUN di boot con i nomi iSCSI qualificati del server (IQN) nel relativo igroup di boot. L'igroup di boot del server contiene due IQN, uno per ogni fabric vNIC/SAN. Questa funzione consente solo al server autorizzato di accedere al LUN di avvio creato appositamente per tale server.
 
-image:sm-bcs-image24.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image24.png[""]
 
 
 
@@ -97,21 +97,21 @@ image:sm-bcs-image24.png["Errore: Immagine grafica mancante"]
 
 I peer del cluster ONTAP comunicano tramite le LIF dell'intercluster. Utilizzando Gestione di sistema di ONTAP per i due cluster, è possibile creare le LIF di intercluster necessarie nel pannello protezione > Panoramica.
 
-image:sm-bcs-image25.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image25.png[""]
 
 Per unire i due cluster, completare i seguenti passaggi:
 
 . Generare la passphrase di peering del cluster nel primo cluster.
 +
-image:sm-bcs-image26.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image26.png[""]
 
 . Richiamare l'opzione Peer Cluster nel secondo cluster e fornire la passphrase e le informazioni LIF dell'intercluster.
 +
-image:sm-bcs-image27.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image27.png[""]
 
 . Il pannello System Manager Protection > Overview (protezione > Panoramica di System Manager) mostra le informazioni relative ai peer del cluster.
 +
-image:sm-bcs-image28.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image28.png[""]
 
 
 
@@ -126,11 +126,11 @@ Prima di installare il mediatore ONTAP, consultare https://docs.netapp.com/us-en
 
 Una volta installato il mediatore ONTAP, è possibile aggiungere il certificato di sicurezza del mediatore ONTAP ai cluster ONTAP e configurare il mediatore ONTAP nel pannello protezione > Panoramica di Gestione sistema. La seguente schermata mostra la GUI di configurazione del mediatore ONTAP.
 
-image:sm-bcs-image29.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image29.png[""]
 
 Dopo aver fornito le informazioni necessarie, il mediatore ONTAP configurato viene visualizzato nel pannello protezione > Panoramica di Gestione sistema.
 
-image:sm-bcs-image30.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image30.png[""]
 
 
 
@@ -148,7 +148,7 @@ Per ulteriori informazioni, consultare la documentazione di ONTAP SM-BC sul http
 
 Per la configurazione della convalida, è stato utilizzato Gestore di sistema di ONTAP per creare i gruppi di coerenza per proteggere le LUN di avvio ESXi e le LUN degli archivi dati condivisi per entrambi i siti. La finestra di dialogo per la creazione di gruppi di coerenza è accessibile selezionando protezione > Panoramica > protezione per la business continuity > Proteggi gruppo di coerenza. Per creare un gruppo di coerenza, fornire i volumi di origine, il cluster di destinazione e le informazioni sulla macchina virtuale di storage di destinazione necessari per la creazione.
 
-image:sm-bcs-image31.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image31.png[""]
 
 Nella tabella seguente sono elencati i quattro gruppi di coerenza creati e i volumi inclusi in ciascun gruppo di coerenza per il test di convalida.
 
@@ -171,15 +171,15 @@ Una volta creati, i gruppi di coerenza vengono visualizzati sotto le rispettive 
 
 Questa schermata mostra le relazioni dei gruppi di coerenza nel sito A.
 
-image:sm-bcs-image32.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image32.png[""]
 
 Questa schermata mostra le relazioni dei gruppi di coerenza nel sito B.
 
-image:sm-bcs-image33.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image33.png[""]
 
 Questa schermata mostra i dettagli delle relazioni del gruppo di coerenza per il gruppo cg_infra_datastore_b.
 
-image:sm-bcs-image34.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image34.png[""]
 
 
 
@@ -190,20 +190,20 @@ Una volta creati i gruppi di coerenza, SnapMirror sincronizza i volumi di origin
 
 Questa schermata mostra le informazioni sul volume per il sito A.
 
-image:sm-bcs-image35.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image35.png[""]
 
 Questa schermata mostra le informazioni sul volume per il sito B.
 
-image:sm-bcs-image36.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image36.png[""]
 
 Per facilitare il failover trasparente delle applicazioni, è necessario mappare anche i LUN SM-BC mirrorati agli host dal cluster di destinazione. In questo modo, gli host possono visualizzare correttamente i percorsi verso le LUN dai cluster di origine e di destinazione. Il `igroup show` e. `lun show` Le uscite per il sito A e il sito B vengono acquisite nelle due schermate seguenti. Con le mappature create, ogni host ESXi nel cluster vede il proprio LUN di avvio SAN come ID 0 e tutte e quattro le LUN degli archivi dati iSCSI condivisi.
 
 Questa schermata mostra la mappatura di igroups e LUN host per un cluster del sito A.
 
-image:sm-bcs-image37.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image37.png[""]
 
 Questa schermata mostra la mappatura di igroups e LUN host per il cluster del sito B.
 
-image:sm-bcs-image38.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image38.png[""]
 
 link:sm-bcs-virtualization.html["Successivo: Convalida della soluzione - virtualizzazione."]

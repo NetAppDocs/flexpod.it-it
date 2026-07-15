@@ -103,7 +103,7 @@ Il supporto congiunto di FlexPod è particolarmente utile se la tua organizzazio
 
 
 
-image:medical-imaging_image2.png["Errore: Immagine grafica mancante"]
+image:medical-imaging_image2.png[""]
 
 
 

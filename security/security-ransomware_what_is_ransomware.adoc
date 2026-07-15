@@ -15,7 +15,7 @@ summary: 'Ransomware è un tipo di malware basato sulla crittografia, ovvero l"u
 
 Arvind Ramakrishnan, NetApp
 
-In collaborazione con:image:cisco logo.png["Errore: Immagine grafica mancante"]
+In collaborazione con: image:cisco logo.png[""]
 
 [role="lead"]
 Per comprendere il ransomware, è necessario prima comprendere alcuni punti chiave sulla crittografia. I metodi crittografici consentono la crittografia dei dati con una chiave segreta condivisa (crittografia a chiave simmetrica) o con una coppia di chiavi (crittografia a chiave asimmetrica). Una di queste chiavi è una chiave pubblica ampiamente disponibile e l'altra è una chiave privata non divulgata.

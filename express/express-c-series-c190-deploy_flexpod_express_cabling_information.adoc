@@ -18,7 +18,7 @@ Questa convalida di riferimento è cablata come mostrato nelle figure e nelle ta
 
 Questa figura mostra il cablaggio di convalida di riferimento.
 
-image:express-c-series-c190-deploy_image3.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image3.png[""]
 
 La seguente tabella elenca le informazioni di cablaggio per lo switch Cisco Nexus 31108PC-V-A.
 

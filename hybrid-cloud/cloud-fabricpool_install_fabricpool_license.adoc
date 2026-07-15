@@ -24,7 +24,7 @@ Dopo aver acquisito un file di licenza NetApp, è possibile installarlo con Gest
 . Fare clic su Aggiungi.
 
 
-image:cloud-fabricpool_image8.png["Errore: Immagine grafica mancante"]
+image:cloud-fabricpool_image8.png[""]
 
 
 
@@ -43,7 +43,7 @@ In Gestore di sistema di OnCommand, attenersi alla seguente procedura:
 . Fare clic sulla scheda Dettagli.
 
 
-image:cloud-fabricpool_image9.png["Errore: Immagine grafica mancante"]
+image:cloud-fabricpool_image9.png[""]
 
 La capacità massima e la capacità corrente sono elencate nella riga licenza FabricPool.
 

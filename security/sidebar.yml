@@ -3,7 +3,6 @@ section: security
 title: FlexPod e sicurezza
 entries:
 - title: FlexPod, la soluzione per il ransomware
-  type: solutions
   entries:
   - title: Cos'è il ransomware?
     url: "/security/security-ransomware_what_is_ransomware.html"
@@ -22,7 +21,6 @@ entries:
   - title: Ulteriori informazioni
     url: "/security/security-ransomware_additional_information.html"
 - title: Soluzione FlexPod conforme alla sicurezza FIPS 140-2 per il settore sanitario
-  type: solutions
   entries:
   - title: Introduzione
     url: "/security/flexpod-fips-introduction.html"

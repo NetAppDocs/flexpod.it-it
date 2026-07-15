@@ -31,13 +31,13 @@ Per associare un Tier cloud a un aggregato utilizzando Gestione di sistema di On
 . Avviare Gestore di sistema di OnCommand.
 . Fare clic su applicazioni e livelli.
 +
-image:cloud-fabricpool_image14.png["Errore: Immagine grafica mancante"]
+image:cloud-fabricpool_image14.png[""]
 
 . Fare clic su Storage Tier.
 . Fare clic su un aggregato.
 . Fare clic su azioni e selezionare Allega Tier cloud.
 +
-image:cloud-fabricpool_image15.png["Errore: Immagine grafica mancante"]
+image:cloud-fabricpool_image15.png[""]
 
 . Seleziona un livello cloud.
 . Visualizzare e aggiornare i criteri di tiering per i volumi sull'aggregato (facoltativo). Per impostazione predefinita, il criterio di tiering del volume è impostato su Snapshot-Only (solo snapshot).

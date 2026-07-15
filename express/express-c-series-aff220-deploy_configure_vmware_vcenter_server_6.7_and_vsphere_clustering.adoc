@@ -35,7 +35,7 @@ Per creare un cluster vSphere, attenersi alla seguente procedura:
 . Attivare DR e vSphere ha selezionando le caselle di controllo.
 . Fare clic su OK.
 +
-image:express-c-series-aff220-deploy_image49.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-deploy_image49.png[""]
 
 
 
@@ -46,7 +46,7 @@ image:express-c-series-aff220-deploy_image49.png["Errore: Immagine grafica manca
 
 . Fare clic con il pulsante destro del mouse sul cluster e selezionare Add host (Aggiungi host).
 +
-image:express-c-series-aff220-deploy_image50.png["Errore: Immagine grafica mancante"]
+image:express-c-series-aff220-deploy_image50.png[""]
 
 . Per aggiungere un host ESXi al cluster, attenersi alla seguente procedura:
 +

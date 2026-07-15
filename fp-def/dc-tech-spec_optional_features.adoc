@@ -25,29 +25,29 @@ FlexPod supporta entrambe le varianti del software NetApp MetroCluster per una d
 
 La figura seguente mostra il data center FlexPod con architettura NetApp MetroCluster.
 
-image:dc-tech-spec_image1.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image1.png[""]
 
 La figura seguente mostra il data center FlexPod con architettura IP NetApp MetroCluster.
 
-image:dc-tech-spec_image2.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image2.png[""]
 
 A partire da ONTAP 9.8, è possibile implementare ONTAP Mediator in un terzo sito per monitorare la soluzione IP di MetroCluster e facilitare lo switchover automatizzato non pianificato in caso di disastro del sito.
 
 Per l'implementazione di una soluzione IP FlexPod MetroCluster con connettività estesa di livello 2 da sito a sito, è possibile ottenere risparmi sui costi condividendo ISL e utilizzando switch FlexPod come switch IP MetroCluster conformi se la larghezza di banda della rete e gli switch soddisfano i requisiti come illustrato nella figura seguente, Che raffigura la soluzione IP di FlexPod MetroCluster con condivisione ISL e switch conformi.
 
-image:dc-tech-spec_image10.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image10.png[""]
 
 Le due figure seguenti illustrano il fabric VXLAN multi-sito e il fabric di storage IP MetroCluster per una soluzione IP FlexPod MetroCluster con implementazione del fabric VXLAN multi-sito.
 
 * Fabric VXLAN multi-sito per soluzione IP FlexPod MetroCluster
 
 
-image:dc-tech-spec_image11.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image11.png[""]
 
 * Fabric di storage IP MetroCluster per soluzione IP FlexPod MetroCluster
 
 
-image:dc-tech-spec_image12.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image12.png[""]
 
 
 
@@ -64,7 +64,7 @@ Per ulteriori informazioni sulle configurazioni FlexPod e sui vantaggi in termin
 
 Per ulteriori informazioni sull'implementazione di ONTAP, vedere https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["TR-4684: Implementazione e configurazione di SAN moderne con NVMe"^].
 
-image:dc-tech-spec_image3.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image3.png[""]
 
 
 
@@ -82,9 +82,9 @@ Per ulteriori informazioni su una progettazione basata su MDS, vedere CVD https:
 
 Le figure seguenti mostrano un esempio di data center FlexPod per FC con connettività MDS e data center FlexPod per FC con Cisco Nexus 93180YC-FX, rispettivamente.
 
-image:dc-tech-spec_image4.jpg["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image4.jpg[""]
 
-image:dc-tech-spec_image5.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image5.png[""]
 
 
 
@@ -107,7 +107,7 @@ NOTE: L'utilizzo della famiglia di switch Cisco Nexus 7000 o 9000 preclude l'uti
 
 La figura seguente mostra una configurazione della connettività FC.
 
-image:dc-tech-spec_image6.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image6.png[""]
 
 
 
@@ -129,7 +129,7 @@ NOTE: L'utilizzo degli switch Cisco Nexus 9000 Series impedisce l'utilizzo di FC
 
 La figura seguente mostra uno scenario di avvio FCoE.
 
-image:dc-tech-spec_image7.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image7.png[""]
 
 
 
@@ -145,7 +145,7 @@ L'opzione di boot iSCSI ha i seguenti requisiti hardware e di licenza:
 
 La figura seguente mostra una configurazione solo Ethernet avviata mediante iSCSI.
 
-image:dc-tech-spec_image8.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image8.png[""]
 
 
 
@@ -171,7 +171,7 @@ I requisiti hardware e di licenza sono i seguenti:
 
 La figura seguente mostra una configurazione FC a connessione diretta.
 
-image:dc-tech-spec_image9.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image9.png[""]
 
 *Note:*
 
@@ -182,7 +182,7 @@ image:dc-tech-spec_image9.png["Errore: Immagine grafica mancante"]
 
 La figura seguente mostra una configurazione di connessione diretta iSCSI/Unified IP.
 
-image:dc-tech-spec_image10.png["Errore: Immagine grafica mancante"]
+image:dc-tech-spec_image10.png[""]
 
 *Note:*
 

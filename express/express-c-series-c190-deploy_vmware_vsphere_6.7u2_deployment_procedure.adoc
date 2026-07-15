@@ -41,7 +41,7 @@ La procedura riportata di seguito illustra in dettaglio il metodo di accesso all
 . Nel menu principale, selezionare la scheda Server.
 . Fare clic su Avvia console KVM.
 +
-image:express-c-series-c190-deploy_image17.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image17.png[""]
 
 . Dalla console KVM virtuale, selezionare la scheda Virtual Media (supporti virtuali).
 . Selezionare Map CD/DVD (Mappa CD/DVD).
@@ -74,7 +74,7 @@ La seguente procedura descrive come installare VMware ESXi su ciascun host.
 . Dopo aver letto il contratto di licenza con l'utente finale, accettarlo e continuare con l'installazione premendo F11.
 . Selezionare il LUN NetApp precedentemente configurato come disco di installazione per ESXi e premere Invio per continuare l'installazione.
 +
-image:express-c-series-c190-deploy_image18.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image18.png[""]
 
 . Selezionare il layout di tastiera appropriato e premere Invio.
 . Inserire e confermare la password root e premere Invio.
@@ -100,7 +100,7 @@ La seguente procedura descrive come aggiungere la rete di gestione per ciascun h
 . Selezionare le porte desiderate per vSwitch0. Premere Invio.
 . Selezionare le porte corrispondenti a eth0 e eth1 in CIMC.
 +
-image:express-c-series-c190-deploy_image19.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image19.png[""]
 
 . Selezionare VLAN (opzionale) e premere Invio.
 . Inserire l'ID VLAN `\<<mgmt_vlan_id>>`. Premere Invio.
@@ -215,7 +215,7 @@ Per configurare l'avvio iSCSI, attenersi alla seguente procedura:
 . Selezionare Networking (rete) a sinistra.
 . A destra, selezionare la scheda Virtual Switches (interruttori virtuali).
 +
-image:express-c-series-c190-deploy_image20.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image20.png[""]
 
 . Fare clic su iScsiBootvSwitch.
 . Selezionare Modifica impostazioni.
@@ -248,7 +248,7 @@ NOTE: Impostare la MTU su 9000 su iScsiBootPG-A.
 .. Fare clic su Edit Settings (Modifica impostazioni) in iSCSIBootPG-A > Tiering and failover > failover order > vmnic3. Vmnic3 deve essere attivo e vmnic5 deve essere inutilizzato.
 .. Fare clic su Edit Settings (Modifica impostazioni) in iSCSIBootPG-B > Teaming and failover (Teaming e failover) > failover Order (Ordine di failover) > Vmnic5. Vmnic5 deve essere attivo e vmnic3 deve essere inutilizzato.
 +
-image:express-c-series-c190-deploy_image21.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image21.png[""]
 
 
 
@@ -264,18 +264,18 @@ Per configurare il multipathing iSCSI sugli host ESXi, attenersi alla seguente p
 . Selezionare Storage (archiviazione) nel riquadro di navigazione a sinistra. Fare clic su adattatori.
 . Selezionare l'adattatore software iSCSI e fare clic su Configure iSCSI (Configura iSCSI).
 +
-image:express-c-series-c190-deploy_image22.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image22.png[""]
 
 . In Dynamic Targets (destinazioni dinamiche), fare clic su Add Dynamic Target (Aggiungi destinazione dinamica
 +
-image:express-c-series-c190-deploy_image23.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image23.png[""]
 
 . Inserire l'indirizzo IP `iscsi_lif01a`.
 +
 .. Ripetere l'operazione con gli indirizzi IP `iscsi_lif01b`, `iscsi_lif02a`, e. `iscsi_lif02b`.
 .. Fare clic su Salva configurazione.
 +
-image:express-c-series-c190-deploy_image24.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image24.png[""]
 
 +
 
@@ -295,7 +295,7 @@ Per configurare l'avvio di ESXi, attenersi alla seguente procedura:
 . Nel riquadro di spostamento a sinistra, selezionare rete.
 . Selezionare vSwitch0.
 +
-image:express-c-series-c190-deploy_image25.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image25.png[""]
 
 . Selezionare Edit Settings (Modifica impostazioni).
 . Impostare la MTU su 9000.
@@ -316,7 +316,7 @@ Per configurare i gruppi di porte e le NIC VMkernel, attenersi alla seguente pro
 . Nel riquadro di spostamento a sinistra, selezionare rete.
 . Fare clic con il pulsante destro del mouse sulla scheda gruppi di porte.
 +
-image:express-c-series-c190-deploy_image26.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image26.png[""]
 
 . Fare clic con il pulsante destro del mouse su rete VM e selezionare Modifica. Impostare l'ID VLAN su `\<<var_vm_traffic_vlan>>`.
 . Fare clic su Aggiungi gruppo di porte.
@@ -329,7 +329,7 @@ image:express-c-series-c190-deploy_image26.png["Errore: Immagine grafica mancant
 
 . Fare clic sulla scheda NIC VMkernel.
 +
-image:express-c-series-c190-deploy_image27.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image27.png[""]
 
 . Selezionare Add VMkernel NIC (Aggiungi NIC VMkernel).
 +
@@ -357,7 +357,7 @@ image:express-c-series-c190-deploy_image27.png["Errore: Immagine grafica mancant
 .. Invio `\<<var_hosta_vmotion_mask>>` Per Subnet Mask.
 .. Assicurarsi che la casella di controllo vMotion sia selezionata dopo Impostazioni IPv4.
 +
-image:express-c-series-c190-deploy_image28.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image28.png[""]
 
 +
 
@@ -376,11 +376,11 @@ I primi datastore da montare sono `infra_datastore` Datastore per macchine virtu
 
 . Fare clic su Storage (archiviazione) nel riquadro di spostamento di sinistra, quindi su New Datastore (nuovo archivio dati).
 +
-image:express-c-series-c190-deploy_image29.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image29.png[""]
 
 . Selezionare Mount NFS Datastore (monta archivio dati NFS).
 +
-image:express-c-series-c190-deploy_image30.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image30.png[""]
 
 . Inserire le seguenti informazioni nella pagina fornire dettagli sull'installazione NFS:
 +
@@ -414,7 +414,7 @@ Per configurare NTP per un host ESXi, attenersi alla seguente procedura:
 . Invio `\<<var_ntp>>` Come server NTP. È possibile impostare più server NTP.
 . Fare clic su Salva.
 +
-image:express-c-series-c190-deploy_image31.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image31.png[""]
 
 
 
@@ -427,11 +427,11 @@ Questi passaggi forniscono informazioni dettagliate sullo spostamento della posi
 
 . Fare clic su Manage (Gestisci) nel riquadro di navigazione a sinistra. Selezionare System (sistema) nel riquadro di destra, quindi fare clic su Swap (Scambia).
 +
-image:express-c-series-c190-deploy_image32.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image32.png[""]
 
 . Fare clic su Modifica impostazioni. Selezionare `infra_swap` Dalle opzioni Datastore.
 +
-image:express-c-series-c190-deploy_image33.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image33.png[""]
 
 . Fare clic su Salva.
 

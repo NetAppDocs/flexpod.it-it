@@ -68,7 +68,7 @@ Per consentire a Cloud Insights di raccogliere i dati, un'organizzazione deve im
 
 La figura seguente mostra l'architettura della soluzione.
 
-image:cloud-insights_image2.png["Errore: Immagine grafica mancante"]
+image:cloud-insights_image2.png[""]
 
 
 
@@ -133,7 +133,7 @@ La seguente tabella elenca i componenti software necessari per implementare la s
 
 Questa soluzione si applica ai seguenti casi di utilizzo:
 
-* Analisi dell'ambiente con i dati forniti al consulente digitale NetApp Active IQ per la valutazione dei rischi del sistema storage e consigli per l'ottimizzazione dello storage.
+* Analisi dell'ambiente con i dati forniti a NetApp Digital Advisor per la valutazione dei rischi del sistema storage e per le raccomandazioni sull'ottimizzazione dello storage.
 * Risoluzione dei problemi nel sistema storage ONTAP implementato in una soluzione FlexPod Datacenter esaminando le statistiche di sistema in tempo reale.
 * Creazione di dashboard personalizzate per monitorare facilmente punti di interesse specifici per i sistemi storage ONTAP implementati in un'infrastruttura convergente del data center FlexPod.
 

@@ -62,6 +62,6 @@ Il presente documento è destinato ai responsabili tecnici del settore sanitario
 
 Un ospedale tipico dispone di un insieme diversificato di sistemi IT. La maggior parte di questi sistemi viene acquistata da un vendor, mentre pochissimi sono costruiti dal sistema ospedaliero in casa. Pertanto, il sistema ospedaliero deve gestire un ambiente di infrastruttura diversificato nei propri data center. Quando gli ospedali unificano i propri sistemi in una piattaforma di infrastruttura convergente come FlexPod, le organizzazioni possono standardizzare le operazioni del data center. Con FlexPod, le organizzazioni sanitarie possono implementare sistemi clinici e non clinici sulla stessa piattaforma, unificando in tal modo le operazioni del data center.
 
-image:flexpod-genomics-image2.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image2.png[""]
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["Avanti: Vantaggi dell'implementazione di workload genomici su FlexPod."]

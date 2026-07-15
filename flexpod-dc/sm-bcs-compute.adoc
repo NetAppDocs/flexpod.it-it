@@ -25,11 +25,11 @@ La configurazione di calcolo per la soluzione FlexPod SM-BC segue le Best practi
 
 La connettività tra i server blade UCS B200 e gli IOM viene fornita dalla scheda VIC UCS attraverso le connessioni del backplane dello chassis UCS 5108. Gli UCS 2204XP Fabric Extender utilizzati per la convalida dispongono di sedici porte 10G ciascuna per connettersi agli otto server blade half-width, ad esempio due per ciascun server. Per aumentare la larghezza di banda della connettività del server, è possibile aggiungere un VIC aggiuntivo basato su mezzanino per collegare il server all'IOM UCS 2408 alternativo, che fornisce quattro connessioni 10G a ciascun server.
 
-image:sm-bcs-image17.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image17.png[""]
 
 La connettività tra lo chassis UCS 5108 e gli UCS 6454 IF utilizzati per la convalida è fornita da IOM 2204XP che utilizza quattro connessioni 10G. Le porte Fi da 1 a 4 sono configurate come porte server per queste connessioni. Le porte Fi da 25 a 28 sono configurate come porte di uplink di rete verso lo switch Nexus A e B nel sito locale. La figura e la tabella riportate di seguito forniscono lo schema di connettività e i dettagli di connessione delle porte per i Fi UCS 6454 da collegare allo chassis UCS 5108 e agli switch Nexus.
 
-image:sm-bcs-image18.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image18.png[""]
 
 |===
 | Dispositivo locale | Porta locale | Dispositivo remoto | Porta remota 
@@ -132,7 +132,7 @@ Per la configurazione di boot SAN iSCSI, i parametri di boot iSCSI sono impostat
 
 La destinazione statica iSCSI può essere configurata nella policy di avvio dei modelli di profilo del servizio nella finestra di dialogo Set iSCSI Boot Parameter (Imposta parametro di avvio iSCSI), come mostrato nella figura seguente. La configurazione consigliata per l'impostazione dei parametri di avvio iSCSI è illustrata nella tabella seguente, che implementa la strategia di avvio descritta in precedenza per ottenere una disponibilità elevata.
 
-image:sm-bcs-image19.png["Errore: Immagine grafica mancante"]
+image:sm-bcs-image19.png[""]
 
 |===
 | Fabric iSCSI | Priorità | Destinazione iSCSI | LIF iSCSI 

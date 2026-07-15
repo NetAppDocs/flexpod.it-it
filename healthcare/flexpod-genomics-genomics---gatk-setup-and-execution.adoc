@@ -46,7 +46,7 @@ Ad alto livello, la genomica può essere classificata nei seguenti passaggi. Que
 
 La figura seguente mostra il processo che va dal campionamento all'identificazione della variante, all'annotazione e alla previsione.
 
-image:flexpod-genomics-image8.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image8.png[""]
 
 Il progetto Human Genome è stato completato nell'aprile 2003 e il progetto ha realizzato una simulazione di altissima qualità della sequenza di genomi umani disponibile in pubblico dominio. Questo genoma di riferimento ha dato inizio a un'esplosione nella ricerca e nello sviluppo delle capacità genomiche. Praticamente ogni disturbo umano ha una firma nei geni di quell'essere umano. Fino a poco tempo fa, i medici utilizzavano i geni per predire e determinare i difetti congeniti come l'anemia falciforme, causata da un certo schema di ereditarietà causato da un cambiamento in un singolo gene. Il tesoro dei dati messi a disposizione dal progetto sul genoma umano ha portato all'avvento dello stato attuale delle capacità genomiche.
 
@@ -95,40 +95,40 @@ Per eseguire la configurazione del laboratorio FlexPod, attenersi alla seguente 
 
 . La configurazione e la convalida del laboratorio FlexPod utilizza le seguenti prenotazioni IP4 e VLAN.
 +
-image:flexpod-genomics-image10.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image10.png[""]
 
 . Configurare le LUN di avvio basate su iSCSI sulla SVM ONTAP.
 +
-image:flexpod-genomics-image9.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image9.png[""]
 
 . Mappare i LUN ai gruppi di iniziatori iSCSI.
 +
-image:flexpod-genomics-image11.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image11.png[""]
 
 +
-image:flexpod-genomics-image12.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image12.png[""]
 
 . Installare vSphere 7.0 con l'avvio iSCSI.
 . Registrare gli host ESXi con vCenter.
 +
-image:flexpod-genomics-image13.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image13.png[""]
 
 . Eseguire il provisioning di un datastore NFS `infra_datastore_nfs` Sullo storage ONTAP.
 +
-image:flexpod-genomics-image14.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image14.png[""]
 
 . Aggiungere il datastore al vCenter.
 +
-image:flexpod-genomics-image16.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image16.png[""]
 
 . Utilizzando vCenter, aggiungere un datastore NFS agli host ESXi.
 +
-image:flexpod-genomics-image15.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image15.png[""]
 
 . Utilizzando vCenter, creare una macchina virtuale Red Hat Enterprise Linux (RHEL) 8.3 per eseguire GATK.
 . Un datastore NFS viene presentato alla macchina virtuale e montato su `/mnt/genomics`, Utilizzato per memorizzare file eseguibili GATK, script, file BAM (Binary Alignment Map), file di riferimento, file di indice, file del dizionario e file out per la chiamata delle varianti.
 +
-image:flexpod-genomics-image17.png["Errore: Immagine grafica mancante"]
+image:flexpod-genomics-image17.png[""]
 
 
 

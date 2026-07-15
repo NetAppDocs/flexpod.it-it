@@ -34,11 +34,11 @@ Per scaricare VMware vCenter Server Appliance (VCSA), attenersi alla seguente pr
 . Fare clic su Installa.
 . Fare clic su Avanti nella pagina Introduzione.
 +
-image:express-c-series-c190-deploy_image34.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image34.png[""]
 
 . Selezionare Embedded Platform Services Controller come tipo di implementazione.
 +
-image:express-c-series-c190-deploy_image35.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image35.png[""]
 
 +
 
@@ -46,15 +46,15 @@ NOTE: Se necessario, l'implementazione del controller dei servizi della piattafo
 
 . In Appliance Deployment Target (destinazione implementazione appliance), immettere l'indirizzo IP di un host ESXi implementato, il nome utente root e la password root.
 +
-image:express-c-series-c190-deploy_image36.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image36.png[""]
 
 . Impostare la macchina virtuale dell'appliance immettendo VCSA come nome della macchina virtuale e password root che si desidera utilizzare per VCSA.
 +
-image:express-c-series-c190-deploy_image37.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image37.png[""]
 
 . Selezionare la dimensione di implementazione più adatta al proprio ambiente. Fare clic su Avanti.
 +
-image:express-c-series-c190-deploy_image38.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image38.png[""]
 
 . Selezionare `infra_datastore` datastore. Fare clic su Avanti.
 . Inserire le seguenti informazioni nella pagina Configure network settings (Configura impostazioni di rete) e fare clic su Next (Avanti).
@@ -69,11 +69,11 @@ image:express-c-series-c190-deploy_image38.png["Errore: Immagine grafica mancant
 
 . Nella pagina Pronto per completare la fase 1, verificare che le impostazioni immesse siano corrette. Fare clic su fine.
 +
-image:express-c-series-c190-deploy_image39.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image39.png[""]
 
 . Rivedere le impostazioni nella fase 1 prima di avviare l'implementazione dell'appliance.
 +
-image:express-c-series-c190-deploy_image40.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image40.png[""]
 
 +
 VCSA viene installato ora. Questo processo richiede alcuni minuti.
@@ -81,13 +81,13 @@ VCSA viene installato ora. Questo processo richiede alcuni minuti.
 . Al termine della fase 1, viene visualizzato un messaggio che indica che il processo è stato completato. Fare clic su Continue (continua) per iniziare la configurazione della fase 2.
 . Nella pagina Introduzione alla fase 2, fare clic su Avanti.
 +
-image:express-c-series-c190-deploy_image41.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image41.png[""]
 
 . Invio `\<<var_ntp_id>>` Per l'indirizzo del server NTP. È possibile immettere più indirizzi IP NTP.
 . Se si intende utilizzare vCenter Server High Availability (ha), assicurarsi che l'accesso SSH sia attivato.
 . Configurare il nome di dominio SSO, la password e il nome del sito. Fare clic su Avanti.
 +
-image:express-c-series-c190-deploy_image42.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image42.png[""]
 
 +
 
@@ -95,12 +95,12 @@ NOTE: Registrare questi valori come riferimento, in particolare se si discosta d
 
 . Se lo desideri, partecipa al programma VMware Customer Experience. Fare clic su Avanti.
 +
-image:express-c-series-c190-deploy_image43.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image43.png[""]
 
 . Visualizzare il riepilogo delle impostazioni. Fare clic su fine o utilizzare il pulsante Indietro per modificare le impostazioni.
 . Viene visualizzato un messaggio che indica che non sarà possibile sospendere o interrompere il completamento dell'installazione dopo l'avvio. Fare clic su OK per continuare.
 +
-image:express-c-series-c190-deploy_image44.png["Errore: Immagine grafica mancante"]
+image:express-c-series-c190-deploy_image44.png[""]
 
 +
 La configurazione dell'appliance continua. Questa operazione richiede alcuni minuti.

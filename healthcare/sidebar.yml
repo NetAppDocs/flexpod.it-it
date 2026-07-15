@@ -3,7 +3,6 @@ section: healthcare
 title: Settore sanitario
 entries:
 - title: FlexPod per la genomica
-  type: solutions
   entries:
   - title: Introduzione
     url: "/healthcare/flexpod-genomics-introduction.html"
@@ -24,7 +23,6 @@ entries:
   - title: Conclusione
     url: "/healthcare/flexpod-genomics-conclusion.html"
 - title: FlexPod per imaging medicale
-  type: solutions
   entries:
   - title: Panoramica
     url: "/healthcare/medical-imaging_introduction.html"

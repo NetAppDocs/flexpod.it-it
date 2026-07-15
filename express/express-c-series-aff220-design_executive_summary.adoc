@@ -17,7 +17,7 @@ summary:
 :imagesdir: ./../media/
 
 
-Savita Kumari, NetApp in partnership con:image:cisco logo.png["Errore: Immagine grafica mancante"]
+Savita Kumari, NetApp In partnership con: image:cisco logo.png[""]
 
 [role="lead"]
 Le tendenze del settore indicano una vasta trasformazione del data center verso l'infrastruttura condivisa e il cloud computing. Inoltre, le organizzazioni cercano una soluzione semplice ed efficace per uffici remoti e filiali, sfruttando la tecnologia che conoscono nel proprio data center.
