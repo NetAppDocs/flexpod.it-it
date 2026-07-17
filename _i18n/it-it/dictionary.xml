@@ -7386,11 +7386,6 @@
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">Novità</block>
   <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">Video e demo</block>
   <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">Blog</block>
-  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">Ai e analisi moderna dei dati con FlexPod</block>
-  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">Applicazioni aziendali FlexPod e database aziendali</block>
-  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">Cloud ibrido con FlexPod</block>
-  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod per VDI</block>
-  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">Settore sanitario con FlexPod</block>
   <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">Una volta installato Cisco Intersight Assist, puoi richiedere i tuoi dispositivi di storage e virtualizzazione NetApp. Torna alla pagina *obiettivi dell'intervista* e Aggiungi i tuoi obiettivi vCenter e NetApp Active IQ Unified Manager.</block>
   <block id="2e5893c243d41c5a61c4efaa83f3a294" category="paragraph"><block ref="2e5893c243d41c5a61c4efaa83f3a294" category="inline-link-rx"></block></block>
   <block id="19829de524ac9c6ea351e3ffc56ea16e" category="paragraph">Queste sono solo alcune funzionalità chiave che integrano la soluzione FlexPod Express. Per informazioni dettagliate sulle funzioni e le funzionalità aggiuntive di ONTAP 9.4, vedere<block ref="c633298bec990e426b7e2b06b94ab53d" category="inline-link-rx"></block> . Inoltre, vedere NetApp<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block> , che è stato aggiornato per includere ONTAP 9.4.</block>
@@ -7755,7 +7750,6 @@
   <block id="7013f56669c02dbe795614370d0c956e" category="list-text">Due switch Ethernet standard da 10Gbps in configurazione ridondante (modelli Cisco Nexus 9200 e 9300)</block>
   <block id="5f7768fa622b0c0e0bf05d27d8097e12" category="list-text">Server rack standalone Cisco UCS C-Series con configurazione server rack standalone basata su CIMC o configurazione standalone Intersight, oppure Cisco UCS X-Series Direct con configurazione gestita da Cisco Intersight (IMM).</block>
   <block id="8cf756e67e6fe3a58a1405610ba75ad9" category="paragraph">Sono necessari controller ridondanti delle serie AFF, ASA o FAS nell'architettura FlexPod Express. I controller eseguono il software ONTAP. Al momento dell'ordine dei controller di storage, la versione software preferita può essere precaricata sui controller. Per ONTAP, il cluster può essere implementato sia con una coppia di switch di interconnessione del cluster, sia in una configurazione di cluster senza switch.</block>
-  <block id="d5c565b8a9c9c59fa0b692c9cbf65edd" category="admonition">Una configurazione di cluster senza switch è supportata solo per una configurazione a due nodi. Gli switch di interconnessione del cluster sono necessari per configurazioni con più di 4 nodi e sono opzionali per una configurazione a due nodi.</block>
   <block id="230b6be042c6a9e09ceea70fd8e2f108" category="paragraph">Sono disponibili diverse opzioni e configurazioni a seconda della piattaforma di storage selezionata. Consultare il proprio referente commerciale per dettagli su questi componenti aggiuntivi.</block>
   <block id="ee65a1f1b80c1d59eba7dc665cc831bc" category="paragraph">Le famiglie di controller elencate nella tabella sottostante sono adatte all'utilizzo in una soluzione FlexPod perché la loro connessione agli switch Cisco Nexus è trasparente. Consultare la <block ref="0012c2b4de81607ee8d0f71acdd6c9ab" category="inline-link-rx"></block> per i dettagli specifici sulla compatibilità di ciascun modello di controller.</block>
   <block id="b77cf317a6bb3b0806632ae61052e3ed" category="cell">NetApp entry-level storage Family per FlexPod Express</block>
@@ -8351,4 +8345,8 @@
   <block id="111f4df7e87e518570ab7b1b197da1ff" category="paragraph"><block ref="111f4df7e87e518570ab7b1b197da1ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f8b76f392fdab66088707ea680cdf9c" category="paragraph"><block ref="3f8b76f392fdab66088707ea680cdf9c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="01d78a1cc76d70d71c21461704721f1f" category="paragraph"><block ref="01d78a1cc76d70d71c21461704721f1f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d31ed23a1faa3e74607a17176c090e5e" category="admonition">Una configurazione di cluster senza switch è supportata solo per una configurazione a due nodi. Gli switch di interconnessione del cluster sono necessari per configurazioni con 4 o più nodi e sono opzionali per una configurazione a due nodi.</block>
+  <block id="29d1fb15319805edca77b8cc05b35dfb" category="sidebar">Guide di progettazione FlexPod</block>
+  <block id="26672345b32420d3708cd3bd0f7b1e88" category="sidebar">Guide di progettazione validate FlexPod</block>
+  <block id="21b29303b1c3acf1c3bbd54b69cf697d" category="sidebar">Specifiche tecniche FlexPod</block>
 </blocks>
