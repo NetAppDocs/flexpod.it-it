@@ -27,4 +27,4 @@ Questa sezione descrive le versioni software consigliate per FlexPod Express.
 
 
 
-NOTE: Tutti i componenti software devono essere elencati e supportati in  http://support.netapp.com/matrix/["NetApp IMT"^], tutti i componenti hardware NetApp e le versioni di ONTAP devono essere elencati e supportati su  https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^] e tutti i componenti hardware Cisco devono essere elencati e supportati su  https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].
+NOTE: Tutti i componenti software devono essere elencati e supportati in  https://imt.netapp.com/imt/#welcome["NetApp IMT"^], tutti i componenti hardware NetApp e le versioni di ONTAP devono essere elencati e supportati su  https://hwu.netapp.com/Home/Index["NetApp Hardware Universe"^] e tutti i componenti hardware Cisco devono essere elencati e supportati su  https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^].

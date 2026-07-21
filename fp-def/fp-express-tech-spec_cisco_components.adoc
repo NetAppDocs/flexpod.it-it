@@ -128,7 +128,7 @@ Le tabelle seguenti elencano le opzioni di chassis e nodi di calcolo Cisco Unifi
 [[cisco-ucs-c-series-rack-server-options]]
 == Opzioni dei server rack Cisco UCS C-Series
 
-I server rack Cisco UCS serie C sono disponibili in versioni a una o due unità rack (RU), con varie opzioni di CPU, memoria e I/O. I codici prodotto elencati nella tabella seguente si riferiscono ai server base. Non includono CPU, memoria, unità disco, schede Peripheral Component Interconnect Express (PCIe). Sono disponibili e supportate diverse opzioni di configurazione nell'architettura FlexPod.
+I server rack Cisco UCS C-Series sono disponibili in configurazioni da una, due e quattro unità rack (RU), con diverse opzioni di CPU, memoria e I/O. I codici prodotto elencati nella tabella seguente si riferiscono ai server base. Non includono CPU, memoria, unità disco, schede Peripheral Component Interconnect Express (PCIe). Sono disponibili diverse opzioni di configurazione e sono supportate nell'architettura FlexPod.
 
 La seguente tabella elenca le opzioni di Cisco UCS C-Series rack Server.
 
