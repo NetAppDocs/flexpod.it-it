@@ -451,7 +451,7 @@ Tutti gli attuali modelli di storage controller NetApp AFF ASA Serie A sono supp
 [[netapp-disk-shelves]]
 === Shelf di dischi NetApp
 
-Le specifiche tecniche per gli shelf di dischi NetApp includono le dimensioni del fattore di forma, il numero di dischi per enclosure e i moduli i/o per shelf; questa documentazione è disponibile nella seguente tabella. Per ulteriori informazioni, consultare http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Shelf di dischi e supporti di storage NetApp - specifiche tecniche"^] e a. https://hwu.netapp.com/["NetApp Hardware Universe"^].
+Le specifiche tecniche per NetApp disk shelves includono il form factor, il numero di unità per alloggiamento e i moduli I/O dell'alloggiamento; questa documentazione è reperibile nella tabella seguente. Per ulteriori informazioni, vedi la https://www.netapp.com/data-storage/disk-shelves-storage-media/["Shelf di dischi e supporti di storage NetApp - specifiche tecniche"^] e la https://hwu.netapp.com/["NetApp Hardware Universe"^].
 
 |===
 | Componente | Documentazione sugli shelf di dischi NetApp FAS/AFF 

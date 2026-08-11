@@ -25,7 +25,7 @@ I requisiti di alimentazione per FlexPod Express variano in base alla posizione 
 
 Per ulteriori dati sulla potenza massima richiesta e per altre informazioni dettagliate sulla potenza, consulta la link:https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_technical_specifications_and_references.html["specifiche tecniche"^] per ciascun componente hardware.
 
-Per informazioni dettagliate sull'alimentazione di Cisco UCS, consultare la http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calcolatore di alimentazione Cisco UCS"^].
+Per i dati dettagliati sul consumo energetico di Cisco UCS, consulta la  https://ucspowercalculator.cisco.com/["Calcolatore di alimentazione Cisco UCS"^].
 
 Per i dati relativi all'alimentazione dello storage controller NetApp, consulta la  http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe"^]. In *Piattaforme*, seleziona la piattaforma di storage che vuoi usare (ad esempio, AFF A20), seleziona la versione di ONTAP e poi fai clic su *Mostra risultati*. I dati relativi al cavo di alimentazione sono elencati nella sezione *Cavi di alimentazione supportati* e per dettagli su dimensioni, peso, potenza ecc. fai riferimento alla sezione *Dimensioni, peso, rumorosità, alimentazione*.
 

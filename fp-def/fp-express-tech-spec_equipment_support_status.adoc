@@ -50,7 +50,7 @@ Cisco fornisce le date di fine vendita e fine supporto nelle pagine di supporto 
 
 
 
-==== Informazioni su fine vendita e fine supporto dei server Cisco UCS
+==== Informazioni sulla fine delle vendite e sulla fine del supporto per Cisco UCS Servers
 
 * Vai a link:https://www.cisco.com/c/en/us/support/eol/index.html["Pagina di supporto prodotti Cisco"].
 * In *Categorie di prodotto* seleziona *Server - UCS e HCI* e fai clic sul tuo tipo di server (esempio: *UCS C-Series Rack Servers*). Individua il tuo modello specifico (esempio: *UCS C220 M5*) e cerca le date di End-of-Sale e End-of-Support.

@@ -527,10 +527,10 @@ NOTE: Questo sistema viene configurato in una configurazione cluster senza switc
 | IP del server DNS (è possibile immettere più di uno) | <<var_dns_server_ip>> 
 
 
-| IP DEL SERVER NTP A. | << switch-a-ntp-ip >> 
+| IP DEL SERVER NTP A. | +<< switch-a-ntp-ip >>+ 
 
 
-| IP SERVER NTP B. | << switch-b-ntp-ip >> 
+| IP SERVER NTP B. | +<< switch-b-ntp-ip >>+ 
 |===
 
 

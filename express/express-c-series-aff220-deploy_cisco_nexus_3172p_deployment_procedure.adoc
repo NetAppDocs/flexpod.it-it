@@ -257,7 +257,7 @@ Un VPC offre i seguenti vantaggi:
 * Fornire alta disponibilità
 
 
-La funzione VPC richiede alcune impostazioni iniziali tra i due switch Cisco Nexus per funzionare correttamente. Se si utilizza la configurazione mgmt0 back-to-back, utilizzare gli indirizzi definiti nelle interfacce e verificare che possano comunicare utilizzando il ping `<<switch_A/B_mgmt0_ip_addr>>vrf` comando di gestione.
+La funzione VPC richiede alcune impostazioni iniziali tra i due switch Cisco Nexus per funzionare correttamente. Se si utilizza la configurazione mgmt0 back-to-back, utilizzare gli indirizzi definiti nelle interfacce e verificare che possano comunicare utilizzando il ping `\<<switch_A/B_mgmt0_ip_addr>>vrf` comando di gestione.
 
 Dalla modalità di configurazione (`config t`), eseguire i seguenti comandi per configurare la configurazione globale VPC per entrambi gli switch:
 
