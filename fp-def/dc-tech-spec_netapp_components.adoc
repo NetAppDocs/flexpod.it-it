@@ -69,13 +69,13 @@ Il tipo di shelf NetApp selezionato determina i tipi di dischi disponibili all'i
 
 NOTE: Per tutti gli shelf di dischi e i codici dei dischi, rivolgersi al rappresentante commerciale.
 
-Per ulteriori informazioni sulle unità supportate, fare clic sul collegamento NetApp Hardware Universe nella tabella seguente, quindi selezionare unità supportate.
+Per ulteriori informazioni sugli alloggiamenti per dischi e sui supporti di memorizzazione, consulta il collegamento "Specifiche tecniche degli alloggiamenti per dischi e dei supporti di memorizzazione" nella tabella seguente.
 
 |===
 | Shelf di dischi | Specifiche tecniche 
 
 
-| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["Shelf di dischi e supporti di storage supportati su NetApp Hardware Universe"] 
+| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["Specifiche tecniche degli shelf di dischi e dei supporti di memorizzazione"] 
 
 
 | DS212C 

@@ -37,7 +37,7 @@ image:flexpod-genomics-image19.png[""]
 . Abbiamo scaricato i diritti `*.bin` Dal sito web del partner NVIDIA.
 . Abbiamo installato un server di licenza NVIDIA vGPU e aggiunto le autorizzazioni al server di licenza utilizzando `*.bin` File scaricato dal sito del partner NVIDIA.
 . Assicurarsi di scegliere la versione software NVIDIA vGPU corretta per l'implementazione sul portale dei partner NVIDIA. Per questa configurazione è stata utilizzata la versione del driver 460.73.02.
-. Questo comando installa https://docs.omniverse.nvidia.com/prod_deployment/prod_deployment/installing-vgpu-manager.html["NVIDIA vGPU Manager"^] In ESXi.
+. Questo comando installa  https://docs.nvidia.com/vgpu/latest/grid-software-quick-start-guide/installing-configuring-vgpu-manager-guest-driver.html#installing-the-nvidia-virtual-gpu-manager-on-vmware-vsphere["NVIDIA vGPU Manager"^] in ESXi.
 +
 ....
 [root@localhost:~] esxcli software vib install -v /vmfs/volumes/infra_datastore_nfs/nvidia/vib/NVIDIA_bootbank_NVIDIA-VMware_ESXi_7.0_Host_Driver_460.73.02-1OEM.700.0.0.15525992.vib

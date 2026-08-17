@@ -53,9 +53,9 @@ https://flexpod.com/solutions/verticals/healthcare/["https://flexpod.com/solutio
 +
 https://flexpod.com/["https://flexpod.com/"^]
 
-* Ai e Analytics per il settore sanitario (NetApp)
+* L'intelligenza artificiale in ambito sanitario e medico (NetApp)
 +
-https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx["https://www.netapp.com/us/artificial-intelligence/healthcare-ai-analytics/index.aspx"^]
+https://www.netapp.com/artificial-intelligence/ai-in-medicine/["https://www.netapp.com/artificial-intelligence/ai-in-medicine/"^]
 
 * Ai nel settore sanitario le scelte di infrastruttura intelligente aumentano il successo
 +

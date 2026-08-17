@@ -58,8 +58,6 @@
   <block id="71c81e313ca5e5611fec268845053370" category="list-text">12x 960 GB</block>
   <block id="d992e1827eb3ff1548758374c052d046" category="list-text">18x 960 GB</block>
   <block id="afa71c56dac2c20407fbf4a57d0c06a2" category="list-text">24x 960 GB</block>
-  <block id="c49fff3d6f4a20cb0c09fb1e672e7447" category="inline-link">Pagina dell'array all-flash NetApp AFF C190</block>
-  <block id="1167e6fdc62369bac1d600d8c92a5037" category="paragraph">Per informazioni complete sul sistema hardware AFF C190, consultare<block ref="e04d825c3a253f91f3ef939dcda0495a" category="inline-link-rx"></block>.</block>
   <block id="9056a7d347c12638c9ac7efd641fc96b" category="section-title">Software ONTAP 9.6</block>
   <block id="3d50b0969e9f9350008352ef96483ea0" category="paragraph">I sistemi NetApp AFF C190 utilizzano il nuovo software per la gestione dei dati ONTAP 9.6. ONTAP 9.6 è il software per la gestione dei dati aziendali leader del settore. Combina nuovi livelli di semplicità e flessibilità con potenti funzionalità di gestione dei dati, efficienza dello storage e integrazione cloud leader del settore.</block>
   <block id="2b39fb0a0934cfecc30ac98eb34b0bbf" category="paragraph">ONTAP 9.6 dispone di diverse funzionalità adatte alla soluzione FlexPod Express. In primo luogo, l'impegno di NetApp per l'efficienza dello storage, che può essere una delle funzionalità più importanti per le piccole implementazioni. Le caratteristiche di efficienza dello storage di NetApp come deduplica, compressione, compattazione e thin provisioning sono disponibili in ONTAP 9.6. Il sistema NetApp WAFL scrive sempre blocchi da 4 KB; pertanto, la compattazione combina più blocchi in un blocco da 4 KB quando i blocchi non utilizzano lo spazio allocato di 4 KB. La seguente figura illustra questo processo.</block>
@@ -2039,9 +2037,6 @@
   <block id="ba1e118c83648b254f27cdd860d0d4ae" category="list-text">Centro di documentazione dei sistemi AFF e FAS</block>
   <block id="554fd76f92a53acc4771ed399786a57d" category="inline-link"><block ref="554fd76f92a53acc4771ed399786a57d" category="inline-link-rx"></block></block>
   <block id="e33f95f1ca3f289e294b676f648401f9" category="paragraph"><block ref="e33f95f1ca3f289e294b676f648401f9" category="inline-link-rx"></block></block>
-  <block id="3f4c54c18646adc8c8ae46b11a0e57bb" category="list-text">Pagina delle risorse di documentazione di AFF</block>
-  <block id="fa83b13617b7a425e389315666f6973f" category="inline-link"><block ref="fa83b13617b7a425e389315666f6973f" category="inline-link-rx"></block></block>
-  <block id="951a11d67c8bd54ba3f92b6b7a568225" category="paragraph"><block ref="951a11d67c8bd54ba3f92b6b7a568225" category="inline-link-rx"></block></block>
   <block id="3da62b0155bb983730f82945c5398c77" category="list-text">Guida all'implementazione di FlexPod con VMware vSphere 6.7 e NetApp AFF C190 (in corso)</block>
   <block id="7a4e9cb5597c0c38152cde29a5ffea15" category="list-text">Documentazione NetApp</block>
   <block id="e8a42cf15da10555bc59082eff55f202" category="summary">Questo documento fornisce informazioni dettagliate sulla configurazione di un sistema FlexPod Express completamente ridondante e ad alta disponibilità. Per riflettere questa ridondanza, i componenti configurati in ogni fase sono indicati come componente A o componente B.</block>
@@ -2705,7 +2700,6 @@
   <block id="67fcc419cbe799bb19b8911cb363a1dd" category="inline-link">HIE</block>
   <block id="1535d7e1326740598e2e9c670065a0a1" category="list-text">Scambio di informazioni sanitarie (<block ref="a2c8343b121451106bab40f2f2a93afd" category="inline-link-rx"></block>) include immagini incorporate nei messaggi.</block>
   <block id="907252d9f6c712cc5f8fcc12251441b1" category="inline-link">Un data fabric abilitato da NetApp</block>
-  <block id="424085d73e2bf68920f52c0e421ec644" category="list-text">Le modalità mobili, ad esempio dispositivi portatili e wireless di scansione (ad esempio, scanner a ultrasuoni tascabili collegati a un telefono), richiedono una solida infrastruttura di rete con sicurezza, affidabilità e latenza a livello DoD all'edge, al core e nel cloud.<block ref="3eee67b0b37da60b6460fdf023f854d0" category="inline-link-rx"></block> fornire alle organizzazioni questa funzionalità su larga scala.</block>
   <block id="2ea6325cbb00626fd010bdc2c9b84882" category="inline-link">performance, affidabilità e scalabilità come caratteristiche fondamentali</block>
   <block id="37a955b83843b3a60895704bbaa81329" category="paragraph">Una piattaforma di sistemi di imaging medicale ben architettata è al centro dell'innovazione. L'architettura FlexPod offre funzionalità di calcolo e storage flessibili con efficienza dello storage leader del settore.</block>
   <block id="b0f6dc9f2ccbbbfab3cb68e673207f49" category="section-title">Vantaggi generali della soluzione</block>
@@ -3207,7 +3201,6 @@
   <block id="0f32b160cfcd3499a930878d29b6ed25" category="list-text">Abbiamo installato un server di licenza NVIDIA vGPU e aggiunto le autorizzazioni al server di licenza utilizzando<block ref="dc107574f209d19365478f0f94ced0b1" prefix=" " category="inline-code"></block> File scaricato dal sito del partner NVIDIA.</block>
   <block id="7f9f34352293614b9bebdab47afb36e8" category="list-text">Assicurarsi di scegliere la versione software NVIDIA vGPU corretta per l'implementazione sul portale dei partner NVIDIA. Per questa configurazione è stata utilizzata la versione del driver 460.73.02.</block>
   <block id="6afa1ca2b52709a30dc305f116845435" category="inline-link">NVIDIA vGPU Manager</block>
-  <block id="f6dde3fe91c3309780cc23ec78a264b2" category="list-text">Questo comando installa<block ref="8dfdcc1b3def6ddf3b82101a1b233305" category="inline-link-rx"></block> In ESXi.</block>
   <block id="7eb52140787764d9abbdb19475dcbb73" category="list-text">Dopo aver riavviato il server ESXi, eseguire il seguente comando per convalidare l'installazione e controllare lo stato delle GPU.</block>
   <block id="e2d5a00791bce9a01f99bc6fd613a39d" category="inline-link">configurare</block>
   <block id="37a453d78969a68cec2776ec753e56c9" category="list-text">Utilizzando vCenter,<block ref="88dff5fd971c4f20673419ef29670bcd" category="inline-link-rx"></block> L'impostazione del dispositivo grafico è "Shared Direct".</block>
@@ -3247,9 +3240,6 @@
   <block id="61180aaf0b2d71322476b407dec66f81" category="list-text">FlexPod per il settore sanitario semplifica la tua trasformazione</block>
   <block id="51715f6336f71f0c342d4f6d79941b19" category="inline-link"><block ref="51715f6336f71f0c342d4f6d79941b19" category="inline-link-rx"></block></block>
   <block id="2331140ce18354b448afad499fd44f5d" category="paragraph"><block ref="2331140ce18354b448afad499fd44f5d" category="inline-link-rx"></block></block>
-  <block id="1a1737c8198f24d4d034d37b96784b6d" category="list-text">Ai e Analytics per il settore sanitario (NetApp)</block>
-  <block id="3f6fbe0eeb0b40131d6099047ee11cf6" category="inline-link"><block ref="3f6fbe0eeb0b40131d6099047ee11cf6" category="inline-link-rx"></block></block>
-  <block id="3d59760af9fb9d0cfe13fe40ba137808" category="paragraph"><block ref="3d59760af9fb9d0cfe13fe40ba137808" category="inline-link-rx"></block></block>
   <block id="f84e9db44c6ef05870d1f60e67ce9b9b" category="list-text">Ai nel settore sanitario le scelte di infrastruttura intelligente aumentano il successo</block>
   <block id="0372ba8eced17850294543c71eb6118f" category="inline-link"><block ref="0372ba8eced17850294543c71eb6118f" category="inline-link-rx"></block></block>
   <block id="faf2964740264b736e400781dfa2c882" category="paragraph"><block ref="faf2964740264b736e400781dfa2c882" category="inline-link-rx"></block></block>
@@ -4035,9 +4025,6 @@
   <block id="ce9c0b8b6c23f9fbba191e4d302b977e" category="paragraph">Per tutti i controller di storage è richiesto un minimo di uno shelf di dischi NetApp.</block>
   <block id="c590db225b3b8f81ea877e347416fc4b" category="paragraph">Il tipo di shelf NetApp selezionato determina i tipi di dischi disponibili all'interno di tale shelf.</block>
   <block id="4565123671fd7bba4b48587da9afe9f8" category="admonition">Per tutti gli shelf di dischi e i codici dei dischi, rivolgersi al rappresentante commerciale.</block>
-  <block id="13cce1099823394337e706eafd90f01d" category="paragraph">Per ulteriori informazioni sulle unità supportate, fare clic sul collegamento NetApp Hardware Universe nella tabella seguente, quindi selezionare unità supportate.</block>
-  <block id="50c7e0a6a44a11f0dd0f88a46fd0a446" category="inline-link">Shelf di dischi e supporti di storage supportati su NetApp Hardware Universe</block>
-  <block id="f517d5bbd97d59fddbf6fb63ae1de23f" category="cell"><block ref="f517d5bbd97d59fddbf6fb63ae1de23f" category="inline-link-rx"></block></block>
   <block id="d5740ca99d65dda0f0c3f535ec3113ea" category="paragraph">La seguente tabella elenca le opzioni di licenza software NetApp disponibili per l'architettura del data center FlexPod. Il software NetApp viene concesso in licenza a livello di controller FAS e AFF.</block>
   <block id="aa2dd17a631a9e61bcaf69515584e135" category="cell">SW, BUNDLE completo (controller), -C</block>
   <block id="82624737d7fd71e77981f1121d913833" category="cell">SW-8XXX-COMP-BNDL-C.</block>
@@ -4288,10 +4275,6 @@
   <block id="729ac23e34a0c4c38e614aa7b070f2c8" category="paragraph">Muhammad Afzal, Cisco John George, Cisco Amit Borulkar, NetApp Uday Shetty, Docker</block>
   <block id="a5914159b890e1688d4a43bc23725131" category="paragraph">Docker è la piattaforma di container software leader a livello mondiale per sviluppatori e operazioni IT per creare, spedire ed eseguire applicazioni distribuite ovunque. Con l'architettura dei microservizi che sta plasmando l'IT di prossima generazione, le aziende con grandi investimenti in applicazioni monolitiche stanno trovando modi per adottare Docker come strategia per modernizzare le proprie architetture applicative e mantenere l'organizzazione competitiva e conveniente. La containerizzazione offre l'agilità, il controllo e la portabilità richiesti dagli sviluppatori e dalle operazioni IT per creare e implementare le applicazioni in qualsiasi infrastruttura. La piattaforma Docker consente di comporre facilmente le applicazioni distribuite in un contenitore di applicazioni leggero che può cambiare dinamicamente e senza interruzioni. Questa funzionalità rende le applicazioni portatili in ambienti di sviluppo, test e produzione eseguiti su macchine fisiche o virtuali a livello locale, nei data center e nelle reti di diversi provider di servizi cloud.</block>
   <block id="ed723eb8e2b67dda0ba1c79346cc4d73" category="paragraph"><block ref="ed723eb8e2b67dda0ba1c79346cc4d73" category="inline-link-macro-rx"></block></block>
-  <block id="ba57600ee0880eeb4a6733e4ffdb746c" category="summary">Questo documento fornisce dettagli di progettazione sull'integrazione della piattaforma Cisco UCS C480 ML M5 nella soluzione FlexPod Datacenter per offrire un approccio unificato per fornire funzionalità ai e ML all'interno dell'infrastruttura convergente.</block>
-  <block id="54c81e9ff4b87e7057996f3d7f7e1ef9" category="paragraph">Questo documento fornisce dettagli di progettazione sull'integrazione della piattaforma Cisco UCS C480 ML M5 nella soluzione FlexPod Datacenter per offrire un approccio unificato per fornire funzionalità ai e ML all'interno dell'infrastruttura convergente. Offrendo ai clienti la possibilità di gestire i server con funzionalità combinate di ai e ML con gli strumenti familiari che utilizzano per amministrare i sistemi FlexPod tradizionali, l'overhead amministrativo e il costo di implementazione della piattaforma di deep learning sono notevolmente ridotti. Il design presentato in questo CVD include anche altre piattaforme Cisco UCS come il server C220 M5 con due GPU NVIDIA T4 e il server C240 M5 dotato di due schede NVIDIA V100 32GB PCIe come opzioni aggiuntive per la gestione simultanea di carichi di lavoro ai e ML.</block>
-  <block id="8b18888e3656f164c4bf24a7a21e4b87" category="inline-link-macro">Data center FlexPod per ai e ML combinati con Cisco UCS 480 ML per deep learning - progettazione</block>
-  <block id="1e4b645d8f9a75e6c46cf9488d22933c" category="paragraph"><block ref="1e4b645d8f9a75e6c46cf9488d22933c" category="inline-link-macro-rx"></block></block>
   <block id="3c52a72d3b477f26f4f5d9d3a3fac16c" category="doc">Visualizzazione grafica 3D con VMware e NVIDIA su Cisco UCS - White paper</block>
   <block id="2ff68af51d58baab35bba502a8c6b92b" category="paragraph">Questo documento descrive le prestazioni dell'hypervisor VMware ESXi e della soluzione VMware Horizon con NVIDIA Tesla P4, P6 e P40 sui server rack Cisco UCS C240 M5 e sui server blade B200 M5.</block>
   <block id="650fe0fc56fe6bb7813edd521139048f" category="paragraph"><block ref="650fe0fc56fe6bb7813edd521139048f" category="inline-link-macro-rx"></block></block>
@@ -4698,7 +4681,6 @@
   <block id="245ccd4cdd5cb484215315baf93697ce" category="list-text">Conformità Cisco e FIPS 140-2</block>
   <block id="6770ff13f95abd8619a19519877aedf9" category="list-text">NetApp Cryptographic Security Module</block>
   <block id="bf7fa6fb49dfa01515f774f7a86c6270" category="list-text">Procedure di cybersecuryper le organizzazioni sanitarie di medie e grandi dimensioni</block>
-  <block id="8f8e7f38245f5c357d275915df1fb3d6" category="list-text">NetApp Storage Encryption, NVMe Self-Encrypting Drive, NetApp Volume Encryption e NetApp aggregate Encryption</block>
   <block id="64f1ff1b6f99d34e2d1a43f8332c7947" category="list-text">NetApp Volume Encryption e NetApp aggregate Encryption</block>
   <block id="826703b67408dd5973ff8ccc401a9b8b" category="list-text">Crittografia dello storage NetApp</block>
   <block id="187fa0150d76f09beb9a3b74c448990a" category="list-text">FlexPod per sistemi di cartella clinica elettronica</block>
@@ -6633,9 +6615,6 @@
   <block id="de8402faa342fc9625bdaa3961573a1b" category="inline-link"><block ref="de8402faa342fc9625bdaa3961573a1b" category="inline-link-rx"></block></block>
   <block id="eda0ad9ec468bbcaad6eca5eb6ef6925" category="paragraph"><block ref="eda0ad9ec468bbcaad6eca5eb6ef6925" category="inline-link-rx"></block></block>
   <block id="d50e63b9f70efedde8dc093be8ec12b2" category="list-text">Procedure consigliate per VMware vSphere Metro Storage Cluster</block>
-  <block id="c912dc73def9e5758eb6e130fd3b21ee" category="list-text">NetApp ONTAP con NetApp SnapMirror Business Continuity (SM-BC) con VMware vSphere Metro Storage Cluster (vMSC). (83370)</block>
-  <block id="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link"><block ref="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link-rx"></block></block>
-  <block id="077317c6b779e004e75e33d28168bab8" category="paragraph"><block ref="077317c6b779e004e75e33d28168bab8" category="inline-link-rx"></block></block>
   <block id="0fb53f6fd950dbb18a8f27d8735f5ed7" category="list-text">Proteggi le applicazioni e i database di Tier 1 con il cluster di storage metro VMware vSphere e ONTAP</block>
   <block id="1fb0c828050c8732d84945ca6ded7c37" category="inline-link"><block ref="1fb0c828050c8732d84945ca6ded7c37" category="inline-link-rx"></block></block>
   <block id="7105f117d2822e18aa8b108416306262" category="paragraph"><block ref="7105f117d2822e18aa8b108416306262" category="inline-link-rx"></block></block>
@@ -6899,8 +6878,6 @@
   <block id="172ba0f1e9e72809918e4f8b777adcd2" category="paragraph">VMware vSphere ha dispone di un meccanismo heartbeat per la convalida dello stato dell'host. Il meccanismo heartbeat primario avviene attraverso la rete e il meccanismo heartbeat secondario attraverso il datastore. Se non vengono ricevuti heartbeat, decide se è isolato dalla rete eseguendo il ping del gateway predefinito o degli indirizzi di isolamento configurati manualmente. Per il battito cardiaco del datastore, VMware consiglia di aumentare i datastore heartbeat da un minimo di due a quattro per un cluster allungato.</block>
   <block id="0323b32e97bf4ad40c68f0b32844cb6b" category="paragraph">Per la convalida della soluzione, vengono utilizzati i due indirizzi IP di gestione del cluster ONTAP come indirizzo di isolamento. Inoltre, l'opzione avanzata vSphere ha consigliata<block ref="a4b2dca67140ae10dc36a2f990cea231" prefix=" " category="inline-code"></block> con un valore di 4 è stato aggiunto come mostrato nella figura seguente.</block>
   <block id="4833f38d3ef45f44218f78ed6d010a1e" category="paragraph">Per il datastore heartbeat, specificare automaticamente i quattro datastore condivisi dal cluster e il complemento, come mostrato nella figura seguente.</block>
-  <block id="af5299e77d937d0f90b53f5c8d31f369" category="inline-link">NetApp ONTAP con NetApp SnapMirror Business Continuity (SM-BC) e VMware vSphere Metro Storage Cluster (vMSC)</block>
-  <block id="fbf1a5366eed75e49cdd525f7972eadc" category="paragraph">Per ulteriori Best practice e configurazioni per VMware ha Cluster e VMware vSphere Metro Storage Cluster, vedere<block ref="e1c1274de4ccc0d5560df65f90d3e6aa" category="inline-link-rx"></block>,<block ref="4f7c5688f5dfddf1590f2246102bcda0" category="inline-link-rx"></block> E la KB VMware per<block ref="82bb4696814a89c9685efdd36751466a" category="inline-link-rx"></block>.</block>
   <block id="04efca99cb9ed979fd07e0b0adfcd574" category="inline-link-macro">Successivo: Convalida della soluzione - scenari validati.</block>
   <block id="3af9ad1096d1f95cac10da1c470c8ede" category="paragraph"><block ref="3af9ad1096d1f95cac10da1c470c8ede" category="inline-link-macro-rx"></block></block>
   <block id="dc230ff87f10e76f7db16560417d3d09" category="summary">Questo documento descrive il data center FlexPod di Cisco e NetApp con NetApp ONTAP 9.6, la versione software unificata 4.0(4) con processori scalabili Intel Xeon di seconda generazione e VMware vSphere 6.7 U2.</block>
@@ -8314,7 +8291,6 @@
   <block id="03eafaadf1f43f467e0c29703ab1932f" category="list-text"><block ref="03eafaadf1f43f467e0c29703ab1932f" category="inline-link-rx"></block></block>
   <block id="ec5ce571da818f4da52a1da1e2dbd33b" category="list-text"><block ref="ec5ce571da818f4da52a1da1e2dbd33b" category="inline-link-rx"></block></block>
   <block id="c66725685883abd77914fbc7480ce223" category="list-text"><block ref="c66725685883abd77914fbc7480ce223" category="inline-link-rx"></block></block>
-  <block id="6e0e67876b025b8aabc5fb9194f724b4" category="list-text"><block ref="6e0e67876b025b8aabc5fb9194f724b4" category="inline-link-rx"></block></block>
   <block id="56d596ac1534ec88a5d46b8da9ec5a19" category="list-text"><block ref="56d596ac1534ec88a5d46b8da9ec5a19" category="inline-link-rx"></block></block>
   <block id="2a5cf8dbaae42a04d9e87f9084f8f7dc" category="list-text"><block ref="2a5cf8dbaae42a04d9e87f9084f8f7dc" category="inline-link-rx"></block></block>
   <block id="3fb849296843f6d74893a1dbb36f741b" category="list-text"><block ref="3fb849296843f6d74893a1dbb36f741b" category="inline-link-rx"></block></block>
@@ -8330,4 +8306,24 @@
   <block id="bce9908f4541b67e5acaa7389d3ac785" category="list-text"><block ref="bce9908f4541b67e5acaa7389d3ac785" category="inline-link-rx"></block></block>
   <block id="a2d81194092c58e2bbe51654477726a7" category="list-text"><block ref="a2d81194092c58e2bbe51654477726a7" category="inline-link-rx"></block></block>
   <block id="db8805d5104d5291fd66b0e18a458f18" category="list-text"><block ref="db8805d5104d5291fd66b0e18a458f18" category="inline-link-rx"></block></block>
+  <block id="54e3a9e029683c8de92be0c55d9d6816" category="inline-link">NetApp AFF C190 documentazione</block>
+  <block id="3f60209c2c21edecf1d0225780f34e18" category="paragraph">Per informazioni complete sul sistema hardware AFF C190, consulta la <block ref="872c66a4a5bb86e831800415c5d779e2" category="inline-link-rx"></block>.</block>
+  <block id="82d00b486e3c8c053c6ba0a4535a2822" category="list-text">Documentazione dei sistemi AFF C-Series</block>
+  <block id="7dcdb17f2cb453fdf5972fb15e133e52" category="inline-link"><block ref="7dcdb17f2cb453fdf5972fb15e133e52" category="inline-link-rx"></block></block>
+  <block id="58e7e157a307b249786e8334fa1fa99a" category="paragraph"><block ref="58e7e157a307b249786e8334fa1fa99a" category="inline-link-rx"></block></block>
+  <block id="9fbd968c2244aeb511619f306fd3defe" category="inline-link">NetApp ONTAP con SnapMirror active sync (precedentemente SM-BC) e VMware vSphere Metro Storage Cluster (vMSC)</block>
+  <block id="fd496345cf0716305e18460bba3496ec" category="paragraph">Per ulteriori best practice e configurazioni per VMware HA Cluster e VMware vSphere Metro storage cluster, vedi <block ref="e1c1274de4ccc0d5560df65f90d3e6aa" category="inline-link-rx"></block>,<block ref="4f7c5688f5dfddf1590f2246102bcda0" category="inline-link-rx"></block> e <block ref="399947f596dce5740d0ee9329ffe1e45" category="inline-link-rx"></block>.</block>
+  <block id="d11030d759cf8db4404491611b16f7b9" category="list-text">NetApp ONTAP con SnapMirror active sync (precedentemente SM-BC) con VMware vSphere Metro Storage Cluster (vMSC)</block>
+  <block id="50bb0628da6c26cb935a8bff810b58ef" category="inline-link"><block ref="50bb0628da6c26cb935a8bff810b58ef" category="inline-link-rx"></block></block>
+  <block id="6a75508e103dc5c21a8907f0d27151c1" category="paragraph"><block ref="6a75508e103dc5c21a8907f0d27151c1" category="inline-link-rx"></block></block>
+  <block id="e4613e8cb67b47c815182efcb2addff3" category="paragraph">Per ulteriori informazioni sugli alloggiamenti per dischi e sui supporti di memorizzazione, consulta il collegamento "Specifiche tecniche degli alloggiamenti per dischi e dei supporti di memorizzazione" nella tabella seguente.</block>
+  <block id="a502ba2e14f433f612cfb7a8c2ab4fda" category="inline-link">Specifiche tecniche degli shelf di dischi e dei supporti di memorizzazione</block>
+  <block id="fb89f6fa4beb71b5f4515f1d61cd3ac7" category="cell"><block ref="fb89f6fa4beb71b5f4515f1d61cd3ac7" category="inline-link-rx"></block></block>
+  <block id="73fb97d8b411c3ab96bb7d5e7cacdcbb" category="list-text">Questo comando installa <block ref="bfe054ce9a0ac3d24a225d16ac8489a9" category="inline-link-rx"></block> in ESXi.</block>
+  <block id="8255476c22d06ed95ba1918cb6fb1dbd" category="list-text">L'intelligenza artificiale in ambito sanitario e medico (NetApp)</block>
+  <block id="e91541d759de63fcaf617f7fb7713601" category="inline-link"><block ref="e91541d759de63fcaf617f7fb7713601" category="inline-link-rx"></block></block>
+  <block id="247aca982accea93869681bc1946caae" category="paragraph"><block ref="247aca982accea93869681bc1946caae" category="inline-link-rx"></block></block>
+  <block id="4fb077baab5a37c36871c89ffbf2bca7" category="list-text">Le modalità mobili, come i dispositivi di scansione wireless portatili (ad esempio, gli scanner ecografici tascabili collegati a un telefono), richiedono un'infrastruttura di rete robusta con sicurezza, affidabilità e latenza a livello DoD ai margini, nel core e nel cloud.<block ref="c19450dab7290b420c563bc2423a5a44" category="inline-link-rx"></block> fornisce alle organizzazioni questa capacità su larga scala.</block>
+  <block id="3a769349ca00340f308dd6f2f643f870" category="inline-link">NetApp Storage Encryption, NetApp Volume Encryption e NetApp Aggregate Encryption</block>
+  <block id="b1fdfe3ff0278357981abd9dec067b7e" category="list-text"><block ref="b1fdfe3ff0278357981abd9dec067b7e" category="inline-link-rx"></block></block>
 </blocks>
