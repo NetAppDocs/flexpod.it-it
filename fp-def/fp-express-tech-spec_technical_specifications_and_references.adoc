@@ -153,7 +153,7 @@ Per ulteriori dettagli, fai riferimento a link:https://www.cisco.com/c/en/us/pro
 [[cisco-ucs-c-series-rack-servers]]
 == Server rack Cisco UCS C-Series
 
-Le specifiche tecniche dei server rack Cisco UCS C-Series includono il supporto dei processori, la capacità massima di memoria, il numero di slot PCIe e il form factor. Per ulteriori dettagli sui modelli di server UCS compatibili, consulta l' https://ucshcltool.cloudapps.cisco.com/public/["Compatibilità hardware Cisco"^]elenco.
+Le specifiche tecniche dei server rack Cisco UCS C-Series includono il supporto dei processori, la capacità massima di memoria, il numero di slot PCIe e il form factor. Per ulteriori dettagli sui modelli di server UCS compatibili, consulta l' https://ucshcltool.cloudapps.cisco.com/public["Compatibilità hardware Cisco"^]elenco.
 
 Consulta la tabella qui sotto per le specifiche tecniche dei server rack Cisco UCS C-Series.
 
@@ -298,4 +298,4 @@ Le specifiche tecniche per NetApp disk shelves includono il form factor, il nume
 [[netapp-drives]]
 === Dischi NetApp
 
-Le specifiche tecniche dei dischi NetApp includono dimensioni del fattore di forma, capacità del disco, rpm del disco, controller di supporto e requisiti di versione ONTAP. Queste specifiche sono disponibili nella sezione Drives (unità) di http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe"^].
+Le specifiche tecniche delle unità NetApp includono il form factor, la capacità del disco, i giri al minuto del disco, i controller supportati e i requisiti della versione di ONTAP. Queste specifiche si trovano nella sezione Drives del  http://hwu.netapp.com["NetApp Hardware Universe"^].

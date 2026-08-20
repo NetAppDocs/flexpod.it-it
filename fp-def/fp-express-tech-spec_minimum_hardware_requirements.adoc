@@ -27,5 +27,5 @@ I requisiti hardware minimi per FlexPod Express sono elencati di seguito:
 
 * Due switch Ethernet standard da 10Gbps in configurazione ridondante (modelli Cisco Nexus 9200 e 9300)
 * Due server rack standalone Cisco UCS serie C con configurazione server rack standalone basata su CIMC o configurazione standalone Intersight, oppure Cisco UCS X-Series Direct con configurazione gestita da Cisco Intersight (IMM).
-* Due controller entry-level delle serie NetApp AFF (A20, A30 o C30), NetApp ASA (A20, A30 o C30) o NetApp FAS (2750, 2820 o FAS 50) in una configurazione a coppia ad alta disponibilità (HA) distribuita come cluster a due nodi
+* Due controller entry-level NetApp AFF (A20, A30 o C30), NetApp ASA (A20, A30 o C30) o NetApp FAS (2750, 2820 o 50) in una configurazione di coppia ad alta disponibilità (HA) distribuita come cluster a due nodi
 

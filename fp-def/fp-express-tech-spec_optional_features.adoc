@@ -41,7 +41,7 @@ NetApp storage controller possono essere collegati direttamente agli interconnet
 I requisiti hardware e di licenza sono i seguenti:
 
 * È richiesta una licenza di protocollo per lo storage controller NetApp.
-* Sul server è richiesto un adattatore Cisco UCS (Initiator). Per un elenco degli adattatori Cisco UCS supportati, consultare NetApp http://mysupport.netapp.com/matrix["IMT"^].
+* È necessario un adattatore Cisco UCS (initiator) sul server. Per un elenco degli adattatori Cisco UCS supportati, consulta la NetApp https://imt.netapp.com["IMT"^].
 * È necessario un adattatore di destinazione sul controller di storage NetApp.
 
 
