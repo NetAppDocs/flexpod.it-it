@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_power_and_cabling_requirements.html 
-keywords: power, cabling, requirements, minimum, techincal, datacenter, specifications 
-summary: 'Un design FlexPod presenta requisiti minimi per l"alimentazione e il cablaggio.' 
+keywords: power, cabling, requirements, flexpod, datacenter, netapp, cisco, ucs, disk shelves 
+summary: Questa sezione descrive i requisiti di alimentazione e le linee guida per il cablaggio degli alloggiamenti per dischi in un progetto FlexPod Datacenter. 
 ---
-= Requisiti di alimentazione e cablaggio
+= Linee guida per l'alimentazione e il cablaggio
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: 'Un design FlexPod presenta requisiti minimi per l"alimentazione e il c
 
 
 [role="lead"]
-Un design FlexPod presenta requisiti minimi per l'alimentazione e il cablaggio.
+Questa sezione descrive i requisiti di alimentazione e le linee guida per il cablaggio per una progettazione FlexPod Datacenter.
 
 
 
@@ -25,84 +25,31 @@ I requisiti di alimentazione per il data center FlexPod variano in base alla pos
 
 Per ulteriori informazioni sulla potenza massima richiesta e per altre informazioni dettagliate sull'alimentazione, consultare le specifiche tecniche di ciascun componente hardware elencato nella sezione link:dc-tech-spec_technical_specifications_and_references.html["Specifiche tecniche e riferimenti: Componenti hardware"].
 
-Per informazioni dettagliate sull'alimentazione di Cisco UCS, consultare la http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Calcolatore di alimentazione Cisco UCS"^].
+Per i dati dettagliati sul consumo energetico di Cisco UCS, consulta la  https://ucspowercalculator.cisco.com/["Calcolatore di alimentazione Cisco UCS"^].
 
-Per i dati sull'alimentazione dei controller di storage NetApp, consultare http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe"^]. In piattaforme, selezionare la piattaforma di storage che si desidera utilizzare nella configurazione (FAS/V-Series o AFF). Selezionare la versione di ONTAP e lo storage controller, quindi fare clic sul pulsante Mostra risultati.
+Per i dati relativi all'alimentazione dello storage controller NetApp, consulta la  https://hwu.netapp.com/["NetApp Hardware Universe"^]. In *Piattaforme*, seleziona la piattaforma di storage che vuoi usare (ad esempio, AFF A90), seleziona la versione di ONTAP e poi fai clic su *Mostra risultati*. I dati relativi al cavo di alimentazione sono elencati nella sezione *Cavi di alimentazione supportati*. Per dettagli su dimensioni, peso, wattaggio ecc., consulta la sezione *Dimensioni, peso, rumorosità, alimentazione*.
 
 
 
-[[minimum-cable-requirements]]
-== Requisiti minimi per i cavi
+[[cabling-guidelines]]
+== Linee guida per il cablaggio
 
-Il numero e il tipo di cavi e adattatori richiesti variano in base all'implementazione del data center FlexPod. Il tipo di cavo, il tipo di ricetrasmettitore e il numero vengono determinati durante il processo di progettazione in base alle proprie esigenze. La tabella seguente elenca il numero minimo di cavi necessari.
+Questa sezione fornisce linee guida generali per il cablaggio per una progettazione FlexPod Datacenter.
+
+* Assicurati della ridondanza della connettività per le connessioni di elaborazione e di storage.
+* La velocità delle connessioni deve essere compatibile con i componenti collegati.
+* Consulta la sezione link:https://docs.netapp.com/us-en/flexpod/fp-def/dc-tech-spec_topologies.html["FlexPod Datacenter topologie"^] per ulteriori linee guida sul cablaggio per topologie specifiche.
+
+
+La tabella seguente fornisce le linee guida per il cablaggio degli shelf dischi NetApp che possono essere utilizzati in una progettazione FlexPod Datacenter.
 
 |===
-| Hardware | Numero di modello | Cavi necessari 
 
 
-| Chassis Cisco UCS | Cisco UCS 5108 | Almeno due cavi twinaxial per ogni modulo Cisco UCS 2104XP, 2204XP o 2208XP 
+| Shelf di dischi | Linee guida per il cablaggio 
 
 
-.6+| Cisco UCS Fabric Interconnects | Cisco UCS 6248UP  a| 
-* Due cavi Cat5e per le porte di gestione
-* Due cavi Cat5e per le interconnessioni L1, L2, per coppia di interconnessioni fabric
-* Almeno quattro cavi twinaxial per interconnessione fabric
-* Almeno quattro cavi FC per interconnessione fabric
-
-
-
-
-| Cisco UCS 6296UP 
-
-
-| Cisco UCS 6332-16UP 
-
-
-| Cisco UCS 6454 
-
-
-| Cisco UCS 6332  a| 
-* Due cavi Cat5e per le porte di gestione
-* Due cavi Cat5e per le interconnessioni L1, L2, per coppia di interconnessioni fabric
-* Almeno quattro cavi twinaxial per interconnessione fabric
-
-
-
-
-| Cisco UCS 6324  a| 
-* Due porte di gestione a 10/100/1000Mbps
-* Almeno due cavi twinaxial per interconnessione fabric
-
-
-
-
-.2+| Switch Cisco Nexus serie 5000 e 7000 | Cisco Nexus serie 5000  a| 
-* Almeno due cavi 10 GbE in fibra o twinaxial per switch
-* Almeno due cavi FC per switch (se è richiesta la connettività FC/FCoE)
-
-
-
-
-| Cisco Nexus serie 7000 
-
-
-| Switch Cisco Nexus serie 9000 | Cisco Nexus serie 9000 | Almeno due cavi da 10 GbE per switch 
-
-
-.2+| Controller NetApp FAS | AFF Serie A.  a| 
-* Una coppia di cavi SAS o SATA per controller di storage
-* Almeno due cavi FC per controller, se si utilizza un FC legacy
-* Almeno due cavi da 10 GbE per controller
-* Almeno un cavo GbE per la gestione per controller
-* Per ONTAP, sono necessari otto cavi twinaxial corti per ogni coppia di switch di interconnessione del cluster
-
-
-
-
-| Serie FAS 
-
-
-.4+| Shelf di dischi NetApp | DS212C .3+| Due cavi SAS, SATA o FC per shelf di dischi 
+| DS212C .3+| link:https://docs.netapp.com/us-en/ontap-systems/sas3/install-cabling-rules.html#configuration-rules["Regole di cablaggio SAS"^] 
 
 
 | DS224C 
@@ -111,5 +58,11 @@ Il numero e il tipo di cavi e adattatori richiesti variano in base all'implement
 | DS460C 
 
 
-| NS224 | Due cavi in rame da 100 Gbps per shelf di dischi 
+| NS224 .3+| link:https://docs.netapp.com/us-en/ontap-systems/drive-shelves/index.html["Requisiti e best practice per gli shelf NS224 e NX224"^] 
+
+
+| NS224 con NSM100B 
+
+
+| NX224 
 |===

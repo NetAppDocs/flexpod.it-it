@@ -16,8 +16,8 @@ summary:
 [role="lead"]
 Esistono due piattaforme FlexPod:
 
-* *FlexPod Datacenter.* questa piattaforma è un'infrastruttura di data center virtuale estremamente scalabile, adatta per applicazioni aziendali con carichi di lavoro, virtualizzazione, infrastruttura di desktop virtuale (VDI) e carichi di lavoro di cloud pubblico, privato e ibrido.
-* *FlexPod Express.* Si tratta di un'infrastruttura convergente compatta dedicata a casi di utilizzo di sedi remote e sedi periferiche. FlexPod Express dispone di specifiche documentate nella https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_overview.html["Specifiche tecniche di FlexPod Express."^]
+* *FlexPod Datacenter.* Questa piattaforma è un'infrastruttura di data center altamente scalabile, adatta per carichi di lavoro e applicazioni aziendali, virtualizzazione, AI/ML, database, SAP HANA, virtual desktop infrastructure (VDI) e carichi di lavoro cloud pubblici, privati e ibridi.
+* *FlexPod Express.* Questa piattaforma è un'infrastruttura convergente compatta destinata a casi d'uso in uffici remoti ed edge. FlexPod Express ha le proprie specifiche, documentate nel https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_overview.html["Specifiche tecniche di FlexPod Express"^].
 
 
 Questo documento fornisce le specifiche tecniche della piattaforma FlexPod Datacenter.
