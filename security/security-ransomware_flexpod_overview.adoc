@@ -10,7 +10,7 @@ summary: 'FlexPod è un"architettura pre-progettata, integrata e validata che co
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

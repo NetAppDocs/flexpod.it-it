@@ -10,7 +10,7 @@ summary: 'Quando si implementa una strategia FIPS 140-2, è importante comprende
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-overview-of-fips-140-2.html["Precedente: Panoramica di FIPS 140-2."]

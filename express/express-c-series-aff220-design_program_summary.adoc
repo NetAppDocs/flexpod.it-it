@@ -10,7 +10,7 @@ summary: 'Le architetture di riferimento FlexPod vengono fornite come Cisco Vali
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

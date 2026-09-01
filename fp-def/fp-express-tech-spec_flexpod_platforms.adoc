@@ -10,7 +10,7 @@ summary: Questo documento fornisce le specifiche tecniche della piattaforma Flex
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

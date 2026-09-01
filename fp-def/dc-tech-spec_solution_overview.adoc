@@ -10,7 +10,7 @@ summary: 'La piattaforma FlexPod è un"architettura di data center pre-progettat
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Arvind Ramakrishnan e Jyh-shing Chen, NetApp

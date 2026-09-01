@@ -10,7 +10,7 @@ summary: Con la configurazione e la configurazione di Cloud Insights per il moni
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

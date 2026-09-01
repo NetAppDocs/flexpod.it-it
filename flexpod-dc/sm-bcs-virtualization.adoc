@@ -10,7 +10,7 @@ summary: 'Nella soluzione multi-sito FlexPod SM-BC, un singolo VMware vCenter ge
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-storage.html["Precedente: Convalida della soluzione - Storage."]

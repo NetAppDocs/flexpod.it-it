@@ -10,7 +10,7 @@ summary: 'La configurazione di calcolo per la soluzione FlexPod SM-BC segue le B
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-solution-validation_overview.html["Preivous: Convalida della soluzione - Panoramica."]

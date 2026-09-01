@@ -10,7 +10,7 @@ summary: 'Un design FlexPod presenta requisiti minimi per l"alimentazione e il c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

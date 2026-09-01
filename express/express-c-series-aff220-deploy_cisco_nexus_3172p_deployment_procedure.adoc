@@ -10,7 +10,7 @@ summary: La sezione seguente descrive in dettaglio la configurazione dello switc
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

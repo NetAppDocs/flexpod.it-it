@@ -10,7 +10,7 @@ summary: 'Prima di poter collegare un archivio di oggetti a un aggregato, è nec
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

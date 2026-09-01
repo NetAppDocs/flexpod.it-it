@@ -10,7 +10,7 @@ summary: Un sistema FlexPod richiede una combinazione di componenti hardware e s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

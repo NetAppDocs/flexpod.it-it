@@ -10,7 +10,7 @@ summary: Prima di iniziare, installare o aggiornare AIQ UM, creare un account Ci
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

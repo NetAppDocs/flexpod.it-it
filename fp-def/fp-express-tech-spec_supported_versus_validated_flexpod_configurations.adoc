@@ -10,7 +10,7 @@ summary: 'L"architettura di FlexPod è definita dall"insieme di regole descritte
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

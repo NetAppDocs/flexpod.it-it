@@ -10,7 +10,7 @@ summary: 'Questo report tecnico riunisce la soluzione di infrastruttura converge
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Ruchika Lahoti, NetApp

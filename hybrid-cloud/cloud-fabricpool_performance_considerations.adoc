@@ -10,7 +10,7 @@ summary: Quando si prende in considerazione il dimensionamento, è necessario va
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

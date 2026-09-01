@@ -10,7 +10,7 @@ summary: 'FlexPod richiede una combinazione di componenti hardware e software ch
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

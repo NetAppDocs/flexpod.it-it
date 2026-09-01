@@ -10,7 +10,7 @@ summary: 'Gli autori consigliano di non pagare un riscatto in caso di attacco, p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

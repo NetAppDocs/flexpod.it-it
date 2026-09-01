@@ -10,7 +10,7 @@ summary: 'Una volta rivendicati i target, i widget di storage NetApp, l"inventar
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

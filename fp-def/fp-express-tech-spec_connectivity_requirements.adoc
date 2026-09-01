@@ -10,7 +10,7 @@ summary: In questa sezione vengono descritti i requisiti di connettività per le
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

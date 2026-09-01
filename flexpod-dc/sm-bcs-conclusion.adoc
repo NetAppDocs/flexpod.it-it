@@ -10,7 +10,7 @@ summary: 'Il data center FlexPod con SM-BC utilizza un data center Active-Active
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-validated-scenarios.html["Precedente: Convalida della soluzione - scenari validati."]

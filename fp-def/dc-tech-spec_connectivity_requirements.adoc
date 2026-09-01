@@ -10,7 +10,7 @@ summary: Di seguito sono elencati i requisiti di connettività per la configuraz
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

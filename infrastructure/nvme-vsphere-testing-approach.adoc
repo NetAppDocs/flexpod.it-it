@@ -10,7 +10,7 @@ summary: 'In questa sezione viene fornito un riepilogo generale del test di conv
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-introduction.html["Precedente: Introduzione."]

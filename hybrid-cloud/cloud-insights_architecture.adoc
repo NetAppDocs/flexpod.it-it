@@ -10,7 +10,7 @@ summary: 'In questa sezione, esaminano l"architettura di un"infrastruttura conve
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

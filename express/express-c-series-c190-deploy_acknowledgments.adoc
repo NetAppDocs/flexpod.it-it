@@ -10,7 +10,7 @@ summary: Gli autori desiderano ringraziare John George per il suo supporto e il 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

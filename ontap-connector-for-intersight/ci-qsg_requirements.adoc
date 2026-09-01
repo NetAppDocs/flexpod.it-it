@@ -10,7 +10,7 @@ summary: 'Verifica di soddisfare i requisiti hardware, software e di licenza per
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

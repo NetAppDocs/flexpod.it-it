@@ -10,7 +10,7 @@ summary: Questa sezione descrive la convalida della soluzione utilizzando divers
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-san-configuration.html["Precedente: Configurazione SAN."]

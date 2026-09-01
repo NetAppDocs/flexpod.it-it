@@ -10,7 +10,7 @@ summary: Questa convalida di riferimento è cablata come mostrato nelle figure e
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

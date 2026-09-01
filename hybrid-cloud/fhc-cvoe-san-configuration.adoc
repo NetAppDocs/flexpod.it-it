@@ -10,7 +10,7 @@ summary: 'Questa sezione descrive la configurazione lato host richiesta da EHR p
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-installation-and-configuration.html["Precedente: Installazione e configurazione."]

@@ -10,7 +10,7 @@ summary: 'Un"architettura FlexPod può essere progettata con un server Cisco UCS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-control-plane-versus-data-plane.html["Precedente: Piano di controllo rispetto al piano dati."]

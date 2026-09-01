@@ -10,7 +10,7 @@ summary: In questa pagina sono elencate 11 procedure necessarie per implementare
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["Precedente: Implementazione automatica dello storage NetApp per il cloud ibrido."]

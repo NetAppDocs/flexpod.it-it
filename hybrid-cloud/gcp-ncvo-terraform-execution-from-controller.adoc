@@ -10,7 +10,7 @@ summary: Possiamo eseguire il piano Terraform utilizzando un controller. Puoi sa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-dr-workflow.html["Precedente: Workflow DR."]

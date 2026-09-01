@@ -10,7 +10,7 @@ summary: Con FlexPod, otterrai una singola piattaforma che supporta FC, FCoE, iS
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jaya Kishore Esanakula e Atul Balodia, NetApp

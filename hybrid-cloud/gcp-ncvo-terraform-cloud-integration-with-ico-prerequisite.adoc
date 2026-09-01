@@ -10,7 +10,7 @@ summary: Questa pagina descrive come connettere Cisco Intersight e Terraform Clo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-cisco-intersight-configuration.html["Precedente: Configurazione di Cisco Intersight."]

@@ -10,7 +10,7 @@ summary: 'FabricPool è una soluzione di storage ibrido in ONTAP che utilizza un
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

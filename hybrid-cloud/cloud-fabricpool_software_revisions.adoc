@@ -10,7 +10,7 @@ summary: 'La seguente tabella illustra le versioni validate dell"hardware e del 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

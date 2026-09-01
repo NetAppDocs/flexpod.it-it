@@ -10,7 +10,7 @@ summary: FlexPod Datacenter e FlexPod Express offrono una configurazione di base
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Savita Kumari, NetApp

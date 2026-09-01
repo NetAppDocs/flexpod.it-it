@@ -10,7 +10,7 @@ summary: I bucket sono contenitori di archivi di oggetti che contengono dati. È
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

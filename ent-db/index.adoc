@@ -10,7 +10,7 @@ summary: 'Questa pagina fornisce un"introduzione all"utilizzo di FlexPod con SAP
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 La piattaforma FlexPod è un'architettura di data center pre-progettata e basata su Best practice, basata sul sistema di calcolo unificato Cisco, sulla famiglia di switch Cisco Nexus e sui controller di storage NetApp.

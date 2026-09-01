@@ -10,7 +10,7 @@ summary: 'È possibile utilizzare una vasta gamma di prodotti Cisco Nexus come c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

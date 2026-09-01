@@ -10,7 +10,7 @@ summary: Questo documento fornisce dettagli sulla configurazione di un sistema F
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

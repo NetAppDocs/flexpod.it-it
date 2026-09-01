@@ -10,7 +10,7 @@ summary: 'Questi sono alcuni esempi di casi di utilizzo per il monitoraggio e l"
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

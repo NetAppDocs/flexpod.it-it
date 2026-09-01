@@ -10,7 +10,7 @@ summary: 'I controller di storage NetApp forniscono la base dello storage nell"a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

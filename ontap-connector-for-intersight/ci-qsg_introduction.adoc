@@ -10,7 +10,7 @@ summary: 'NetApp e Cisco hanno collaborato per fornire Cisco Intersight, una vis
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

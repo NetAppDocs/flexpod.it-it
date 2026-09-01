@@ -10,7 +10,7 @@ summary: 'FlexPod è una soluzione flessibile che consente di utilizzare le appa
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

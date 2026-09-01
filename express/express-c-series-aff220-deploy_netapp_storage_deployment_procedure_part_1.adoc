@@ -10,7 +10,7 @@ summary: Per completare la procedura di implementazione dello storage NetApp AFF
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

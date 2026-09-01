@@ -10,7 +10,7 @@ summary: Le specifiche tecniche forniscono dettagli sui componenti hardware di u
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

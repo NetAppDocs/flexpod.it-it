@@ -10,7 +10,7 @@ summary: 'Il percorso verso il cloud varia tra le organizzazioni, tra le busines
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

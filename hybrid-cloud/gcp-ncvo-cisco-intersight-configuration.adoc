@@ -10,7 +10,7 @@ summary: Questa pagina elenca le risorse necessarie per configurare Cisco Inters
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-deploy-flexpod.html["Precedente: Implementare FlexPod."]

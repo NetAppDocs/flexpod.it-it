@@ -10,7 +10,7 @@ summary: Per configurare il clustering di VMware vCenter Server 6.7 e vSphere, a
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

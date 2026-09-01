@@ -10,7 +10,7 @@ summary: 'L"architettura FlexPod è progettata per fornire alta disponibilità i
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod offre una soluzione semplice ed efficace grazie a un design val
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

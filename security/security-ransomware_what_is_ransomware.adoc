@@ -10,7 +10,7 @@ summary: 'Ransomware è un tipo di malware basato sulla crittografia, ovvero l"u
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Arvind Ramakrishnan, NetApp

@@ -10,7 +10,7 @@ summary: Questa soluzione fornisce un riepilogo di alto livello delle performanc
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Chris Schmitt e Kamini Singh, NetApp

@@ -10,7 +10,7 @@ summary: Il cablaggio di convalida di riferimento è documentato nelle tabelle s
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

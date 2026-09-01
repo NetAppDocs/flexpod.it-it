@@ -10,7 +10,7 @@ summary: Questa sezione descrive i requisiti software consigliati per le diverse
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

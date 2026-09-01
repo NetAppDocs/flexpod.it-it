@@ -10,7 +10,7 @@ summary: Per implementare Cloud Insights per FlexPod, è necessario completare l
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

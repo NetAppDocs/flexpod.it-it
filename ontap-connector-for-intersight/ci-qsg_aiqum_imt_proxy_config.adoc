@@ -10,7 +10,7 @@ summary: Per utilizzare il servizio IMT, le configurazioni di AIQ UM con server 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

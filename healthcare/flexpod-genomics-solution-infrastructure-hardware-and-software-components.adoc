@@ -10,7 +10,7 @@ summary: 'Questa sezione descrive l"infrastruttura della soluzione e i component
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["Precedente: Vantaggi dell'implementazione di workload genomici su FlexPod."]

@@ -10,7 +10,7 @@ summary: 'Cisco contribuisce in modo sostanziale alla progettazione e all"archit
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Per creare igroups, è necessario disporre degli IQN iSCSI Initiator e 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

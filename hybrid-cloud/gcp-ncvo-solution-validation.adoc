@@ -10,7 +10,7 @@ summary: 'In questa pagina, rivisitiamo la soluzione con un workflow di replica 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-execution-from-controller.html["Precedente: Esecuzione del terraform dal controller."]

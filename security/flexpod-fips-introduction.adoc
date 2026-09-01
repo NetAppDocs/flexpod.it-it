@@ -10,7 +10,7 @@ summary: 'Questo documento è una panoramica tecnica di un"infrastruttura FlexPo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 JayaKishore Esanakula, NetApp John McAbel, Cisco

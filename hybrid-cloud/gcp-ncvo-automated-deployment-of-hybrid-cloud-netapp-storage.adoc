@@ -10,7 +10,7 @@ summary: 'Questa sezione descrive l"implementazione automatica dello storage Net
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-configure-public-cloud-service-provider.html["Precedente: Configurare il provider di servizi di cloud pubblico."]

@@ -10,7 +10,7 @@ summary: 'In questa pagina sono elencate le risorse necessarie per implementare 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-components.html["Precedente: Componenti della soluzione."]

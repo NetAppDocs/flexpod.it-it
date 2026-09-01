@@ -10,7 +10,7 @@ summary: 'Una volta aggiunto e identificato da ONTAP, un archivio di oggetti dev
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

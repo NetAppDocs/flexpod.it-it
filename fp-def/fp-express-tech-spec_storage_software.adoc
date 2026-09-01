@@ -10,7 +10,7 @@ summary: I sistemi operativi per lo storage elencati in questa sezione sono supp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

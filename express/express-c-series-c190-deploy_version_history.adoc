@@ -10,7 +10,7 @@ summary: Di seguito è riportata la cronologia delle versioni di questo document
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 |===

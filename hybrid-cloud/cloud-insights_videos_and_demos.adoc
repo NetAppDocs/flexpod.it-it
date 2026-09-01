@@ -10,7 +10,7 @@ summary: 'È possibile visualizzare una dimostrazione video dell"utilizzo di Net
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: Per creare igroups, eseguire i seguenti comandi dalla connessione SSH d
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

@@ -10,7 +10,7 @@ summary: La creazione di un cloud ibrido è un obiettivo per la maggior parte de
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-validation.html["Precedente: Convalida della soluzione."]

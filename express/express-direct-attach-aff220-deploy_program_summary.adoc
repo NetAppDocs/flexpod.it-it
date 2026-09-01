@@ -10,7 +10,7 @@ summary: 'FlexPod è un"architettura pre-progettata e basata su Best practice, b
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 SREE Lakshmi Lanka, NetApp

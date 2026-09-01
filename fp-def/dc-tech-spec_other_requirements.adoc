@@ -10,7 +10,7 @@ summary: 'Un"architettura FlexPod presenta i seguenti requisiti aggiuntivi di in
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

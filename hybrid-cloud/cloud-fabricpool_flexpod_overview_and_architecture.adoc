@@ -10,7 +10,7 @@ summary: FlexPod è un set definito di hardware e software che costituisce una b
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

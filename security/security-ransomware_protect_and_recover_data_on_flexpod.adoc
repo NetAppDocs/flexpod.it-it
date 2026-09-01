@@ -10,7 +10,7 @@ summary: Questa sezione descrive come è possibile ripristinare i dati di un ute
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

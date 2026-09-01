@@ -10,7 +10,7 @@ summary: 'Eseguendo la tua applicazione per il settore sanitario su una piattafo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-additional-flexpod-security-consideration.html["Precedente: Ulteriori considerazioni sulla sicurezza di FlexPod."]

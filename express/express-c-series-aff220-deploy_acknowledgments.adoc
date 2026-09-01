@@ -10,7 +10,7 @@ summary: Gli autori desiderano riconoscere alcuni individui per il loro supporto
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

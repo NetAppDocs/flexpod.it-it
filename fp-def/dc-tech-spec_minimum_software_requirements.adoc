@@ -10,7 +10,7 @@ summary: Le seguenti informazioni descrivono i requisiti software minimi per una
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

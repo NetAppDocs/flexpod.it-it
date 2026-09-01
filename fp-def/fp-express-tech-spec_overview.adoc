@@ -10,7 +10,7 @@ summary: 'FlexPod Express è un"architettura predefinita e best practice, basata
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

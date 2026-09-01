@@ -10,7 +10,7 @@ summary: I destinatari e i casi a cui si applica questa soluzione sono elencati 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

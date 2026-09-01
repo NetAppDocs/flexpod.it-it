@@ -10,7 +10,7 @@ summary: La piattaforma Cisco MDS serie 9000 con software 8.4.x è conforme a FI
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["Precedente: Calcolo Cisco UCS FlexPod e FIPS 140-2."]

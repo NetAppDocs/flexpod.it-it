@@ -10,7 +10,7 @@ summary: Per ulteriori informazioni su questo documento, consultare il sito Web 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

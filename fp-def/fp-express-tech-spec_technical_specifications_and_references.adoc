@@ -10,7 +10,7 @@ summary: Questa sezione descrive specifiche tecniche importanti aggiuntive per c
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
