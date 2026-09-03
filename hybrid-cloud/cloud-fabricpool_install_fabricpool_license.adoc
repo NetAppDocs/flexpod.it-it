@@ -24,7 +24,7 @@ Dopo aver acquisito un file di licenza NetApp, è possibile installarlo con Gest
 . Fare clic su Aggiungi.
 
 
-image:cloud-fabricpool_image8.png[""]
+image:cloud-fabricpool_image8.png["Uno screenshot della finestra di dialogo \"Add License Packages\" di OnCommand System Manager con i pulsanti \"Choose Files\" e \"Add\""]
 
 
 
@@ -43,7 +43,7 @@ In Gestore di sistema di OnCommand, attenersi alla seguente procedura:
 . Fare clic sulla scheda Dettagli.
 
 
-image:cloud-fabricpool_image9.png[""]
+image:cloud-fabricpool_image9.png["Uno screenshot dei dettagli delle licenze di ONTAP System Manager che mostra la capacità di licenza FabricPool di 10 TB e la capacità attuale di 0 Byte"]
 
 La capacità massima e la capacità corrente sono elencate nella riga licenza FabricPool.
 

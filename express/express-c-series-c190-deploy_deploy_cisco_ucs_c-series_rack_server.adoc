@@ -50,7 +50,7 @@ NOTE: La versione di CIMC utilizzata per questa convalida è CIMC 4.0.(4).
 Accendere il server e premere F8 quando richiesto per accedere alla configurazione CIMC.
 
 +
-image:express-c-series-c190-deploy_image5.png[""]
+image:express-c-series-c190-deploy_image5.png["Uno screenshot che mostra la schermata di avvio di un server Cisco che invita a premere F8 per la configurazione di CIMC"]
 
 . Nell'utility di configurazione di CIMC, impostare le seguenti opzioni:
 +
@@ -82,7 +82,7 @@ Ridondanza della NIC
 Nessuno: `[X]`
 
 +
-image:express-c-series-c190-deploy_image6.png[""]
+image:express-c-series-c190-deploy_image6.png["Uno screenshot delle proprietà della scheda di rete dell'utility di configurazione Cisco IMC con scheda di rete dedicata e nessuna ridondanza selezionata"]
 
 
 
@@ -181,7 +181,7 @@ Per impostare la configurazione dell'ordine di avvio, attenersi alla seguente pr
 . Dalla finestra del browser dell'interfaccia CIMC, fare clic sulla scheda Compute (calcolo) e selezionare BIOS.
 . Fare clic su Configure Boot Order (Configura ordine di avvio), quindi su OK.
 +
-image:express-c-series-c190-deploy_image7.png[""]
+image:express-c-series-c190-deploy_image7.png["Uno screenshot della pagina \"Configure Boot Order\" del BIOS del Cisco Integrated Management Controller"]
 
 . Configurare i seguenti dispositivi facendo clic su Device (dispositivo) sotto Add Boot Device (Aggiungi dispositivo di avvio) e selezionando la scheda Advanced (Avanzate):
 +
@@ -235,7 +235,7 @@ Porta: 3
 . Fare clic su Aggiungi dispositivo.
 . Fare clic su Save Changes (Salva modifiche), quindi su Close (Chiudi)
 +
-image:express-c-series-c190-deploy_image8.png[""]
+image:express-c-series-c190-deploy_image8.png["Uno screenshot della configurazione avanzata dell'ordine di avvio con KVM-MAPPED-DVD, iSCSI-A e iSCSI-B abilitati"]
 
 . Riavviare il server per eseguire l'avvio con il nuovo ordine di avvio.
 
@@ -252,7 +252,7 @@ Se il server C-Series contiene un controller RAID, attenersi alla seguente proce
 . Scorrere verso il basso fino a PCIe slot:HBA Option ROM.
 . Se il valore non è già disattivato, impostarlo su Disabled (Disattivato).
 +
-image:express-c-series-c190-deploy_image9.png[""]
+image:express-c-series-c190-deploy_image9.png["Uno screenshot che mostra le impostazioni del BIOS CIMC con l'Option ROM degli slot PCIe 1 e 2 disabilitata"]
 
 
 
@@ -270,7 +270,7 @@ NOTE: Prima di poter configurare le quattro porte singole, è necessario disatti
 . Nella scheda General (Generale), deselezionare il canale della porta.
 . Salvare le modifiche e riavviare CIMC.
 +
-image:express-c-series-c190-deploy_image10.png[""]
+image:express-c-series-c190-deploy_image10.png["Uno screenshot della scheda Generale MLOM della scheda adattatore Cisco Integrated Management Controller con Port Channel deselezionato"]
 
 
 
@@ -301,13 +301,13 @@ Per creare vNIC iSCSI, attenersi alla seguente procedura:
 ** Invio `\<<var_iscsi_vlan_b>>` Come VLAN.
 ** Impostare la porta uplink su 3.
 +
-image:express-c-series-c190-deploy_image11.png[""]
+image:express-c-series-c190-deploy_image11.png["Uno screenshot che mostra le impostazioni generali per la vNIC iSCSI eth1 con VLAN 3439 e porta uplink 1"]
 
 
 
 . Selezionare la vNIC eth1 a sinistra.
 +
-image:express-c-series-c190-deploy_image12.png[""]
+image:express-c-series-c190-deploy_image12.png["Uno screenshot che mostra le impostazioni dell'iniziatore delle proprietà di avvio iSCSI per vNIC eth1"]
 
 . In iSCSI Boot Properties (Proprietà di avvio iSCSI), immettere i dettagli dell'iniziatore:
 +
@@ -316,7 +316,7 @@ image:express-c-series-c190-deploy_image12.png[""]
 ** Subnet mask: `\<<var_esxi_hostA_iscsiA_mask>>`
 ** Gateway: `\<<var_esxi_hostA_iscsiA_gateway>>`
 +
-image:express-c-series-c190-deploy_image13.png[""]
+image:express-c-series-c190-deploy_image13.png["Uno screenshot delle proprietà di avvio iSCSI con initiator, dettagli della destinazione primaria e della destinazione secondaria"]
 
 
 
@@ -352,7 +352,7 @@ NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un 
 ** Subnet mask: `\<<var_esxi_hostb_iscsib_mask>>`
 ** Gateway: `\<<var_esxi_hostb_iscsib_gateway>>`
 +
-image:express-c-series-c190-deploy_image14.png[""]
+image:express-c-series-c190-deploy_image14.png["Uno screenshot che mostra le proprietà di avvio iSCSI per la vNIC eth3 con impostazioni di initiator e target"]
 
 
 
@@ -395,11 +395,11 @@ Per configurare le vNIC per ESXi, attenersi alla seguente procedura:
 . Impostare MTU su 9000. Fare clic su Salva modifiche.
 . Impostare la VLAN sulla VLAN 2 nativa.
 +
-image:express-c-series-c190-deploy_image15.png[""]
+image:express-c-series-c190-deploy_image15.png["Uno screenshot delle proprietà della vNIC eth0 del Cisco Integrated Management Controller con MTU 9000 e VLAN predefinita 2"]
 
 . Ripetere i passaggi 3 e 4 per eth1, verificando che la porta uplink sia impostata su 1 per eth1.
 +
-image:express-c-series-c190-deploy_image16.png[""]
+image:express-c-series-c190-deploy_image16.png["Uno screenshot delle vNIC di Cisco Integrated Management Controller che elenca eth0 fino a eth3 con MTU, porta uplink e impostazioni VLAN"]
 
 +
 

@@ -1653,7 +1653,7 @@ Per creare un blocco di indirizzi IP per l'accesso a tastiera, video e mouse (KV
 . Fare clic con il pulsante destro del mouse su IP Pool ext-mgmt e selezionare Create Block of IPv4 Addresses (Crea blocco di indirizzi IPv4).
 . Inserire l'indirizzo IP iniziale del blocco, il numero di indirizzi IP richiesti e le informazioni relative alla subnet mask e al gateway.
 +
-image:express-direct-attach-aff220-deploy_image7.png[""]
+image:express-direct-attach-aff220-deploy_image7.png["Uno screenshot della finestra di dialogo Crea blocco di indirizzi IPv4 con i campi indirizzo IP, subnet, gateway e DNS"]
 
 . Fare clic su OK per creare il blocco.
 . Fare clic su OK nel messaggio di conferma.
@@ -1674,12 +1674,12 @@ Per sincronizzare l'ambiente Cisco UCS con i server NTP negli switch Nexus, atte
 . Fare clic su Aggiungi server NTP.
 . Invio `<switch-a-ntp-ip> or <Nexus-A-mgmt-IP>` E fare clic su OK. Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image8.png[""]
+image:express-direct-attach-aff220-deploy_image8.png["Uno screenshot della finestra di dialogo Aggiungi NTP Server con NTP Server impostato su 10.1.156.4"]
 
 . Fare clic su Aggiungi server NTP.
 . Invio `<switch-b-ntp-ip>` `or <Nexus-B-mgmt-IP>` E fare clic su OK. Fare clic su OK nella conferma.
 +
-image:express-direct-attach-aff220-deploy_image9.png[""]
+image:express-direct-attach-aff220-deploy_image9.png["Uno screenshot delle impostazioni NTP di Cisco UCS Manager con due server NTP elencati e il fuso orario America/New_York selezionato"]
 
 
 
@@ -1717,7 +1717,7 @@ Per abilitare le porte server e uplink, attenersi alla seguente procedura:
 . Nel riquadro di sinistra, selezionare Fixed Module (modulo fisso) in Fabric Interconnect A. 
 . Nella scheda Porte Ethernet, verificare che le porte siano state configurate correttamente nella colonna ruolo If. Se sulla porta di scalabilità sono stati configurati server C-Series, fare clic su di essi per verificare la connettività della porta.
 +
-image:express-direct-attach-aff220-deploy_image10.png[""]
+image:express-direct-attach-aff220-deploy_image10.png["Uno screenshot che mostra le porte Ethernet di Fabric Interconnect A con i ruoli di uplink e appliance storage configurati"]
 
 . Espandere Equipment > Fabric Interconnect > Fabric Interconnect B > Fixed Module.
 . Espandere Porte Ethernet.
@@ -1730,7 +1730,7 @@ image:express-direct-attach-aff220-deploy_image10.png[""]
 . Nel riquadro di sinistra, selezionare Fixed Module (modulo fisso) in Fabric Interconnect B. 
 . Nella scheda Porte Ethernet, verificare che le porte siano state configurate correttamente nella colonna ruolo If. Se sulla porta di scalabilità sono stati configurati server C-Series, fare clic su di essa per verificare la connettività della porta.
 +
-image:express-direct-attach-aff220-deploy_image11.png[""]
+image:express-direct-attach-aff220-deploy_image11.png["Uno screenshot che mostra le porte Ethernet di Fabric Interconnect B con i ruoli di rete e di storage appliance configurati"]
 
 
 
@@ -1753,7 +1753,7 @@ NOTE: In questa procedura, vengono creati due canali di porta: Uno dal fabric A 
 . Inserire VPC-13-Nexus come nome del canale della porta.
 . Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image12.png[""]
+image:express-direct-attach-aff220-deploy_image12.png["Uno screenshot della finestra di dialogo Create Port Channel con ID 1 e nome vPC-13-Nexus inseriti"]
 
 . Selezionare le seguenti porte da aggiungere al canale della porta:
 +
@@ -1818,7 +1818,7 @@ Per configurare le porte e le VLAN di storage dell'appliance di storage, attener
 . Invio `\<<var_nfs_vlan_id>>` Per l'ID VLAN.
 . Lasciare l'opzione Sharing Type (tipo di condivisione) impostata su None
 +
-image:express-direct-attach-aff220-deploy_image13.jpeg[""]
+image:express-direct-attach-aff220-deploy_image13.jpeg["Uno screenshot della finestra di dialogo Crea VLAN con NFS-VLAN e VLAN ID 3170 inseriti"]
 
 . Fare clic su OK, quindi nuovamente su OK per creare la VLAN.
 . Fare clic con il pulsante destro del mouse su VLAN in Appliances Cloud.
@@ -1840,14 +1840,14 @@ image:express-direct-attach-aff220-deploy_image13.jpeg[""]
 . Invio `\<<var_native_vlan_id>>` Per l'ID VLAN.
 . Fare clic su OK, quindi nuovamente su OK per creare la VLAN.
 +
-image:express-direct-attach-aff220-deploy_image14.png[""]
+image:express-direct-attach-aff220-deploy_image14.png["Uno screenshot che mostra la tabella delle VLAN in Cisco UCS Manager con i nomi e gli ID delle VLAN"]
 
 . Nel riquadro di navigazione, in LAN > Policy, espandere Appliances e fare clic con il pulsante destro del mouse su Network Control Policies.
 . Selezionare Crea criterio di controllo di rete.
 . Assegnare un nome al criterio `Enable_CDP_LLPD` E selezionare Enabled (attivato) accanto a CDP.
 . Attivare le funzioni di trasmissione e ricezione per LLDP.
 +
-image:express-direct-attach-aff220-deploy_image15.png[""]
+image:express-direct-attach-aff220-deploy_image15.png["Uno screenshot che mostra la policy di controllo di rete Enable_CDP con trasmissione e ricezione CDP e LLDP abilitate"]
 
 . Fare clic su OK, quindi fare nuovamente clic su OK per creare il criterio.
 . Nel riquadro di navigazione, sotto LAN > Appliances Cloud, espandere la struttura ad albero fabric A.
@@ -1858,7 +1858,7 @@ image:express-direct-attach-aff220-deploy_image15.png[""]
 . In VLAN, selezionare iSCSI-A-VLAN, NFS VLAN e Native VLAN. Impostare la VLAN nativa come VLAN nativa. Deselezionare la selezione della VLAN predefinita.
 . Fare clic su Save Changes (Salva modifiche) e OK.
 +
-image:express-direct-attach-aff220-deploy_image16.png[""]
+image:express-direct-attach-aff220-deploy_image16.png["Uno screenshot delle proprietà dell'interfaccia Appliance 1/3 con CDP abilitato e VLAN di storage selezionate"]
 
 . Selezionare Appliance Interface 1/4 in Fabric A.
 . Nel campo User Label (etichetta utente), inserire le informazioni che indicano la porta dello storage controller, ad esempio `<storage_controller_02_name>:e0e`. Fare clic su Save Changes (Salva modifiche) e OK.
@@ -1874,7 +1874,7 @@ image:express-direct-attach-aff220-deploy_image16.png[""]
 . Selezionare Enable_CDP Network Control Policy (criterio di controllo di rete Enable_CDP), quindi Save Changes (Salva modifiche) e OK.
 . In VLAN, selezionare iSCSI-B-VLAN, NFS VLAN e Native VLAN. Impostare la VLAN nativa come VLAN nativa. Deselezionare la VLAN predefinita.
 +
-image:express-direct-attach-aff220-deploy_image17.png[""]
+image:express-direct-attach-aff220-deploy_image17.png["Uno screenshot delle impostazioni VLAN di Appliance Interface 1/3 con iSCSI-B, NFS e VLAN Native selezionate"]
 
 . Fare clic su Save Changes (Salva modifiche) e OK.
 . Selezionare Appliance Interface 1/4 in Fabric B.
@@ -1896,7 +1896,7 @@ Per configurare i frame jumbo e abilitare la qualità del servizio nel fabric Ci
 . Nel riquadro di destra, fare clic sulla scheda Generale.
 . Nella riga Best effort, inserire 9216 nella casella sotto la colonna MTU.
 +
-image:express-direct-attach-aff220-deploy_image18.png[""]
+image:express-direct-attach-aff220-deploy_image18.png["Uno screenshot delle impostazioni della classe di sistema QoS di Cisco UCS Manager con Best Effort MTU impostato su 9216"]
 
 . Fare clic su Salva modifiche.
 . Fare clic su OK.
@@ -1939,7 +1939,7 @@ Per creare una policy di gestione del firmware per una data configurazione del s
 . Nel riquadro delle azioni, selezionare Modify Package Versions (Modifica versioni pacchetto).
 . Selezionare la versione 4.0(1b) per entrambi i pacchetti blade.
 +
-image:express-direct-attach-aff220-deploy_image19.png[""]
+image:express-direct-attach-aff220-deploy_image19.png["Uno screenshot della finestra di dialogo Modifica versioni pacchetto con Blade Package 4.0(1b)B selezionato"]
 
 . Fare clic su OK, quindi di nuovo su OK per modificare il pacchetto firmware dell'host.
 
@@ -1969,7 +1969,7 @@ NOTE: Per la soluzione FlexPod, si consiglia di inserire 0A nell'ottetto success
 
 . Specificare una dimensione per il pool di indirizzi MAC sufficiente a supportare le risorse blade o server disponibili. Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image20.png[""]
+image:express-direct-attach-aff220-deploy_image20.png["Uno screenshot della finestra di dialogo Crea un blocco di indirizzi MAC con indirizzo MAC 00:25:B5:32:0A:00 e dimensione 64"]
 
 . Fare clic su fine.
 . Nel messaggio di conferma, fare clic su OK.
@@ -2013,7 +2013,7 @@ NOTE: Se si utilizzano più domini Cisco UCS, potrebbe essere necessario utilizz
 . Immettere 1 nel campo da.
 . Specificare la dimensione del blocco IQN sufficiente per supportare le risorse server disponibili. Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image21.png[""]
+image:express-direct-attach-aff220-deploy_image21.png["Uno screenshot della finestra di dialogo Create a Block of IQN Suffixes con suffisso ucs-host, From 1 e Size 16"]
 
 . Fare clic su fine.
 
@@ -2109,7 +2109,7 @@ Per creare un Network Control Policy per Cisco Discovery Protocol (CDP) e link L
 . Per LLDP, scorrere verso il basso e selezionare Enabled (attivato) per Transmit (trasmissione) e Receive (ricezione).
 . Fare clic su OK per creare il criterio di controllo di rete. Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image22.png[""]
+image:express-direct-attach-aff220-deploy_image22.png["Uno screenshot della finestra di dialogo Crea criteri di controllo di rete con CDP e LLDP abilitati"]
 
 
 
@@ -2128,7 +2128,7 @@ Per creare una policy di controllo dell'alimentazione per l'ambiente Cisco UCS, 
 . Impostare il limite di alimentazione su No Cap.
 . Fare clic su OK per creare il criterio di controllo del risparmio di energia. Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image23.png[""]
+image:express-direct-attach-aff220-deploy_image23.png["Uno screenshot della finestra di dialogo Create Power Control Policy con No-Power-Cap e No Cap selezionati"]
 
 
 
@@ -2153,7 +2153,7 @@ NOTE: In questo esempio viene creata una policy per i server Cisco UCS B-Series 
 . Fare clic su OK per creare il criterio CPU/Core.
 . Fare clic su OK per creare il criterio, quindi fare clic su OK per confermare.
 +
-image:express-direct-attach-aff220-deploy_image24.png[""]
+image:express-direct-attach-aff220-deploy_image24.png["Screenshot della finestra di dialogo \"Create CPU/Cores Qualification\" di Cisco UCS Manager con architettura del processore Xeon e campo CPU PID"]
 
 
 
@@ -2172,7 +2172,7 @@ Per creare un criterio BIOS del server per l'ambiente Cisco UCS, attenersi alla 
 . Impostare l'opzione Quiet Boot su Disabled (Disattivato).
 . Impostare l'opzione Naming periferica coerente su attivato.
 +
-image:express-direct-attach-aff220-deploy_image25.png[""]
+image:express-direct-attach-aff220-deploy_image25.png["Uno screenshot della finestra di dialogo Crea BIOS Policy con nome VM-Host e denominazione coerente dei dispositivi abilitati"]
 
 . Selezionare la scheda Processor (processore) e impostare i seguenti parametri:
 +
@@ -2181,7 +2181,7 @@ image:express-direct-attach-aff220-deploy_image25.png[""]
 ** Report del processore C3: Disattivato
 ** Report processore C7: Disattivato
 +
-image:express-direct-attach-aff220-deploy_image26.png[""]
+image:express-direct-attach-aff220-deploy_image26.png["Uno screenshot della scheda Crea criteri BIOS Processore con Processor C State e C1E disabilitati"]
 
 
 
@@ -2191,7 +2191,7 @@ image:express-direct-attach-aff220-deploy_image26.png[""]
 ** Frequency Floor Override (Ignora frequenza
 ** Rallentamento del clock della DRAM: Prestazioni
 +
-image:express-direct-attach-aff220-deploy_image27.png[""]
+image:express-direct-attach-aff220-deploy_image27.png["Uno screenshot che mostra le opzioni del processore del BIOS con Energy Performance e DRAM Clock Throttling impostati su performance"]
 
 
 
@@ -2199,7 +2199,7 @@ image:express-direct-attach-aff220-deploy_image27.png[""]
 +
 ** LV DDR Mode (modalità LV DDR): Modalità Performance (prestazioni)
 +
-image:express-direct-attach-aff220-deploy_image28.png[""]
+image:express-direct-attach-aff220-deploy_image28.png["Uno screenshot della pagina Create BIOS Policy RAS Memory con la modalità LV DDR impostata su Performance Mode"]
 
 
 
@@ -2220,7 +2220,7 @@ Per aggiornare la policy di manutenzione predefinita, attenersi alla seguente pr
 . Impostare il criterio di riavvio su User Ack.
 . Selezionare al prossimo avvio per delegare le finestre di manutenzione agli amministratori del server.
 +
-image:express-direct-attach-aff220-deploy_image29.png[""]
+image:express-direct-attach-aff220-deploy_image29.png["Uno screenshot della policy di manutenzione predefinita di Cisco UCS Manager con \"User Ack\" e \"On Next Boot\" selezionati"]
 
 . Fare clic su Salva modifiche.
 . Fare clic su OK per accettare la modifica.
@@ -2264,7 +2264,7 @@ Per creare una vNIC dell'infrastruttura, attenersi alla seguente procedura:
 . Fare clic su OK per creare il modello vNIC.
 . Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image30.png[""]
+image:express-direct-attach-aff220-deploy_image30.png["Uno screenshot delle proprietà del modello vNIC di Cisco UCS Manager per vNIC_Template_A su Fabric A"]
 
 
 
@@ -2296,7 +2296,7 @@ NOTE: La scelta del failover è un passaggio critico per migliorare il tempo di 
 . Fare clic su OK per creare il modello vNIC.
 . Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image31.png[""]
+image:express-direct-attach-aff220-deploy_image31.png["Uno screenshot delle impostazioni del modello vNIC B di Cisco UCS Manager con Fabric B, MTU 9000 e MAC Pool B selezionati"]
 
 
 
@@ -2324,7 +2324,7 @@ Per creare vNIC iSCSI, attenersi alla seguente procedura:
 . Fare clic su OK per completare la creazione del modello vNIC.
 . Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image32.png[""]
+image:express-direct-attach-aff220-deploy_image32.png["Uno screenshot del modello vNIC Site_01_iSCSI-A con Fabric A, MTU 9000 e MAC Pool A56/64 selezionati"]
 
 . Selezionare LAN a sinistra.
 . Selezionare Policy > root.
@@ -2344,7 +2344,7 @@ image:express-direct-attach-aff220-deploy_image32.png[""]
 . Fare clic su OK per completare la creazione del modello vNIC.
 . Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image33.png[""]
+image:express-direct-attach-aff220-deploy_image33.png["Screenshot delle impostazioni del modello vNIC Site_01_iSCSI-B di Cisco UCS Manager per Fabric B con MTU 9000"]
 
 
 
@@ -2369,7 +2369,7 @@ Per configurare il criterio di connettività LAN dell'infrastruttura necessario,
 . Dall'elenco a discesa Adapter Policy (criterio adattatore), selezionare VMware.
 . Fare clic su OK per aggiungere questa vNIC al criterio.
 +
-image:express-direct-attach-aff220-deploy_image34.png[""]
+image:express-direct-attach-aff220-deploy_image34.png["Uno screenshot che mostra la finestra di dialogo Modify vNIC per Site-01-vNIC-A usando vNIC_Template_A e VMWare adapter policy"]
 
 . Fare clic sull'opzione Add (Aggiungi) superiore per aggiungere una vNIC.
 . Nella finestra di dialogo Create vNIC (Crea vNIC), immettere `Site-01-vNIC-B` Come nome della vNIC.
@@ -2398,7 +2398,7 @@ image:express-direct-attach-aff220-deploy_image34.png[""]
 . Selezionare None (Nessuno) (utilizzato per impostazione predefinita) come assegnazione dell'indirizzo MAC.
 . Fare clic su OK per aggiungere la vNIC iSCSI al criterio.
 +
-image:express-direct-attach-aff220-deploy_image35.png[""]
+image:express-direct-attach-aff220-deploy_image35.png["Uno screenshot della finestra di dialogo Modifica iSCSI vNIC per Site-01-iSCSI-A con impostazioni VLAN e indirizzo MAC"]
 
 . Fare clic sull'opzione Lower Add (Aggiungi) nello spazio Add iSCSI vNIC (Aggiungi vNIC iSCSI) per aggiungere iSCSI vNIC.
 . Nella finestra di dialogo Create iSCSI vNIC (Crea vNIC iSCSI), immettere `Site-01-iSCSI-B` Come nome della vNIC.
@@ -2409,7 +2409,7 @@ image:express-direct-attach-aff220-deploy_image35.png[""]
 . Fare clic su OK per aggiungere la vNIC iSCSI al criterio.
 . Fare clic su Salva modifiche.
 +
-image:express-direct-attach-aff220-deploy_image36.png[""]
+image:express-direct-attach-aff220-deploy_image36.png["Uno screenshot del criterio di connettività LAN Site-01-iSCSIBoot con due vNIC iSCSI elencate"]
 
 
 
@@ -2446,7 +2446,7 @@ Questa ISO di VMware ESXi 6.7U1 può essere scaricata da  https://support.broadc
 Per i nuovi server aggiunti all'ambiente Cisco UCS, è possibile utilizzare il modello di profilo del servizio vMedia per installare l'host ESXi. Al primo avvio, l'host si avvia nel programma di installazione di ESXi poiché il disco montato SULLA SAN è vuoto. Dopo l'installazione di ESXi, il vMedia non viene referenziato finché il disco di avvio è accessibile.
 
 +
-image:express-direct-attach-aff220-deploy_image37.png[""]
+image:express-direct-attach-aff220-deploy_image37.png["Uno screenshot della finestra di dialogo Crea vMedia Mount configurata con un file ISO di installazione HTTP di ESXi e relativo percorso"]
 
 
 
@@ -2477,7 +2477,7 @@ Per creare una policy di avvio per l'ambiente Cisco UCS, attenersi alla seguente
 . Nella finestra di dialogo Add iSCSI Boot (Aggiungi avvio iSCSI), immettere `Site-01-iSCSI-B`. Fare clic su OK.
 . Fare clic su OK per creare il criterio.
 +
-image:express-direct-attach-aff220-deploy_image38.png[""]
+image:express-direct-attach-aff220-deploy_image38.png["Uno screenshot di Cisco UCS Manager Boot Policy Site-01-Fabric-A con due voci di avvio iSCSI configurate"]
 
 
 
@@ -2498,7 +2498,7 @@ Per creare il modello di profilo del servizio, attenersi alla seguente procedura
 . Selezionare l'opzione Updating Template (aggiornamento modello).
 . In UUID, selezionare `UUID_Pool` Come pool UUID. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image39.png[""]
+image:express-direct-attach-aff220-deploy_image39.png["Uno screenshot della procedura guidata Crea modello di profilo di servizio con i campi nome, aggiornamento modello e pool UUID"]
 
 
 
@@ -2523,7 +2523,7 @@ Per configurare le opzioni di rete, attenersi alla seguente procedura:
 . Selezionare iSCSI-Boot dal menu a discesa LAN Connectivity Policy (Criteri di connettività LAN).
 . Selezionare `IQN_Pool` In Initiator Name Assignment. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image40.png[""]
+image:express-direct-attach-aff220-deploy_image40.png["Uno screenshot delle impostazioni di rete di Create Service Profile Template con connettività iSCSI-Boot e IQN_Pool selezionato"]
 
 
 
@@ -2571,7 +2571,7 @@ Per configurare l'ordine di avvio del server, attenersi alla seguente procedura:
 
 . Selezionare `Boot-Fabric-A` Per la policy di avvio.
 +
-image:express-direct-attach-aff220-deploy_image41.png[""]
+image:express-direct-attach-aff220-deploy_image41.png["Uno screenshot della pagina Crea modello profilo di servizio Ordine di avvio del server con Boot-Fabric-A selezionato"]
 
 . Nell'ordine boor, selezionare `Site-01- iSCSI-A`.
 . Fare clic su Set iSCSI Boot Parameters.
@@ -2582,22 +2582,22 @@ image:express-direct-attach-aff220-deploy_image41.png[""]
 . Fare clic su Aggiungi.
 . Inserire il nome della destinazione iSCSI. Per ottenere il nome di destinazione iSCSI di Infra-SVM, accedere all'interfaccia di gestione del cluster di storage ed eseguire `iscsi show` comando.
 +
-image:express-direct-attach-aff220-deploy_image42.png[""]
+image:express-direct-attach-aff220-deploy_image42.png["Uno screenshot dell'output del comando iscsi show che elenca un target Infra-SVM IQN, alias e stato attivo"]
 
 . Immettere l'indirizzo IP di `iscsi_lif_02a` Per il campo IPv4 Address (Indirizzo IPv4).
 +
-image:express-direct-attach-aff220-deploy_image43.png[""]
+image:express-direct-attach-aff220-deploy_image43.png["Uno screenshot della finestra di dialogo Crea destinazione statica iSCSI con indirizzo IPv4 192.168.10.62 inserito"]
 
 . Fare clic su OK per aggiungere la destinazione statica iSCSI.
 . Fare clic su Aggiungi.
 . Inserire il nome della destinazione iSCSI.
 . Immettere l'indirizzo IP di `iscsi_lif_01a` Per il campo IPv4 Address (Indirizzo IPv4).
 +
-image:express-direct-attach-aff220-deploy_image44.png[""]
+image:express-direct-attach-aff220-deploy_image44.png["Uno screenshot della finestra di dialogo Crea destinazione statica iSCSI con indirizzo IPv4 192.168.10.61 e ID LUN 0"]
 
 . Fare clic su OK per aggiungere la destinazione statica iSCSI.
 +
-image:express-direct-attach-aff220-deploy_image45.png[""]
+image:express-direct-attach-aff220-deploy_image45.png["Uno screenshot della finestra di dialogo \"Imposta parametri di avvio iSCSI\" con le interfacce di destinazione statiche iSCSI selezionate"]
 
 +
 
@@ -2612,22 +2612,22 @@ NOTE: Gli IP di destinazione sono stati inseriti con il nodo di storage 02 IP pe
 . Fare clic su Aggiungi.
 . Inserire il nome della destinazione iSCSI. Per ottenere il nome di destinazione iSCSI di Infra-SVM, accedere all'interfaccia di gestione del cluster di storage ed eseguire `iscsi show` comando.
 +
-image:express-direct-attach-aff220-deploy_image42.png[""]
+image:express-direct-attach-aff220-deploy_image42.png["Uno screenshot dell'output del comando iscsi show che elenca un target Infra-SVM IQN, alias e stato attivo"]
 
 . Immettere l'indirizzo IP di `iscsi_lif_02b` Per il campo IPv4 Address (Indirizzo IPv4).
 +
-image:express-direct-attach-aff220-deploy_image46.png[""]
+image:express-direct-attach-aff220-deploy_image46.png["Uno screenshot della finestra di dialogo Create iSCSI Static Target con indirizzo IPv4 impostato su 192.168.20.62"]
 
 . Fare clic su OK per aggiungere la destinazione statica iSCSI.
 . Fare clic su Aggiungi.
 . Inserire il nome della destinazione iSCSI.
 . Immettere l'indirizzo IP di `iscsi_lif_01b` Per il campo IPv4 Address (Indirizzo IPv4).
 +
-image:express-direct-attach-aff220-deploy_image47.png[""]
+image:express-direct-attach-aff220-deploy_image47.png["Uno screenshot della finestra di dialogo Crea destinazione statica iSCSI con indirizzo IPv4 192.168.20.61 e ID LUN 0"]
 
 . Fare clic su OK per aggiungere la destinazione statica iSCSI.
 +
-image:express-direct-attach-aff220-deploy_image48.png[""]
+image:express-direct-attach-aff220-deploy_image48.png["Uno screenshot che mostra due interfacce di destinazione statiche iSCSI selezionate in Imposta iSCSI Boot Parameters"]
 
 . Fare clic su Avanti.
 
@@ -2640,7 +2640,7 @@ Per configurare la policy di manutenzione, attenersi alla seguente procedura:
 
 . Impostare la policy di manutenzione su default.
 +
-image:express-direct-attach-aff220-deploy_image49.png[""]
+image:express-direct-attach-aff220-deploy_image49.png["Uno screenshot della fase \"Create Service Profile Template Maintenance Policy\" con la policy predefinita selezionata"]
 
 . Fare clic su Avanti.
 
@@ -2655,7 +2655,7 @@ Per configurare l'assegnazione del server, attenersi alla seguente procedura:
 . Selezionare inattivo come stato di alimentazione da applicare quando il profilo è associato al server.
 . Espandere firmware Management (Gestione firmware) nella parte inferiore della pagina e selezionare il criterio predefinito.
 +
-image:express-direct-attach-aff220-deploy_image50.png[""]
+image:express-direct-attach-aff220-deploy_image50.png["Uno screenshot di Creazione dell'assegnazione del server del modello di profilo di servizio con Infra-Pool, stato di alimentazione Down e pacchetto firmware predefinito selezionati"]
 
 . Fare clic su Avanti.
 
@@ -2669,7 +2669,7 @@ Per configurare le policy operative, attenersi alla seguente procedura:
 . Dall'elenco a discesa BIOS Policy (criterio BIOS), selezionare VM-host (host VM).
 . Espandere Power Control Policy Configuration e selezionare No-Power-Cap dall'elenco a discesa Power Control Policy (Criteri controllo alimentazione).
 +
-image:express-direct-attach-aff220-deploy_image51.png[""]
+image:express-direct-attach-aff220-deploy_image51.png["Uno screenshot della pagina Criteri operativi di Create Service Profile Template con VM-Host BIOS e No-Power-Cap selezionati"]
 
 . Fare clic su Finish (fine) per creare il modello di profilo del servizio.
 . Fare clic su OK nel messaggio di conferma.
@@ -2708,7 +2708,7 @@ Per creare profili di servizio dal modello di profilo di servizio, attenersi all
 .. Selezionare root come org.
 .. Fare clic su OK per creare i profili di servizio.
 +
-image:express-direct-attach-aff220-deploy_image52.png[""]
+image:express-direct-attach-aff220-deploy_image52.png["Uno screenshot della finestra di dialogo Crea profili di servizio da modello con prefisso Site-01-Infra-0, numero 2 e organizzazione radice"]
 
 
 
@@ -2867,7 +2867,7 @@ Per configurare ciascun host ESXi con accesso alla rete di gestione, attenersi a
 . Verificare che i numeri nel campo etichetta hardware corrispondano ai numeri nel campo Nome periferica.
 . Premere Invio.
 +
-image:express-direct-attach-aff220-deploy_image53.png[""]
+image:express-direct-attach-aff220-deploy_image53.png["Uno screenshot della schermata Schede di rete di ESXi con vmnic0 e vmnic1 selezionati e connessi"]
 
 . Selezionare l'opzione VLAN (opzionale) e premere Invio.
 . Inserire il `<ib-mgmt-vlan-id>` E premere Invio.
@@ -3054,11 +3054,11 @@ NOTE: Per evitare conflitti di indirizzi IP, se gli indirizzi del pool IP iSCSI 
 . Fare clic su Crea.
 . Selezionare la scheda Virtual Switches (interruttori virtuali), quindi vSwitch0. Le proprietà delle NIC VMkernel vSwitch0 devono essere simili al seguente esempio:
 +
-image:express-direct-attach-aff220-deploy_image54.png[""]
+image:express-direct-attach-aff220-deploy_image54.png["Uno screenshot che mostra i dettagli e la topologia di vSwitch0 con gli adattatori VMkernel e due adattatori fisici"]
 
 . Selezionare la scheda NIC VMkernel per confermare gli adattatori virtuali configurati. Gli adattatori elencati devono essere simili al seguente esempio:
 +
-image:express-direct-attach-aff220-deploy_image55.png[""]
+image:express-direct-attach-aff220-deploy_image55.png["Uno screenshot della scheda VMkernel NICs di ESXi che elenca cinque adattatori VMkernel e i loro gruppi di porte"]
 
 
 
@@ -3074,14 +3074,14 @@ Per configurare il multipathing iSCSI sull'host ESXi VM-host-Infra-01 e VM-host-
 . Nel riquadro centrale, fare clic su adattatori.
 . Selezionare l'adattatore software iSCSI e fare clic su Configure iSCSI (Configura iSCSI).
 +
-image:express-direct-attach-aff220-deploy_image56.png[""]
+image:express-direct-attach-aff220-deploy_image56.png["Uno screenshot della scheda Adattatori di archiviazione di ESXi con l'adattatore software iSCSI vmhba64 selezionato"]
 
 . In Dynamic Targets (destinazioni dinamiche), fare clic su Add Dynamic target (Aggiungi destinazione dinamica
 . Immettere l'indirizzo IP di `iSCSI_lif01a`.
 . Ripetere l'immissione di questi indirizzi IP: `iscsi_lif01b`, `iscsi_lif02a`, e. `iscsi_lif02b`.
 . Fare clic su Salva configurazione.
 +
-image:express-direct-attach-aff220-deploy_image57.png[""]
+image:express-direct-attach-aff220-deploy_image57.png["Uno screenshot della finestra di dialogo Configura iSCSI che mostra quattro destinazioni iSCSI dinamiche e statiche sulla porta 3260"]
 
 +
 Per ottenere tutti i `iscsi_lif` Indirizzi IP, accedere all'interfaccia di gestione del cluster di storage NetApp ed eseguire `network interface show` comando.
@@ -3105,7 +3105,7 @@ Per montare gli archivi dati richiesti, completare la seguente procedura su cias
 . Nel riquadro centrale, selezionare New Datastore (nuovo archivio dati) per aggiungere un nuovo archivio dati.
 . Nella finestra di dialogo nuovo datastore, selezionare Mount NFS datastore (Installa datastore NFS) e fare clic su Next (Avanti).
 +
-image:express-direct-attach-aff220-deploy_image58.png[""]
+image:express-direct-attach-aff220-deploy_image58.png["Uno screenshot della procedura guidata Nuovo datastore con Monta NFS datastore selezionato come tipo di creazione"]
 
 . Nella pagina fornire dettagli sul montaggio NFS, completare la seguente procedura:
 +
@@ -3115,7 +3115,7 @@ image:express-direct-attach-aff220-deploy_image58.png[""]
 .. Lasciare la versione di NFS impostata su NFS 3.
 .. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image59.png[""]
+image:express-direct-attach-aff220-deploy_image59.png["Uno screenshot della pagina \"Fornisci dettagli di montaggio NFS\" con infra_datastore_1 e server NFS 192.168.104.3"]
 
 
 
@@ -3133,7 +3133,7 @@ image:express-direct-attach-aff220-deploy_image59.png[""]
 
 . Fare clic su fine. Il datastore dovrebbe ora apparire nell'elenco datastore.
 +
-image:express-direct-attach-aff220-deploy_image60.jpeg[""]
+image:express-direct-attach-aff220-deploy_image60.jpeg["Uno screenshot dell'elenco dei datastore di storage di ESXi che mostra infra_datastore_2 montato come datastore NFS"]
 
 . Montare entrambi i datastore su entrambi gli host ESXi.
 
@@ -3153,7 +3153,7 @@ Per configurare NTP sugli host ESXi, completare i seguenti passaggi su ciascun h
 . Utilizzare il menu a discesa per selezionare Start and Stop with host (Avvia e arresta con host).
 . Inserire i due indirizzi NTP dello switch Nexus nella casella Server NTP separati da una virgola.
 +
-image:express-direct-attach-aff220-deploy_image61.png[""]
+image:express-direct-attach-aff220-deploy_image61.png["Uno screenshot della finestra di dialogo Modifica configurazione ora con NTP abilitato e due indirizzi di server NTP inseriti"]
 
 . Fare clic su Save (Salva) per salvare le modifiche di configurazione.
 . Selezionare Actions (azioni) > NTP service (Servizio NTP) > Start (Avvio
@@ -3174,11 +3174,11 @@ Per configurare lo swap degli host sugli host ESXi, attenersi alla seguente proc
 
 . Fare clic su Manage (Gestisci) nel riquadro di navigazione a sinistra. Selezionare System (sistema) nel riquadro di destra e fare clic su Swap (Scambia).
 +
-image:express-direct-attach-aff220-deploy_image62.png[""]
+image:express-direct-attach-aff220-deploy_image62.png["Uno screenshot della pagina Gestisci swap di sistema di VMware ESXi che mostra le impostazioni di swap e le impostazioni di modifica"]
 
 . Fare clic su Modifica impostazioni. Selezionare `infra_swap` Dalle opzioni Datastore.
 +
-image:express-direct-attach-aff220-deploy_image63.png[""]
+image:express-direct-attach-aff220-deploy_image63.png["Uno screenshot della finestra di dialogo Modifica configurazione swap con il datastore infra_swap selezionato e i pulsanti Save e Cancel"]
 
 . Fare clic su Salva.
 
@@ -3221,7 +3221,7 @@ Per installare VCSA, attenersi alla seguente procedura:
 
 . Scarica VCSA. Per accedere al collegamento per il download, fare clic sull'icona Get vCenter Server (Ottieni server vCenter) durante la gestione dell'host ESXi.
 +
-image:express-direct-attach-aff220-deploy_image64.png[""]
+image:express-direct-attach-aff220-deploy_image64.png["Uno screenshot del navigatore dell'host ESXi con il pulsante Ottieni vCenter Server evidenziato"]
 
 . Scaricare VCSA dal sito VMware.
 +
@@ -3235,26 +3235,26 @@ NOTE: Sebbene sia supportato l'installabile di Microsoft Windows vCenter Server,
 . Accettare l'EULA.
 . Selezionare Embedded Platform Services Controller come tipo di implementazione.
 +
-image:express-direct-attach-aff220-deploy_image65.png[""]
+image:express-direct-attach-aff220-deploy_image65.png["Uno screenshot della pagina Select deployment type del programma di installazione dell'appliance vCenter Server con l'opzione Embedded Platform Services Controller selezionata"]
 
 +
 Se necessario, l'implementazione del controller dei servizi della piattaforma esterna è supportata anche come parte della soluzione FlexPod Express.
 
 . Nella pagina Appliance Deployment Target, immettere l'indirizzo IP di un host ESXi implementato, il nome utente root e la password root. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image66.png[""]
+image:express-direct-attach-aff220-deploy_image66.png["Uno screenshot della pagina di destinazione della distribuzione dell'appliance di installazione di VCenter Server Appliance con le credenziali dell'host ESXi inserite"]
 
 . Impostare la macchina virtuale dell'appliance immettendo VCSA come nome della macchina virtuale e password root che si desidera utilizzare per VCSA. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image67.png[""]
+image:express-direct-attach-aff220-deploy_image67.png["Uno screenshot della pagina Set up appliance VM del programma di installazione vCenter Server Appliance, con i campi nome VM e password di root"]
 
 . Selezionare la dimensione di implementazione più adatta al proprio ambiente. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image68.png[""]
+image:express-direct-attach-aff220-deploy_image68.png["Uno screenshot della pagina Seleziona la dimensione di distribuzione di vCenter Server Appliance Installer con Tiny selezionato"]
 
 . Selezionare `infra_datastore_1` datastore. Fare clic su Avanti.
 +
-image:express-direct-attach-aff220-deploy_image69.png[""]
+image:express-direct-attach-aff220-deploy_image69.png["Uno screenshot della pagina Seleziona datastore di vCenter Server Appliance Installer con infra_datastore_1 elencato tra tre datastore"]
 
 . Inserire le seguenti informazioni nella pagina Configure Network Settings (Configura impostazioni di rete) e fare clic su Next (Avanti).
 +
@@ -3265,7 +3265,7 @@ image:express-direct-attach-aff220-deploy_image69.png[""]
 .. Inserire il gateway predefinito.
 .. Inserire il server DNS.
 +
-image:express-direct-attach-aff220-deploy_image70.png[""]
+image:express-direct-attach-aff220-deploy_image70.png["Uno screenshot della pagina di configurazione delle impostazioni di rete del programma di installazione dell'appliance vCenter Server con dettagli IPv4 statici"]
 
 
 
@@ -3275,7 +3275,7 @@ VCSA viene installato ora. Questo processo richiede alcuni minuti.
 
 . Al termine della fase 1, viene visualizzato un messaggio che indica che il processo è stato completato. Fare clic su Continue (continua) per iniziare la configurazione della fase 2.
 +
-image:express-direct-attach-aff220-deploy_image71.png[""]
+image:express-direct-attach-aff220-deploy_image71.png["Uno screenshot che mostra l'avvenuta distribuzione del server vCenter di Stage 1 con un pulsante Continua"]
 
 . Nella pagina Introduzione alla fase 2, fare clic su Avanti.
 . Invio `\<<var_ntp_id>>` Per l'indirizzo del server NTP. È possibile immettere più indirizzi IP NTP.
@@ -3323,7 +3323,7 @@ Per creare un cluster vSphere, attenersi alla seguente procedura:
 . Selezionare e attivare le opzioni DRS e vSphere ha.
 . Fare clic su OK.
 +
-image:express-direct-attach-aff220-deploy_image72.png[""]
+image:express-direct-attach-aff220-deploy_image72.png["Uno screenshot della finestra di dialogo Nuovo cluster con DRS e vSphere HA abilitati per il cluster Express"]
 
 
 
@@ -3333,7 +3333,7 @@ Per aggiungere host ESXi al cluster, attenersi alla seguente procedura:
 
 . Selezionare Add host (Aggiungi host) nel menu Actions (azioni) del cluster.
 +
-image:express-direct-attach-aff220-deploy_image73.png[""]
+image:express-direct-attach-aff220-deploy_image73.png["Uno screenshot del menu Azioni del client vSphere per il cluster Express con l'opzione Aggiungi host selezionata"]
 
 . Per aggiungere un host ESXi al cluster, attenersi alla seguente procedura:
 +

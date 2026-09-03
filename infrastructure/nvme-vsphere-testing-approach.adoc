@@ -33,7 +33,7 @@ In modalità standalone, lo switch funziona come un tipico switch Cisco Nexus, c
 
 FlexPod con NX-OS è progettato per essere completamente ridondante nei livelli di calcolo, rete e storage. Non esiste un singolo punto di errore dal punto di vista di un dispositivo o di un percorso di traffico. La figura seguente mostra il collegamento dei vari elementi dell'ultima progettazione FlexPod utilizzata per la convalida di FC-NVMe.
 
-image:nvme-vsphere-image2.png[""]
+image:nvme-vsphere-image2.png["Un diagramma che mostra la connettività ridondante degli switch UCS, Nexus, AFF A800 e MDS per FlexPod FC-NVMe"]
 
 Dal punto di vista della SAN FC, questo design utilizza le ultime interconnessioni fabric Cisco UCS 6454 di quarta generazione e la piattaforma Cisco UCS VICS 1400 con espansione delle porte nei server. I server blade Cisco UCS B200 M6 nello chassis Cisco UCS utilizzano Cisco UCS VIC 1440 con Port Expander collegato a Cisco UCS 2408 Fabric Extender IOM e ogni adattatore bus host virtuale Fibre Channel over Ethernet (FCoE) (vHBA) ha una velocità di 40 Gbps. I server rack Cisco UCS C220 M5 gestiti da Cisco UCS utilizzano Cisco UCS VIC 1457 con due interfacce da 25 Gbps per ogni Fabric Interconnect. Ogni vHBA C220 M5 FCoE ha una velocità di 50 Gbps.
 

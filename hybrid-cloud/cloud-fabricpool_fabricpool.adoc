@@ -76,7 +76,7 @@ Come discusso in precedenza, il caso d'utilizzo principale di FabricPool è quel
 
 La policy di tiering Snapshot-Only, illustrata nella figura seguente, sposta i dati snapshot dei volumi cold e i backup SnapCenter per vSphere delle macchine virtuali che occupano spazio ma non condividono blocchi con il file system attivo in un archivio di oggetti cloud. La policy di tiering Snapshot-Only sposta i blocchi di dati cold nel Tier cloud. Se è necessario un ripristino, i blocchi freddi nel cloud vengono resi hot e spostati di nuovo sul Tier flash delle performance on-premise.
 
-image:cloud-fabricpool_image4.png[""]
+image:cloud-fabricpool_image4.png["Un diagramma che mostra la suddivisione in livelli Snapshot-Only che sposta le copie snapshot da un cluster primario al cloud storage"]
 
 
 
@@ -90,7 +90,7 @@ Quando si utilizza la policy di tiering automatico, i blocchi a cui si accede ra
 
 NOTE: Il profiler dell'archivio di oggetti deve essere utilizzato per verificare la latenza e il throughput nell'archivio di oggetti prima di associarlo a un aggregato FabricPool.
 
-image:cloud-fabricpool_image5.png[""]
+image:cloud-fabricpool_image5.png["Un diagramma che mostra l'Auto tiering mentre sposta i dati inattivi dallo storage primario del cluster al cloud storage"]
 
 
 

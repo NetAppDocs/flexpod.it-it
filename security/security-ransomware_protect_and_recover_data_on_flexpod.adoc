@@ -34,15 +34,15 @@ Questa sezione mostra lo stato dei file prima di un attacco alla macchina virtua
 
 La cartella documenti della macchina virtuale aveva un set di file PDF che non sono stati ancora crittografati dal malware WannaCry.
 
-image:security-ransomware_image3.png[""]
+image:security-ransomware_image3.png["Uno screenshot di una cartella Documenti di Windows che elenca file PDF WorkDoc non crittografati"]
 
 La seguente schermata mostra la condivisione CIFS mappata alla macchina virtuale.
 
-image:security-ransomware_image4.png[""]
+image:security-ransomware_image4.png["Uno screenshot che mostra l'unità di rete CIFS fpolicy_share mappata come unità Z: in Esplora file di Windows"]
 
 La seguente schermata mostra i file sulla condivisione CIFS `fpolicy_share` Che non sono ancora stati crittografati dal malware WannaCry.
 
-image:security-ransomware_image5.png[""]
+image:security-ransomware_image5.png["Uno screenshot di Esplora file che mostra i file non crittografati sulla fpolicy_share CIFS share mappata come unità Z"]
 
 
 
@@ -53,19 +53,19 @@ I dettagli sull'efficienza dello storage e le dimensioni della copia Snapshot pr
 
 Grazie alla deduplica sul volume che ospita la macchina virtuale, sono stati ottenuti risparmi dello storage del 19%.
 
-image:security-ransomware_image6.png[""]
+image:security-ransomware_image6.png["Uno screenshot dell'efficienza di archiviazione di infra_datastore1 che mostra un risparmio di deduplicazione di 5,84 GB (19%)"]
 
 Con la deduplica sulla condivisione CIFS sono stati ottenuti risparmi dello storage del 45% `fpolicy_share`.
 
-image:security-ransomware_image7.png[""]
+image:security-ransomware_image7.png["Uno screenshot dell'efficienza di archiviazione del volume cifS che mostra un risparmio di deduplicazione di 5,05 GB (45%)"]
 
 È stata rilevata una dimensione della copia Snapshot di 456 KB per il volume che ospita la macchina virtuale.
 
-image:security-ransomware_image8.png[""]
+image:security-ransomware_image8.png["Uno screenshot delle Snapshot Copies di infra_datastore1 che mostrano before_attack con una dimensione totale di 456 KB"]
 
 Per la condivisione CIFS è stata osservata una dimensione della copia Snapshot di 160 KB `fpolicy_share`.
 
-image:security-ransomware_image9.png[""]
+image:security-ransomware_image9.png["Uno screenshot della scheda Copie Snapshot di cifS_volume che mostra lo snapshot before_attack_cifs con una dimensione totale di 160 KB"]
 
 
 
@@ -78,11 +78,11 @@ I seguenti passaggi dimostrano come il malware binario WannaCry è stato introdo
 
 . Il malware protetto è stato estratto.
 +
-image:security-ransomware_image10.png[""]
+image:security-ransomware_image10.png["Icona per una cartella compressa chiamata Ransomware.WannaCry"]
 
 . Il binario è stato eseguito.
 +
-image:security-ransomware_image11.png[""]
+image:security-ransomware_image11.png["Uno screenshot di Esplora file di Windows che mostra un eseguibile WannaCry selezionato con l'opzione di menu \"Esegui come amministratore\""]
 
 
 
@@ -95,11 +95,11 @@ Il file system locale e la condivisione CIFS mappata sono stati crittografati da
 
 Il malware inizia a crittografare i file con estensioni WNCRY.
 
-image:security-ransomware_image12.png[""]
+image:security-ransomware_image12.png["Uno screenshot di Esplora file di Windows che mostra file PDF e file WNCRY crittografati in Documenti"]
 
 Il malware crittografa tutti i file nella VM locale e nella condivisione mappata.
 
-image:security-ransomware_image13.png[""]
+image:security-ransomware_image13.png["Uno screenshot che mostra i file delle CIFS share locali e mappate crittografati con estensioni WNCRY"]
 
 
 
@@ -109,15 +109,15 @@ Dal momento in cui il malware ha iniziato a crittografare i file, ha generato un
 
 Durante l'attacco, è stato rilevato un notevole aumento delle dimensioni di Snapshot fino a 820,98 MB per il volume che ospita la condivisione CIFS.
 
-image:security-ransomware_image14.png[""]
+image:security-ransomware_image14.png["Uno screenshot che mostra la scheda Snapshot Copies di cifs_volume con una dimensione Snapshot di 820,98 MB"]
 
 È stato rilevato un aumento delle dimensioni della copia Snapshot fino a 404,3 MB per il volume che ospita la macchina virtuale.
 
-image:security-ransomware_image15.png[""]
+image:security-ransomware_image15.png["Uno screenshot della scheda Snapshot Copies di infra_datastore1 che mostra una copia Snapshot before_attack di 404,3 MB"]
 
 L'efficienza dello storage per il volume che ospita la condivisione CIFS è scesa al 34%.
 
-image:security-ransomware_image16.png[""]
+image:security-ransomware_image16.png["Uno screenshot dell'efficienza di archiviazione di cifsv_volume che mostra un risparmio totale di 5 GB pari al 34%"]
 
 
 
@@ -131,23 +131,23 @@ Per ripristinare la macchina virtuale, attenersi alla seguente procedura:
 
 . Utilizzare la copia Snapshot creata con SnapCenter per ripristinare la macchina virtuale.
 +
-image:security-ransomware_image17.png[""]
+image:security-ransomware_image17.png["Uno screenshot del menu Azioni di vSphere per WannaCry-2016-1 con NetApp SnapCenter Ripristina selezionato"]
 
 . Selezionare la copia Snapshot coerente VMware desiderata per il ripristino.
 +
-image:security-ransomware_image18.png[""]
+image:security-ransomware_image18.png["Uno screenshot della procedura guidata di ripristino che elenca i backup Snapshot di VMware disponibili con uno selezionato"]
 
 . L'intera macchina virtuale viene ripristinata e riavviata.
 +
-image:security-ransomware_image19.png[""]
+image:security-ransomware_image19.png["Una procedura guidata di ripristino che seleziona l'intera macchina virtuale WannaCry-2016-1 e la riavvia su un host ESXi"]
 
 . Fare clic su Finish (fine) per avviare il processo di ripristino.
 +
-image:security-ransomware_image20.png[""]
+image:security-ransomware_image20.png["Riepilogo della procedura guidata di ripristino per la macchina virtuale WannaCry-2016-1 con pulsante Fine e avviso di spegnimento"]
 
 . La macchina virtuale e i relativi file vengono ripristinati.
 +
-image:security-ransomware_image21.png[""]
+image:security-ransomware_image21.png["Uno screenshot di Esplora file di Windows che mostra i file PDF ripristinati nella cartella Documenti"]
 
 
 
@@ -157,15 +157,15 @@ Per ripristinare la condivisione CIFS, attenersi alla seguente procedura:
 
 . Utilizzare la copia Snapshot del volume preso prima dell'attacco per ripristinare la condivisione.
 +
-image:security-ransomware_image22.png[""]
+image:security-ransomware_image22.png["Uno screenshot che mostra la scheda Snapshot Copies per cifs_volume con l'azione Restore selezionata"]
 
 . Fare clic su OK per avviare l'operazione di ripristino.
 +
-image:security-ransomware_image23.png[""]
+image:security-ransomware_image23.png["Una finestra di dialogo di conferma per il ripristino del volume con i pulsanti OK e Annulla per il ripristino di cif_volume da una copia Snapshot"]
 
 . Visualizzare la condivisione CIFS dopo il ripristino.
 +
-image:security-ransomware_image24.png[""]
+image:security-ransomware_image24.png["Uno screenshot di Esplora file di Windows che mostra l'unità CIFS fpolicy_share mappata con cartelle, immagini disco e file PDF"]
 
 
 
@@ -192,8 +192,8 @@ Con questo criterio, ai file con estensioni WNCRY, Locky e ad4c non è consentit
 
 Visualizzare lo stato dei file prima dell'attacco: Sono non crittografati e in un sistema pulito.
 
-image:security-ransomware_image25.png[""]
+image:security-ransomware_image25.png["Uno screenshot che mostra i file PDF non crittografati WorkDoc nella cartella Documenti e nell'unità fpolicy_share"]
 
 I file sulla macchina virtuale sono crittografati. Il malware WannaCry tenta di crittografare i file nella condivisione CIFS, ma FPolicy impedisce che influiscano sui file.
 
-image:security-ransomware_image26.png[""]
+image:security-ransomware_image26.png["Uno screenshot di file VM crittografati accanto a file PDF non interessati in una CIFS share"]

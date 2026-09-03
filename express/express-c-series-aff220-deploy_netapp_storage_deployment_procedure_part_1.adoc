@@ -271,7 +271,7 @@ L'installazione del cluster può essere eseguita anche utilizzando l'interfaccia
 . Fare clic su Guided Setup (Configurazione guidata) per configurare il cluster.
 . Invio `\<<var_clustername>>` per il nome del cluster e. `\<<var_nodeA>>` e. `\<<var_nodeB>>` per ciascuno dei nodi che si sta configurando. Inserire la password che si desidera utilizzare per il sistema di storage. Selezionare Switchless Cluster (Cluster senza switch) per il tipo di cluster. Inserire la licenza di base del cluster.
 +
-image:express-c-series-aff220-deploy_image6.png[""]
+image:express-c-series-aff220-deploy_image6.png["Uno screenshot dei campi di configurazione del cluster di System Manager Guided Setup per due nodi di una coppia HA e licenze"]
 
 . È inoltre possibile inserire licenze delle funzionalità per Cluster, NFS e iSCSI.
 . Viene visualizzato un messaggio di stato che indica che il cluster è in fase di creazione. Questo messaggio di stato passa in rassegna diversi stati. Questo processo richiede alcuni minuti.
@@ -298,7 +298,7 @@ image:express-c-series-aff220-deploy_image6.png[""]
 Prima di procedere, è necessario impostare almeno il metodo di notifica degli eventi. È possibile selezionare uno dei metodi.
 
 +
-image:express-c-series-aff220-deploy_image7.png[""]
+image:express-c-series-aff220-deploy_image7.png["Uno screenshot della configurazione del supporto di OnCommand System Manager con i campi AutoSupport e di notifica degli eventi"]
 
 
 

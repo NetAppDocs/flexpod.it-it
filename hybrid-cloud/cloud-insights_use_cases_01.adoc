@@ -39,15 +39,15 @@ Per accedere alle informazioni di Digital Advisor tramite la dashboard di Cloud 
 
 . Fare clic sull'opzione Data Collector (raccolta dati) nel menu Admin (Amministrazione) a sinistra.
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["Uno screenshot che mostra il menu Admin con Data Collectors selezionato in Cloud Insights"]
 
 . Filtro per il Data Collector specifico nel tuo ambiente. In questo esempio, filtriamo in base al termine FlexPod.
 +
-image:cloud-insights_image23.png[""]
+image:cloud-insights_image23.png["Uno screenshot che mostra la pagina dei raccoglitori di dati filtrata per FlexPod Datacenter"]
 
 . Fare clic su Data Collector per visualizzare un riepilogo dell'ambiente e dei dispositivi monitorati da tale collector.
 +
-image:cloud-insights_image24.png[""]
+image:cloud-insights_image24.png["Uno screenshot del riepilogo del data collector FlexPod Datacenter con cronologia degli eventi e dispositivo di storage segnalato"]
 
 +
 Nell'elenco dei dispositivi in basso, fare clic sul nome del sistema di storage ONTAP monitorato. Viene visualizzata una dashboard contenente le informazioni raccolte sul sistema, inclusi i seguenti dettagli:
@@ -61,19 +61,19 @@ Nell'elenco dei dispositivi in basso, fare clic sul nome del sistema di storage 
 ** Latenza media
 ** Throughput medio
 +
-image:cloud-insights_image25.png[""]
+image:cloud-insights_image25.png["Uno screenshot del pannello di controllo dello storage aa14-a800 con riepilogo, rischi, dati utente e grafico della latenza"]
 
 +
 Inoltre, in questa pagina, nella sezione Politiche di performance, puoi trovare un collegamento a NetApp Digital Advisor.
 
 +
-image:cloud-insights_image26.png[""]
+image:cloud-insights_image26.png["Uno screenshot che mostra le Performance Policies con 35 rischi rilevati da Active IQ e un'icona di collegamento esterno"]
 
 
 
 . Per aprire una nuova scheda del browser e accedere alla pagina di mitigazione del rischio, che mostra quali nodi sono interessati, quanto sono critici i rischi e qual è l'azione appropriata da intraprendere per risolvere i problemi identificati, fai clic sul collegamento per Digital Advisor.
 +
-image:cloud-insights_image27.png[""]
+image:cloud-insights_image27.png["Uno screenshot di Active IQ Digital Advisor che elenca i rischi per la salute e le azioni correttive per un sistema storage"]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights può visualizzare dashboard in tempo reale delle informazioni rac
 
 Dalla dashboard del sistema di storage, è possibile visualizzare l'ultima volta che Data Collector ha aggiornato le informazioni. Un esempio è illustrato nella figura seguente.
 
-image:cloud-insights_image28.png[""]
+image:cloud-insights_image28.png["Uno screenshot dei dettagli di Cloud Insights Data Collector che mostra l'acquisizione avvenuta con successo 3 minuti fa alle 13:21"]
 
 Per impostazione predefinita, la dashboard del sistema di storage visualizza diversi grafici interattivi che mostrano le metriche a livello di sistema dal sistema di storage sottoposto a polling o da ogni singolo nodo, tra cui latenza, IOPS e throughput, nella sezione visualizzazione avanzata. Esempi di questi grafici predefiniti sono illustrati nella figura seguente.
 
-image:cloud-insights_image29.png[""]
+image:cloud-insights_image29.png["Uno screenshot della vista esperto di Cloud Insights con grafici di latenza, IOPS e throughput e dettagli sulle risorse"]
 
 Per impostazione predefinita, i grafici mostrano le informazioni delle ultime tre ore, ma è possibile impostarle su un numero di valori diversi o su un valore personalizzato dall'elenco a discesa in alto a destra nella dashboard del sistema di storage. Questo è mostrato nella figura seguente.
 
-image:cloud-insights_image30.png[""]
+image:cloud-insights_image30.png["Uno screenshot della dashboard di storage con il menu a discesa dell'intervallo di tempo che mostra \"Last 15 Minutes\" fino a \"Custom\""]
 
 
 
@@ -115,21 +115,21 @@ Per creare una dashboard personalizzata per la valutazione delle risorse di stor
 
 . Per creare una dashboard personalizzata, passare il mouse su dashboard nel menu principale di Cloud Insights e fare clic su + nuovo dashboard nell'elenco a discesa.
 +
-image:cloud-insights_image31.png[""]
+image:cloud-insights_image31.png["Uno screenshot del menu Dashboards di Cloud Insights con + New Dashboard evidenziato"]
 
 +
 Viene visualizzata la finestra New Dashboard (nuovo dashboard).
 
 . Assegnare un nome alla dashboard e selezionare il tipo di widget utilizzato per visualizzare i dati. È possibile scegliere tra diversi tipi di grafici o persino note o tipi di tabelle per visualizzare i dati raccolti.
 +
-image:cloud-insights_image32.png[""]
+image:cloud-insights_image32.png["Uno screenshot dei riquadri di selezione del tipo di widget della nuova dashboard, inclusi grafici, indicatori, note e tabelle"]
 
 . Scegliere variabili personalizzate dal menu Aggiungi variabile.
 +
 In questo modo, i dati presentati sono incentrati sulla visualizzazione di fattori più specifici o specializzati.
 
 +
-image:cloud-insights_image33.png[""]
+image:cloud-insights_image33.png["Uno screenshot che mostra il menu Aggiungi variabile con un campo di ricerca e un elenco di variabili in una nuova dashboard"]
 
 . Per creare una dashboard personalizzata, selezionare il tipo di widget che si desidera utilizzare, ad esempio un grafico a torta per visualizzare l'utilizzo dello storage in base al volume:
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png[""]
 .. Personalizzare le informazioni da visualizzare. Per impostazione predefinita, questa selezione mostra i volumi di dati ONTAP ed elenca i primi 10 volumi.
 .. Per salvare la dashboard personalizzata, fare clic sul pulsante Save (Salva).
 +
-image:cloud-insights_image34.png[""]
+image:cloud-insights_image34.png["Uno screenshot che mostra un widget grafico a torta Capacità utilizzata configurato per la capacità utilizzata del volume di storage"]
 
 +
 Dopo aver salvato il widget personalizzato, il browser torna alla pagina New Dashboard, dove viene visualizzato il widget appena creato e consente di eseguire azioni interattive, come la modifica del periodo di polling dei dati.
 
 +
-image:cloud-insights_image35.png[""]
+image:cloud-insights_image35.png["Uno screenshot che mostra una dashboard di Cloud Insights con un widget a grafico a torta Capacità utilizzata"]
 
 
 

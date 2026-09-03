@@ -53,7 +53,7 @@ Per modificare la policy di tiering di un volume utilizzando Gestione di sistema
 . Selezionare il criterio di tiering da applicare al volume.
 . Fare clic su Salva.
 +
-image:cloud-fabricpool_image16.png[""]
+image:cloud-fabricpool_image16.png["Uno screenshot che mostra la finestra di dialogo Modifica criteri di tiering del volume con le opzioni dei criteri di tiering espanse"]
 
 
 

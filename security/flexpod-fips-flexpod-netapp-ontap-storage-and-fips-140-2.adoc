@@ -44,7 +44,7 @@ NVE è una soluzione di crittografia dei dati a riposo basata su software dispon
 
 Ecco come funziona il processo: Quando i dati vengono crittografati, vengono inviati al modulo crittografico convalidato FIPS 140-2 livello 1. Il modulo crittografico crittografa i dati e li invia di nuovo al livello RAID. I dati crittografati vengono quindi inviati al disco. Pertanto, con la combinazione di NVE e NAE, i dati sono già crittografati durante il percorso verso il disco. Le letture seguono il percorso inverso. In altre parole, i dati lasciano il disco crittografato, vengono inviati a RAID, vengono decifrati dal modulo crittografico e quindi inviati al resto dello stack, come mostrato nella figura seguente.
 
-image:flexpod-fips-image3.png[""]
+image:flexpod-fips-image3.png["Un diagramma che mostra il flusso dei dati crittografati in scrittura e decrittografati in lettura attraverso la rete, WAFL, RAID e lo storage con un modulo crittografico"]
 
 
 NOTE: NVE utilizza un modulo di crittografia software validato FIPS 140-2 livello 1.
@@ -108,7 +108,7 @@ NSE utilizza i SED per eseguire la crittografia dei dati attraverso un meccanism
 
 NSE è configurato per utilizzare dischi con crittografia automatica FIPS 140-2 livello 2 per facilitare la conformità e il ritorno delle parti di ricambio, consentendo la protezione dei dati inattivi tramite crittografia trasparente dei dischi AES a 256 bit. I dischi eseguono tutte le operazioni di crittografia dei dati internamente, come illustrato nella figura seguente, inclusa la generazione della chiave di crittografia. Per impedire l'accesso non autorizzato ai dati, il sistema di storage deve autenticarsi con il disco utilizzando una chiave di autenticazione stabilita al primo utilizzo del disco.
 
-image:flexpod-fips-image4.png[""]
+image:flexpod-fips-image4.png["Un diagramma che mostra la crittografia e la decrittografia attraverso la rete, WAFL, RAID e i livelli dei moduli crittografici di storage"]
 
 
 NOTE: NSE utilizza la crittografia hardware su ogni disco, convalidata FIPS 140-2 livello 2.
@@ -122,7 +122,7 @@ Per ulteriori informazioni su NSE, vedere https://www.netapp.com/pdf.html?item=/
 
 Lo standard FIPS 140-2 si applica al modulo crittografico come definito dal confine, come mostrato nella figura seguente.
 
-image:flexpod-fips-image5.png[""]
+image:flexpod-fips-image5.png["Un diagramma che mostra il confine crittografico di ONTAP con i componenti key manager, cryptomod e cryptomod_fips"]
 
 Key Manager tiene traccia di tutte le chiavi di crittografia utilizzate da ONTAP. I SED NSE utilizzano il gestore delle chiavi per impostare le chiavi di autenticazione per i SED NSE. Quando si utilizza il gestore delle chiavi, la soluzione combinata NVE e NAE è composta da un modulo di crittografia software, chiavi di crittografia e un gestore delle chiavi. Per ciascun volume, NVE utilizza una chiave di crittografia dati XTS-AES 256 univoca, archiviata dal gestore delle chiavi. La chiave utilizzata per un volume di dati è univoca per il volume di dati in quel cluster e viene generata quando viene creato il volume crittografato. Allo stesso modo, un volume NAE utilizza chiavi di crittografia dati XTS-AES 256 univoche per aggregato, memorizzate anche dal gestore delle chiavi. Le chiavi NAE vengono generate quando viene creato l'aggregato crittografato. ONTAP non genera in anticipo le chiavi, le riutilizza o le visualizza in testo normale, ma vengono memorizzate e protette dal gestore delle chiavi.
 

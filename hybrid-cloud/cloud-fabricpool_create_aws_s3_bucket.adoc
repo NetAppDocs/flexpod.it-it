@@ -23,7 +23,7 @@ FabricPool supporta l'attacco di un bucket per aggregato, come illustrato nella 
 
 Quando si pianifica un'architettura di storage, considerare come la relazione bucket-to-aggregate potrebbe influire sulle performance. Molti provider di archivi di oggetti impostano un numero massimo di IOPS supportati a livello di bucket o container. Gli ambienti che richiedono le massime performance devono utilizzare più bucket per ridurre la possibilità che le limitazioni IOPS dello storage a oggetti possano influire sulle performance di più aggregati FabricPool. Collegare un singolo bucket o container a tutti gli aggregati FabricPool in un cluster potrebbe essere più vantaggioso per gli ambienti che apprezzano la gestibilità rispetto alle performance di livello cloud.
 
-image:cloud-fabricpool_image10.png[""]
+image:cloud-fabricpool_image10.png["Un diagramma che mostra le configurazioni di collegamento aggregato-bucket valide e non valide di FabricPool"]
 
 
 
@@ -33,12 +33,12 @@ image:cloud-fabricpool_image10.png[""]
 . Nella console di gestione AWS dalla home page, immettere S3 nella barra di ricerca.
 . Seleziona lo storage scalabile S3 nel cloud.
 +
-image:cloud-fabricpool_image11.png[""]
+image:cloud-fabricpool_image11.png["Uno screenshot della ricerca nella console AWS che mostra il risultato S3 Scalable Storage in the Cloud evidenziato"]
 
 . Nella home page di S3, selezionare Create Bucket (Crea bucket).
 . Immettere un nome conforme al DNS e scegliere la regione in cui creare il bucket.
 +
-image:cloud-fabricpool_image12.png[""]
+image:cloud-fabricpool_image12.png["Uno screenshot della finestra di dialogo \"Create bucket\" di AWS con il nome del bucket, la regione e il pulsante \"Create\""]
 
 . Fare clic su Create (Crea) per creare il bucket dell'archivio di oggetti.
 

@@ -40,7 +40,7 @@ La procedura riportata di seguito illustra in dettaglio il metodo di accesso all
 . Nel menu principale, selezionare la scheda Server.
 . Fare clic su Avvia console KVM.
 +
-image:express-c-series-aff220-deploy_image21.png[""]
+image:express-c-series-aff220-deploy_image21.png["Uno screenshot della pagina del BIOS del server Cisco CIMC con il collegamento \"Launch KVM\" nel menu in alto"]
 
 . Dalla console KVM virtuale, selezionare la scheda Virtual Media (supporti virtuali).
 . Selezionare Map CD/DVD (Mappa CD/DVD).
@@ -83,7 +83,7 @@ Il programma di installazione viene caricato. Questa operazione richiede alcuni 
 . Dopo aver letto il contratto di licenza con l'utente finale, accettarlo e continuare con l'installazione premendo F11.
 . Selezionare il LUN NetApp precedentemente configurato come disco di installazione per ESXi e premere Invio per continuare l'installazione.
 +
-image:express-c-series-aff220-deploy_image22.png[""]
+image:express-c-series-aff220-deploy_image22.png["Uno screenshot del programma di installazione di ESXi che seleziona un dispositivo di storage NETAPP LUN C-Mode con una capacità di 15,00 GiB"]
 
 . Selezionare il layout di tastiera appropriato e premere Invio.
 . Inserire e confermare la password root e premere Invio.
@@ -112,7 +112,7 @@ La seguente procedura descrive come aggiungere la rete di gestione per ciascun h
 NOTE: Selezionare le porte corrispondenti a eth0 e eth1 in CIMC.
 
 +
-image:express-c-series-aff220-deploy_image23.png[""]
+image:express-c-series-aff220-deploy_image23.png["Uno screenshot del menu Schede di rete di ESXi con vmnic0 e vmnic1 selezionati per vSwitch0"]
 
 . Selezionare VLAN (opzionale) e premere Invio.
 . Inserire l'ID VLAN `\<<mgmt_vlan_id>>`. Premere Invio.
@@ -211,7 +211,7 @@ Per configurare ciascun host ESXi, sono necessarie le informazioni riportate nel
 . Selezionare Networking (rete) a sinistra.
 . A destra, selezionare la scheda Virtual Switches (interruttori virtuali).
 +
-image:express-c-series-aff220-deploy_image24.png[""]
+image:express-c-series-aff220-deploy_image24.png["Uno screenshot della scheda Switch virtuali di rete ESXi che mostra vSwitch0 e iScsiBootvSwitch"]
 
 . Fare clic su iScsiBootvSwitch.
 . Selezionare Modifica impostazioni.
@@ -242,7 +242,7 @@ NOTE: Vmnic2 e vmnic3 vengono utilizzati per l'avvio iSCSI in questa configurazi
 ** Invio `\<<var_hosta_iscsib_mask>>` Per Subnet Mask.
 ** Fare clic su Crea.
 +
-image:express-c-series-aff220-deploy_image25.png[""]
+image:express-c-series-aff220-deploy_image25.png["Uno screenshot del modulo Aggiungi VMkernel NIC che configura iScsiBootPG-B con impostazioni IPv4 statiche e MTU 9000"]
 
 +
 
@@ -262,18 +262,18 @@ Per configurare il multipathing iSCSI sugli host ESXi, attenersi alla seguente p
 . Selezionare Storage (archiviazione) nel riquadro di navigazione a sinistra. Fare clic su adattatori.
 . Selezionare l'adattatore software iSCSI e fare clic su Configure iSCSI (Configura iSCSI).
 +
-image:express-c-series-aff220-deploy_image26.png[""]
+image:express-c-series-aff220-deploy_image26.png["Uno screenshot della pagina Adattatori di storage di VMware ESXi con l'adattatore software iSCSI vmhba64 selezionato"]
 
 . In Dynamic Targets (destinazioni dinamiche), fare clic su Add Dynamic Target (Aggiungi destinazione dinamica
 +
-image:express-c-series-aff220-deploy_image27.png[""]
+image:express-c-series-aff220-deploy_image27.png["Uno screenshot della finestra di dialogo Configura iSCSI con Aggiungi destinazione dinamica sotto Destinazioni dinamiche"]
 
 . Inserire l'indirizzo IP `iscsi_lif01a`.
 +
 ** Ripetere l'operazione con gli indirizzi IP `iscsi_lif01b`, `iscsi_lif02a`, e. `iscsi_lif02b`.
 ** Fare clic su Salva configurazione.
 +
-image:express-c-series-aff220-deploy_image28.png[""]
+image:express-c-series-aff220-deploy_image28.png["Uno screenshot che mostra quattro indirizzi IP target iSCSI dinamici, ciascuno che utilizza la porta 3260"]
 
 
 
@@ -290,7 +290,7 @@ NOTE: È possibile trovare gli indirizzi IP LIF iSCSI eseguendo il comando `Netw
 . Nel riquadro di spostamento a sinistra, selezionare rete.
 . Selezionare vSwitch0.
 +
-image:express-c-series-aff220-deploy_image29.png[""]
+image:express-c-series-aff220-deploy_image29.png["Uno screenshot della pagina VMware ESXi vSwitch0 che mostra MTU 1500 e due adattatori fisici attivi"]
 
 . Selezionare Edit Settings (Modifica impostazioni).
 . Impostare la MTU su 9000.
@@ -305,7 +305,7 @@ image:express-c-series-aff220-deploy_image29.png[""]
 . Nel riquadro di spostamento a sinistra, selezionare rete.
 . Fare clic con il pulsante destro del mouse sulla scheda gruppi di porte.
 +
-image:express-c-series-aff220-deploy_image30.png[""]
+image:express-c-series-aff220-deploy_image30.png["Uno screenshot della pagina Networking di ESXi con la scheda Port groups selezionata e Add port group disponibile"]
 
 . Fare clic con il pulsante destro del mouse su rete VM e selezionare Modifica. Impostare l'ID VLAN su `\<<var_vm_traffic_vlan>>`.
 . Fare clic su Aggiungi gruppo di porte.
@@ -318,7 +318,7 @@ image:express-c-series-aff220-deploy_image30.png[""]
 
 . Fare clic sulla scheda NIC VMkernel.
 +
-image:express-c-series-aff220-deploy_image31.png[""]
+image:express-c-series-aff220-deploy_image31.png["Uno screenshot della scheda Networking VMkernel NICs di ESXi che elenca gli adattatori vmk0 e vmk1"]
 
 . Selezionare Add VMkernel NIC (Aggiungi NIC VMkernel).
 +
@@ -332,7 +332,7 @@ image:express-c-series-aff220-deploy_image31.png[""]
 ** Invio `\<<var_hosta_nfs_mask>>` Per Subnet Mask.
 ** Fare clic su Crea.
 +
-image:express-c-series-aff220-deploy_image32.png[""]
+image:express-c-series-aff220-deploy_image32.png["Uno screenshot del modulo Aggiungi VMkernel NIC che configura il gruppo di porte NFS-Network con impostazioni IPv4 statiche"]
 
 
 
@@ -349,7 +349,7 @@ image:express-c-series-aff220-deploy_image32.png[""]
 .. Invio `\<<var_hosta_vmotion_mask>>` Per Subnet Mask.
 .. Assicurarsi che la casella di controllo vMotion sia selezionata dopo Impostazioni IPv4.
 +
-image:express-c-series-aff220-deploy_image33.png[""]
+image:express-c-series-aff220-deploy_image33.png["Uno screenshot della finestra di dialogo Aggiungi VMkernel NIC con impostazioni IPv4 statiche e vMotion selezionato"]
 
 +
 
@@ -367,11 +367,11 @@ I primi datastore da montare sono il datastore infra_datastore_1 per le macchine
 
 . Fare clic su Storage (archiviazione) nel riquadro di spostamento di sinistra, quindi su New Datastore (nuovo archivio dati).
 +
-image:express-c-series-aff220-deploy_image34.png[""]
+image:express-c-series-aff220-deploy_image34.png["Uno screenshot della pagina VMware ESXi Storage con il pulsante Nuovo datastore visibile"]
 
 . Selezionare Mount NFS Datastore (monta archivio dati NFS).
 +
-image:express-c-series-aff220-deploy_image35.png[""]
+image:express-c-series-aff220-deploy_image35.png["Uno screenshot della procedura guidata Nuovo datastore con Monta NFS datastore selezionato come tipo di creazione"]
 
 . Quindi, inserire le seguenti informazioni nella pagina fornire i dettagli del montaggio NFS:
 +
@@ -401,14 +401,14 @@ Per configurare NTP per un host ESXi, attenersi alla seguente procedura:
 
 . Fare clic su Manage (Gestisci) nel riquadro di navigazione a sinistra. Selezionare sistema nel riquadro di destra, quindi fare clic su Data e ora.
 +
-image:express-c-series-aff220-deploy_image36.png[""]
+image:express-c-series-aff220-deploy_image36.png["Uno screenshot della pagina Gestione data e ora di sistema di ESXi che mostra lo stato del client NTP e i server NTP"]
 
 . Selezionare Use Network Time Protocol (attiva client NTP).
 . Selezionare Start and Stop with host (Avvia e arresta con host) come criterio di avvio del servizio NTP.
 . Invio `\<<var_ntp>>` Come server NTP. È possibile impostare più server NTP.
 . Fare clic su Salva.
 +
-image:express-c-series-aff220-deploy_image37.png[""]
+image:express-c-series-aff220-deploy_image37.png["Uno screenshot della finestra di dialogo Modifica configurazione ora con NTP abilitato e un server NTP inserito"]
 
 
 
@@ -421,11 +421,11 @@ Questi passaggi forniscono informazioni dettagliate sullo spostamento della posi
 
 . Fare clic su Manage (Gestisci) nel riquadro di navigazione a sinistra. Selezionare System (sistema) nel riquadro di destra, quindi fare clic su Swap (Scambia).
 +
-image:express-c-series-aff220-deploy_image38.png[""]
+image:express-c-series-aff220-deploy_image38.png["Uno screenshot della pagina Gestione swap di sistema di VMware ESXi con le impostazioni di swap visualizzate"]
 
 . Fare clic su Modifica impostazioni. Selezionare infra_swap dalle opzioni Datastore.
 +
-image:express-c-series-aff220-deploy_image39.png[""]
+image:express-c-series-aff220-deploy_image39.png["Uno screenshot della finestra di dialogo Modifica configurazione swap con infra_swap selezionato come datastore e i pulsanti Save e Cancel"]
 
 . Fare clic su Salva.
 
@@ -480,7 +480,7 @@ Value of HardwareAcceleratedMove is 1
 . Installare il plug-in sull'host ESXi utilizzando ESX CLI.
 . Riavviare l'host ESXI.
 +
-image:express-c-series-aff220-deploy_image40.png[""]
+image:express-c-series-aff220-deploy_image40.png["Un terminale che mostra l'installazione del VIB del plug-in NFS di NetApp avvenuta con successo e un messaggio che indica che è necessario riavviare il sistema"]
 
 
 

@@ -68,7 +68,7 @@ Per consentire a Cloud Insights di raccogliere i dati, un'organizzazione deve im
 
 La figura seguente mostra l'architettura della soluzione.
 
-image:cloud-insights_image2.png[""]
+image:cloud-insights_image2.png["Un diagramma che mostra Cisco UCS, switch Nexus, controller NetApp AFF A800 e switch MDS interconnessi da collegamenti di rete"]
 
 
 

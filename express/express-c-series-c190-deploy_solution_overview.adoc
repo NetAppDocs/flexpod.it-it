@@ -29,7 +29,7 @@ Il programma FlexPod include due soluzioni: FlexPod Express e FlexPod Datacenter
 * *FlexPod Datacenter.* offre una base polivalente ottimale per diversi carichi di lavoro e applicazioni.
 
 
-image:express-c-series-c190-deploy_image1.png[""]
+image:express-c-series-c190-deploy_image1.png["Un diagramma che mostra le opzioni di portfolio FlexPod Express e FlexPod Datacenter con casi d'uso"]
 
 
 
@@ -53,7 +53,7 @@ In questa guida viene illustrato in dettaglio il design di FlexPod con VMware vS
 
 Questa soluzione sfrutta le più recenti tecnologie di NetApp, Cisco e VMware. Questa soluzione include il nuovo NetApp AFF C190 con ONTAP 9.6, due switch Cisco Nexus 31108 e server rack Cisco UCS C220 M5 con VMware vSphere 6.7U2. Questa soluzione validata utilizza la tecnologia 10 GbE. Viene inoltre fornita una guida su come scalare la capacità di calcolo aggiungendo due nodi hypervisor alla volta, in modo che l'architettura FlexPod Express possa adattarsi alle esigenze di business in evoluzione di un'organizzazione.
 
-image:express-c-series-c190-deploy_image2.png[""]
+image:express-c-series-c190-deploy_image2.png["Un diagramma che mostra gli switch FlexPod Express, i server C220 M5 e le connessioni di storage AFF C190"]
 
 
 NOTE: Per utilizzare in modo efficiente le quattro porte 10GbE fisiche del VIC 1457, creare due collegamenti aggiuntivi da ciascun server agli switch rack superiori.

@@ -31,7 +31,7 @@ Il seguente elenco di organizzazioni sanitarie è stato preso di mira dagli agen
 
 La diversità delle applicazioni che costituiscono un'organizzazione sanitaria è innegabile e sempre più complessa. Gli uffici per la sicurezza delle informazioni devono fornire una governance per la vasta gamma di sistemi E risorse IT. La figura seguente illustra le funzionalità cliniche di un sistema ospedaliero tipico.
 
-image:flexpod-fips-image2.png[""]
+image:flexpod-fips-image2.png["Un diagramma che mostra l'integrazione delle applicazioni aziendali che collegano i sistemi clinici e amministrativi ospedalieri"]
 
 I dati dei pazienti sono al centro dell'immagine. La perdita dei dati dei pazienti e lo stigma associato a condizioni mediche sensibili sono molto reali. Altri problemi sensibili includono il rischio di esclusione sociale, ricatti, profiling, vulnerabilità al marketing mirato, sfruttamento e potenziale responsabilità finanziaria nei confronti dei pagatori in merito alle informazioni mediche al di là dei privilegi del pagatore.
 

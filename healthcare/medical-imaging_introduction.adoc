@@ -103,7 +103,7 @@ Il supporto congiunto di FlexPod è particolarmente utile se la tua organizzazio
 
 
 
-image:medical-imaging_image2.png[""]
+image:medical-imaging_image2.png["Un diagramma che mostra il modello di supporto cooperativo FlexPod tra clienti, Cisco e NetApp"]
 
 
 

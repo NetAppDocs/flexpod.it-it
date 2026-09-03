@@ -48,7 +48,7 @@ NOTE: La versione di CIMC utilizzata per questa convalida è CIMC 3.1.3(g).
 . Collegare il dongle KVM (tastiera, video e mouse) Cisco (fornito con il server) alla porta KVM sulla parte anteriore del server. Collegare un monitor VGA e una tastiera USB alle porte dongle KVM appropriate.
 . Accendere il server e premere F8 quando richiesto per accedere alla configurazione CIMC.
 +
-image:express-c-series-aff220-deploy_image8.png[""]
+image:express-c-series-aff220-deploy_image8.png["Uno screenshot della schermata di avvio di un server Cisco che invita gli utenti a premere F8 per la configurazione di CIMC"]
 
 . Nell'utility di configurazione di CIMC, impostare le seguenti opzioni:
 +
@@ -71,7 +71,7 @@ image:express-c-series-aff220-deploy_image8.png[""]
 *** Ridondanza della NIC
 *** Nessuno: [X]
 +
-image:express-c-series-aff220-deploy_image9.png[""]
+image:express-c-series-aff220-deploy_image9.png["Uno screenshot delle proprietà della scheda di rete Cisco IMC con impostazioni IPv4 e senza ridondanza NIC selezionata"]
 
 
 
@@ -93,7 +93,7 @@ image:express-c-series-aff220-deploy_image9.png[""]
 *** Port properties (Proprietà porta): Utilizzare i valori predefiniti.
 *** Port profiles (profili porta): Lasciare deselezionato.
 +
-image:express-c-series-aff220-deploy_image10.png[""]
+image:express-c-series-aff220-deploy_image10.png["Uno screenshot dell'utilità di configurazione Cisco IMC che mostra le proprietà comuni e le impostazioni delle porte"]
 
 
 
@@ -167,7 +167,7 @@ Per impostare la configurazione dell'ordine di avvio, attenersi alla seguente pr
 . Dalla finestra del browser dell'interfaccia CIMC, fare clic sulla scheda Server e selezionare BIOS.
 . Fare clic su Configure Boot Order (Configura ordine di avvio), quindi su OK.
 +
-image:express-c-series-aff220-deploy_image11.png[""]
+image:express-c-series-aff220-deploy_image11.png["Uno screenshot delle impostazioni del BIOS del Cisco Integrated Management Controller con \"Configura ordine di avvio\" selezionato"]
 
 . Configurare i seguenti dispositivi facendo clic su dispositivo in Add Boot Device (Aggiungi dispositivo di avvio) e selezionando la scheda Advanced (Avanzate).
 +
@@ -202,7 +202,7 @@ image:express-c-series-aff220-deploy_image11.png[""]
 . Fare clic su Aggiungi dispositivo.
 . Fare clic su Save Changes (Salva modifiche), quindi su Close (Chiudi)
 +
-image:express-c-series-aff220-deploy_image12.png[""]
+image:express-c-series-aff220-deploy_image12.png["Uno screenshot della configurazione avanzata dell'ordine di avvio con KVM-MAPPED-DVD, iSCSI-A e iSCSI-B abilitati"]
 
 . Riavviare il server per eseguire l'avvio con il nuovo ordine di avvio.
 
@@ -219,7 +219,7 @@ Se il server C-Series contiene un controller RAID, attenersi alla seguente proce
 . Scorrere verso il basso fino a PCIe slot:HBA Option ROM.
 . Se il valore non è già disattivato, impostarlo su Disabled (Disattivato).
 +
-image:express-c-series-aff220-deploy_image13.png[""]
+image:express-c-series-aff220-deploy_image13.png["Uno screenshot che mostra le impostazioni del BIOS CIMC con l'Option ROM degli slot PCIe 1 e 2 disabilitata"]
 
 
 
@@ -244,7 +244,7 @@ La seguente procedura di configurazione riguarda Cisco VIC 1387 per l'avvio iSCS
 ** Modalità VLAN: TRUNK
 ** Enable PXE boot (attiva avvio PXE): Controllare
 +
-image:express-c-series-aff220-deploy_image14.png[""]
+image:express-c-series-aff220-deploy_image14.png["Uno screenshot che mostra le impostazioni di iSCSI-vNIC-A con MTU 9000, VLAN 3439, modalità trunk e avvio PXE abilitato"]
 
 
 
@@ -258,7 +258,7 @@ image:express-c-series-aff220-deploy_image14.png[""]
 
 . Selezionare la vNIC `iSCSI-vNIC-A` sulla sinistra.
 +
-image:express-c-series-aff220-deploy_image15.png[""]
+image:express-c-series-aff220-deploy_image15.png["Uno screenshot che mostra iSCSI-vNIC-A selezionato con le proprietà di avvio iSCSI espanse nella scheda vNIC."]
 
 . In iSCSI Boot Properties (Proprietà di avvio iSCSI), immettere i dettagli dell'iniziatore:
 +
@@ -267,7 +267,7 @@ image:express-c-series-aff220-deploy_image15.png[""]
 ** Subnet mask:<<var_esxi_hostA_iscsiA_mask>>
 ** Gateway:<<var_esxi_hostA_iscsiA_gateway>>
 +
-image:express-c-series-aff220-deploy_image16.png[""]
+image:express-c-series-aff220-deploy_image16.png["Uno screenshot delle proprietà di avvio iSCSI di Cisco UCS che mostra il nome dell'initiator, l'indirizzo IP, la maschera di sottorete e i campi del gateway"]
 
 
 
@@ -291,7 +291,7 @@ image:express-c-series-aff220-deploy_image16.png[""]
 NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un passaggio successivo.
 
 +
-image:express-c-series-aff220-deploy_image17.png[""]
+image:express-c-series-aff220-deploy_image17.png["Uno screenshot che mostra le impostazioni dell'iniziatore iSCSI vNIC con target NetApp primario e secondario"]
 
 
 
@@ -339,16 +339,16 @@ NOTE: Assicurarsi di registrare i nomi IQN per ogni vNIC. Sono necessari per un 
 . Dalla finestra del browser dell'interfaccia CIMC, fare clic su Inventory (inventario), quindi su Cisco VIC adapter (adattatori VIC Cisco) nel riquadro destro.
 . In schede adattatore, selezionare Cisco UCS VIC 1387, quindi selezionare le vNIC sottostanti.
 +
-image:express-c-series-aff220-deploy_image18.png[""]
+image:express-c-series-aff220-deploy_image18.png["Uno screenshot della scheda vNIC di Cisco VIC che elenca eth0, eth1 e due vNIC iSCSI"]
 
 . Selezionare eth0 e fare clic su Proprietà.
 . Impostare MTU su 9000. Fare clic su Salva modifiche.
 +
-image:express-c-series-aff220-deploy_image19.png[""]
+image:express-c-series-aff220-deploy_image19.png["Uno screenshot delle proprietà della vNIC eth0 di Cisco VIC con il campo MTU impostato su 9000"]
 
 . Ripetere i passaggi 3 e 4 per eth1, verificando che la porta uplink sia impostata su `1` per eth1.
 +
-image:express-c-series-aff220-deploy_image20.png[""]
+image:express-c-series-aff220-deploy_image20.png["Uno screenshot che mostra la scheda vNIC con eth0 e eth1 MTU impostato a 9000 e porte uplink 0 e 1"]
 
 +
 

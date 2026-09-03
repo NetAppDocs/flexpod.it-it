@@ -27,7 +27,7 @@ Gli switch FlexPod Nexus di ogni sito forniscono la connettività locale tra il 
 
 Il seguente diagramma mostra la connettività locale dello switch Nexus in ogni sito. Oltre a quanto mostrato nel diagramma, sono disponibili anche connessioni di console e di rete di gestione per ciascun componente non mostrate. I cavi breakout da 40 G a 4 x 10 G vengono utilizzati per collegare gli switch Nexus ai Fi UCS e ai controller di storage ONTAP AFF A250. In alternativa, i cavi breakout DA 100 G a 4 x 25 G possono essere utilizzati per aumentare la velocità di comunicazione tra gli switch Nexus e i controller di storage AFF A250. Per semplicità, i due controller AFF A250 sono mostrati logicamente come uno accanto all'altro per l'illustrazione del cablaggio. Le due connessioni tra i due controller storage consentono allo storage di formare un cluster senza switch.
 
-image:sm-bcs-image20.png[""]
+image:sm-bcs-image20.png["Un diagramma che mostra FI 6454, Nexus e AFF A250 con connettività locale ridondante"]
 
 La seguente tabella mostra la connettività tra gli switch Nexus e i controller di storage AFF A250 in ogni sito.
 
@@ -60,7 +60,7 @@ La seguente tabella mostra la connettività tra gli switch Nexus e i controller 
 |===
 La connettività tra gli switch FlexPod del sito A e del sito B è illustrata nella seguente figura con i dettagli relativi al cablaggio elencati nella tabella allegata. Le connessioni tra i due switch di ciascun sito sono relative ai collegamenti peer VPC. D'altra parte, le connessioni tra gli switch tra i siti forniscono i collegamenti tra siti. I collegamenti estendono le VLAN tra i siti per la comunicazione tra cluster, la replica dei dati SM-BC, la gestione in-band e l'accesso ai dati per le risorse del sito remoto.
 
-image:sm-bcs-image21.png[""]
+image:sm-bcs-image21.png["Un diagramma che mostra i collegamenti peer vPC e i collegamenti inter-sito tra gli switch FlexPod dei siti A e B"]
 
 |===
 | Dispositivo locale | Porta locale | Dispositivo remoto | Porta remota 

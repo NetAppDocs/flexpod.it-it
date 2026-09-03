@@ -315,7 +315,7 @@ NOTE: È inoltre possibile inserire un server NTP alternativo. L'indirizzo IP `1
 NOTE: Prima di procedere, è necessario impostare almeno il metodo di notifica degli eventi. È possibile selezionare uno dei metodi.
 
 +
-image:express-c-series-c190-deploy_image4.png[""]
+image:express-c-series-c190-deploy_image4.png["Uno screenshot della configurazione del supporto di OnCommand System Manager con i campi AutoSupport e di notifica degli eventi"]
 
 +
 Quando il sistema indica che la configurazione del cluster è stata completata, fare clic su Manage Your Cluster (Gestisci cluster) per configurare lo storage.
