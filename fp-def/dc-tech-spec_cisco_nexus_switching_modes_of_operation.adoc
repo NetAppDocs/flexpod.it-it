@@ -18,9 +18,12 @@ Diversi prodotti Cisco Nexus possono essere utilizzati come componente di switch
 
 L'offerta di Cisco nello spazio delle reti software-defined si chiama Application Centric Infrastructure (ACI). La linea di prodotti Cisco Nexus che supporta la modalità ACI (fabric mode) può essere implementata anche in modalità NX-OS.
 
+
+NOTE: Non tutti gli switch Cisco Nexus supportano la modalità ACI. Assicurati che il modello specifico che stai implementando soddisfi i tuoi requisiti operativi.
+
 Cisco ACI è destinato alle implementazioni del data center che si concentrano sui requisiti di un'applicazione specifica. Le applicazioni vengono instanziate attraverso una serie di profili e contratti che consentono la connettività dall'host o dalla macchina virtuale (VM) fino allo storage attraverso la rete.
 
-FlexPod Datacenter è validato con entrambe le modalità operative degli switch Cisco Nexus. Per ulteriori informazioni sulle modalità ACI e NX-OS, consulta le seguenti pagine Cisco:
+FlexPod Datacenter è stato validato con switch Cisco Nexus operanti sia in modalità NX-OS che in modalità ACI. Puoi selezionare la modalità operativa che meglio si adatta alla tua architettura di rete, al tuo modello operativo e ai tuoi requisiti di automazione. Per ulteriori informazioni sulle modalità ACI e NX-OS, consulta le seguenti pagine Cisco:
 
 * http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Cisco Application Centric Infrastructure"^]
 * https://www.cisco.com/site/us/en/products/networking/cloud-networking/nx-os/index.html["Software Cisco NX-OS"^]

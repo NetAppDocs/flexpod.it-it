@@ -16,9 +16,9 @@ summary: 'La piattaforma FlexPod è un"architettura di data center predefinita e
 [role="lead"]
 La piattaforma FlexPod è un'architettura di data center predefinita e basata sulle best practice, costruita sul Cisco Unified Computing System (Cisco UCS), sulla famiglia di switch Cisco Nexus e MDS (per FC), e sui controller di storage NetApp (sistemi AFF, ASA, FAS o AFX).
 
-FlexPod è una piattaforma adatta per l'esecuzione di una vasta gamma di hypervisor di virtualizzazione, sistemi operativi bare-metal e carichi di lavoro aziendali. FlexPod offre non solo una configurazione di base, ma anche la flessibilità di essere dimensionati e ottimizzati per adattarsi a diversi casi di utilizzo e requisiti.
+FlexPod è una piattaforma adatta per l'esecuzione di una varietà di hypervisor di virtualizzazione, sistemi operativi bare-metal, ambienti containerizzati e carichi di lavoro aziendali. FlexPod offre non solo una configurazione di riferimento, ma anche la flessibilità di essere dimensionata e ottimizzata per adattarsi a molti diversi casi d'uso e requisiti.
 
 
-NOTE: Prima di ordinare una configurazione completa di FlexPod, consulta la pagina  http://www.netapp.com/us/technology/flexpod["Home page NetApp FlexPod"^] per la versione più recente di queste specifiche tecniche.
+NOTE: Prima di ordinare una configurazione completa FlexPod, dai un'occhiata alla  http://www.netapp.com/us/technology/flexpod["Home page NetApp FlexPod"^] versione più recente di queste specifiche tecniche.
 
 link:dc-tech-spec_flexpod_platforms.html["Successivo: Piattaforme FlexPod."]

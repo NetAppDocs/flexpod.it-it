@@ -13,6 +13,7 @@ summary: Per ulteriori informazioni sulle informazioni descritte in questo docum
 :imagesdir: ../media/
 
 
+[role="lead"]
 Per ulteriori informazioni sulle informazioni descritte in questo documento, consultare i seguenti documenti e/o siti Web:
 
 * https://docs.netapp.com/us-en/ontap/concepts/snapshot-copies-concept.html["Software NetApp Snapshot"^]

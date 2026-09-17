@@ -25,12 +25,12 @@ Una configurazione FlexPod ha i seguenti requisiti hardware minimi:
 NOTE: Se stai implementando un'architettura ACI, devi rispettare i seguenti requisiti aggiuntivi: * Implementa gli switch Cisco Nexus 9000 Series in una topologia leaf-spine. * Usa tre Cisco Application Policy Infrastructure Controller (APIC).
 
 * Due Cisco UCS 6400, 6500 o 6600 Series Fabric Interconnect in una configurazione ridondante, se usi i UCS C-Series Rack Servers o i X-Series Modular systems.
-* Due server rack Cisco UCS C-Series con connettività FI e configurazione gestita da Intersight (IMM), oppure Cisco UCS X-Series Direct con Cisco IMM, oppure Cisco UCS X-Series Modular con configurazione gestita da Cisco Intersight (IMM).
+* Due server rack Cisco UCS serie C con connettività FI e configurazione Intersight Managed Mode (IMM), oppure Cisco UCS X-Series Direct con Cisco IMM, oppure Cisco UCS X-Series Modular con Cisco IMM.
 
 
 
-NOTE: Se usi i server rack UCS senza connettività FI, puoi usare CIMC o la modalità standalone di Intersight per la gestione.
+NOTE: Se usi i server rack UCS senza connettività FI, puoi usare CIMC o la modalità standalone di Intersight per la gestione (ISM).
 
-* Due controller NetApp AFF, NetApp ASA o NetApp FAS in una configurazione di coppia ad alta disponibilità (HA) distribuiti come cluster a due nodi. Se usi NetApp AFX, sono necessari almeno quattro controller NetApp AFX, da distribuire come cluster HA a quattro nodi insieme a una coppia di switch di interconnessione del cluster.
+* Due controller NetApp AFF, NetApp ASA o NetApp FAS in una configurazione di coppia ad alta disponibilità (HA) distribuiti come cluster a due nodi. Se usi NetApp AFX, sono necessari almeno quattro controller NetApp AFX, che devono essere distribuiti come cluster a quattro nodi con 2 coppie HA e una coppia di switch di interconnessione del cluster.
 * È necessario almeno un alloggiamento dischi NetApp per i controller di storage che non dispongono di un alloggiamento dischi integrato.
 

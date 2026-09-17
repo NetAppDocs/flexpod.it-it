@@ -174,16 +174,11 @@ Sono necessari switch Cisco Nexus ridondanti nell'architettura FlexPod.
 [[cisco-support-licensing-options]]
 == Opzioni di licenza del supporto Cisco
 
-Sono necessari contratti di supporto TSANet validi su tutte le apparecchiature Cisco nell'architettura FlexPod Express.
 
+NOTE: Si consiglia di verificare i requisiti di licenza con il proprio rappresentante commerciale Cisco o NetApp prima di effettuare l'ordine.
 
-NOTE: Le licenze necessarie e i relativi codici prodotto possono variare a seconda del prodotto e della configurazione. Si consiglia di verificare i requisiti di licenza con il proprio rappresentante commerciale Cisco o NetApp prima di effettuare l'ordine.
+link:https://www.cisco.com/c/dam/en_us/about/doing_business/legal/service_descriptions/docs/solution-support-smart-total-care.pdf["Cisco Solution Support"^] è un'offerta di Technical Support Service che si applica alle soluzioni Cisco che includono sia hardware che software di Cisco oppure di Cisco e Solution Support Alliance Partners e sono composte esclusivamente da prodotti Cisco e da prodotti forniti da vendor terzi (Solution Support Alliance Partner(s)).
 
-La seguente tabella elenca le opzioni di licenza per il supporto Cisco.
+Cisco supporta ambienti clienti complessi attraverso il suo link:https://www.cisco.com/c/en/us/support/web/tac/technical-services-resource-guide.html["Centro di assistenza tecnica"]. Cisco Solution Support offre ai clienti l'accesso a un team di ingegneri TAC, che fungono da principale punto di contatto per i problemi riscontrati all'interno della soluzione, nonché supporto per l'Hardware e il Software che la compongono.
 
-|===
-| Licenze Cisco Support | Guida alla licenza 
-
-
-| TSANet | https://www.tsanet.org/cisco-tsanet-case-study/[] 
-|===
+Cisco sfrutta il link:https://www.tsanet.org/cisco-tsanet-case-study/["Programma partner TSANet"^] framework per integrare i Solution Support Partners in un gruppo privato sul sistema TSANet Connect. TSANet Connect offre un metodo coerente per permettere agli ingegneri del supporto di collaborare con i team tecnici dei partner, garantendo una comunicazione efficiente e una risoluzione rapida dei problemi senza gli attriti causati da tentativi informali di collaborazione con i partner.

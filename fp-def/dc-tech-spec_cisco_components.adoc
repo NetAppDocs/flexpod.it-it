@@ -232,7 +232,7 @@ Sono necessari switch ridondanti Cisco Nexus serie 9000 nell'architettura FlexPo
 [[cisco-apic-options]]
 == Opzioni Cisco APIC
 
-Cisco APIC è il principale componente architetturale di Cisco ACI. È il punto unificato di automazione e gestione per il fabric Cisco ACI.
+Cisco APIC è il principale componente architetturale di Cisco ACI. Fornisce gestione centralizzata, controllo delle policy e automazione per le infrastrutture Cisco ACI.
 
 Per ulteriori informazioni sulle specifiche del prodotto APIC, consulta la Tabella 1 fino alla Tabella 3 nella https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Scheda informativa su Cisco Application Policy Infrastructure Controller"^].
 
