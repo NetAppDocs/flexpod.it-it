@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-conclusion.html 
+keywords: ontap select, cisco unified edge, conclusion, flexpod 
+summary: 'FlexPod Edge combina Cisco Unified Edge e ONTAP Select per offrire software-defined storage e servizi dati aziendali all"interno di un unico chassis all"edge.' 
+---
+= Conclusione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+L'implementazione di FlexPod Edge con software-defined storage offre ai clienti un percorso pratico verso i servizi dati aziendali all'edge. L'architettura combina la piattaforma Unified Edge compatta e gestita centralmente di Cisco con i servizi dati consolidati di ONTAP, abilitando lo storage software-defined all'interno di un singolo chassis che può supportare carichi di lavoro locali dove i dati vengono creati e manipolati.
