@@ -3701,7 +3701,6 @@
   <block id="73cbafda498a06bae0ca1f5a7714be30" category="inline-link-macro">Successivo: Piattaforme FlexPod.</block>
   <block id="ffe6ecde43ed5c7ff2182a101c0d2390" category="paragraph"><block ref="ffe6ecde43ed5c7ff2182a101c0d2390" category="inline-link-macro-rx"></block></block>
   <block id="254f642527b45bc260048e30704edb39" category="cell">Configurazione</block>
-  <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">Cisco contribuisce in modo sostanziale alla progettazione e all'architettura di FlexPod Express e contribuisce ai livelli di calcolo e di rete della soluzione.</block>
   <block id="db9522af2119f167ded30369ddb56248" category="doc">Componenti Cisco</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">Cisco contribuisce in modo sostanziale alla progettazione e all'architettura di FlexPod Express e contribuisce ai livelli di calcolo e di rete della soluzione. Questa sezione descrive i componenti Cisco UCS e Cisco Nexus disponibili per FlexPod Express.</block>
   <block id="0adca13cab777a69d4b054794aadc650" category="section-title">Opzioni dei server rack Cisco UCS C-Series</block>
@@ -8564,4 +8563,6 @@
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link-macro">Documentazione dei sistemi ASA r2</block>
   <block id="5a043bdfd29a9c2a632078901fc0d525" category="cell"><block ref="5a043bdfd29a9c2a632078901fc0d525" category="inline-link-macro-rx"></block></block>
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">I centri medici accademici e altre organizzazioni sanitarie e delle scienze biologiche sono sulla buona strada per istituire centri di eccellenza (COE) nella scienza del genoma. Secondo il Dr. Charlie Gersbach, il Dr. Greg Crawford e il Dr. Tim E Reddy della Duke University, "Sappiamo che i geni non vengono attivati o disattivati da un semplice interruttore binario, ma sono il risultato di molteplici interruttori di regolazione genica che lavorano insieme. " Hanno anche stabilito che "nessuna di queste parti del genoma funziona in isolamento. Il genoma è una rete molto complessa che l'evoluzione ha tessuto" (<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>).</block>
+  <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">Panoramica delle procedure di implementazione</block>
+  <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Cisco contribuisce con i livelli di elaborazione e di rete alla progettazione e all'architettura di FlexPod Express, inclusi i server UCS e gli switch Nexus.</block>
 </blocks>

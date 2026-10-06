@@ -10,7 +10,7 @@ summary: Questa sezione spiega come verificare lo stato di supporto delle appare
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

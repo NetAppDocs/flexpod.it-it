@@ -10,7 +10,7 @@ summary: La distribuzione automatizzata per FlexPod Datacenter è disponibile tr
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

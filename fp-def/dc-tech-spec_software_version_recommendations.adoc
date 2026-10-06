@@ -10,7 +10,7 @@ summary: Le seguenti informazioni descrivono le versioni software consigliate pe
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

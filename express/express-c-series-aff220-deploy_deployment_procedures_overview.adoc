@@ -4,7 +4,7 @@ permalink: express/express-c-series-aff220-deploy_deployment_procedures_overview
 keywords: vmware, vcenter, server, appliance, download 
 summary: Questo documento fornisce dettagli sulla configurazione di un sistema FlexPod Express completamente ridondante e altamente disponibile e sul provisioning di più host Cisco UCS. 
 ---
-= Procedure di implementazione
+= Panoramica delle procedure di implementazione
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
