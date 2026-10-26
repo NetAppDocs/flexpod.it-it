@@ -158,7 +158,7 @@ Abbiamo scaricato i file BAM e i corrispondenti file di indice, dizionario e gen
 
 Cromwell è un motore open-source orientato ai flussi di lavoro scientifici che consente la gestione del workflow. Il motore Cromwell può essere eseguito in due https://cromwell.readthedocs.io/en/stable/Modes/["modalità"^], Server mode o Run mode a singolo flusso di lavoro. Il comportamento del motore Cromwell può essere controllato tramite https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["File di configurazione del motore Cromwell"^].
 
-* *Server mode.* attiva https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["Riposante"^] Esecuzione dei flussi di lavoro nel motore Cromwell.
+* *Modalità server.* Consente https://cromwell.readthedocs.io/en/stable/Modes/["Riposante"^] l'esecuzione di flussi di lavoro nel motore Cromwell.
 * *Run mode.* la modalità Run è più adatta per l'esecuzione di singoli flussi di lavoro in Cromwell, https://cromwell.readthedocs.io/en/stable/CommandLine/["rif"^] Per una serie completa di opzioni disponibili in modalità Run.
 
 
