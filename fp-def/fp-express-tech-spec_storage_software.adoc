@@ -23,4 +23,60 @@ FlexPod Express supporta i sistemi di storage che eseguono il sistema operativo 
 
 Il software NetApp ONTAP è il sistema operativo che gira sui sistemi di storage AFF, ASA e FAS. ONTAP offre un'architettura di storage altamente scalabile che consente operazioni senza interruzioni, aggiornamenti senza interruzioni e un'infrastruttura dati agile. Con il modello di licensing ONTAP One, tutti i servizi dati aziendali sono inclusi in un unico pacchetto, semplificando l'implementazione e la gestione e offrendo pieno accesso a funzionalità avanzate. ONTAP offre una solida protezione dei dati tramite tecnologie come SnapMirror per la replica e il disaster recovery, oltre a SnapCenter per backup e ripristino coerente con l'applicazione. Incorpora inoltre funzionalità di sicurezza integrate, tra cui Autonomous Ransomware Protection e la crittografia, per proteggere i dati dalle minacce moderne. Inoltre, ONTAP consente una perfetta integrazione con il cloud ibrido grazie a funzionalità come SnapMirror Cloud e la replica basata su S3, permettendo la mobilità dei dati tra ambienti on-premises e cloud, mantenendo coerenza e controllo.
 
-Per ulteriori informazioni su ONTAP, consulta la https://www.netapp.com/ontap-data-management-software/["Pagina del prodotto ONTAP"^].
+o per ulteriori informazioni su ONTAP, consulta il https://docs.netapp.com/us-en/ontap-family/["Documentazione del prodotto ONTAP"^].
+
+
+
+[[recommended-ontap-featuresconfigurations]]
+=== Funzionalità/configurazioni ONTAP consigliate
+
+FlexPod raggiunge le massime prestazioni, la ridondanza di livello enterprise e l'alta disponibilità delineate nelle nostre architetture verificate utilizzando le seguenti funzionalità/configurazioni:
+
+
+
+==== Multipathing e interfacce logiche
+
+L'architettura FlexPod è progettata per fornire alta disponibilità in caso di guasto di un componente o di un collegamento nell'intero stack di calcolo, rete e storage. I percorsi di rete multipli per l'accesso al client e allo storage offrono il bilanciamento del carico e un utilizzo ottimale delle risorse.
+
+Il Multipath I/O in ONTAP viene realizzato tramite interfacce logiche. Un'interfaccia logica (LIF) è un indirizzo IP o un WWPN con caratteristiche associate, come un ruolo, una porta home, un nodo home, un elenco di porte su cui effettuare il failover e una policy del firewall.
+
+La tabella seguente elenca il numero minimo di interfacce logiche da creare per ciascun protocollo per nodo in una coppia HA.
+
+|===
+| Protocollo di storage | Numero di interfacce logiche per nodo in una coppia HA | Numero di interfacce logiche per coppia HA 
+
+
+| NFS / CIFS / S3 | 1 | 2 
+
+
+| iSCSI/NVMe su TCP | 2 | 4 
+
+
+| FC / NVMe su FC | 2 | 4 
+|===
+
+
+==== ONTAP Snapshot, SnapMirror e SnapCenter
+
+Uno Snapshot è un'immagine point-in-time di sola lettura di un volume. Dopo la creazione di uno Snapshot, il file system attivo e lo Snapshot puntano agli stessi blocchi del disco; pertanto, lo Snapshot non utilizza spazio su disco aggiuntivo. Nel tempo, l'immagine consuma uno spazio di storage minimo e comporta un overhead prestazionale trascurabile, perché registra solo le modifiche ai file dall'ultimo Snapshot. Puoi usare uno Snapshot per recuperare singoli file o LUN oppure per ripristinare l'intero contenuto di un volume. ONTAP confronta le informazioni sui puntatori nello Snapshot con i dati sul disco per ricostruire l'oggetto mancante o danneggiato, senza tempi di inattività o un impatto significativo sulle prestazioni.
+
+SnapMirror è una tecnologia di disaster recovery, progettata per il failover dallo storage primario allo storage secondario in un sito remoto dal punto di vista geografico. Come suggerisce il nome, SnapMirror crea una replica, o mirror, dei tuoi dati di lavoro nello storage secondario, da cui puoi continuare a servire i dati in caso di catastrofe nel sito primario.
+
+SnapCenter Software è una piattaforma semplice, centralizzata e scalabile che fornisce protezione dei dati coerente con l'applicazione per applicazioni, database, file system host e VM in esecuzione sui sistemi ONTAP ovunque nel cloud ibrido.
+
+Ti consigliamo di integrare la protezione dei dati nella tua architettura FlexPod, utilizzando tecnologie come SnapMirror per la replica e il disaster recovery, nonché SnapCenter per backup e ripristino coerenti con l'applicazione.
+
+
+
+==== Multi-tenancy sicura
+
+La multi-tenancy sicura consiste nell'utilizzo di partizioni virtuali sicure all'interno di un ambiente di storage fisico condiviso, allo scopo di condividere l'ambiente fisico tra più tenant distinti. Ad esempio, un service provider di storage potrebbe configurare un array di storage in modo tale che a ciascuno di tre diversi clienti venga fornita una determinata porzione della capacità del disco dell'array e delle risorse di rete. In un ambiente multi-tenant sicuro, ogni cliente avrebbe accesso solo alle risorse esplicitamente fornite a quel cliente. Il cliente non avrebbe accesso ai dati degli altri clienti e non sarebbe nemmeno a conoscenza dell'esistenza degli altri clienti o del fatto che condividono un array fisico comune. Gli ambienti multi-tenant sicuri dovrebbero inoltre fornire un mezzo per garantire che nessun singolo tenant consumi una parte così grande della capacità di prestazioni condivisa da influire sugli altri tenant.
+
+La multi-tenancy in ONTAP si ottiene tramite storage virtual machine (SVM) e IP Spaces.
+
+Analogamente a una macchina virtuale in esecuzione su un hypervisor, un SVM è un'entità logica che astrae le risorse fisiche. Un SVM fornisce dati a client e host da uno o più volumi, attraverso una o più interfacce logiche di rete (LIF).
+
+Gli IPspaces ti consentono di configurare un singolo cluster ONTAP in modo che possa essere accessibile dai client di più domini di rete amministrativamente separati, anche se questi client usano lo stesso intervallo di sottoreti IP. Questo ti permette di separare il traffico dei client per privacy e sicurezza.
+
+
+NOTE: Per le best practice di FlexPod sulla configurazione di ONTAP, consulta la https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vvf_9_fc_boot_manual_deploy.html#NetAppONTAPStorageConfiguration["FlexPod CVD: Configurazione dello storage NetApp ONTAP"^].
